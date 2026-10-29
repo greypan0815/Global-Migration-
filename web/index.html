@@ -70,14 +70,14 @@
           <div class="stat"><span class="stat-icon">◈</span><div><strong id="statCountries">—</strong><small>個國家／地區</small></div></div>
           <div class="stat"><span class="stat-icon">◇</span><div><strong id="statRoutes">—</strong><small>條移居路線</small></div></div>
           <div class="stat"><span class="stat-icon">✳</span><div><strong id="statTaiwan">—</strong><small>條臺灣資格已核對</small></div></div>
-          <div class="stat"><span class="stat-icon">↗</span><div><strong>100%</strong><small>免費開放資料</small></div></div>
+          <div class="stat"><span class="stat-icon">↗</span><div><strong id="statAudit">—</strong><small>條路線部分官方核查</small></div></div>
         </section>
       </div>
       <section class="notice-section container" aria-label="重要資料提醒">
         <div class="notice-strip"><div class="notice-icon">!</div><div><strong id="noticeTitle">先確認你的護照資格</strong><span id="noticeText">臺灣已核對只代表特定簽證的國籍適用性；其他路線尚待核查。原專案以中國大陸護照為基準，不可直接套用。</span></div><a href="#method">了解資料標示 <span aria-hidden="true">↗</span></a></div>
       </section>
       <section class="featured-section container" id="featuredSection" aria-labelledby="featuredTitle">
-        <div class="section-heading"><div><p class="section-kicker">CURATED FOR TAIWAN</p><h2 id="featuredTitle">從這幾條路線開始</h2><p>先認識台灣護照已列入資格的代表性簽證，再延伸研究長期居留。</p></div><a class="section-link" href="#explore">查看完整路線 <span aria-hidden="true">↗</span></a></div>
+        <div class="section-heading"><div><p class="section-kicker">CURATED FOR TAIWAN</p><h2 id="featuredTitle">工程師直接就業，先從這裡研究</h2><p>從正式雇主聘僱切入德國、愛爾蘭與荷蘭；已核對部分官方制度，仍需確認個案資格。<a class="inline-source" href="https://github.com/greypan0815/Global-Migration-/blob/main/docs/taiwan/tech-employment.md" target="_blank" rel="noopener noreferrer">查看台灣工程師就業指引 ↗</a></p></div><a class="section-link" href="#explore">查看完整路線 <span aria-hidden="true">↗</span></a></div>
         <div id="featuredGrid" class="featured-grid"><div class="loading-state">正在載入臺灣路線資料…</div></div>
       </section>
       <section class="explore-section container" id="explore" aria-labelledby="exploreTitle">
@@ -97,10 +97,21 @@
               <p class="field-help">「尚待核對」不等於不符合資格。</p>
             </div>
             <div class="filter-block"><label for="prFilter">永久居留方向</label>
-              <select id="prFilter"><option value="all">不限</option><option value="upstream_possible">上游標示可能通往永居</option><option value="needs_review">未明確核對</option><option value="not_indicated">上游標示不通往永居</option></select>
-              <p class="field-help">這是上游初步分類，不保證符合法定條件。</p>
+              <select id="prFilter"><option value="all">不限</option><option value="reviewed_possible">有官方核對的居留／PR 方向</option><option value="not_direct">非直接 PR／永居</option><option value="upstream_possible">僅上游標示可能</option><option value="needs_review">尚待逐條核對</option></select>
+              <p class="field-help">核對內容分為「工作身分、暫時居留、居留升級、永久居留」，並非同義詞。</p>
             </div>
-            <div class="filter-block"><label for="statusFilter">路線／受理狀態</label><select id="statusFilter"><option value="all">全部狀態</option><option value="upstream_open">上游標示開放</option><option value="closed_window">當年度窗口結束</option><option value="closed">上游標示已停止</option><option value="check_window">需查當期受理窗口</option></select></div>
+            <div class="filter-block"><label for="statusFilter">路線／受理狀態</label><select id="statusFilter"><option value="all">全部狀態</option><option value="upstream_open">一般／上游標示開放（須核對）</option><option value="closed_window">當年度窗口結束</option><option value="closed">已停止／暫停新申請</option><option value="check_window">需查當期受理窗口</option></select></div>
+            <div class="filter-block"><label for="evidenceFilter">來源與核查品質</label>
+              <select id="evidenceFilter">
+                <option value="all">全部證據等級</option>
+                <option value="reviewed_specific_fields">特定欄位已官方核對</option>
+                <option value="official_links_not_audited">有官方連結（未逐條核對）</option>
+                <option value="generic_country_portal">僅國家層級官方入口</option>
+                <option value="third_party_only">僅有第三方資料</option>
+                <option value="missing_route_source">缺少路線直接來源</option>
+              </select>
+              <p class="field-help">政府網址存在不代表所有資格與數字都已查核。</p>
+            </div>
             <div class="filter-block checkbox-filter"><label><input type="checkbox" id="savedOnly"> <span>只顯示我的收藏</span></label></div>
           </aside>
           <div class="explorer-content">
@@ -123,9 +134,9 @@
       <section class="method-section container" id="method" aria-labelledby="methodTitle">
         <div class="section-heading"><div><p class="section-kicker">TRUST THE CONTEXT, NOT JUST A NUMBER</p><h2 id="methodTitle">資料透明，選擇才有意義。</h2><p>不同護照、戶籍和出生地可能改變簽證資格。本站刻意把已核對與待核對資料分開。</p></div></div>
         <div class="method-grid">
-          <article class="method-card"><span class="method-symbol verified">✓</span><h3>臺灣資格已核對</h3><p>僅表示該類別在官方網站列有臺灣的國籍／地區適用資格，並不代表目前開放或符合全部條件。</p></article>
-          <article class="method-card"><span class="method-symbol unknown">?</span><h3>臺灣資格待核對</h3><p>上游原始資料多以中國大陸護照為基準；待核對不等於不能申請，請自行檢查主管機關的規定。</p></article>
-          <article class="method-card"><span class="method-symbol source">↗</span><h3>回到第一手來源</h3><p>路線卡片附官方與第三方資料連結及上游文件，門檻、有效年限、配額均須以申請當期公告為準。</p></article>
+          <article class="method-card"><span class="method-symbol verified">✓</span><h3>分欄位的官方證據</h3><p>優先核對國籍、當期申請窗口、合法工作權與永久居留；標示核查日期與政策生效日。只對已查證的欄位負責。</p></article>
+          <article class="method-card"><span class="method-symbol unknown">?</span><h3>原版資訊不等於官方結論</h3><p>上游主要針對中國大陸護照，部分只有國家官方入口或第三方連結；「待核對」不代表臺灣不適用，更不能拿來直接提交申請。</p></article>
+          <article class="method-card"><span class="method-symbol source">↗</span><h3>區分居留與永久身分</h3><p>工作簽證、打工度假、Stamp 4、Resident Visa 與 PR／永居並不相同。薪資門檻會調整，申請季也會關閉，應在遞交當天重新查官方。</p></article>
         </div>
         <div class="source-foot"><span>資料首次適配：2026-10-30</span><span>無登入 · 無追蹤程式 · 靜態網站</span><a href="https://github.com/greypan0815/Global-Migration-" target="_blank" rel="noopener noreferrer">檢視原始資料與授權 ↗</a></div>
       </section>
