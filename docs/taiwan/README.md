@@ -4,13 +4,21 @@
 >
 > 這裡是 [BryceYuuu/RUN](https://github.com/BryceYuuu/RUN) 的**臺灣護照補充層**：原有中國大陸護照內容仍保留，但**尚未逐一核對所有國家與路線是否適用臺灣**。下表只代表具備進一步申請的國籍／地區資格，**不等於目前可遞交、保證獲准或能直接取得永久居留**。
 
-[繁體中文入口](../../README.zh-TW.md) ｜ [原始總覽](../../README.md) ｜ [加拿大 IEC](canada-iec.md) ｜ [臺灣文件](documents.md) ｜ [資料表](../../data/taiwan_applicability.csv)
+[繁體中文入口](../../README.zh-TW.md) ｜ [工程師直接就業](tech-employment.md) ｜ [核對方法](audit-methodology.md) ｜ [加拿大 IEC](canada-iec.md) ｜ [臺灣文件](documents.md) ｜ [資料表](../../data/taiwan_applicability.csv)
+
+## 🔎 2026-10-30 本輪政策核查範圍
+
+- **150 條路線**可搜尋，但僅有 **22 條優先路線的特定政策欄位**經官方頁面核查；其餘 **128 條仍屬上游參考，不能直接據此申請**。
+- **10 條**路線已從政府資料明確確認臺灣在國籍／地區適用範圍（原有 9 條，加上捷克 Digital Nomad Program）。**其餘 140 條未核對不等於不適用台灣**。
+- 已核對路線清楚區分**台灣資格、2026 受理狀態、工作許可、永久居留**；只對 `data/policy_reviews.json` 中明列的欄位核查，沒有核查的欄位不會假裝已認證。
+- 優先閱讀 [臺灣軟體工程師直接海外就業指南](tech-employment.md) 及 [官方證據品質分級](audit-methodology.md)。
 
 ## 一、已依官方來源核對的臺灣路線
 
 | 目的地 | 制度 | 基本資格或限制 | 2026 年重要狀態 | 官方來源 |
 |---|---|---|---|---|
-| 🇨🇦 加拿大 | IEC：WH、YP、International Co-op | 台灣列入 18–35 歲資格表；三類別要求不同 | 是否仍有名額／邀請須看當期輪次 | [IRCC](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table) |
+| 🇨🇦 加拿大 | IEC：WH、YP、International Co-op | 台灣列入 18–35 歲資格表；三類別要求不同 | **2026 候選人池已關閉**；已獲 ITA 者仍可按時遞交，2027 開放時間待公告 | [IRCC](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table) |
+| 🇨🇿 捷克 | Digital Nomad Program | 台灣在工貿部適用名單；限符合資格的 IT／行銷遠距受雇或自由業者 | 不是獨立永久居留簽證，需確認個別受理條件 | [捷克工貿部](https://mpo.gov.cz/en/foreign-trade/economic-migration/programs-and-projects/digital-nomad-program--275799/) |
 | 🇬🇧 英國 | Youth Mobility Scheme | 臺灣 18–30 歲，須先通過 ballot | 官方公告 **2026 年不再辦額外抽選** | [GOV.UK](https://www.gov.uk/guidance/youth-mobility-scheme-visa-ballot-system) |
 | 🇯🇵 日本 | 打工度假 | 臺灣一般 18–30 歲，2026-02-01 起可終身參加兩次，各 1 年且非連續 | 申請期間依日本台灣交流協會公告 | [外務省](https://www.mofa.go.jp/j_info/visit/w_holiday/) |
 | 🇦🇺 澳洲 | Working Holiday 417 | 臺灣一般護照、18–30 歲 | **417 不是 462**；其他要求另查 | [內政部](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417) |
@@ -24,7 +32,7 @@
 短期打工度假和永久居留（PR）是不同制度。若目標是不讀碩士、直接到海外擔任正式軟體工程師，可並行研究：
 
 - **加拿大**：合格 IEC／其他工作許可 → 加拿大合格工作經驗 → CEC 或 PNP → Express Entry 與 PR 審查；**每一階段都不保證成功**。詳見 [加拿大 IEC 專頁](canada-iec.md)。
-- **德國、愛爾蘭、日本、美國等**：雇主聘僱及工作居留制度；原版各國資料可作為研究索引，但尚未完成臺灣護照逐路線驗證。
+- **德國、愛爾蘭、荷蘭、英國、澳洲、紐西蘭等**：已有部分官方門檻與雇主聘僱條件核對，見 [直接就業專頁](tech-employment.md)。但尚未對所有台灣申請人的個別資格與全部路線完成核對。
 - **全球遠距工作**：數位遊牧簽證和合法在當地就業不同，需同時確認僱傭關係、稅務、居留延長及是否能累積 PR 年限。
 
 ## 三、原版中國大陸專屬資訊不能直接套用
@@ -39,8 +47,8 @@
 
 ## 四、資料狀態與讀者責任
 
-- **official_checked**：只表示特定「臺灣屬計畫適用對象」與註明的限制有官方來源。
+- **official_checked**：只表示明確核對臺灣屬於特定計畫的適用國籍／地區（**不是整條路線已取得保證**）。一般第三國的就業制度可有官方政策核查，但未列為「臺灣專屬資格已確認」。
 - **needs_review**：原有資料尚未核查對臺灣護照的適用性；不可因其他國家開放就推定自己符合。
 - **當期狀態**：申請季、名額、薪資、費用、資格及文件有可能隨時更動，請申請當天再核對官方網站。
 
-臺灣初版機器可讀資料：[data/taiwan_applicability.csv](../../data/taiwan_applicability.csv)。原始歐洲與全球資料仍由原專案維護，內容依 [CC BY-SA 4.0](../../LICENSE) 授權。
+臺灣機器可讀資料：[data/taiwan_applicability.csv](../../data/taiwan_applicability.csv) 與 [官方政策核查 `data/policy_reviews.json`](../../data/policy_reviews.json)。原始歐洲與全球資料仍由原專案維護，內容依 [CC BY-SA 4.0](../../LICENSE) 授權。

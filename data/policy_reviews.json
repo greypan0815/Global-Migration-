@@ -1,0 +1,1549 @@
+{
+  "_meta": {
+    "title": "Taiwan-first official evidence overlay",
+    "lastReviewed": "2026-10-30",
+    "scope": "Only the fields explicitly listed in reviewedFields have been checked against corresponding official pages. Legacy original facts must not be silently mixed with reviewed facts.",
+    "statuses": {
+      "passport": [
+        "confirmed_for_taiwan",
+        "third_country_route",
+        "chargeability_matters",
+        "unknown"
+      ],
+      "window": [
+        "season_closed",
+        "no_fixed_season",
+        "invitation_based",
+        "check_official",
+        "paused",
+        "priority_date_based",
+        "quota_and_check"
+      ],
+      "settlement": [
+        "not_direct",
+        "separate_application",
+        "conditional_settlement",
+        "direct_residence_application",
+        "status_upgrade_not_pr",
+        "resident_visa"
+      ]
+    }
+  },
+  "routes": {
+    "tw:iec_wh": {
+      "priority": 90,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "IRCC 官方資格表列有 Taiwan，年齡 18–35 歲；仍須符合該類別其他規定。"
+      },
+      "window": {
+        "state": "season_closed",
+        "detail": "2026 IEC 候選人池已關閉。已收到 ITA 者仍可能依期限遞交申請；未獲邀者須等 2027 池重新開放（開放日期尚待公告）。",
+        "period": "2026"
+      },
+      "work": {
+        "state": "open_permit",
+        "detail": "通常為開放式工作許可；並非所有遠距工作或工作種類都能計入 CEC。"
+      },
+      "settlement": {
+        "state": "separate_application",
+        "detail": "IEC 是臨時工作許可，不會自動轉 PR。需另外評估合格工作經驗、CEC／PNP 等條件，且可能需要新的合法工作身分。"
+      },
+      "summary": "IEC Working Holiday 為打工度假路線，通常使用開放式工作許可；適合依法尋找加拿大雇主工作。 2026 年 IEC 候選人池已關閉，已持 ITA 者可依官方要求繼續申請。",
+      "facts": [
+        [
+          "2026 申請季",
+          "候選人池已關閉，非永久取消制度"
+        ],
+        [
+          "臺灣年齡",
+          "18–35 歲"
+        ],
+        [
+          "2027 申請季",
+          "尚待 IRCC 宣布開放日期"
+        ]
+      ],
+      "steps": [
+        [
+          "確認目前申請季及臺灣類別",
+          "以 IRCC 官網最新公告為準"
+        ],
+        [
+          "取得 IEC 邀請／工作許可",
+          "邀請不是核准；申請季限制須留意"
+        ],
+        [
+          "在加拿大合法工作",
+          "遵守許可的雇主／工時等條件"
+        ],
+        [
+          "另行評估 PR",
+          "檢查 CEC、PNP、分數、語言與工作經驗"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "IRCC：2026 IEC season is closed",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html"
+        },
+        {
+          "title": "IRCC：臺灣 IEC 類別及年齡",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table"
+        },
+        {
+          "title": "IRCC：Recognized Organizations 額外參與",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/recognized-organizations.html"
+        },
+        {
+          "title": "IRCC：Canadian Experience Class",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "2026_window",
+        "permit_type",
+        "pr_separation"
+      ],
+      "note": "RO 額外兩次終身參與的官方文字不能直接推定可重複同一類別；每一 RO 可能有個別資格限制。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:iec_yp": {
+      "priority": 90,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "IRCC 官方資格表列有 Taiwan，年齡 18–35 歲；仍須符合該類別其他規定。"
+      },
+      "window": {
+        "state": "season_closed",
+        "detail": "2026 IEC 候選人池已關閉。已收到 ITA 者仍可能依期限遞交申請；未獲邀者須等 2027 池重新開放（開放日期尚待公告）。",
+        "period": "2026"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "須有合格雇主及職位；許可通常限定雇主。"
+      },
+      "settlement": {
+        "state": "separate_application",
+        "detail": "IEC 是臨時工作許可，不會自動轉 PR。需另外評估合格工作經驗、CEC／PNP 等條件，且可能需要新的合法工作身分。"
+      },
+      "summary": "IEC Young Professionals 以符合專業發展規則的加拿大雇主 offer 申請指定雇主工作許可。 2026 年 IEC 候選人池已關閉，已持 ITA 者可依官方要求繼續申請。",
+      "facts": [
+        [
+          "2026 申請季",
+          "候選人池已關閉，非永久取消制度"
+        ],
+        [
+          "臺灣年齡",
+          "18–35 歲"
+        ],
+        [
+          "2027 申請季",
+          "尚待 IRCC 宣布開放日期"
+        ]
+      ],
+      "steps": [
+        [
+          "確認目前申請季及臺灣類別",
+          "以 IRCC 官網最新公告為準"
+        ],
+        [
+          "取得 IEC 邀請／工作許可",
+          "邀請不是核准；申請季限制須留意"
+        ],
+        [
+          "在加拿大合法工作",
+          "遵守許可的雇主／工時等條件"
+        ],
+        [
+          "另行評估 PR",
+          "檢查 CEC、PNP、分數、語言與工作經驗"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "IRCC：2026 IEC season is closed",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html"
+        },
+        {
+          "title": "IRCC：臺灣 IEC 類別及年齡",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table"
+        },
+        {
+          "title": "IRCC：Recognized Organizations 額外參與",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/recognized-organizations.html"
+        },
+        {
+          "title": "IRCC：Canadian Experience Class",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "2026_window",
+        "permit_type",
+        "pr_separation"
+      ],
+      "note": "RO 額外兩次終身參與的官方文字不能直接推定可重複同一類別；每一 RO 可能有個別資格限制。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:iec_coop": {
+      "priority": 90,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "IRCC 官方資格表列有 Taiwan，年齡 18–35 歲；仍須符合該類別其他規定。"
+      },
+      "window": {
+        "state": "season_closed",
+        "detail": "2026 IEC 候選人池已關閉。已收到 ITA 者仍可能依期限遞交申請；未獲邀者須等 2027 池重新開放（開放日期尚待公告）。",
+        "period": "2026"
+      },
+      "work": {
+        "state": "internship",
+        "detail": "需符合在學、實習與雇主條件。全職就學或 Co-op 工作通常不能計入 CEC。"
+      },
+      "settlement": {
+        "state": "separate_application",
+        "detail": "IEC 是臨時工作許可，不會自動轉 PR。需另外評估合格工作經驗、CEC／PNP 等條件，且可能需要新的合法工作身分。"
+      },
+      "summary": "IEC International Co-op 是符合資格的在學生及合格實習路線，不能當作一般就業許可。 2026 年 IEC 候選人池已關閉，已持 ITA 者可依官方要求繼續申請。",
+      "facts": [
+        [
+          "2026 申請季",
+          "候選人池已關閉，非永久取消制度"
+        ],
+        [
+          "臺灣年齡",
+          "18–35 歲"
+        ],
+        [
+          "2027 申請季",
+          "尚待 IRCC 宣布開放日期"
+        ]
+      ],
+      "steps": [
+        [
+          "確認目前申請季及臺灣類別",
+          "以 IRCC 官網最新公告為準"
+        ],
+        [
+          "取得 IEC 邀請／工作許可",
+          "邀請不是核准；申請季限制須留意"
+        ],
+        [
+          "在加拿大合法工作",
+          "遵守許可的雇主／工時等條件"
+        ],
+        [
+          "另行評估 PR",
+          "檢查 CEC、PNP、分數、語言與工作經驗"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "IRCC：2026 IEC season is closed",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html"
+        },
+        {
+          "title": "IRCC：臺灣 IEC 類別及年齡",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table"
+        },
+        {
+          "title": "IRCC：Recognized Organizations 額外參與",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/recognized-organizations.html"
+        },
+        {
+          "title": "IRCC：Canadian Experience Class",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "2026_window",
+        "permit_type",
+        "pr_separation"
+      ],
+      "note": "RO 額外兩次終身參與的官方文字不能直接推定可重複同一類別；每一 RO 可能有個別資格限制。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:e1": {
+      "priority": 34,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "美國國務院條約／互惠資訊列有 Taiwan；仍須依個別投資、貿易、企業與國籍要求審查。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "非年度抽籤制度，實際申請、預約、效期與文件以美國國務院及受理機構為準。"
+      },
+      "work": {
+        "state": "business_restricted",
+        "detail": "E-1 為與核准企業／業務相關的工作或活動權利，不是通用開放式工簽。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "屬非移民簽證，獲得 E-1 不會自動取得美國綠卡。"
+      },
+      "summary": "E-1 為台灣可進一步檢查資格的條約簽證。需符合美臺間合格的實質貿易、企業或受雇人員條件，不是單純拿 E-1 來找一般工作。",
+      "facts": [
+        [
+          "性質",
+          "非移民條約簽證"
+        ],
+        [
+          "台灣資格",
+          "列在美國官方條約適用資訊中"
+        ],
+        [
+          "永久居留",
+          "不自動取得綠卡"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "美國國務院：Taiwan E 類互惠與條約資訊",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/Visa-Reciprocity-and-Civil-Documents-by-Country/Taiwan.html"
+        },
+        {
+          "title": "美國國務院：E-1/E-2 簽證說明",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/employment/treaty-trader-investor-visa-e.html"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "visa_type",
+        "pr_separation"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:e2": {
+      "priority": 34,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "美國國務院條約／互惠資訊列有 Taiwan；仍須依個別投資、貿易、企業與國籍要求審查。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "非年度抽籤制度，實際申請、預約、效期與文件以美國國務院及受理機構為準。"
+      },
+      "work": {
+        "state": "business_restricted",
+        "detail": "E-2 為與核准企業／業務相關的工作或活動權利，不是通用開放式工簽。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "屬非移民簽證，獲得 E-2 不會自動取得美國綠卡。"
+      },
+      "summary": "E-2 為台灣可進一步檢查資格的條約簽證。需符合實質投資並經營企業，或合格 E 類企業雇員條件；不是被動小額投資即符合。",
+      "facts": [
+        [
+          "性質",
+          "非移民條約簽證"
+        ],
+        [
+          "台灣資格",
+          "列在美國官方條約適用資訊中"
+        ],
+        [
+          "永久居留",
+          "不自動取得綠卡"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "美國國務院：Taiwan E 類互惠與條約資訊",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/Visa-Reciprocity-and-Civil-Documents-by-Country/Taiwan.html"
+        },
+        {
+          "title": "美國國務院：E-1/E-2 簽證說明",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/employment/treaty-trader-investor-visa-e.html"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "visa_type",
+        "pr_separation"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:yms": {
+      "priority": 30,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "英國政府明定 Taiwan 申請者需先參加 Youth Mobility Scheme ballot，並符合 18–30 歲及其他條件。"
+      },
+      "window": {
+        "state": "season_closed",
+        "detail": "2026 年 Youth Mobility Scheme 兩次 ballot 均已結束，英國政府表示 2026 年沒有其他抽選；2027 日期待公告。",
+        "period": "2026"
+      },
+      "work": {
+        "state": "temporary_work",
+        "detail": "持核准 YMS 可依簽證條件工作；不是無限期或永居身分。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "YMS 不直接取得永久居留，日後若有合格聘僱需另查可否轉簽及後續規定。"
+      },
+      "summary": "臺灣可參加英國青年流動計畫，須先經抽選；2026 年所有 ballot 已結束，2027 日期待公告。",
+      "facts": [
+        [
+          "年齡",
+          "18–30 歲"
+        ],
+        [
+          "申請方式",
+          "Taiwan 須先參加 ballot"
+        ],
+        [
+          "2026 狀態",
+          "全年抽選已結束"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "GOV.UK：YMS ballot",
+          "url": "https://www.gov.uk/guidance/youth-mobility-scheme-visa-ballot-system"
+        },
+        {
+          "title": "GOV.UK：YMS eligibility",
+          "url": "https://www.gov.uk/youth-mobility/eligibility"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "2026_ballot_window",
+        "age"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:working_holiday": {
+      "priority": 32,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "日本外務省公告：台灣出身者自 2026-02-01 起終身可參加兩次（各最長一年、非連續）。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "請依日本台灣交流協會實際受理期間、公告及名額辦理，非自動全年開放。"
+      },
+      "work": {
+        "state": "working_holiday",
+        "detail": "打工度假主旨是度假及附帶的工作，工作內容、期限與禁止活動依日本准許條件。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "打工度假不是永住資格；欲長期工作需另查在留資格變更及永住要求。"
+      },
+      "summary": "日本打工度假對台灣開放，自 2026-02-01 起符合條件者可終身申請兩次、各最長一年；以交流協會受理公告為準。",
+      "facts": [
+        [
+          "台灣參加次數",
+          "終身兩次（各最長一年）"
+        ],
+        [
+          "規則生效",
+          "2026-02-01"
+        ],
+        [
+          "永久居留",
+          "不因打工度假而自動取得"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "日本外務省：Working Holiday",
+          "url": "https://www.mofa.go.jp/j_info/visit/w_holiday/"
+        }
+      ],
+      "effectiveOn": "2026-02-01",
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "participations",
+        "pr_separation"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:wh_417": {
+      "priority": 34,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "澳洲內政部明列臺灣一般護照（不含官方／外交護照）適用 417，申請時年齡 18–30。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "資格存在不等於保證現在可獲核准；以澳洲 417 正式申請頁與個別條件為準。"
+      },
+      "work": {
+        "state": "working_holiday",
+        "detail": "可依 417 規定短期工作；同一雇主、工作類型或續簽另有限制。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "417 本身不是澳洲永久居留。"
+      },
+      "summary": "台灣一般護照適用澳洲 Working Holiday subclass 417，申請時 18–30 歲；不是 subclass 462。",
+      "facts": [
+        [
+          "簽證類別",
+          "Subclass 417"
+        ],
+        [
+          "年齡",
+          "申請時 18–30 歲"
+        ],
+        [
+          "護照",
+          "排除外交及公務護照"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "澳洲內政部：417 eligibility",
+          "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "age",
+        "work_category"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "tw:taiwan_wh": {
+      "priority": 25,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "紐西蘭移民局要求臺灣護照、臺灣戶籍證明與年齡 18–30 歲。"
+      },
+      "window": {
+        "state": "season_closed",
+        "detail": "紐西蘭移民局明示台灣 Working Holiday 2026 年度已關閉，可關注次年度公告。",
+        "period": "2026"
+      },
+      "work": {
+        "state": "working_holiday",
+        "detail": "最多 12 個月；任何同一雇主最多工作 3 個月、不得從事永久職位。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "打工度假本身不是 Resident Visa 或 Permanent Resident Visa。"
+      },
+      "summary": "台灣護照加戶籍證明可評估紐西蘭 Working Holiday，2026 年已關閉；同一雇主最多工作三個月。",
+      "facts": [
+        [
+          "2026 狀態",
+          "已關閉"
+        ],
+        [
+          "年齡",
+          "18–30 歲"
+        ],
+        [
+          "資金",
+          "至少 NZD 4,200"
+        ],
+        [
+          "工作限制",
+          "同一雇主最多 3 個月"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "紐西蘭移民局：Taiwan WH",
+          "url": "https://www.immigration.govt.nz/visas/taiwan-working-holiday-visa/"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "2026_window",
+        "work_restriction",
+        "funds"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit"
+    },
+    "eu:czechia-digital-nomad-program": {
+      "priority": 62,
+      "passport": {
+        "state": "confirmed_for_taiwan",
+        "detail": "捷克工貿部 Digital Nomad Program 官方名單明確列有 Taiwan；仍須符合 IT／行銷與僱傭或自由業條件。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "官方計畫列為實施中；不等於個別簽證／長期居留申請會自動獲批。需向捷克主管機關確認當期受理條件。"
+      },
+      "work": {
+        "state": "foreign_remote_restricted",
+        "detail": "適用高資格 IT／行銷遠距工作者與符合條件的自由業者；國外雇主員工須確認遠距條款及公司規模等條件。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "Digital Nomad Program 是加速特定申請的計畫，不等於獨立的永久居留簽證。"
+      },
+      "summary": "捷克官方 Digital Nomad Program 明確包含台灣，針對符合規定的 IT／行銷遠距工作者及自由業者；不是一般開放式工作簽證。",
+      "facts": [
+        [
+          "台灣國籍／地區資格",
+          "官方適用名單包含 Taiwan"
+        ],
+        [
+          "目標對象",
+          "高資格 IT／行銷專業人士"
+        ],
+        [
+          "僱傭條件",
+          "國外雇主員工須符合公司規模與遠距條款等要求"
+        ],
+        [
+          "計畫性質",
+          "非自動取得長期居留／永居"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "捷克工貿部：Digital Nomad Program",
+          "url": "https://mpo.gov.cz/en/foreign-trade/economic-migration/programs-and-projects/digital-nomad-program--275799/"
+        },
+        {
+          "title": "捷克工貿部：經濟移民計畫總覽",
+          "url": "https://mpo.gov.cz/en/foreign-trade/economic-migration/economic-migration-and-government-programs--239491/"
+        }
+      ],
+      "reviewedFields": [
+        "taiwan_eligibility",
+        "target_occupation",
+        "visa_not_permanent"
+      ],
+      "note": "台灣符合國籍條件，仍非任意遠距工作即有資格。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "確認臺灣在官方適用清單",
+          "核對 IT／行銷、工作形式與公司／自由業條件"
+        ],
+        [
+          "準備工作合約與相關證明",
+          "依捷克工貿部說明"
+        ],
+        [
+          "申請適用簽證或居留",
+          "計畫資格不是直接入境或永久居留許可"
+        ]
+      ]
+    },
+    "eu:germany-eu-blue-card": {
+      "priority": 85,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "德國 EU Blue Card 面向符合資格的第三國專業人士；臺灣籍申請者仍須依學歷／IT 經驗、合格雇主 offer 等條件個案審核。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "非 IEC 類年度抽籤；申請可行性取決於具體 offer、簽證預約與官方門檻。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "需有至少六個月的德國合格就業 offer，符合工作職責、薪資及其他規範。"
+      },
+      "settlement": {
+        "state": "conditional_settlement",
+        "detail": "持 EU Blue Card 符合德語、年金與其他條件者，可於 B1 德語 21 個月或 A1 德語 27 個月申請 Settlement Permit，並非自動取得。"
+      },
+      "summary": "德國 EU Blue Card：2026 一般年薪至少 €50,700，緊缺等合資格情況可適用 €45,934.20；持卡者另依條件申請永居。",
+      "threshold": "2026 年薪 €50,700／合資格降低門檻 €45,934.20",
+      "facts": [
+        [
+          "一般年薪門檻（2026）",
+          "€50,700（稅前）"
+        ],
+        [
+          "特定降低門檻（2026）",
+          "€45,934.20，須符合職業等條件"
+        ],
+        [
+          "雇主",
+          "須有至少 6 個月合格聘僱 offer"
+        ],
+        [
+          "永久居留",
+          "B1 德語通常可 21 個月申請；A1 27 個月（另有條件）"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "Make it in Germany：EU Blue Card",
+          "url": "https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card"
+        },
+        {
+          "title": "Make it in Germany：Settlement permit",
+          "url": "https://www.make-it-in-germany.com/en/visa-residence/living-permanently/settlement-permit"
+        }
+      ],
+      "reviewedFields": [
+        "target_group",
+        "2026_salary",
+        "offer",
+        "conditional_pr"
+      ],
+      "note": "薪資門檻會按年度調整；IT 無正式學位有例外路徑，但須符合特定經驗條件。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得合格德國雇主工作 offer",
+          "確認合約至少六個月"
+        ],
+        [
+          "核對學歷或 IT 經驗與薪資門檻",
+          "標準與降低門檻不能混用"
+        ],
+        [
+          "依官方程序申請簽證及藍卡",
+          "確認文件與主管機關"
+        ],
+        [
+          "合法工作並維持相關保險與年金紀錄",
+          "核對換雇主時的義務"
+        ],
+        [
+          "符合語言與年限後另申請永居",
+          "21／27 個月僅為可能申請門檻"
+        ]
+      ]
+    },
+    "eu:ireland-critical-skills-employment-permit": {
+      "priority": 84,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "愛爾蘭 Critical Skills Employment Permit 是符合條件的非歐盟／EEA 工作許可路線；實際資格依職業、學位與報酬判定。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "以官方 Employment Permits Online 和當期核發規則為準；需要合格工作機會。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "須有符合職位與報酬標準的愛爾蘭雇主職缺與工作許可。"
+      },
+      "settlement": {
+        "state": "status_upgrade_not_pr",
+        "detail": "符合條件者在開始合格工作約 21 個月後可能申請 Stamp 4；這是可更新的居留與工作權狀態，並非永久居留或入籍。"
+      },
+      "summary": "愛爾蘭 Critical Skills：特定清單職業的 2026 年薪門檻 €40,904（通常需相關學位）；達標工作約 21 個月可評估 Stamp 4，並非 PR。",
+      "threshold": "特定清單職業年薪 €40,904 起（依條件）",
+      "facts": [
+        [
+          "清單職業門檻",
+          "€40,904／年，通常需相關學位"
+        ],
+        [
+          "近 12 月取得資格者",
+          "特定情形可適用 €36,848"
+        ],
+        [
+          "其他合格職類",
+          "部分年薪超過 €68,911 可評估"
+        ],
+        [
+          "Stamp 4",
+          "符合條件、開始工作約 21 個月後可申請，非永居"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "愛爾蘭 DETE：Critical Skills Employment Permit",
+          "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/"
+        },
+        {
+          "title": "愛爾蘭移民局：Stamp 4 升級",
+          "url": "https://www.irishimmigration.ie/registering-your-immigration-permission/how-to-renew-your-current-permission/information-on-stamp-4-upgrades/"
+        },
+        {
+          "title": "愛爾蘭 Critical Skills Occupations List",
+          "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/employment-permit-eligibility/highly-skilled-eligible-occupations-list/critical%20skills%20occupations%20list.html"
+        }
+      ],
+      "reviewedFields": [
+        "salary",
+        "occupation",
+        "sponsor",
+        "stamp4_not_pr"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得合格雇主與職業 offer",
+          "核對 Critical Skills Occupations List"
+        ],
+        [
+          "查當期薪資與學位／經驗條件",
+          "不同職類門檻不同"
+        ],
+        [
+          "按官方工作許可程序申請",
+          "核對開工前申請及其他文件"
+        ],
+        [
+          "依許可開始合格工作",
+          "合法居留與稅務紀錄"
+        ],
+        [
+          "條件滿足後評估 Stamp 4",
+          "21 個月是可能升級資格，不等於永久居留"
+        ]
+      ]
+    },
+    "eu:netherlands-highly-skilled-migrant": {
+      "priority": 82,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "荷蘭高技術移民供符合資格的海外受雇人員申請；必須由 IND 認可擔保雇主提出申請，非個人無 offer 開放移民。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "薪資標準按年度公告，工作及許可申請受認可雇主、合約與官方審查影響。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "必須由 IND 認可擔保雇主申請；雇主變動另有申報與薪資規則。"
+      },
+      "settlement": {
+        "state": "conditional_settlement",
+        "detail": "符合長期合法居留及其他條件後可能申請永久居留；不是持有 HSM 工作居留即自動取得。"
+      },
+      "summary": "荷蘭 Highly Skilled Migrant：2026 年未滿 30 歲月薪門檻 €4,357；30 歲以上 €5,942，須 IND 認可雇主申請。",
+      "threshold": "2026 月薪 €4,357（未滿 30）／€5,942（30+）",
+      "facts": [
+        [
+          "未滿 30 歲（2026）",
+          "月薪 €4,357（不含假期津貼）"
+        ],
+        [
+          "30 歲以上（2026）",
+          "月薪 €5,942（不含假期津貼）"
+        ],
+        [
+          "特定降低薪資資格",
+          "月薪 €3,122（僅合格情況）"
+        ],
+        [
+          "雇主",
+          "須 IND 認可擔保人"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "荷蘭 IND：Highly skilled migrant",
+          "url": "https://ind.nl/en/residence-permits/work/highly-skilled-migrant"
+        },
+        {
+          "title": "荷蘭 IND：2026 薪資門檻",
+          "url": "https://ind.nl/en/required-amounts-income-requirements"
+        }
+      ],
+      "reviewedFields": [
+        "sponsor",
+        "2026_salary",
+        "work_rights",
+        "conditional_pr"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得 IND 認可擔保雇主聘用",
+          "先查官方 sponsor 名冊"
+        ],
+        [
+          "按年齡及例外資格核對薪資",
+          "2026 金額不含假期津貼"
+        ],
+        [
+          "由認可雇主申請適用許可",
+          "依 IND 及居留文件規定"
+        ],
+        [
+          "合法就業與維持身分",
+          "換雇主須留意門檻與告知"
+        ],
+        [
+          "符合長居條件後另提出申請",
+          "HSM 居留不是永久居留"
+        ]
+      ]
+    },
+    "eu:netherlands-eu-blue-card": {
+      "priority": 79,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "荷蘭 EU Blue Card 面向非 EU／EEA／瑞士的符合條件專業人士；臺灣可依一般第三國規則審查。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "依雇主、合格工作與當期門檻辦理，非年度抽籤。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "合約至少 6 個月，需高等教育或符合特定年資的專業經驗；雇主不必是 IND 認可擔保人。"
+      },
+      "settlement": {
+        "state": "conditional_settlement",
+        "detail": "符合長期居留規則者可另外申請；特定 EU Blue Card 流動年資另有規定。"
+      },
+      "summary": "荷蘭 EU Blue Card：2026 月薪 €5,942，特殊降低門檻 €4,754；雇主不必是 IND 認可擔保人，與 HSM 制度不同。",
+      "threshold": "2026 月薪 €5,942／降低標準 €4,754",
+      "facts": [
+        [
+          "2026 一般門檻",
+          "€5,942／月（不含假期津貼）"
+        ],
+        [
+          "2026 合格降低門檻",
+          "€4,754／月"
+        ],
+        [
+          "雇主認可擔保資格",
+          "Blue Card 不要求 IND recognized sponsor"
+        ],
+        [
+          "工作合約",
+          "至少 6 個月"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "荷蘭 IND：European Blue Card",
+          "url": "https://ind.nl/en/residence-permits/work/european-blue-card-residence-permit"
+        },
+        {
+          "title": "荷蘭 IND：薪資門檻",
+          "url": "https://ind.nl/en/required-amounts-income-requirements"
+        }
+      ],
+      "reviewedFields": [
+        "2026_salary",
+        "qualification",
+        "work",
+        "settlement"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得符合學歷或專業年資的工作 offer",
+          "合約至少六個月"
+        ],
+        [
+          "核對 2026 EU Blue Card 薪資門檻",
+          "視是否符合降低門檻"
+        ],
+        [
+          "由雇主或依 IND 規定申請",
+          "不要求認可擔保人，但仍須合格雇主"
+        ],
+        [
+          "取得居留後依規則就業",
+          "另外評估長期居民資格"
+        ]
+      ]
+    },
+    "global:ca-ee": {
+      "priority": 75,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "Express Entry 不只針對某一國護照；實際適用需先滿足 FSW、CEC 或 FST 任一類別的規定。"
+      },
+      "window": {
+        "state": "invitation_based",
+        "detail": "有邀請輪次（ITA）與分數／類別排名；能建立檔案不代表必定獲邀。"
+      },
+      "work": {
+        "state": "not_a_work_permit",
+        "detail": "Express Entry 本身是移民申請管理系統，不是工作許可；想先在加拿大工作需另有合法工作身分。"
+      },
+      "settlement": {
+        "state": "direct_residence_application",
+        "detail": "獲邀後符合資格並通過完整審查，才可能取得加拿大 PR；不是工作一年就自動核發。"
+      },
+      "summary": "加拿大 Express Entry 管理 CEC／FSW／FST 等永久居留申請。必須先符合至少一個計畫資格，再依邀請輪次獲得 ITA；無法保證錄取。",
+      "facts": [
+        [
+          "資格入口",
+          "CEC／FSW／FST，需符合至少一項"
+        ],
+        [
+          "邀請",
+          "CRS／類別輪次，獲邀不保證核准"
+        ],
+        [
+          "工作權",
+          "EE 檔案不是工簽"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "IRCC：Express Entry",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+        },
+        {
+          "title": "IRCC：Canadian Experience Class",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        }
+      ],
+      "reviewedFields": [
+        "program_type",
+        "work_not_permit",
+        "pr_process"
+      ],
+      "note": "CEC 的遠距工作須實際人在加拿大且替加拿大雇主工作；一般全職在學實習／自雇不計入。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "確認符合 CEC／FSW／FST 之一",
+          "依類別準備規定的語言、學歷與工作證明"
+        ],
+        [
+          "建立 Express Entry 檔案",
+          "符合建檔資格不代表獲邀"
+        ],
+        [
+          "留意官方邀請輪次與 CRS",
+          "等待 ITA"
+        ],
+        [
+          "獲邀後依法遞交完整 PR 申請",
+          "通過審查才可能取得永久居民身分"
+        ]
+      ]
+    },
+    "global:ca-pnp": {
+      "priority": 70,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "省提名依各省類別、雇主、資格和省內定居意圖審查，與臺灣護照沒有直接的一體化名額。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "各省開放類別、配額與邀請時間不相同，必須查目標省份。"
+      },
+      "work": {
+        "state": "not_a_work_permit",
+        "detail": "獲省提名不是通用工簽，工作身分需另行合法維持。"
+      },
+      "settlement": {
+        "state": "direct_residence_application",
+        "detail": "省提名需接續聯邦永久居留審查；Express Entry-aligned 提名可能增加 CRS 600 分，非 EE 類別不能一概加分。"
+      },
+      "summary": "加拿大 PNP 依各省資格與邀請政策運作；EE-aligned 省提名可增加 CRS 600 分，但省提名並非自動拿 PR。",
+      "facts": [
+        [
+          "600 分",
+          "適用於符合條件的 EE-aligned 省提名"
+        ],
+        [
+          "永久居留",
+          "省提名後仍須通過聯邦審查"
+        ],
+        [
+          "工作許可",
+          "省提名本身不是開放式工簽"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "IRCC：Provincial nominees",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html"
+        },
+        {
+          "title": "IRCC：Express Entry PNP",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry.html"
+        }
+      ],
+      "reviewedFields": [
+        "pnp_process",
+        "600_crs_scope",
+        "work_rights"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "選擇省分與實際符合的提名類別",
+          "核對當期名額、雇主與定居要求"
+        ],
+        [
+          "依省規則申請提名",
+          "部分為 EE-aligned、部分不是"
+        ],
+        [
+          "如為 EE-aligned 且符合條件",
+          "省提名可提供 CRS 600 分"
+        ],
+        [
+          "依聯邦程序申請 PR",
+          "仍需符合聯邦審查與可入境規定"
+        ]
+      ]
+    },
+    "global:ca-suv": {
+      "priority": 20,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "非以臺灣護照為限定對象，但申請方案目前已暫停，不能視為開放。"
+      },
+      "window": {
+        "state": "paused",
+        "detail": "新申請已暫停。特定持 2025 commitment certificate 的申請期限為 2026-06-30，現在不能當成一般開放的新申請途徑。"
+      },
+      "work": {
+        "state": "not_a_work_permit",
+        "detail": "SUV 本身是 PR 創業類計畫；另有適用於既有申請人的個別工簽安排。"
+      },
+      "settlement": {
+        "state": "direct_residence_application",
+        "detail": "符合例外或既有申請條件並通過審查才可能取得 PR。"
+      },
+      "summary": "加拿大 Start-up Visa 目前為暫停受理新申請；2025 commitment certificate 的截止日已過，不能用作現在的一般新申請方案。",
+      "facts": [
+        [
+          "官方狀態",
+          "Paused"
+        ],
+        [
+          "歷史期限",
+          "特定 2025 commitment certificate 須於 2026-06-30 前申請"
+        ],
+        [
+          "一般新申請",
+          "暫停"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "IRCC：Start-up Visa Status: Paused",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html"
+        }
+      ],
+      "reviewedFields": [
+        "2026_program_status"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "先確認官方是否恢復受理新申請",
+          "目前為 Paused"
+        ],
+        [
+          "如屬歷史既有案件",
+          "依 IRCC 官方例外與續簽規則處理"
+        ],
+        [
+          "不能把本方案當成一般可開放新申請路線",
+          "勿預付未確認的中介或投資費"
+        ]
+      ]
+    },
+    "global:us-eb1a-niw": {
+      "priority": 72,
+      "passport": {
+        "state": "chargeability_matters",
+        "detail": "美國職業移民排期通常依出生地／chargeability（有特定例外），不能單純使用臺灣或中國大陸護照決定排期。"
+      },
+      "window": {
+        "state": "priority_date_based",
+        "detail": "2026 年 11 月 Visa Bulletin 已發布，為即將生效的月份。不同 EB 分類、出生地與 Final Action／Dates for Filing 不可互換。"
+      },
+      "work": {
+        "state": "not_a_work_permit",
+        "detail": "EB-1A／EB-2 NIW 的 I-140 申請本身不授權在美工作；另需適用工作身分。"
+      },
+      "settlement": {
+        "state": "direct_residence_application",
+        "detail": "若 I-140 獲准且排期、I-485 或領館程序完成，才可能取得綠卡。"
+      },
+      "summary": "美國 EB-1A／EB-2 NIW 可在符合資格時自行申請 I-140；職業移民排期通常依出生地／法定 chargeability 判定，不是看護照。",
+      "facts": [
+        [
+          "2026-11 EB-2 Final Action 一般地區",
+          "2025-04-01"
+        ],
+        [
+          "2026-11 EB-2 Final Action 中國大陸出生",
+          "2021-10-01"
+        ],
+        [
+          "2026-11 EB-1 一般地區",
+          "Current"
+        ],
+        [
+          "提醒",
+          "上述為 2026-11 預告排期；實際申請時查當月公告"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "美國國務院：2026 年 11 月 Visa Bulletin",
+          "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2027/visa-bulletin-for-november-2026.html"
+        },
+        {
+          "title": "美國國務院：Visa Bulletin 索引",
+          "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+        }
+      ],
+      "reviewedFields": [
+        "chargeability",
+        "upcoming_2026_11_visa_bulletin",
+        "not_work_permit"
+      ],
+      "note": "交叉歸屬與特殊出生地規則需依 USCIS／DOS 實務核對；不能僅依台灣護照假定適用一般地區排期。",
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "依 EB-1A／EB-2 NIW 標準評估資格與證據",
+          "兩種法律類別與門檻不同"
+        ],
+        [
+          "依規定準備並提交 I-140",
+          "可能符合自行請願條件"
+        ],
+        [
+          "按出生地等法定歸屬查看月度 Visa Bulletin",
+          "分別看 Final Action 與 Dates for Filing"
+        ],
+        [
+          "排期與其他條件符合時",
+          "按規定申請 I-485 或境外領館移民簽證"
+        ]
+      ]
+    },
+    "global:au-482": {
+      "priority": 78,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "澳洲雇主擔保 Skills in Demand 482 對符合資格海外技術人員提供途徑；臺灣申請者仍需有合格 sponsor、職位及語言等條件。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "依雇主 nominated position 與簽證審查，不是打工度假的年度名額。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "原則上只能為核准雇主或相關實體從事被提名職業；不得視為通用開放工簽。"
+      },
+      "settlement": {
+        "state": "separate_application",
+        "detail": "部分 482 持有人可能另行符合 186 雇主提名永久居留，但 482 不自動轉 186／PR。"
+      },
+      "summary": "澳洲 Skills in Demand subclass 482：需要核准 sponsor 與合格職位；2026/07 起 Core Skills Income Threshold 為 AUD 79,423。",
+      "threshold": "2026/07–2027/06 Core Skills：AUD 79,423／年",
+      "facts": [
+        [
+          "Core Skills 薪資下限",
+          "AUD 79,423／年（2026-07-01 至 2027-06-30）"
+        ],
+        [
+          "雇主",
+          "必須有合格 sponsor 與 nomination"
+        ],
+        [
+          "相關經驗",
+          "通常需至少 12 個月相關經驗"
+        ],
+        [
+          "PR",
+          "符合條件可另評估 186，非自動轉換"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "澳洲內政部：Subclass 482",
+          "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"
+        },
+        {
+          "title": "澳洲內政部：2026 薪資門檻",
+          "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/salary-requirements"
+        },
+        {
+          "title": "澳洲內政部：雇主擔保 482/186",
+          "url": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/learn-about-sponsoring/visa-options"
+        }
+      ],
+      "effectiveOn": "2026-07-01",
+      "reviewedFields": [
+        "2026_income_threshold",
+        "sponsor",
+        "work_conditions",
+        "pr_not_automatic"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得澳洲核准 sponsor 的合格工作",
+          "職位需符合 nominated position"
+        ],
+        [
+          "核對當年度薪資及工作經驗",
+          "Core Skills 下限不是所有職類唯一門檻"
+        ],
+        [
+          "由雇主提出 nomination 並按規定申請 482",
+          "準備英語與職業證明"
+        ],
+        [
+          "依核准職業與雇主條件工作",
+          "維持合法身分"
+        ],
+        [
+          "如符合條件另行評估 subclass 186",
+          "482 不自動核發 PR"
+        ]
+      ]
+    },
+    "global:nz-smc": {
+      "priority": 76,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "紐西蘭 SMC 對符合資格的海外工作者開放，但必須符合核准雇主工作、職類、英語、年齡等條件。"
+      },
+      "window": {
+        "state": "invitation_based",
+        "detail": "需要提交 EOI、接受邀請並通過 Resident Visa 審核，不能只看到六分就認為自動取得。"
+      },
+      "work": {
+        "state": "residence_if_granted",
+        "detail": "獲 Resident Visa 後有居住與工作權；申請前需要符合雇主與資格條件，不代表 EOI 使你有工作許可。"
+      },
+      "settlement": {
+        "state": "resident_visa",
+        "detail": "SMC 核准後為 Resident Visa（可居留工作），不是直接自動取得 Permanent Resident Visa；後續另有資格。"
+      },
+      "summary": "紐西蘭 SMC 目前有三種路徑：6 分積分、技術工作經驗、技工／技術人員；均需符合就業與其他官方規則。",
+      "facts": [
+        [
+          "共通要求",
+          "55 歲以下，合格 Accredited Employer 工作或 offer、英文等"
+        ],
+        [
+          "路徑一",
+          "積分制：需 6 分"
+        ],
+        [
+          "路徑二",
+          "技術工作經驗：通常總計至少 5 年且新西蘭合格經驗至少 2 年"
+        ],
+        [
+          "路徑三",
+          "符合要求的技工／技術人員路線"
+        ],
+        [
+          "核准身分",
+          "Resident Visa，非直接 Permanent Resident Visa"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "紐西蘭移民局：SMC Resident Visa",
+          "url": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/"
+        },
+        {
+          "title": "紐西蘭移民局：三種 SMC 路徑",
+          "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/"
+        }
+      ],
+      "reviewedFields": [
+        "three_pathways",
+        "employer",
+        "residence_not_pr"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得符合規定的 accredited employer 工作或 offer",
+          "核對薪資與英文等資格"
+        ],
+        [
+          "判斷適用三種 SMC 途徑的哪一種",
+          "六分、工作經驗、技工／技術人員"
+        ],
+        [
+          "依法提交 EOI",
+          "並非提交就保證受邀"
+        ],
+        [
+          "獲邀後備妥文件並申請 Resident Visa",
+          "獲准才有相應居留權"
+        ],
+        [
+          "另外研究 Permanent Resident Visa 的取得條件",
+          "Resident Visa 不等同永久居民簽證"
+        ]
+      ]
+    },
+    "extra:uk-skilled-worker": {
+      "priority": 74,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "英國 Skilled Worker 申請資格依合格 UK sponsor、職業代碼、薪資及其他條件決定；非只看台灣護照或學位。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "需有獲 Home Office 核准的雇主與 Certificate of Sponsorship，申請可行性依實際職位及簽證規則。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "工作原則上須符合被核准職位與 sponsorship 條件，換工作等應遵照 UKVI 規則。"
+      },
+      "settlement": {
+        "state": "conditional_settlement",
+        "detail": "日後可能符合 settlement，但實際年限／規範會變動；不得保證持簽證滿固定年數即獲永久身分。"
+      },
+      "summary": "英國 Skilled Worker：2026 一般年薪至少 £41,700 或職業 going rate（取較高者），部分情況適用例外與不同標準。",
+      "threshold": "一般 £41,700／年或職業 going rate，取較高者",
+      "facts": [
+        [
+          "雇主",
+          "須 Home Office approved sponsor"
+        ],
+        [
+          "一般年薪門檻",
+          "£41,700／年或職業 going rate 較高者"
+        ],
+        [
+          "職業",
+          "需符合可申請職類、SOC code"
+        ],
+        [
+          "例外",
+          "特定轉簽、醫護、教育等另有標準"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "GOV.UK：Skilled Worker 職位與薪資",
+          "url": "https://www.gov.uk/skilled-worker-visa/your-job"
+        },
+        {
+          "title": "GOV.UK：Skilled Worker Overview",
+          "url": "https://www.gov.uk/skilled-worker-visa"
+        }
+      ],
+      "reviewedFields": [
+        "2026_salary",
+        "sponsor",
+        "job_codes",
+        "pr_uncertainty"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得合格雇主與核准的職位",
+          "核對 SOC 職業代碼與 going rate"
+        ],
+        [
+          "確認薪資與例外條件",
+          "一般 £41,700 或職業 going rate 較高者"
+        ],
+        [
+          "雇主提供 Certificate of Sponsorship",
+          "依 GOV.UK 規定申請"
+        ],
+        [
+          "合法工作並留意換工作規則",
+          "定居條件須在申請當下重新核對"
+        ]
+      ]
+    },
+    "extra:uk-hpi": {
+      "priority": 45,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "HPI 依畢業學校與取得學位日期等條件判定，不是只要擁有任何名校學歷就符合。"
+      },
+      "window": {
+        "state": "quota_and_check",
+        "detail": "有年度申請上限；學校名單按畢業時間之年度清單核對，實際可否受理以 GOV.UK 為準。"
+      },
+      "work": {
+        "state": "open_with_conditions",
+        "detail": "符合 HPI 許可可在英國從事允許的工作，不需要先取得雇主 offer。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "HPI 最長一般 2 年（博士 3 年），不能續簽；HPI 停留期間不計入依該途徑申請定居年限，但可能另轉符合條件的簽證。"
+      },
+      "summary": "英國 HPI 不需要先有雇主 offer，但必須在近五年取得指定年度合格大學學位；不能續簽，HPI 時間不直接計入定居資格。",
+      "facts": [
+        [
+          "學歷",
+          "近五年合格大學的合格學位（依授予年份清單）"
+        ],
+        [
+          "雇主 offer",
+          "不需要"
+        ],
+        [
+          "期限",
+          "一般 2 年、博士 3 年"
+        ],
+        [
+          "續簽／定居",
+          "不能續簽；HPI 期間不直接計入 Settlement"
+        ]
+      ],
+      "sources": [
+        {
+          "title": "GOV.UK：HPI Eligibility",
+          "url": "https://www.gov.uk/high-potential-individual-visa/eligibility"
+        },
+        {
+          "title": "GOV.UK：HPI Overview",
+          "url": "https://www.gov.uk/high-potential-individual-visa"
+        }
+      ],
+      "reviewedFields": [
+        "degree_eligibility",
+        "annual_quota",
+        "work_without_offer",
+        "pr_restriction"
+      ],
+      "checkedAt": "2026-10-30",
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "確認畢業學校與學位授予年度的官方名單",
+          "近五年、非英國合格學校"
+        ],
+        [
+          "依規定辦理學歷認證",
+          "Ecctis 與英語／資金要求"
+        ],
+        [
+          "檢查當期年度名額並申請",
+          "不必預先有雇主 offer"
+        ],
+        [
+          "在許可到期前評估轉簽",
+          "HPI 不可續簽且其居留期間不直接計入 Settlement"
+        ]
+      ]
+    }
+  }
+}

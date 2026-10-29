@@ -4,6 +4,10 @@
 >
 > [返回臺灣專區](README.md) ｜ [原版加拿大資料](../global/canada.md)
 
+## ⚠️ 2026 申請季已結束
+
+加拿大 IRCC [官方首頁](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html) 明確公告：**2026 年 IEC 候選人池已關閉**。已收到 Invitation to Apply（ITA）者仍可依核發規定及期限遞交工作許可；未收到邀請者的 profile 將被移出候選池，可待 **2027 候選池重新開放**時重建 profile。**目前不應把 IEC 標示為仍有 2026 可抽邀名額**；下一季開放日期尚待政府公布。
+
 ## 1. 臺灣可參與的 IEC 類別
 
 加拿大 IRCC [資格表](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table) 將臺灣列在 **18–35 歲**的參與者中，類別包括：
@@ -31,10 +35,11 @@ IRCC [Recognized Organization（RO）官方頁](https://www.canada.ca/en/immigra
 
 ## 4. 官方查核連結
 
+- [2026 IEC 候選池關閉狀態（IRCC）](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html)
 - [IEC 臺灣資格與參與類別](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table)
 - [IEC 官方入口](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html)
 - [RO 額外參與與名單](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/recognized-organizations.html)
 - [CEC 正式資格](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html)
 - [Express Entry 邀請輪次](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html)
 
-**已核對**：IEC 臺灣適用性、RO 官方文字、CEC 核心條件。**未核對**：各 RO 個別契約和特定申請季是否仍有名額。
+**已核對**：IEC 臺灣適用性、**2026 候選池已關閉**、RO 官方文字、CEC 核心條件。**未核對**：各 RO 個別契約與 **2027 開放日期**。移民身份不自動取得。
