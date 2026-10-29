@@ -50,17 +50,36 @@ jobs:
           import assert from 'node:assert/strict';
           const p='dist/data/catalog.json';
           const data=JSON.parse(fs.readFileSync(p,'utf8'));
-          assert.equal(data.schemaVersion,1);
+          assert.equal(data.schemaVersion,2);
           assert.equal(data.counts.countries,49);
           assert.equal(data.counts.routes,150);
-          assert.equal(data.counts.taiwanChecked,9);
+          assert.equal(data.counts.taiwanChecked,10);
+          assert.equal(data.counts.officialFieldReviews,22);
+          assert.equal(data.counts.nonAudited,128);
+          const checked=data.routes.filter(r=>r.audit?.checkedAt);
+          assert.equal(checked.length,22);
+          assert.equal(data.routes.find(r=>r.id==='eu:czechia-digital-nomad-program').verification,'official_checked');
+          for(const id of ['tw:iec_wh','tw:iec_yp','tw:iec_coop']){
+            const r=data.routes.find(x=>x.id===id);
+            assert.equal(r.status,'closed_window');
+            assert.equal(r.audit.window.state,'season_closed');
+          }
+          const eb2=data.routes.find(r=>r.id==='global:us-eb1a-niw');
+          assert.ok(eb2.audit.passport.detail.includes('出生地'));
+          assert.ok(eb2.facts.some(f=>f[1]==='2025-04-01'));
+          assert.equal(data.routes.find(r=>r.id==='eu:ireland-critical-skills-employment-permit').audit.settlement.state,'status_upgrade_not_pr');
           assert.equal(data.routes.filter(r=>r.origin==='europe').length,99);
           assert.equal(data.routes.filter(r=>r.origin==='extra').length,11);
           assert.equal(data.routes.filter(r=>r.origin==='global').length,31);
           assert.equal(data.routes.filter(r=>r.origin==='taiwan').length,9);
           for(const file of ['dist/index.html','dist/app.js','dist/styles.css','dist/_headers','dist/favicon.svg'])
             assert.ok(fs.existsSync(file),file);
-          console.log('Output validated',data.counts);
+          const html=fs.readFileSync('dist/index.html','utf8');
+          const js=fs.readFileSync('dist/app.js','utf8');
+          assert.ok(html.includes('id="evidenceFilter"'));
+          assert.ok(html.includes('id="statAudit"'));
+          assert.ok(js.includes('台灣資格／申請窗口／工作權／PR'));
+          console.log('Output and scoped policy reviews validated',data.counts);
           JS
       - name: HTTP preview smoke test
         run: |
