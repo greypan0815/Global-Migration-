@@ -290,11 +290,10 @@
     const ver=kind(r),sources=r.sources||[];
     let facts=[['路線類型',r.typeLabel],['資料狀態',ver.text],['申請／開放狀態',status(r)]];
     if(r.age)facts.push(['年齡條件（摘要）',r.age]);
-    if(r.threshold)facts.push(['上游門檻概要',r.threshold]);
-    if(r.pr)facts.push(['永居／長期居留',r.pr]);
-    else facts.push(['永居／長期居留','尚待依各國官方規則確認']);
-    if(r.family)facts.push(['家屬',r.family]);
-    if(r.verified)facts.push([r.origin==='taiwan'?'台灣資料核查日期':'上游資料核查日期',r.verified]);
+    if(r.threshold)facts.push([r.audit?'官方已核查門檻摘要':'原版門檻（尚待核對）',r.threshold]);
+    facts.push(['永居／長期居留',r.audit?.settlement?.detail||r.pr||'尚待依各國官方規則確認']);
+    if(r.family&&!r.audit)facts.push(['原版家屬資料（未核查）',r.family]);
+    if(r.verified&&!r.audit)facts.push(['上游資料日期（非本輪官方核查）',r.verified]);
     facts.push(...(r.facts||[]).slice(0,16));
     const stepHtml=(r.steps||[]).length?
       '<ol class="step-list">'+r.steps.map(([name,note],i)=>'<li><span class="step-index">'+(i+1)+
@@ -303,15 +302,30 @@
       '<div class="source-list">'+sources.map(s=>'<a class="source-link" href="'+esc(url(s.url))+
       '" target="_blank" rel="noopener noreferrer"><span>'+esc(s.title)+'</span><span>↗</span></a>').join('')+'</div>'
       :'<p class="detail-intro">本筆未附單獨來源，請透過原始路線頁查證，勿直接依此申請。</p>';
-    const warning=r.verification==='official_checked'
-      ?'「臺灣資格已核對」只表示原始官方來源列出台灣為適用對象，並非保證符合全部資格、當前有名額或可取得 PR。'
-      :'此為原專案資料；台灣護照的資格、戶籍要求、受理狀態與居留權利尚未逐條核對。';
+    const warning=r.audit?.checkedAt
+      ?'以下僅列出已由官方資訊核對的特定欄位，並不代表所有法規、個案資格、名額或 PR 都已獲得認定。申請前務必重新確認官方公告。'
+      :'本筆屬原版參考資料，可能以中國大陸護照為基準；台灣護照資格、窗口、工作權與永居條件尚未逐條核對，請勿直接據此申請。';
+    const auditSection=r.audit
+      ?block('台灣資格／申請窗口／工作權／PR：四項分開核對',
+        '<div class="audit-grid">'+[
+          ['國籍與申請對象',r.audit.passport.detail],
+          ['申請窗口及當期狀態',r.audit.window.detail],
+          ['合法工作權利',r.audit.work.detail],
+          ['取得 PR／永居的條件',r.audit.settlement.detail]
+        ].map(([title,body])=>'<div class="audit-row"><strong>'+esc(title)+'</strong><p>'+esc(body)+'</p></div>').join('')+'</div>'+
+        '<p class="audit-foot">核查日期：'+esc(r.audit.checkedAt)+
+        (r.audit.effectiveOn?' · 生效日：'+esc(r.audit.effectiveOn):'')+
+        ' · 本輪核查範圍：'+esc((r.audit.reviewedFields||[]).map(x=>scopeLabel[x]||x.replaceAll('_',' ')).join('、'))+
+        (r.audit.note?' · 額外提醒：'+esc(r.audit.note):'')+'</p>')
+      :block('尚待逐條核對的部分',
+        '<p class="detail-intro">'+esc(reviewLabel(r))+'。請勿因有來源連結或上游寫「開放」就推定臺灣護照一定適用。必須自行向政府核對護照、工作權、受理窗口、PR 與申請材料。</p>');
     return '<div class="dialog-body"><div class="detail-country"><span>'+esc(r.flag)+'</span>'+
       esc(r.country)+' · '+esc(r.typeLabel)+'</div>'+
       '<h2 class="detail-heading">'+esc(r.name)+'</h2>'+
       '<p class="detail-intro">'+esc(r.summary)+'</p>'+
       '<div class="detail-tags">'+pill(ver.text)+pill(status(r))+pill(sourceLabel(r))+'</div>'+
       '<div class="detail-callout">'+esc(warning)+'</div>'+
+      auditSection+
       block('核心條件與概要',factsHtml(facts))+
       block('申請與轉換流程（摘要）',stepHtml)+
       block('較適合的情況',(r.fit||[]).length?bulletHtml(r.fit):'')+
