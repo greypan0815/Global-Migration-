@@ -14,6 +14,13 @@
 
 專案採原生 HTML／CSS／JavaScript，透過 `npm run build` 產生 `dist/`。Cloudflare Pages 設定：**Build command = `npm run build`、Output = `dist`、Production branch = `main`**。初次部署仍需在你的 Cloudflare 帳號授權連接此 GitHub Repository。
 
+## 官方政策核查更新（2026-10-30）
+
+- 150 條路線可搜尋，但僅 **22 條優先路線的部分欄位**經官方資料比對；其餘 128 條仍需審查。
+- **10 條**路線有臺灣適用國籍／地區的官方明確依據（含捷克 Digital Nomad Program），不代表其它 140 條不適用。
+- 2026 加拿大 IEC 已關閉候選人池；英國 YMS 及紐西蘭台灣打工度假已結束當年度窗口。
+- [軟體工程師直接海外就業指南](docs/taiwan/tech-employment.md) ｜ [官方核查方式及證據品質](docs/taiwan/audit-methodology.md)
+
 ## 從這裡開始
 
 - **[🇹🇼 臺灣護照專區：官方已確認的路線、限制、後續 PR 方向](docs/taiwan/README.md)**
@@ -27,8 +34,9 @@
 
 | 國家 | 路線 | 需要知道的差異 |
 |---|---|---|
-| 加拿大 | IEC | 臺灣可申請 WH、YP、International Co-op；PR 要另行符合移民條件 |
+| 加拿大 | IEC | 臺灣可申請 WH、YP、International Co-op，**2026 申請季已關閉**；PR 要另行符合移民條件 |
 | 美國 | E-1／E-2 | 美國官方條約名單包含臺灣；不是一般求職／永久居留簽證 |
+| 捷克 | Digital Nomad Program | 台灣列入官方適用名單，但有 IT／行銷專業、僱傭或自由業等資格限制 |
 | 英國 | YMS | 臺灣需 ballot；2026 年官方已公告抽選結束 |
 | 日本 | Working Holiday | 臺灣可參加，自 2026 年 2 月起可終身兩次（各 1 年） |
 | 澳洲 | subclass 417 | 臺灣一般護照列入 417，不能與 462 混淆 |
