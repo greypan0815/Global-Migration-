@@ -181,7 +181,7 @@
   function featureCard(r){
     return '<article class="feature-card">'+
       '<div class="feature-top"><span class="feature-flag">'+esc(r.flag)+' '+esc(r.country)+
-      '</span><span class="feature-kicker">臺灣資格已核對</span></div>'+
+      '</span><span class="feature-kicker">部分官方欄位已核對</span></div>'+
       '<h3>'+esc(r.name)+'</h3><p>'+esc(r.summary)+'</p>'+
       '<div class="feature-footer"><span>'+esc(status(r))+'</span>'+
       '<button type="button" data-action="open" data-id="'+esc(r.id)+'">查看路線 ↗</button></div></article>';
@@ -203,6 +203,7 @@
       '<span>'+esc(r.country)+'</span></div><span class="card-type">'+esc(r.typeLabel)+'</span></div>'+
       '<div class="card-status '+esc(statusClass)+'"><span class="dot"></span>'+
       esc(ver.text)+' · '+esc(status(r))+'</div>'+
+      '<p class="card-evidence">'+esc(reviewLabel(r))+(r.audit?.checkedAt?' · '+esc(r.audit.checkedAt):'')+'</p>'+
       '<h3 class="card-title">'+esc(r.name)+'</h3>'+
       '<p class="card-summary">'+esc(r.summary)+'</p>'+
       '<div class="card-facts"><div class="card-fact"><small>資格／門檻（摘要）</small><strong title="'+esc(rate)+'">'+esc(rate)+'</strong></div>'+
@@ -222,8 +223,9 @@
     if(state.type!=='all')hints.push(catalog.types.find(x=>x.id===state.type)?.label||state.type);
     if(state.passport==='tw'&&state.verify==='checked')hints.push('臺灣資格已核對');
     if(state.passport==='tw'&&state.verify==='needs_review')hints.push('臺灣待核對');
-    if(state.pr!=='all')hints.push(state.pr==='upstream_possible'?'上游標示可能永居':state.pr==='needs_review'?'永居未核對':'上游標示不通永居');
-    if(state.status!=='all')hints.push('狀態：'+(status({status:state.status})));
+    if(state.pr!=='all')hints.push(({reviewed_possible:'有官方核查的居留方向',not_direct:'非直接永居',upstream_possible:'上游可能永居',needs_review:'永居尚待核對'})[state.pr]||state.pr);
+    if(state.evidence!=='all')hints.push('證據：'+state.evidence);
+    if(state.status!=='all')hints.push('篩選狀態：'+state.status);
     if(state.savedOnly)hints.push('我的收藏');
     $('activeFilters').innerHTML=hints.map(s=>'<span class="active-filter-chip">'+esc(s)+'</span>').join('');
   }
@@ -345,9 +347,13 @@
     const tableRows=[
       ['目的國',r=>r.flag+' '+r.country],['簽證類型',r=>r.typeLabel],
       ['護照適用性',r=>kind(r).text],['申請狀態',status],
-      ['門檻／條件',r=>r.threshold||r.age||'請查官方'],['永久居留方向',r=>r.pr||prLabel(r)],
-      ['家屬資訊',r=>r.family||'尚待核對'],['資料核查日期',r=>r.verified||'未標示'],
-      ['資料來源',r=>r.sources.length+' 筆可追溯連結']
+      ['門檻／條件',r=>r.threshold||r.age||'請查官方'],
+      ['工作權',r=>r.audit?.work?.detail||'尚未逐條核對'],
+      ['永久居留方向',r=>r.audit?.settlement?.detail||prLabel(r)],
+      ['家屬資訊',r=>r.audit?'本輪未核對':r.family||'尚待核對'],
+      ['官方核查日期',r=>r.audit?.checkedAt||'未逐條核對'],
+      ['來源可信度',reviewLabel],
+      ['來源連結',r=>r.sources.length+' 筆（不代表全部查證）']
     ];
     $('compareDialogContent').innerHTML='<div class="comparison-body"><h2>並排比較你的選擇</h2>'+
       '<p>僅供研究對照。上游「可能永居」並不代表符合申請資格，實際門檻請以官方當期公告為準。</p>'+
@@ -376,6 +382,7 @@
     $('verifyFilter').addEventListener('change',event=>{state.verify=event.target.value;state.visible=12;renderResults();});
     $('prFilter').addEventListener('change',event=>{state.pr=event.target.value;state.visible=12;renderResults();});
     $('statusFilter').addEventListener('change',event=>{state.status=event.target.value;state.visible=12;renderResults();});
+    $('evidenceFilter').addEventListener('change',event=>{state.evidence=event.target.value;state.visible=12;renderResults();});
     $('savedOnly').addEventListener('change',event=>{state.savedOnly=event.target.checked;state.visible=12;renderResults();});
     $('sortBy').addEventListener('change',event=>{state.sort=event.target.value;renderResults();});
     $('typeChoices').addEventListener('click',e=>{
@@ -431,7 +438,7 @@
     for(const [key,value] of [
       ['heroCountryCount',counts.countries],['heroRouteCount',counts.routes],
       ['statCountries',counts.countries],['statRoutes',counts.routes],
-      ['statTaiwan',counts.taiwanChecked]
+      ['statTaiwan',counts.taiwanChecked],['statAudit',counts.officialFieldReviews]
     ])$(key).textContent=value.toLocaleString('zh-TW');
   }
   async function start(){
