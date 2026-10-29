@@ -22,9 +22,18 @@
     favorites:new Set(Array.isArray(savedIds)?savedIds:[]),compare:[]
   };
   let catalog=null,lookup=new Map(),toastHandle;
+  // Static builds cannot promise ongoing government-policy freshness.
+  // After 90 days, visibly downgrade the confidence shown to readers.
+  const reviewAgeDays=r=>{
+    if(!r.audit?.checkedAt)return null;
+    const time=Date.parse(r.audit.checkedAt+'T00:00:00Z');
+    return Number.isFinite(time)?Math.floor((Date.now()-time)/86400000):null;
+  };
+  const needsRecheck=r=>reviewAgeDays(r)!==null&&reviewAgeDays(r)>90;
   const kind=r=>{
     if(state.passport==='cn')return {text:'原版中國大陸視角',cls:''};
     const v=r.audit?.passport?.state;
+    if(v&&needsRecheck(r))return {text:'曾官方核對 · 逾 90 天須複查',cls:''};
     if(v==='confirmed_for_taiwan')return {text:'臺灣列入適用對象',cls:'checked'};
     if(v==='third_country_route')return {text:'一般第三國制度（個案申請）',cls:'checked'};
     if(v==='chargeability_matters')return {text:'出生地排期（非護照）',cls:'checked'};
@@ -53,7 +62,7 @@
   const prLabel=r=>r.audit?.settlement?.state
     ?(prLabels[r.audit.settlement.state]||'依官方規則評估')
     :({upstream_possible:'僅上游標示可能',not_indicated:'上游標示不通永居',needs_review:'尚待個別核對'}[r.prKind]||'尚待確認');
-  const reviewLabel=r=>({
+  const reviewLabel=r=>needsRecheck(r)?'曾官方核對 · 已逾 90 天，務必重新核實':({
     reviewed_specific_fields:'部分欄位經官方核對',
     official_links_not_audited:'有官方連結、未逐條核對',
     generic_country_portal:'僅國家官方入口',
@@ -303,7 +312,9 @@
       '" target="_blank" rel="noopener noreferrer"><span>'+esc(s.title)+'</span><span>↗</span></a>').join('')+'</div>'
       :'<p class="detail-intro">本筆未附單獨來源，請透過原始路線頁查證，勿直接依此申請。</p>';
     const warning=r.audit?.checkedAt
-      ?'以下僅列出已由官方資訊核對的特定欄位，並不代表所有法規、個案資格、名額或 PR 都已獲得認定。申請前務必重新確認官方公告。'
+      ?(needsRecheck(r)
+        ?'此筆官方欄位核查已超過 90 天；申請季、薪資及法律可能已變更。請先打開政府頁面重新確認，不能依這份歷史資料直接申請。'
+        :'以下僅列出已由官方資訊核對的特定欄位，並不代表所有法規、個案資格、名額或 PR 都已獲得認定。申請前務必重新確認官方公告。')
       :'本筆屬原版參考資料，可能以中國大陸護照為基準；台灣護照資格、窗口、工作權與永居條件尚未逐條核對，請勿直接據此申請。';
     const auditSection=r.audit
       ?block('台灣資格／申請窗口／工作權／PR：四項分開核對',
@@ -454,6 +465,9 @@
       ['statCountries',counts.countries],['statRoutes',counts.routes],
       ['statTaiwan',counts.taiwanChecked],['statAudit',counts.officialFieldReviews]
     ])$(key).textContent=value.toLocaleString('zh-TW');
+    $('buildVersion').textContent='官方欄位核查截至 '+catalog.verificationCutoff+
+      (catalog.sourceCommit?' · 部署來源 '+catalog.sourceCommit.slice(0,8):'')+
+      ' · 靜態資料不會即時跟隨政府公告';
   }
   async function start(){
     attachEvents();
