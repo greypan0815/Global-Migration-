@@ -626,7 +626,21 @@
       ],
       "note": "台灣符合國籍條件，仍非任意遠距工作即有資格。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "確認臺灣在官方適用清單",
+          "核對 IT／行銷、工作形式與公司／自由業條件"
+        ],
+        [
+          "準備工作合約與相關證明",
+          "依捷克工貿部說明"
+        ],
+        [
+          "申請適用簽證或居留",
+          "計畫資格不是直接入境或永久居留許可"
+        ]
+      ]
     },
     "eu:germany-eu-blue-card": {
       "priority": 85,
@@ -684,7 +698,29 @@
       ],
       "note": "薪資門檻會按年度調整；IT 無正式學位有例外路徑，但須符合特定經驗條件。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得合格德國雇主工作 offer",
+          "確認合約至少六個月"
+        ],
+        [
+          "核對學歷或 IT 經驗與薪資門檻",
+          "標準與降低門檻不能混用"
+        ],
+        [
+          "依官方程序申請簽證及藍卡",
+          "確認文件與主管機關"
+        ],
+        [
+          "合法工作並維持相關保險與年金紀錄",
+          "核對換雇主時的義務"
+        ],
+        [
+          "符合語言與年限後另申請永居",
+          "21／27 個月僅為可能申請門檻"
+        ]
+      ]
     },
     "eu:ireland-critical-skills-employment-permit": {
       "priority": 84,
@@ -745,7 +781,29 @@
         "stamp4_not_pr"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得合格雇主與職業 offer",
+          "核對 Critical Skills Occupations List"
+        ],
+        [
+          "查當期薪資與學位／經驗條件",
+          "不同職類門檻不同"
+        ],
+        [
+          "按官方工作許可程序申請",
+          "核對開工前申請及其他文件"
+        ],
+        [
+          "依許可開始合格工作",
+          "合法居留與稅務紀錄"
+        ],
+        [
+          "條件滿足後評估 Stamp 4",
+          "21 個月是可能升級資格，不等於永久居留"
+        ]
+      ]
     },
     "eu:netherlands-highly-skilled-migrant": {
       "priority": 82,
@@ -802,7 +860,29 @@
         "conditional_pr"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得 IND 認可擔保雇主聘用",
+          "先查官方 sponsor 名冊"
+        ],
+        [
+          "按年齡及例外資格核對薪資",
+          "2026 金額不含假期津貼"
+        ],
+        [
+          "由認可雇主申請適用許可",
+          "依 IND 及居留文件規定"
+        ],
+        [
+          "合法就業與維持身分",
+          "換雇主須留意門檻與告知"
+        ],
+        [
+          "符合長居條件後另提出申請",
+          "HSM 居留不是永久居留"
+        ]
+      ]
     },
     "eu:netherlands-eu-blue-card": {
       "priority": 79,
@@ -859,7 +939,25 @@
         "settlement"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得符合學歷或專業年資的工作 offer",
+          "合約至少六個月"
+        ],
+        [
+          "核對 2026 EU Blue Card 薪資門檻",
+          "視是否符合降低門檻"
+        ],
+        [
+          "由雇主或依 IND 規定申請",
+          "不要求認可擔保人，但仍須合格雇主"
+        ],
+        [
+          "取得居留後依規則就業",
+          "另外評估長期居民資格"
+        ]
+      ]
     },
     "global:ca-ee": {
       "priority": 75,
@@ -911,7 +1009,25 @@
       ],
       "note": "CEC 的遠距工作須實際人在加拿大且替加拿大雇主工作；一般全職在學實習／自雇不計入。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "確認符合 CEC／FSW／FST 之一",
+          "依類別準備規定的語言、學歷與工作證明"
+        ],
+        [
+          "建立 Express Entry 檔案",
+          "符合建檔資格不代表獲邀"
+        ],
+        [
+          "留意官方邀請輪次與 CRS",
+          "等待 ITA"
+        ],
+        [
+          "獲邀後依法遞交完整 PR 申請",
+          "通過審查才可能取得永久居民身分"
+        ]
+      ]
     },
     "global:ca-pnp": {
       "priority": 70,
@@ -962,7 +1078,25 @@
         "work_rights"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "選擇省分與實際符合的提名類別",
+          "核對當期名額、雇主與定居要求"
+        ],
+        [
+          "依省規則申請提名",
+          "部分為 EE-aligned、部分不是"
+        ],
+        [
+          "如為 EE-aligned 且符合條件",
+          "省提名可提供 CRS 600 分"
+        ],
+        [
+          "依聯邦程序申請 PR",
+          "仍需符合聯邦審查與可入境規定"
+        ]
+      ]
     },
     "global:ca-suv": {
       "priority": 20,
@@ -1007,7 +1141,21 @@
         "2026_program_status"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "先確認官方是否恢復受理新申請",
+          "目前為 Paused"
+        ],
+        [
+          "如屬歷史既有案件",
+          "依 IRCC 官方例外與續簽規則處理"
+        ],
+        [
+          "不能把本方案當成一般可開放新申請路線",
+          "勿預付未確認的中介或投資費"
+        ]
+      ]
     },
     "global:us-eb1a-niw": {
       "priority": 72,
@@ -1027,7 +1175,7 @@
         "state": "direct_residence_application",
         "detail": "若 I-140 獲准且排期、I-485 或領館程序完成，才可能取得綠卡。"
       },
-      "summary": "美國 EB-1A／EB-2 NIW 可在符合高門檻時自行申請 I-140；排期按法定 chargeability 判定，不是看護照。",
+      "summary": "美國 EB-1A／EB-2 NIW 可在符合資格時自行申請 I-140；職業移民排期通常依出生地／法定 chargeability 判定，不是看護照。",
       "facts": [
         [
           "2026-11 EB-2 Final Action 一般地區",
@@ -1063,7 +1211,25 @@
       ],
       "note": "交叉歸屬與特殊出生地規則需依 USCIS／DOS 實務核對；不能僅依台灣護照假定適用一般地區排期。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "依 EB-1A／EB-2 NIW 標準評估資格與證據",
+          "兩種法律類別與門檻不同"
+        ],
+        [
+          "依規定準備並提交 I-140",
+          "可能符合自行請願條件"
+        ],
+        [
+          "按出生地等法定歸屬查看月度 Visa Bulletin",
+          "分別看 Final Action 與 Dates for Filing"
+        ],
+        [
+          "排期與其他條件符合時",
+          "按規定申請 I-485 或境外領館移民簽證"
+        ]
+      ]
     },
     "global:au-482": {
       "priority": 78,
@@ -1125,7 +1291,29 @@
         "pr_not_automatic"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得澳洲核准 sponsor 的合格工作",
+          "職位需符合 nominated position"
+        ],
+        [
+          "核對當年度薪資及工作經驗",
+          "Core Skills 下限不是所有職類唯一門檻"
+        ],
+        [
+          "由雇主提出 nomination 並按規定申請 482",
+          "準備英語與職業證明"
+        ],
+        [
+          "依核准職業與雇主條件工作",
+          "維持合法身分"
+        ],
+        [
+          "如符合條件另行評估 subclass 186",
+          "482 不自動核發 PR"
+        ]
+      ]
     },
     "global:nz-smc": {
       "priority": 76,
@@ -1184,7 +1372,29 @@
         "residence_not_pr"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得符合規定的 accredited employer 工作或 offer",
+          "核對薪資與英文等資格"
+        ],
+        [
+          "判斷適用三種 SMC 途徑的哪一種",
+          "六分、工作經驗、技工／技術人員"
+        ],
+        [
+          "依法提交 EOI",
+          "並非提交就保證受邀"
+        ],
+        [
+          "獲邀後備妥文件並申請 Resident Visa",
+          "獲准才有相應居留權"
+        ],
+        [
+          "另外研究 Permanent Resident Visa 的取得條件",
+          "Resident Visa 不等同永久居民簽證"
+        ]
+      ]
     },
     "extra:uk-skilled-worker": {
       "priority": 74,
@@ -1241,7 +1451,25 @@
         "pr_uncertainty"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "取得合格雇主與核准的職位",
+          "核對 SOC 職業代碼與 going rate"
+        ],
+        [
+          "確認薪資與例外條件",
+          "一般 £41,700 或職業 going rate 較高者"
+        ],
+        [
+          "雇主提供 Certificate of Sponsorship",
+          "依 GOV.UK 規定申請"
+        ],
+        [
+          "合法工作並留意換工作規則",
+          "定居條件須在申請當下重新核對"
+        ]
+      ]
     },
     "extra:uk-hpi": {
       "priority": 45,
@@ -1297,7 +1525,25 @@
         "pr_restriction"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "steps": [
+        [
+          "確認畢業學校與學位授予年度的官方名單",
+          "近五年、非英國合格學校"
+        ],
+        [
+          "依規定辦理學歷認證",
+          "Ecctis 與英語／資金要求"
+        ],
+        [
+          "檢查當期年度名額並申請",
+          "不必預先有雇主 offer"
+        ],
+        [
+          "在許可到期前評估轉簽",
+          "HPI 不可續簽且其居留期間不直接計入 Settlement"
+        ]
+      ]
     }
   }
 }
