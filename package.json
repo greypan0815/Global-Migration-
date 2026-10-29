@@ -1,0 +1,12 @@
+{
+  "name": "global-migration-pages",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Zero-dependency Cloudflare Pages site generated from RUN migration data",
+  "scripts": {
+    "build": "node scripts/build_site.mjs",
+    "test": "node --test tests/site-build.test.mjs",
+    "dev": "npm run build && node scripts/serve_site.mjs"
+  }
+}

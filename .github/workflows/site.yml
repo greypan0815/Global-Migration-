@@ -1,0 +1,64 @@
+name: Validate Cloudflare Pages site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "scripts/build_site.mjs"
+      - "scripts/serve_site.mjs"
+      - "tests/**"
+      - "package.json"
+      - "data/**"
+      - "src/**"
+      - ".github/workflows/site.yml"
+  pull_request:
+    paths:
+      - "web/**"
+      - "scripts/build_site.mjs"
+      - "scripts/serve_site.mjs"
+      - "tests/**"
+      - "package.json"
+      - "data/**"
+      - "src/**"
+      - ".github/workflows/site.yml"
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Test & build static catalogue
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit tests
+        run: npm test
+      - name: Build Cloudflare Pages output
+        run: npm run build
+      - name: Assert generated artefacts and full catalogue
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const p='dist/data/catalog.json';
+          const data=JSON.parse(fs.readFileSync(p,'utf8'));
+          assert.equal(data.schemaVersion,1);
+          assert.equal(data.counts.countries,49);
+          assert.equal(data.counts.routes,150);
+          assert.equal(data.counts.taiwanChecked,9);
+          assert.equal(data.routes.filter(r=>r.origin==='europe').length,99);
+          assert.equal(data.routes.filter(r=>r.origin==='extra').length,11);
+          assert.equal(data.routes.filter(r=>r.origin==='global').length,31);
+          assert.equal(data.routes.filter(r=>r.origin==='taiwan').length,9);
+          for(const file of ['dist/index.html','dist/app.js','dist/styles.css','dist/_headers','dist/favicon.svg'])
+            assert.ok(fs.existsSync(file),file);
+          console.log('Output validated',data.counts);
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-pages-static-site
+          path: dist/
+          retention-days: 7

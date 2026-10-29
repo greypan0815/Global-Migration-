@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1425">
+  <meta name="description" content="Global Migration 全球移居路線地圖：以台灣護照為入口，探索約 150 條技術就業、打工度假、數位遊牧、創業與移民路線。附官方來源及資格核查狀態。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Global Migration — 找到你的下一站">
+  <meta property="og:description" content="一站比較全球移居路線、台灣護照適用性、申請條件與官方來源。">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+  <title>Global Migration — 你的全球移居路線地圖</title>
+</head>
+<body>
+  <a class="skip-link" href="#explore">跳到路線探索</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Global Migration 回到首頁">
+          <span class="brand-symbol" aria-hidden="true">✳</span>
+          <span class="brand-words"><strong>GLOBAL MIGRATION</strong><small>全球移居路線地圖</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="主要導覽">
+          <a href="#explore">探索路線</a>
+          <a href="#countries">國家地圖</a>
+          <a href="#method">資料說明</a>
+        </nav>
+        <div class="header-actions">
+          <div class="passport-switch" role="group" aria-label="選擇護照身分">
+            <button type="button" class="passport-option active" data-passport="tw" aria-pressed="true">🇹🇼 臺灣</button>
+            <button type="button" class="passport-option" data-passport="cn" aria-pressed="false">🇨🇳 中國大陸</button>
+          </div>
+          <a class="github-link" href="https://github.com/greypan0815/Global-Migration-" target="_blank" rel="noopener noreferrer" aria-label="前往 GitHub Repository">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.75-.24.75-.53v-2.04c-3.05.66-3.7-1.3-3.7-1.3-.5-1.26-1.22-1.59-1.22-1.59-1-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.99 1.69 2.6 1.2 3.24.91.1-.71.39-1.2.7-1.48-2.44-.28-5-1.22-5-5.47 0-1.2.43-2.2 1.14-2.98-.12-.28-.5-1.42.11-2.95 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.1c.94 0 1.88.13 2.76.38 2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.71.78 1.14 1.78 1.14 2.98 0 4.26-2.56 5.18-5 5.46.4.34.75 1 .75 2.02V22c0 .3.2.64.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero container" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse-dot"></span> YOUR GLOBAL NEXT CHAPTER <span class="eyebrow-sep">/</span> 2026 EDITION</div>
+          <h1 id="heroTitle">世界很大，<br><span>你的下一站</span><br>可以更清楚。</h1>
+          <p class="hero-lead">不只看哪個國家容易去，而是從護照資格、工作機會到長期居留，把每一條移居路線攤開比較。</p>
+          <div class="hero-cta">
+            <a class="button button-primary" href="#explore"><span>探索所有路線</span><span aria-hidden="true">↗</span></a>
+            <button class="button button-outline" id="heroVerified" type="button">先看臺灣已核對 <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="hero-footnote"><span aria-hidden="true">✦</span> 免費使用 · 無需登入 · 內容附來源 · 台灣護照優先</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+          <div class="art-caption">THE PATH TO YOUR NEXT CHAPTER</div>
+          <div class="journey-card journey-one"><span class="journey-num">01</span><span><small>ENTRY</small><strong>確認國籍與簽證資格</strong></span><span class="journey-icon">↗</span></div>
+          <div class="journey-connector"><i></i><i></i><i></i></div>
+          <div class="journey-card journey-two"><span class="journey-num">02</span><span><small>WORK</small><strong>合法工作 · 累積經驗</strong></span><span class="journey-icon">↗</span></div>
+          <div class="journey-connector"><i></i><i></i><i></i></div>
+          <div class="journey-card journey-three"><span class="journey-num">03</span><span><small>SETTLEMENT</small><strong>長期居留與永久身分</strong></span><span class="journey-icon">✧</span></div>
+          <div class="floating-tag tag-left">COUNTRIES <b id="heroCountryCount">—</b></div>
+          <div class="floating-tag tag-right">PATHWAYS <b id="heroRouteCount">—</b></div>
+          <div class="hero-glow"></div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="stats-strip" aria-label="網站資料統計">
+          <div class="stat"><span class="stat-icon">◈</span><div><strong id="statCountries">—</strong><small>個國家／地區</small></div></div>
+          <div class="stat"><span class="stat-icon">◇</span><div><strong id="statRoutes">—</strong><small>條移居路線</small></div></div>
+          <div class="stat"><span class="stat-icon">✳</span><div><strong id="statTaiwan">—</strong><small>條臺灣資格已核對</small></div></div>
+          <div class="stat"><span class="stat-icon">↗</span><div><strong>100%</strong><small>免費開放資料</small></div></div>
+        </section>
+      </div>
+      <section class="notice-section container" aria-label="重要資料提醒">
+        <div class="notice-strip"><div class="notice-icon">!</div><div><strong id="noticeTitle">先確認你的護照資格</strong><span id="noticeText">臺灣已核對只代表特定簽證的國籍適用性；其他路線尚待核查。原專案以中國大陸護照為基準，不可直接套用。</span></div><a href="#method">了解資料標示 <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <section class="featured-section container" aria-labelledby="featuredTitle">
+        <div class="section-heading"><div><p class="section-kicker">CURATED FOR TAIWAN</p><h2 id="featuredTitle">從這幾條路線開始</h2><p>先認識台灣護照已列入資格的代表性簽證，再延伸研究長期居留。</p></div><a class="section-link" href="#explore">查看完整路線 <span aria-hidden="true">↗</span></a></div>
+        <div id="featuredGrid" class="featured-grid"><div class="loading-state">正在載入臺灣路線資料…</div></div>
+      </section>
+      <section class="explore-section container" id="explore" aria-labelledby="exploreTitle">
+        <div class="section-heading section-heading-explore"><div><p class="section-kicker">EXPLORE YOUR OPTIONS</p><h2 id="exploreTitle">探索所有移居路線</h2><p>依目的國、簽證類型與適用性篩選。每筆資料都有來源、驗證標記與路線詳情。</p></div></div>
+        <div class="explorer">
+          <aside class="filters" id="filtersPanel" aria-label="篩選條件">
+            <div class="filters-title"><h3>篩選條件</h3><button id="resetFilters" type="button">清除</button></div>
+            <div class="filter-block"><label for="countryFilter">目的國</label><select id="countryFilter"><option value="all">全部國家／地區</option></select></div>
+            <div class="filter-block"><span class="filter-label">地區</span><div class="choice-grid" id="regionChoices">
+              <button type="button" class="choice active" data-region="all" aria-pressed="true">全部</button>
+              <button type="button" class="choice" data-region="europe" aria-pressed="false">歐洲</button>
+              <button type="button" class="choice" data-region="global" aria-pressed="false">其他地區</button>
+            </div></div>
+            <div class="filter-block"><span class="filter-label">路線類型</span><div id="typeChoices" class="type-choices"></div></div>
+            <div class="filter-block"><label for="verifyFilter">護照適用性</label>
+              <select id="verifyFilter"><option value="all">不限驗證狀態</option><option value="checked">臺灣資格已核對</option><option value="needs_review">尚待核對</option></select>
+              <p class="field-help">「尚待核對」不等於不符合資格。</p>
+            </div>
+            <div class="filter-block"><label for="prFilter">永久居留方向</label>
+              <select id="prFilter"><option value="all">不限</option><option value="upstream_possible">上游標示可能通往永居</option><option value="needs_review">未明確核對</option><option value="not_indicated">上游標示不通往永居</option></select>
+              <p class="field-help">這是上游初步分類，不保證符合法定條件。</p>
+            </div>
+            <div class="filter-block"><label for="statusFilter">路線／受理狀態</label><select id="statusFilter"><option value="all">全部狀態</option><option value="upstream_open">上游標示開放</option><option value="closed_window">當年度窗口結束</option><option value="closed">上游標示已停止</option><option value="check_window">需查當期受理窗口</option></select></div>
+            <div class="filter-block checkbox-filter"><label><input type="checkbox" id="savedOnly"> <span>只顯示我的收藏</span></label></div>
+          </aside>
+          <div class="explorer-content">
+            <div class="searchbar"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" autocomplete="off" placeholder="搜尋國家、簽證、工作、門檻…" aria-label="搜尋移居路線"><kbd>⌘ K</kbd></div>
+            <div class="result-toolbar"><div class="result-meta"><strong id="resultCount">—</strong> 條符合條件的路線 <span id="activeHint"></span></div><div class="toolbar-actions"><button type="button" id="toggleFilters" class="mobile-filter-button">☷ 篩選</button><select id="sortBy" aria-label="排序"><option value="relevance">推薦排序</option><option value="country">依國家排序</option><option value="name">依名稱排序</option></select></div></div>
+            <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+            <div id="routeGrid" class="route-grid"><div class="loading-state">正在建立路線清單…</div></div>
+            <div id="emptyState" class="empty-state" hidden><span>⌕</span><h3>沒有符合條件的路線</h3><p>試著移除部分篩選，或改用其他關鍵字。</p><button type="button" id="emptyReset" class="button button-outline">重設篩選</button></div>
+            <div class="load-more-wrap"><button type="button" id="loadMore" class="button button-outline" hidden>顯示更多路線 <span aria-hidden="true">↓</span></button></div>
+          </div>
+        </div>
+      </section>
+      <section class="country-section" id="countries" aria-labelledby="countriesTitle">
+        <div class="container">
+          <div class="section-heading"><div><p class="section-kicker">EXPLORE BY DESTINATION</p><h2 id="countriesTitle">從目的地開始探索</h2><p>點選一個國家，快速切換至該國的所有移居路線。</p></div></div>
+          <div id="countryTabs" class="country-tabs" role="group" aria-label="國家地區切換"><button type="button" data-tab="all" class="active" aria-pressed="true">所有地區</button><button type="button" data-tab="europe" aria-pressed="false">歐洲 36 國</button><button type="button" data-tab="global" aria-pressed="false">其他目的地</button></div>
+          <div id="countryGrid" class="country-grid"></div>
+        </div>
+      </section>
+      <section class="method-section container" id="method" aria-labelledby="methodTitle">
+        <div class="section-heading"><div><p class="section-kicker">TRUST THE CONTEXT, NOT JUST A NUMBER</p><h2 id="methodTitle">資料透明，選擇才有意義。</h2><p>不同護照、戶籍和出生地可能改變簽證資格。本站刻意把已核對與待核對資料分開。</p></div></div>
+        <div class="method-grid">
+          <article class="method-card"><span class="method-symbol verified">✓</span><h3>臺灣資格已核對</h3><p>僅表示該類別在官方網站列有臺灣的國籍／地區適用資格，並不代表目前開放或符合全部條件。</p></article>
+          <article class="method-card"><span class="method-symbol unknown">?</span><h3>臺灣資格待核對</h3><p>上游原始資料多以中國大陸護照為基準；待核對不等於不能申請，請自行檢查主管機關的規定。</p></article>
+          <article class="method-card"><span class="method-symbol source">↗</span><h3>回到第一手來源</h3><p>路線卡片附官方與第三方資料連結及上游文件，門檻、有效年限、配額均須以申請當期公告為準。</p></article>
+        </div>
+        <div class="source-foot"><span>資料首次適配：2026-10-30</span><span>無登入 · 無追蹤程式 · 靜態網站</span><a href="https://github.com/greypan0815/Global-Migration-" target="_blank" rel="noopener noreferrer">檢視原始資料與授權 ↗</a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><span class="brand-symbol">✳</span><span><strong>GLOBAL MIGRATION</strong><small>Make the next move intentional.</small></span></div><div class="footer-legal">衍生自 <a href="https://github.com/BryceYuuu/RUN" target="_blank" rel="noopener noreferrer">BryceYuuu/RUN</a> · 文件 CC BY-SA 4.0 · 程式 MIT<br>資訊僅供研究參考，不構成法律、移民或稅務意見。</div><a class="back-top" href="#top">回到頂端 ↑</a></div></footer>
+  </div>
+  <div id="compareTray" class="compare-tray" hidden><div class="container compare-inner"><div class="compare-label"><span>⇄</span><strong>路線比較</strong><small id="compareCount">0/3</small></div><div id="compareSelected" class="compare-selected"></div><div class="compare-actions"><button type="button" class="text-button" id="clearCompare">清除</button><button type="button" class="button button-primary" id="openCompare">開始比較 →</button></div></div></div>
+  <dialog class="route-dialog" id="routeDialog" aria-label="移民路線詳細資訊"><div class="dialog-top"><span>ROUTE DETAILS / 路線詳情</span><button type="button" class="dialog-close" id="closeDetail" aria-label="關閉路線詳情">✕</button></div><div id="routeDialogContent"></div></dialog>
+  <dialog class="compare-dialog" id="compareDialog" aria-label="比較已選移居路線"><div class="dialog-top"><span>PATHWAY COMPARISON / 路線比較</span><button type="button" class="dialog-close" id="closeCompare" aria-label="關閉比較">✕</button></div><div id="compareDialogContent"></div></dialog>
+  <div role="status" id="toast" class="toast" aria-live="polite"></div>
+</body>
+</html>
