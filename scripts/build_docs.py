@@ -340,7 +340,7 @@ def europe_index():
     L = ['<div align="center">', '', '# 🇪🇺 欧洲 36 国', '',
          '每个国家一页：路线速查表 · 关键数字 · 申请流程图 · 材料清单 · 注意事项 · 官方来源', '',
          '[🏠 首页](../../README.md) ｜ [📊 全部路线对比](#compare) ｜ 图例：💻 数字游民 🧑‍💻 技术工作 🚀 创业 🧾 自雇 💰 投资 🛂 入籍 🧩 其他', '',
-         '</div>', '', country_grid(), '', '<a id="compare"></a>', '', '## 📊 全部路线对比', '',
+         '</div>', '', '> [!IMPORTANT]', '> 🇹🇼 **臺灣護照讀者**：歐洲各國路線尚未逐一核查對臺灣護照的適用性；免簽數、文件及生活成本可能以中國大陸為基準。請先閱讀 [臺灣專區](../taiwan/README.md)，並以各國政府網站為準。', '', country_grid(), '', '<a id="compare"></a>', '', '## 📊 全部路线对比', '',
          '| 国家 | 路线 | 类型 | 门槛信号 | 折合 €/月 | 家属 | 永居 | 状态 |', '|---|---|---|---|--:|:-:|:-:|:-:|']
     for p in sorted(progs, key=lambda p: (p['slug'] in CLOSED, ORDER.index(p['route_type']), income_eur(p['threshold']) or 9e9)):
         n, _, f, *_ = META[p['country_slug']]
@@ -483,6 +483,7 @@ def global_page(g, prev_g, next_g):
     L = ['<a id="top"></a>', '', '<div align="center">', '', f'# {g["flag"]} {g["name"]} · {g["en"]}', '', kv, '',
          f'**{g["tagline"]}**', '', nav + ' · [📖 深度解读](#deep)', '', '</div>', '',
          '> [!NOTE]', '> 本篇依据 2026-10 对政府页面和公开资料的检索整理，核查深度低于欧洲篇，递交前请回到官方入口核对。', '',
+         '> [!IMPORTANT]', '> 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。', '',
          ]
     if g['slug'] in GLOBAL_PROFILE:
         col, rent, safe, pp = GLOBAL_PROFILE[g['slug']]
@@ -524,6 +525,7 @@ def global_index():
         rows.append('<tr>' + ''.join(f'<td width="33%" valign="top">{c}</td>' for c in chunk) + '</tr>')
     L = ['<div align="center">', '', '# 🌏 主要移民地区', '', '[🏠 首页](../../README.md) ｜ [🇪🇺 欧洲 36 国](../europe/README.md) ｜ 英国见 [欧洲篇](../europe/united-kingdom.md)', '', '</div>', '',
          '> [!NOTE]', '> 欧洲篇基于 LetsMigrate 逐条对照官方来源的数据；本篇依据 2026-10 的公开检索整理，核查深度较低，许多数字各来源说法不一，递交前务必回到官方入口核对。', '',
+         '> [!IMPORTANT]', '> 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。', '',
          '<table>', *rows, '</table>', '', '## 📊 全部路线', '', '| 目的地 | 路线 | 类型 | 一句话 |', '|---|---|---|---|']
     for g in GLOBAL:
         for r in g['routes']:

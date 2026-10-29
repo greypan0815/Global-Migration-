@@ -9,6 +9,10 @@
 > [!NOTE]
 > 欧洲篇基于 LetsMigrate 逐条对照官方来源的数据；本篇依据 2026-10 的公开检索整理，核查深度较低，许多数字各来源说法不一，递交前务必回到官方入口核对。
 
+> [!IMPORTANT]
+> 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。
+
+
 <table>
 <tr><td width="33%" valign="top"><a href="usa.md"><b>🇺🇸 美国</b></a><br><sub>机会最大，但中国大陆出生的职业移民排期最长</sub><br><sub>绿卡排队：EB-2 中国排到 2021-10</sub><br><sub>入籍：绿卡 5 年</sub><br><sub>双重国籍：允许（中国不认）</sub></td><td width="33%" valign="top"><a href="canada.md"><b>🇨🇦 加拿大</b></a><br><sub>积分制移民标杆；定向抽签为主，法语加分大；联邦创业签证已暂停</sub><br><sub>入籍：5 年内住满 1,095 天</sub><br><sub>双重国籍：允许（中国不认）</sub><br><sub>主通道：Express Entry</sub></td><td width="33%" valign="top"><a href="australia.md"><b>🇦🇺 澳大利亚</b></a><br><sub>189 独立技术移民 + 482 雇主担保 + 858 杰出人才</sub><br><sub>入籍：居住 4 年（永居 1 年）</sub><br><sub>双重国籍：允许（中国不认）</sub><br><sub>482 门槛：AUD 79,423</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="new-zealand.md"><b>🇳🇿 新西兰</b></a><br><sub>SMC 6 分制技术移民；投资移民 NZD 500 万起</sub><br><sub>技术移民：6 分制</sub><br><sub>投资：NZD 500 万起</sub><br><sub>父母：Parent Boost 5 年签</sub></td><td width="33%" valign="top"><a href="japan.md"><b>🇯🇵 日本</b></a><br><sub>高度人才 80 分 1 年永住；经营管理签证涨到 3,000 万日元</sub><br><sub>最快永住：1 年（80 分）</sub><br><sub>双重国籍：❌ 不允许</sub><br><sub>经管签资本：¥30,000,000</sub></td><td width="33%" valign="top"><a href="south-korea.md"><b>🇰🇷 韩国</b></a><br><sub>F-1-D 数字游民签证转正、最长 3 年；Top-Tier 3 年永住</sub><br><sub>数字游民：最长 3 年</sub><br><sub>Top-Tier：3 年永住</sub><br><sub>积分居住：F-2-7</sub></td></tr>

@@ -8,6 +8,9 @@
 
 </div>
 
+> [!IMPORTANT]
+> 🇹🇼 **臺灣護照讀者**：歐洲各國路線尚未逐一核查對臺灣護照的適用性；免簽數、文件及生活成本可能以中國大陸為基準。請先閱讀 [臺灣專區](../taiwan/README.md)，並以各國政府網站為準。
+
 <table>
 <tr><td width="25%" valign="top"><a href="albania.md"><b>🇦🇱 阿尔巴尼亚</b></a><br><sub>Albania · 1 条路线 💻</sub><br><sub>数字游民许可门槛极低（月入约 EUR 330），适合低预算试住</sub></td><td width="25%" valign="top"><a href="andorra.md"><b>🇦🇩 安道尔</b></a><br><sub>Andorra · 1 条路线 💰</sub><br><sub>被动居留 2026 起涨到 EUR 100 万投资 + 配额，门槛很高</sub></td><td width="25%" valign="top"><a href="austria.md"><b>🇦🇹 奥地利</b></a><br><sub>Austria · 3 条路线 🧑‍💻 🧾</sub><br><sub>红白红卡积分制 / 蓝卡 EUR 55,678，21 个月转 Plus 卡</sub></td><td width="25%" valign="top"><a href="belgium.md"><b>🇧🇪 比利时</b></a><br><sub>Belgium · 3 条路线 🧑‍💻 🧾</sub><br><sub>工作许可按大区审批，四个大区门槛各不同</sub></td></tr>
 <tr><td width="25%" valign="top"><a href="bulgaria.md"><b>🇧🇬 保加利亚</b></a><br><sub>Bulgaria · 3 条路线 🚀 🧑‍💻</sub><br><sub>无数字游民签证；蓝卡 + StartUp Visa 证书，税率 10%</sub></td><td width="25%" valign="top"><a href="croatia.md"><b>🇭🇷 克罗地亚</b></a><br><sub>Croatia · 3 条路线 💻 🧑‍💻</sub><br><sub>数字游民最长 18 个月、境外收入免税，但不能续成长期身份</sub></td><td width="25%" valign="top"><a href="cyprus.md"><b>🇨🇾 塞浦路斯</b></a><br><sub>Cyprus · 4 条路线 💰 💻 🧑‍💻</sub><br><sub>30 万欧投资永居约 2 个月获批；数字游民名额 500</sub></td><td width="25%" valign="top"><a href="czechia.md"><b>🇨🇿 捷克</b></a><br><sub>Czechia · 3 条路线 💻 🧑‍💻</sub><br><sub>员工卡门槛低；数字游民计划不含中国大陆护照</sub></td></tr>
