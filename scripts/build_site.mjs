@@ -182,8 +182,53 @@ function taiwanStatus(value) {
   if(value==='2026_closed'||value==='2026_ballots_finished')return 'closed_window';
   return 'check_window';
 }
+
+function sourceGrade(route){
+  // Presence of a link is NOT an independent verification of the route's claims.
+  const sources=route.sources??[];
+  if(route.audit?.checkedAt)return 'reviewed_specific_fields';
+  if(route.origin==='global')return sources.length?'generic_country_portal':'missing_route_source';
+  if(!sources.length)return 'missing_route_source';
+  const govHosts=['canada.ca','gc.ca','gov.uk','gov.au','govt.nz','gov.sg','gov.hk','gov.ie','gov.pt','gov.cz','gov.de','gov.fr','gov.it','gov.pl','gov.se','gov.no','gov.gr','gov.mt','gov.lv','gov.ee','gov.es','gov.hu','gov.si','gov.sk','gov.hr','gov.fi','gov.nl','gov.ch','gov.ae','gov.ro','gov.cy','gov.rs','gov.tr','mofa.go.jp','moj.go.jp','enterprise.gov.ie','mpo.gov.cz','ind.nl','migri.fi','service-public.fr','gesetze-im-internet.de','make-it-in-germany.com','europa.eu','govt.nz','immigration.govt.nz','immi.homeaffairs.gov.au','travel.state.gov','uscis.gov'];
+  const official=sources.some(item=>{try{const hostname=new URL(item.url).hostname.toLowerCase();return govHosts.some(h=>hostname===h||hostname.endsWith('.'+h))||hostname.endsWith('.gov');}catch{return false;}});
+  return official?'official_links_not_audited':'third_party_only';
+}
+function applyReview(route,review){
+  if(!review) {
+    route.audit=null;
+    route.sourceGrade=sourceGrade(route);
+    return;
+  }
+  for(const key of ['passport','window','work','settlement']){
+    if(!review[key]?.state||!review[key]?.detail)throw Error('Incomplete official review '+route.id+' field '+key);
+  }
+  if(!Array.isArray(review.sources)||!review.sources.length)throw Error('Official review without source: '+route.id);
+  route.audit={
+    checkedAt:review.checkedAt||'',
+    effectiveOn:review.effectiveOn||null,
+    reviewedFields:Array.isArray(review.reviewedFields)?review.reviewedFields:[],
+    passport:review.passport,
+    window:review.window,
+    work:review.work,
+    settlement:review.settlement,
+    note:review.note||'',
+    priority:Number.isFinite(review.priority)?review.priority:0
+  };
+  // An official check of selected fields must not imply every old claim is checked.
+  route.sourceGrade='reviewed_specific_fields';
+  route.verification=review.passport.state==='confirmed_for_taiwan'?'official_checked':'needs_review';
+  route.summary=traditional(review.summary||route.summary);
+  if(Object.hasOwn(review,'threshold'))route.threshold=traditional(review.threshold);
+  route.facts=cleanPairs(review.facts);
+  route.steps=cleanPairs(review.steps);
+  route.fit=[];route.unfit=[];route.docs=[];route.tips=[];
+  route.sources=sourcesFrom(review.sources);
+  if(review.window.state==='season_closed')route.status='closed_window';
+  if(review.window.state==='paused')route.status='closed';
+}
+
 export function buildCatalog(input) {
-  const {programmes=[],details={},extras={},global=[],profiles={},taiwan=[]}=input;
+  const {programmes=[],details={},extras={},global=[],profiles={},taiwan=[],policyReviews={}}=input;
   const countries=new Map(),routes=[];
   const register=(slug,fallback)=>{
     if(!countries.has(slug)){
@@ -261,10 +306,16 @@ export function buildCatalog(input) {
       referenceUrl:GITHUB+'/docs/taiwan/'+(t.country_iso==='CA'?'canada-iec.md':'README.md')});
   }
   if(routes.length===0)throw Error('No routes generated');
+  const byId=new Map(routes.map(r=>[r.id,r]));
+  for(const id of Object.keys(policyReviews))if(!byId.has(id))throw Error('Policy review points to missing route: '+id);
+  for(const route of routes)applyReview(route,policyReviews[route.id]);
   const types=Object.entries(TYPE_LABELS).map(([id,label])=>({id,label,count:routes.filter(r=>r.type===id).length})).filter(x=>x.count);
-  return {schemaVersion:1,edition:'Taiwan + Mainland reference',verificationCutoff:'2026-10-30',
+  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-10-30',
+    policyAuditScope:'僅 audit.reviewedFields 欄位有當日官方來源核查；其餘舊資料為上游參考。',
     dataNotice:'原始中國大陸導向資料與臺灣額外官方核對資料分層呈現；非法律意見。',
     counts:{countries:countries.size,routes:routes.length,taiwanChecked:routes.filter(r=>r.verification==='official_checked').length,
+      officialFieldReviews:routes.filter(r=>r.audit?.checkedAt).length,
+      nonAudited:routes.filter(r=>!r.audit?.checkedAt).length,
       europe:routes.filter(r=>r.origin==='europe'||r.origin==='extra').length,global:routes.filter(r=>r.origin==='global').length},
     types,countries:[...countries.values()].sort((a,b)=>a.country.localeCompare(b.country,'zh-Hant')),
     routes};
@@ -283,7 +334,8 @@ export function main(){
     global:loadJson('src/global.json'),
     profiles:loadJson('data/country_profiles.json'),
     details,
-    taiwan:parseCsv(fs.readFileSync(path.join(ROOT,'data/taiwan_applicability.csv'),'utf8'))
+    taiwan:parseCsv(fs.readFileSync(path.join(ROOT,'data/taiwan_applicability.csv'),'utf8')),
+    policyReviews:loadJson('data/policy_reviews.json').routes
   });
   const output=path.join(ROOT,'dist');
   fs.rmSync(output,{recursive:true,force:true});
@@ -292,6 +344,7 @@ export function main(){
     if(!entry.isFile())continue;
     fs.copyFileSync(path.join(ROOT,'web',entry.name),path.join(output,entry.name));
   }
+  catalog.sourceCommit=process.env.CF_PAGES_COMMIT_SHA||process.env.GITHUB_SHA||null;
   fs.writeFileSync(path.join(output,'data/catalog.json'),JSON.stringify(catalog));
   if(!fs.existsSync(path.join(output,'index.html')))throw Error('Missing dist/index.html');
   console.log('Global Migration static build OK:',JSON.stringify(catalog.counts));
