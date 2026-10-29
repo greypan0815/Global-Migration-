@@ -13,11 +13,24 @@
 
 ![数据截至](https://img.shields.io/badge/数据截至-2026--10-57606a)
 ![License](https://img.shields.io/badge/内容-CC%20BY--SA%204.0-lightgrey)
-[![English](https://img.shields.io/badge/README-English-blue)](README.en.md)
+[![English](https://img.shields.io/badge/README-English-blue)](README.en.md)  [繁體中文](README.zh-TW.md)
 
 **[🧭 我该走哪条路](docs/routes/choose-route.md)** ｜ **[🌏 主要移民地区](docs/global/README.md)** ｜ **[🇪🇺 欧洲 36 国](docs/europe/README.md)** ｜ **[📊 路线对比](docs/europe/README.md#compare)** ｜ **[📑 文件准备](docs/practical/china-documents.md)**
 
 </div>
+
+## 🇹🇼 臺灣護照讀者入口（首次適配）
+
+> [!IMPORTANT]
+> 此 Fork 目前**同時服務臺灣與中國大陸護照讀者**。下方原始國家資料、免簽比較、文件準備與「中國護照不適用」段落仍沿用上游**中國大陸護照**視角，**尚未全面驗證臺灣護照**。首次官方核查：2026-10-30。
+
+- **[繁體中文主入口](README.zh-TW.md)** · **[臺灣護照專區與路線表](docs/taiwan/README.md)**
+- [加拿大 IEC（WH／YP／RO 與後續 CEC）](docs/taiwan/canada-iec.md) · [臺灣文件準備](docs/taiwan/documents.md) · [臺灣適用性 CSV](data/taiwan_applicability.csv)
+- **已核對的臺灣特殊路線**：加拿大 IEC、英國 YMS、日本打工度假、澳洲 417、紐西蘭打工度假、美國 E-1／E-2。**國籍適用不代表開放申請、保證獲批或可取得 PR**。
+
+原始內容來源：[BryceYuuu/RUN](https://github.com/BryceYuuu/RUN)。最終資格以各國官方來源為準。
+
+---
 
 > [!CAUTION]
 > 本手册仅供信息参考，**不构成**移民、法律、税务或投资建议。2025–2026 年大量路线关闭或改规则，网上很多旧攻略已经失效——任何决定前请以各国官方页面为准。详见 [免责声明](DISCLAIMER.md)。
@@ -185,7 +198,6 @@
 - 🇨🇾 塞浦路斯投资永居 — 直接，约 2 个月
 - 🇲🇹 马耳他 MPRP — 直接
 - 🇩🇪 德国蓝卡 + B1 德语 — 21 个月
-- 🇦🇹 奥地利红白红卡 Plus — 21 个月
 - 🇯🇵 日本高度人才 80 分 — 1 年
 
 </td>
@@ -221,7 +233,8 @@
 | 🧭 | [我该走哪条路？](docs/routes/choose-route.md) | 四步判断：收入来源 → 目标 → 护照限制 → 自检清单 |
 | 🎓 | [留学 → 工作 → 移民](docs/routes/study-to-work.md) | 欧洲及全球毕业后找工作签证期限对比 |
 | 🏙️ | [生活与身份对比表](docs/europe/README.md#profiles) | 36 国生活成本、工资、个税、护照、入籍年限、双重国籍 |
-| 📑 | [中国申请人文件准备](docs/practical/china-documents.md) | 海牙认证、无犯罪、学历认证、姓名拼音、资金合规 |
+| 📑 | [中国大陆申请人文件准备](docs/practical/china-documents.md) | 中国大陆文件认证、无犯罪、学历认证、资金合规（台湾护照请勿照抄） |
+| 🇹🇼 | [臺灣申請人文件準備](docs/taiwan/documents.md) | 臺灣護照、戶籍、學歷／工作與文件驗證 |
 | 🧾 | [税务居民入门](docs/practical/tax-residency.md) | 居留 ≠ 税务居民；183 天规则；各国特殊税制 |
 | ✅ | [落地前 90 天清单](docs/practical/landing-checklist.md) | 住址登记、居留卡、税号、银行、续签时间点 |
 | 🔗 | [资源导航](docs/resources.md) | 官方门户、类似网站、其他润学项目 |
