@@ -67,8 +67,8 @@
     return r.prKind==='upstream_possible'?'upstream_possible':'needs_review';
   };
   const scopeLabel={
-    taiwan_eligibility:'臺灣國籍資格',2026_window:'2026 申請季',2026_ballot_window:'2026 抽選狀態',
-    2026_program_status:'2026 計畫狀態',2026_salary:'2026 薪資',2026_income_threshold:'2026 薪資',
+    taiwan_eligibility:'臺灣國籍資格','2026_window':'2026 申請季','2026_ballot_window':'2026 抽選狀態',
+    '2026_program_status':'2026 計畫狀態','2026_salary':'2026 薪資','2026_income_threshold':'2026 薪資',
     stamp4_not_pr:'Stamp 4 非 PR',three_pathways:'移民途徑',chargeability:'出生地排期',
     work_rights:'工作權',pr_not_automatic:'非自動 PR',conditional_pr:'永居條件',
     target_occupation:'適用職業',target_group:'申請對象',sponsor:'雇主資格',
