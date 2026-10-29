@@ -34,6 +34,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Static JavaScript syntax check
+        run: |
+          node --check web/app.js
+          node --check scripts/build_site.mjs
+          node --check scripts/serve_site.mjs
       - name: Unit tests
         run: npm test
       - name: Build Cloudflare Pages output
@@ -57,6 +62,18 @@ jobs:
             assert.ok(fs.existsSync(file),file);
           console.log('Output validated',data.counts);
           JS
+      - name: HTTP preview smoke test
+        run: |
+          node scripts/serve_site.mjs > /tmp/gm-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" || true' EXIT
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if curl --fail --silent http://127.0.0.1:4173/ -o /tmp/gm-home.html; then break; fi
+            sleep 1
+          done
+          grep -q 'GLOBAL MIGRATION' /tmp/gm-home.html
+          curl --fail --silent http://127.0.0.1:4173/data/catalog.json |
+            node -e 'let s=""; process.stdin.on("data",c=>s+=c); process.stdin.on("end",()=>{if(JSON.parse(s).counts.routes!==150)process.exit(1);});'
       - uses: actions/upload-artifact@v4
         with:
           name: cloudflare-pages-static-site

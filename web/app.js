@@ -52,7 +52,11 @@
   function setPassport(passport){
     state.passport=passport;
     storeSet('gm:passport:v1',passport);
-    if(passport==='cn'&&state.verify==='checked')state.verify='all';
+    if(passport==='cn'){
+      if(state.verify==='checked')state.verify='all';
+      state.compare=state.compare.filter(id=>!id.startsWith('tw:'));
+    }
+    $('featuredSection').hidden=passport==='cn';
     state.visible=12;
     document.querySelectorAll('[data-passport]').forEach(btn=>{
       const active=btn.dataset.passport===passport;
