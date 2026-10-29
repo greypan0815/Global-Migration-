@@ -6,6 +6,14 @@
 
 > **重要範圍限制**：目前是臺灣適用性**第一版**，不是原有各國移民路線全部重新核對完成。原版國家頁面仍包含以中國大陸護照為基準的免簽數、限制、費用比較與文件流程；未經重新驗證的資料不可直接用來提交臺灣護照申請。
 
+## 🌐 靜態互動網站（Cloudflare Pages）
+
+本 Repository 新增**繁體中文互動網站**：可以搜尋約 150 條路線、按國家／簽證類型／臺灣護照核對狀態篩選，收藏及比較最多三條路線，並直接點開申請流程與來源。
+
+**[Cloudflare Pages 一鍵部署設定與操作教學](docs/DEPLOY-CLOUDFLARE-PAGES.md)**
+
+專案採原生 HTML／CSS／JavaScript，透過 `npm run build` 產生 `dist/`。Cloudflare Pages 設定：**Build command = `npm run build`、Output = `dist`、Production branch = `main`**。初次部署仍需在你的 Cloudflare 帳號授權連接此 GitHub Repository。
+
 ## 從這裡開始
 
 - **[🇹🇼 臺灣護照專區：官方已確認的路線、限制、後續 PR 方向](docs/taiwan/README.md)**

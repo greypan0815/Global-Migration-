@@ -19,6 +19,14 @@
 
 </div>
 
+## 🌐 靜態網站版（Cloudflare Pages）
+
+已加入可搜尋、篩選、收藏、並排比較各國移居路線的繁體中文前端。使用 **`npm run build`** 產生 `dist/`，Cloudflare Pages 以 `main` 為正式分支、`dist` 為輸出目錄。
+
+[📘 Cloudflare Pages 部署教學](docs/DEPLOY-CLOUDFLARE-PAGES.md) ｜ [🇹🇼 繁體中文入口](README.zh-TW.md)
+
+---
+
 ## 🇹🇼 臺灣護照讀者入口（首次適配）
 
 > [!IMPORTANT]

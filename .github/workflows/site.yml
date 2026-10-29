@@ -1,0 +1,81 @@
+name: Validate Cloudflare Pages site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "scripts/build_site.mjs"
+      - "scripts/serve_site.mjs"
+      - "tests/**"
+      - "package.json"
+      - "data/**"
+      - "src/**"
+      - ".github/workflows/site.yml"
+  pull_request:
+    paths:
+      - "web/**"
+      - "scripts/build_site.mjs"
+      - "scripts/serve_site.mjs"
+      - "tests/**"
+      - "package.json"
+      - "data/**"
+      - "src/**"
+      - ".github/workflows/site.yml"
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Test & build static catalogue
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Static JavaScript syntax check
+        run: |
+          node --check web/app.js
+          node --check scripts/build_site.mjs
+          node --check scripts/serve_site.mjs
+      - name: Unit tests
+        run: npm test
+      - name: Build Cloudflare Pages output
+        run: npm run build
+      - name: Assert generated artefacts and full catalogue
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const p='dist/data/catalog.json';
+          const data=JSON.parse(fs.readFileSync(p,'utf8'));
+          assert.equal(data.schemaVersion,1);
+          assert.equal(data.counts.countries,49);
+          assert.equal(data.counts.routes,150);
+          assert.equal(data.counts.taiwanChecked,9);
+          assert.equal(data.routes.filter(r=>r.origin==='europe').length,99);
+          assert.equal(data.routes.filter(r=>r.origin==='extra').length,11);
+          assert.equal(data.routes.filter(r=>r.origin==='global').length,31);
+          assert.equal(data.routes.filter(r=>r.origin==='taiwan').length,9);
+          for(const file of ['dist/index.html','dist/app.js','dist/styles.css','dist/_headers','dist/favicon.svg'])
+            assert.ok(fs.existsSync(file),file);
+          console.log('Output validated',data.counts);
+          JS
+      - name: HTTP preview smoke test
+        run: |
+          node scripts/serve_site.mjs > /tmp/gm-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" || true' EXIT
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if curl --fail --silent http://127.0.0.1:4173/ -o /tmp/gm-home.html; then break; fi
+            sleep 1
+          done
+          grep -q 'GLOBAL MIGRATION' /tmp/gm-home.html
+          curl --fail --silent http://127.0.0.1:4173/data/catalog.json |
+            node -e 'let s=""; process.stdin.on("data",c=>s+=c); process.stdin.on("end",()=>{if(JSON.parse(s).counts.routes!==150)process.exit(1);});'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-pages-static-site
+          path: dist/
+          retention-days: 7
