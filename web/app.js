@@ -18,30 +18,62 @@
   const state = {
     passport:storeGet('gm:passport:v1','tw')==='cn'?'cn':'tw',
     query:'',country:'all',region:'all',type:'all',verify:'all',pr:'all',
-    status:'all',savedOnly:false,sort:'relevance',visible:12,countryTab:'all',
+    status:'all',evidence:'all',savedOnly:false,sort:'relevance',visible:12,countryTab:'all',
     favorites:new Set(Array.isArray(savedIds)?savedIds:[]),compare:[]
   };
   let catalog=null,lookup=new Map(),toastHandle;
-  const kind = r => {
-    if(state.passport==='tw'){
-      return r.verification==='official_checked'
-        ?{text:'臺灣資格已核對',cls:'checked'}
-        :{text:'臺灣資格待核對',cls:''};
-    }
-    return {text:'上游資料供參考',cls:''};
+  const kind=r=>{
+    if(state.passport==='cn')return {text:'原版中國大陸視角',cls:''};
+    const v=r.audit?.passport?.state;
+    if(v==='confirmed_for_taiwan')return {text:'臺灣列入適用對象',cls:'checked'};
+    if(v==='third_country_route')return {text:'一般第三國制度（個案申請）',cls:'checked'};
+    if(v==='chargeability_matters')return {text:'出生地排期（非護照）',cls:'checked'};
+    return {text:'臺灣資格待核對',cls:''};
   };
-  const status = r => ({
-    closed_window:'2026 受理期已結束',
-    check_window:'請查當期申請窗口',
-    closed:'上游標示已停止',
-    upstream_open:'上游標示開放'
-  }[r.status]||'狀態待確認');
-  const prLabel = r => ({
-    upstream_possible:'上游標示可能',
-    not_indicated:'上游未標示可通往永居',
-    needs_review:'尚待個別確認'
-  }[r.prKind]||'尚待確認');
-  const sourceLabel = r => r.origin==='taiwan'?'臺灣補充':'原版參考';
+  const windowLabels={
+    season_closed:'2026 年申請季已結束',
+    no_fixed_season:'非固定抽選 · 請核實',
+    check_official:'請查當期受理窗口',
+    invitation_based:'邀請制，需另符合條件',
+    priority_date_based:'依每月排期判定',
+    quota_and_check:'有年度名額 · 須查窗口',
+    paused:'暫停新申請'
+  };
+  const status=r=>r.audit?.window?.state
+    ?(windowLabels[r.audit.window.state]||'依當期官方規則申請')
+    :({closed_window:'上游標示該年度已結束',
+        check_window:'需查當期申請窗口',
+        closed:'上游標示已停止',
+        upstream_open:'上游標示開放（未核實）'}[r.status]||'狀態待核實');
+  const prLabels={
+    not_direct:'非直接永居',separate_application:'需另申請 PR',
+    conditional_settlement:'符合條件可申請永居',status_upgrade_not_pr:'居留升級 ≠ 永居',
+    direct_residence_application:'通過 PR 審查才取得',resident_visa:'核准為 Resident Visa'
+  };
+  const prLabel=r=>r.audit?.settlement?.state
+    ?(prLabels[r.audit.settlement.state]||'依官方規則評估')
+    :({upstream_possible:'僅上游標示可能',not_indicated:'上游標示不通永居',needs_review:'尚待個別核對'}[r.prKind]||'尚待確認');
+  const reviewLabel=r=>({
+    reviewed_specific_fields:'部分欄位經官方核對',
+    official_links_not_audited:'有官方連結、未逐條核對',
+    generic_country_portal:'僅國家官方入口',
+    third_party_only:'僅第三方來源',
+    missing_route_source:'缺少路線直接來源'
+  }[r.sourceGrade]||'來源待核對');
+  const sourceLabel=r=>r.audit?.checkedAt?'官方欄位核對':r.origin==='taiwan'?'臺灣補充':'上游參考';
+  const prCategory=r=>{
+    if(r.audit?.settlement?.state)return ['not_direct','status_upgrade_not_pr'].includes(r.audit.settlement.state)
+      ?'not_direct':'reviewed_possible';
+    return r.prKind==='upstream_possible'?'upstream_possible':'needs_review';
+  };
+  const scopeLabel={
+    taiwan_eligibility:'臺灣國籍資格',2026_window:'2026 申請季',2026_ballot_window:'2026 抽選狀態',
+    2026_program_status:'2026 計畫狀態',2026_salary:'2026 薪資',2026_income_threshold:'2026 薪資',
+    stamp4_not_pr:'Stamp 4 非 PR',three_pathways:'移民途徑',chargeability:'出生地排期',
+    work_rights:'工作權',pr_not_automatic:'非自動 PR',conditional_pr:'永居條件',
+    target_occupation:'適用職業',target_group:'申請對象',sponsor:'雇主資格',
+    age:'年齡',offer:'聘僱',visa_type:'簽證類型'
+  };
   function toast(text){
     const node=$('toast');
     node.textContent=text;
@@ -73,12 +105,13 @@
   }
   function resetFilters(){
     Object.assign(state,{query:'',country:'all',region:'all',type:'all',verify:'all',
-      pr:'all',status:'all',savedOnly:false,sort:'relevance',visible:12});
+      pr:'all',status:'all',evidence:'all',savedOnly:false,sort:'relevance',visible:12});
     $('searchInput').value='';
     $('countryFilter').value='all';
     $('verifyFilter').value='all';
     $('prFilter').value='all';
     $('statusFilter').value='all';
+    $('evidenceFilter').value='all';
     $('savedOnly').checked=false;
     $('sortBy').value='relevance';
     syncFilterButtons();
@@ -114,9 +147,10 @@
     if(state.sort==='country')return arr.sort((a,b)=>a.country.localeCompare(b.country,'zh-Hant')||a.name.localeCompare(b.name,'zh-Hant'));
     if(state.sort==='name')return arr.sort((a,b)=>a.name.localeCompare(b.name,'zh-Hant'));
     return arr.sort((a,b)=>{
-      const score=r=>(state.passport==='tw'&&r.verification==='official_checked'?500:0)
-        +(r.type==='work'?28:0)+(r.type==='youth'?18:0)
-        +(r.origin==='global'?3:0)+(r.status==='closed'||r.status==='closed_window'?-40:0);
+      const score=r=>(state.passport==='tw'&&r.verification==='official_checked'?130:0)
+        +(r.audit?.priority||0)*2+(r.audit?.checkedAt?25:0)
+        +(r.type==='work'?35:0)+(r.type==='youth'?10:0)
+        +(r.status==='closed'||r.status==='closed_window'?-220:0);
       return score(b)-score(a)||a.country.localeCompare(b.country,'zh-Hant')||a.name.localeCompare(b.name,'zh-Hant');
     });
   }
@@ -131,12 +165,13 @@
         if(state.verify==='checked'&&r.verification!=='official_checked')return false;
         if(state.verify==='needs_review'&&r.verification==='official_checked')return false;
       }
-      if(state.pr!=='all'&&r.prKind!==state.pr)return false;
+      if(state.pr!=='all'&&prCategory(r)!==state.pr)return false;
+      if(state.evidence!=='all'&&r.sourceGrade!==state.evidence)return false;
       if(state.status!=='all'&&r.status!==state.status)return false;
       if(state.savedOnly&&!state.favorites.has(r.id))return false;
       if(q){
         const haystack=[r.country,r.countryEn,r.name,r.originalName,r.summary,r.audience,
-          r.threshold,r.typeLabel,r.pr,...(r.facts||[]).flat(),
+          r.threshold,r.typeLabel,r.pr,r.audit?.passport?.detail,r.audit?.work?.detail,r.audit?.window?.detail,...(r.facts||[]).flat(),
           ...(r.sources||[]).map(s=>s.title)].join(' ').toLocaleLowerCase();
         if(!haystack.includes(q))return false;
       }
@@ -152,7 +187,7 @@
       '<button type="button" data-action="open" data-id="'+esc(r.id)+'">查看路線 ↗</button></div></article>';
   }
   function renderFeatured(){
-    const order=['tw:iec_wh','tw:working_holiday','tw:e2'];
+    const order=['eu:germany-eu-blue-card','eu:ireland-critical-skills-employment-permit','eu:netherlands-highly-skilled-migrant'];
     const list=order.map(id=>lookup.get(id)).filter(Boolean);
     $('featuredGrid').innerHTML=list.length?list.map(featureCard).join(''):
       '<div class="loading-state">臺灣專屬資料暫無法顯示，請查看原始 GitHub 資料。</div>';
@@ -405,7 +440,7 @@
       const response=await fetch('/data/catalog.json',{cache:'no-cache'});
       if(!response.ok)throw Error('HTTP '+response.status);
       catalog=await response.json();
-      if(catalog.schemaVersion!==1||!Array.isArray(catalog.routes))throw Error('資料格式不相容');
+      if(catalog.schemaVersion!==2||!Array.isArray(catalog.routes))throw Error('資料格式不相容');
       lookup=new Map(catalog.routes.map(r=>[r.id,r]));
       initStats();renderChoices();renderFeatured();renderCountries();setPassport(state.passport);
       if(location.hash.startsWith('#route=')){
