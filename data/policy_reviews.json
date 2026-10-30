@@ -1,7 +1,7 @@
 {
   "_meta": {
     "title": "Taiwan-first official evidence overlay",
-    "lastReviewed": "2026-10-30",
+    "lastReviewed": "2026-10-31",
     "scope": "Only the fields explicitly listed in reviewedFields have been checked against corresponding official pages. Legacy original facts must not be silently mixed with reviewed facts.",
     "statuses": {
       "passport": [
@@ -1544,6 +1544,179 @@
           "HPI 不可續簽且其居留期間不直接計入 Settlement"
         ]
       ]
+    },
+    "global:us-dv-lottery": {
+      "priority": 64,
+      "checkedAt": "2026-10-31",
+      "reviewType": "selective_official_audit",
+      "passport": {
+        "state": "chargeability_matters",
+        "detail": "美國 DV 的一般資格依出生地／法定 chargeability，而非僅憑台灣護照。DV-2026 官方指示列台灣出生者合格，2027 年度必須以新版指示核查，亦有狹義的配偶／父母出生地例外。"
+      },
+      "window": {
+        "state": "registration_not_open",
+        "detail": "截至 2026-10-31，E-DV 官方登記入口不接受新的 DV 申請；美國國務院曾公告 DV-2027 登記開始日期將另行公布。另依 2026-08-31 官方更新，DV 簽證核發暫停；登記與核發是兩件不同的事。"
+      },
+      "work": {
+        "state": "not_a_work_permit",
+        "detail": "登記或中籤不會給予在美國工作的權利；須經移民簽證程序、取得適當入境或調整身分結果後，才有相應身分權利。"
+      },
+      "settlement": {
+        "state": "conditional_immigrant_visa",
+        "detail": "DV 是移民簽證抽籤，不是 WH／YMS；中籤仍須學歷／合格工作經驗等條件、背景審查、年度簽證名額及核發恢復，且不保證取得綠卡。"
+      },
+      "summary": "移民簽證的隨機抽選制度，不是一般工作簽證。2026-10-31 官方尚未開放新的 DV 登記，DV-2027 登記日期待公告；2026-08-31 官方公告暫停 DV 簽證核發。",
+      "facts": [
+        [
+          "參加資格",
+          "原則上依出生地／chargeability（非護照），且符合高中學歷或規定的合格工作經驗"
+        ],
+        [
+          "台灣出生紀錄",
+          "DV-2026 官方說明明列 Taiwan 出生者符合國籍／地區資格；未來年度名單須重新核查"
+        ],
+        [
+          "2026-10-31 報名狀態",
+          "官方 E-DV 入口未開放新登記，DV-2027 登記起始日尚未公告"
+        ],
+        [
+          "簽證核發狀態",
+          "2026-08-31 美國國務院公告暫停所有 DV 核發，須持續注意最新法律與公告"
+        ],
+        [
+          "抽中後",
+          "抽中不保證取得簽證；需符合所有資格、排程、面試及年度名額"
+        ]
+      ],
+      "steps": [
+        [
+          "等待官方公布 DV 登記日",
+          "每年報名期間不固定，不能自行假設十月必定開放"
+        ],
+        [
+          "核對出生地與該年度合格地區",
+          "部分申請者可依法使用配偶或父母的出生地歸屬例外"
+        ],
+        [
+          "符合資格且報名窗口開啟後，透過官方入口提交一次",
+          "僅使用 dvprogram.state.gov，保留確認號碼"
+        ],
+        [
+          "依官方 Entrant Status Check 查詢是否中籤",
+          "抽中不表示已獲移民簽證"
+        ],
+        [
+          "若獲選，依官方指示完成資格、簽證／調整身分程序",
+          "目前 DV 簽證核發仍受官方暫停指引影響"
+        ]
+      ],
+      "reviewedFields": [
+        "2026_10_registration_status",
+        "2026_08_issuance_pause",
+        "birthplace_chargeability",
+        "historical_taiwan_eligibility",
+        "program_type",
+        "not_work_authorization"
+      ],
+      "sources": [
+        {
+          "title": "官方 DV 登記入口及暫未開放狀態",
+          "url": "https://dvprogram.state.gov/"
+        },
+        {
+          "title": "官方 DV-2027 登記時間變更通知",
+          "url": "https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html"
+        },
+        {
+          "title": "2026-08-31 美國國務院 DV 核發暫停指引",
+          "url": "https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html"
+        },
+        {
+          "title": "DV-2026 參加資格及台灣出生者適用來源",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry/diversity-visa-instructions.html"
+        }
+      ],
+      "note": "關鍵：DV-2027 新名單未公告，不得把 DV-2026 台灣出生合格直接說成 DV-2027 已核准報名。簽證核發暫停不等同永久廢除抽籤制度。"
+    },
+    "global:us-j1-summer-work-travel": {
+      "priority": 18,
+      "checkedAt": "2026-10-31",
+      "reviewType": "selective_official_audit",
+      "passport": {
+        "state": "third_country_route",
+        "detail": "美國 BridgeUSA Summer Work Travel 屬合格海外全職大專院校在學生的 J-1 交流計畫。是否可參加取決於學生、英文、sponsor 及簽證資格，不是持有台灣護照就自動取得。"
+      },
+      "window": {
+        "state": "check_official",
+        "detail": "依指定 sponsor 和美國學期／長假期安排招生及核定，非台灣一般青年每年固定的 WH 抽籤或永久開放工簽。"
+      },
+      "work": {
+        "state": "program_limited",
+        "detail": "僅限核准 Summer Work Travel 交流安排及相關工作，最長四個月。受雇、工作安排與 sponsor 等限制需按 J-1 計畫辦理。"
+      },
+      "settlement": {
+        "state": "not_direct",
+        "detail": "J-1 SWT 為暫時性的學生交流，不能直接換成美國永久居民身分。"
+      },
+      "summary": "提供合資格海外全職大專院校在學生於暑假赴美短期工作交流，最長四個月。這不是對一般畢業人士開放的美國 Working Holiday，也不直接取得綠卡。",
+      "facts": [
+        [
+          "學生資格",
+          "在美國境外認可、實體授課大專院校全職就讀，已完成至少一學期"
+        ],
+        [
+          "英文",
+          "需足以在英語環境互動"
+        ],
+        [
+          "長度",
+          "最長四個月，不能延長該交流計畫"
+        ],
+        [
+          "工作限制",
+          "須透過指定 sponsor 和符合規定的季節性／暫時性職位；入境前是否需預先安排工作依官方規則"
+        ],
+        [
+          "永久居留",
+          "J-1 Summer Work Travel 是交流訪客計畫，不會直接取得永久居留"
+        ]
+      ],
+      "steps": [
+        [
+          "確認全職學生身分與完成至少一學期",
+          "不可用先前已畢業的學歷代替當下在學資格"
+        ],
+        [
+          "確認合格 sponsor 與計畫安排",
+          "J-1 不是自由找任何公司的開放式打工簽證"
+        ],
+        [
+          "辦理 sponsor、必要文件及 J-1 申請",
+          "以美國國務院與 sponsor 當期規定為準"
+        ],
+        [
+          "在核准的四個月內依計畫工作旅遊",
+          "按要求回國繼續就學；不得視為合法永久工作身分"
+        ]
+      ],
+      "reviewedFields": [
+        "student_eligibility",
+        "english",
+        "max_4_months",
+        "sponsor_requirements",
+        "not_pr"
+      ],
+      "sources": [
+        {
+          "title": "BridgeUSA：Summer Work Travel 官方資格",
+          "url": "https://j1visa.state.gov/programs/summer-work-travel/"
+        },
+        {
+          "title": "美國國務院：J 類交流簽證總覽",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/study/exchange.html"
+        }
+      ],
+      "note": "若已畢業且非目前合資格全職在學生，不宜將本計畫當成一般 Working Holiday。"
     }
   }
 }

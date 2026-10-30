@@ -19,7 +19,9 @@ export const SOURCE={
   jp:'https://www.mofa.go.jp/j_info/visit/w_holiday/',
   jphsp:'https://www.moj.go.jp/isa/applications/resources/newimmiact_3_index.html',
   auwh:'https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417',
-  nzwh:'https://www.immigration.govt.nz/visas/taiwan-working-holiday-visa/'
+  nzwh:'https://www.immigration.govt.nz/visas/taiwan-working-holiday-visa/',
+  dv:'https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry/diversity-visa-instructions.html',
+  swt:'https://j1visa.state.gov/programs/summer-work-travel/'
 };
 export const MODELS=[
  ['eu:germany-eu-blue-card','必要條件',SOURCE.blue],
@@ -45,7 +47,9 @@ export const MODELS=[
  ['global:us-eb1a-niw','專業成就與法定標準',SOURCE.niw],
  ['global:au-189','官方積分制：部分項目小計',SOURCE.au189],
  ['extra:germany-opportunity-card','官方六分制／資格認定',SOURCE.chance],
- ['global:jp-hsp','官方高度人才積分制',SOURCE.jphsp]
+ ['global:jp-hsp','官方高度人才積分制',SOURCE.jphsp],
+ ['global:us-dv-lottery','出生地與學歷資格／隨機抽籤',SOURCE.dv],
+ ['global:us-j1-summer-work-travel','在學交流工作／J-1 Sponsor',SOURCE.swt]
 ];
 export const DEFAULT_PROFILE={
  age:'',field:'unknown',education:'unknown',years:'',english:'unknown',german:'unknown',
@@ -53,7 +57,7 @@ export const DEFAULT_PROFILE={
  sponsor:'unknown',taiwanHousehold:'unknown',student:'unknown',remoteWork:'unknown',
  business:'unknown',achievements:'unknown',canadianYears:'',auOccupation:'unknown',
  auEnglish:'unknown',auDegree:'unknown',auWorkVerified:'unknown',auYears:'',
- partner:'unknown',hpiUniversity:'unknown',destination:'all'
+ partner:'unknown',hpiUniversity:'unknown',birthPlace:'unknown',destination:'all'
 };
 const region={
  germany:'europe',ireland:'europe',netherlands:'europe','united-kingdom':'europe',
@@ -194,6 +198,27 @@ function checksFor(r,p){
    out.push(age(p,18,44),special(p,'auOccupation','職業與技術評估','189 必須有符合的提名職業與有效 skills assessment。',true));break;
  case 'extra:germany-opportunity-card':
    out.push(degree(p),unknown('正式六分或資格認定','機會卡存在免積分資格認定路線與符合條件的六分制，建議使用官方自我檢查。',2));break;
+ case 'global:us-dv-lottery':
+   out.push(p.birthPlace==='taiwan'?
+     ok('出生地歷史資格','台灣出生者在 DV-2026 官方名單內；DV-2027 的適用出生地需等待新指示，不能視為今年已開放。',3):
+     p.birthPlace==='mainland'||p.birthPlace==='hongkong'?
+       need('出生地歷史資格','DV-2026 排除中國大陸及香港出生者，一些申請人可能依配偶／父母等法定例外另行判定，DV-2027 需新指示。',3):
+       unknown('出生地資格','DV 主要依出生地／法定 chargeability（有例外），不是只看台灣護照。',3));
+   out.push(p.education==='unknown'?
+     unknown('學歷／職業資格','須符合高中或等同的 12 年教育，或指定合格工作經驗。',2):
+     ['highschool','diploma','bachelor','master','phd'].includes(p.education)?
+       ok('學歷初步方向','填寫的學歷具基礎線索，但是否符合 12 年正式教育須按當期官方文件審核。',2):
+       need('學歷／職業資格','如未完成合格高中教育，須確認是否有最近五年的合格工作經驗等替代資格。',2));
+   out.push(need('報名與簽證核發狀態','截至 2026-10-31，E-DV 未受理新報名；美國國務院 2026-08-31 指引暫停 DV 簽證核發。',2));
+   break;
+ case 'global:us-j1-summer-work-travel':
+   out.push(special(p,'student','合格全職在學身分',
+      '須在海外認可的實體授課大學／學院全職就讀，且完成至少一學期。已畢業非在學通常不符合。',true));
+   out.push(p.english==='unknown'?
+     unknown('英語溝通能力','BridgeUSA 要求能在英語環境有效溝通；須由 sponsor 判斷，沒有固定 CEFR B1/B2 官方標準。',2):
+     unknown('英文條件仍需 sponsor 確認','英文自評不等於美國核准的語言能力。',2));
+   out.push(unknown('合格 Sponsor 與短期工作安排','需 J-1 sponsor 及符合季節性工作安排，最長四個月，不能當一般開放式 Working Holiday。',2));
+   break;
  case 'global:jp-hsp':
    out.push(degree(p),p.offerCountry==='japan'?ok('日本合格活動','已有日本聘用線索，但要按官方積分表計算。',2):
     unknown('日本聘用與活動','須確認活動性質與官方高度人才計分制度。',2));break;
@@ -237,7 +262,7 @@ export function matchRoutes(catalog,raw={}){
    const r=lookup.get(id);if(!r)return null;
    const checks=checksFor(r,profile),denom=checks.reduce((n,x)=>n+x.weight,0),
      score=Math.round(100*checks.filter(x=>x.state==='met').reduce((n,x)=>n+x.weight,0)/Math.max(1,denom)),
-     hard=checks.some(x=>x.hard),season=Boolean(r.audit?.window?.state==='season_closed');
+     hard=checks.some(x=>x.hard),season=['season_closed','registration_not_open'].includes(r.audit?.window?.state);
    let tier=hard?'out_of_range':score>=65?'prioritize':score>=33?'prepare':'research';
    if(season&&tier==='prioritize')tier='prepare';
    return {id,name:r.name,country:r.country,flag:r.flag,countryId:r.countryId,method,official,

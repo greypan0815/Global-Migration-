@@ -65,7 +65,7 @@ test('unsupported URLs are not published as source links',()=>{
 function sourceData(path){
   return fs.readFileSync(new URL('../'+path,import.meta.url),'utf8');
 }
-test('actual 150-route catalogue has exactly 22 reviewed records and 10 Taiwan nationality confirmations',()=>{
+test('actual 152-route catalogue has exactly 24 reviewed records and 10 Taiwan nationality confirmations',()=>{
   const policy=JSON.parse(sourceData('data/policy_reviews.json'));
   const c=buildCatalog({
     programmes:JSON.parse(sourceData('data/programmes.json')),
@@ -77,8 +77,8 @@ test('actual 150-route catalogue has exactly 22 reviewed records and 10 Taiwan n
   });
   assert.equal(c.schemaVersion,2);
   assert.equal(c.counts.countries,49);
-  assert.equal(c.counts.routes,150);
-  assert.equal(c.counts.officialFieldReviews,22);
+  assert.equal(c.counts.routes,152);
+  assert.equal(c.counts.officialFieldReviews,24);
   assert.equal(c.counts.nonAudited,128);
   assert.equal(c.counts.taiwanChecked,10);
   const get=id=>{const r=c.routes.find(x=>x.id===id);assert.ok(r,'missing '+id);return r;};
@@ -131,4 +131,20 @@ test('review overrides legacy unverified facts without claiming all routes were 
   assert.equal(x.verification,'needs_review');
   assert.equal(x.audit.checkedAt,'2026-10-30');
   assert.throws(()=>buildCatalog({programmes:[sample],policyReviews:{'eu:missing':review}}),/missing route/);
+});
+
+
+test('new US DV and Summer Work Travel routes have separate official evidence',()=>{
+  const usa=JSON.parse(sourceData('src/global.json')).find(c=>c.slug==='usa');
+  const reviews=JSON.parse(sourceData('data/policy_reviews.json')).routes;
+  const dv=usa.routes.find(r=>r.id==='us-dv-lottery');
+  const j1=usa.routes.find(r=>r.id==='us-j1-summer-work-travel');
+  assert.equal(dv.type,'lottery');
+  assert.equal(j1.type,'exchange');
+  assert.equal(reviews['global:us-dv-lottery'].window.state,'registration_not_open');
+  assert.equal(reviews['global:us-dv-lottery'].passport.state,'chargeability_matters');
+  assert.equal(reviews['global:us-dv-lottery'].work.state,'not_a_work_permit');
+  assert.equal(reviews['global:us-j1-summer-work-travel'].work.state,'program_limited');
+  assert.ok(dv.sources.every(s=>s.url.startsWith('https://')));
+  assert.ok(j1.sources.every(s=>s.url.startsWith('https://')));
 });

@@ -26,3 +26,12 @@
 ## 官方入口
 
 - [USCIS](https://www.uscis.gov/) · [国务院排期表 Visa Bulletin](https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html) · [EB-5](https://www.uscis.gov/working-in-the-united-states/permanent-workers/eb-5-immigrant-investor-program)
+
+## 2026-10-31 補充：DV 抽籤及 J-1 Summer Work Travel（台灣讀者）
+
+| 制度 | 2026-10-31 官方核查 | 注意 |
+|---|---|---|
+| **DV 綠卡樂透** | [DV-2027 登記時間另公告](https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html)；[E-DV](https://dvprogram.state.gov/) 暫未接受新登記；[2026-08-31 DV 核發暫停指引](https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html) | 依**出生地／chargeability**，不是持台灣護照即符合。DV-2026 台灣出生者合格，不保證 DV-2027 規則相同 |
+| **J-1 Summer Work Travel** | [BridgeUSA](https://j1visa.state.gov/programs/summer-work-travel/) 限合格海外全職大專院校在學生，完成至少一學期，有英文能力，最長四個月 | 不是已畢業青年通用的美國 Working Holiday，也不直接給 PR |
+
+更多說明：[台灣讀者抽籤／青年簽證比較](../../docs/taiwan/lotteries-and-youth-visas.md)。

@@ -44,7 +44,7 @@ export const TYPE_LABELS = {
   work:'技術就業', 'digital-nomad':'數位遊牧', 'self-employed':'自雇經營',
   startup:'創業', 'residence-by-investment':'投資居留',
   citizenship:'入籍', passive:'被動收入', youth:'打工度假',
-  study:'學生／實習', other:'其他'
+  study:'學生／實習', other:'其他', lottery:'綠卡樂透／抽選', exchange:'學生交流工作'
 };
 
 // The interface is Traditional Chinese; legacy descriptions are converted
@@ -225,6 +225,7 @@ function applyReview(route,review){
   route.sources=sourcesFrom(review.sources);
   if(review.window.state==='season_closed')route.status='closed_window';
   if(review.window.state==='paused')route.status='closed';
+  if(review.window.state==='registration_not_open')route.status='registration_not_open';
 }
 
 export function buildCatalog(input) {
@@ -310,7 +311,7 @@ export function buildCatalog(input) {
   for(const id of Object.keys(policyReviews))if(!byId.has(id))throw Error('Policy review points to missing route: '+id);
   for(const route of routes)applyReview(route,policyReviews[route.id]);
   const types=Object.entries(TYPE_LABELS).map(([id,label])=>({id,label,count:routes.filter(r=>r.type===id).length})).filter(x=>x.count);
-  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-10-30',
+  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-10-31',
     policyAuditScope:'僅 audit.reviewedFields 欄位有當日官方來源核查；其餘舊資料為上游參考。',
     dataNotice:'原始中國大陸導向資料與臺灣額外官方核對資料分層呈現；非法律意見。',
     counts:{countries:countries.size,routes:routes.length,taiwanChecked:routes.filter(r=>r.verification==='official_checked').length,
