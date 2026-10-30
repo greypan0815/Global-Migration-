@@ -90,6 +90,8 @@ test('incomplete or self-reported language never becomes a claimed official 189 
 });
 test('offer/age checks do not assume missing values are eligible',()=>{
  const unknown=matchRoutes(actual(),{});
+ assert.equal(normalizeProfile({}).field,'unknown');
+ assert.ok(find(unknown,'eu:czechia-digital-nomad-program').checks.some(x=>x.label==='職業類別'&&x.state==='unknown'));
  const w=find(unknown,'tw:wh_417');
  assert.ok(w.checks.some(x=>x.label==='年齡'&&x.state==='unknown'));
  const p=normalizeProfile({age:'not-a-number',years:-3,salary:'',auYears:'bad'});
