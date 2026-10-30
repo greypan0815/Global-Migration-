@@ -100,7 +100,7 @@ function degree(p){
    :need('學歷與專業資歷','部分路線要求大學學位；特定 IT 年資可能有例外。',2);
 }
 function occupation(p,allow=['software','stem']){
- if(p.field==='unknown')return unknown('職業條件','需輸入職業類型、實際職務及代碼。',2);
+ if(p.field==='unknown')return unknown('職業類別','需輸入職業類型、實際職務及代碼。',2);
  return allow.includes(p.field)?ok('職業類別','職業方向可作為研究線索，實際職務代碼仍需查核。',2)
    :need('職業類別','需核對是否屬計畫許可的職業清單。',2);
 }
