@@ -352,3 +352,20 @@ dialog::backdrop{background:rgba(2,9,19,.75);backdrop-filter:blur(4px)}
 .audit-foot{font-size:11px;color:#9db8bd;line-height:1.9;margin:14px 0 0}
 .inline-source{color:var(--mint);text-decoration:underline;text-underline-offset:3px;font-weight:700}
 .inline-source:hover{color:#acfce0}
+
+/* Entry point for the private, browser-local immigration readiness assistant. */
+.matcher-promo{margin-top:28px;display:flex;gap:22px;align-items:center;border:1px solid rgba(103,233,189,.43);border-radius:16px;padding:26px 30px;background:linear-gradient(110deg,rgba(27,81,72,.72),rgba(18,45,59,.84) 58%,rgba(37,50,80,.68));box-shadow:0 20px 58px rgba(0,0,0,.12)}
+.matcher-promo-symbol{font-size:49px;color:#7fedd0;flex:0 0 58px;line-height:1;text-align:center}
+.matcher-promo-copy{flex:1}
+.matcher-promo .section-kicker{margin:0 0 6px;font-size:10px}
+.matcher-promo h2{font-size:22px;letter-spacing:-.035em;line-height:1.4;margin:0 0 8px}
+.matcher-promo p:not(.section-kicker){color:#afc8d2;font-size:12px;line-height:1.9;margin:0}
+.matcher-promo p strong{color:#e2f4ed}
+.matcher-promo .button{flex:0 0 auto}
+@media(max-width:780px){
+ .matcher-promo{padding:20px;gap:12px;flex-wrap:wrap}
+ .matcher-promo-symbol{font-size:38px;flex-basis:39px}
+ .matcher-promo-copy{flex-basis:calc(100% - 55px)}
+ .matcher-promo h2{font-size:17px}
+ .matcher-promo .button{margin-left:51px;font-size:12px}
+}
