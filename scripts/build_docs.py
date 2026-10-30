@@ -106,11 +106,14 @@ TAGLINE = {
     'united-kingdom': '投资移民已关闭；永居拟从 5 年改为 10 年',
 }
 ROUTE = {'digital-nomad': '数字游民', 'work': '技术工作', 'startup': '创业', 'self-employed': '自雇',
-         'passive': '被动收入居留', 'residence-by-investment': '投资居留', 'citizenship': '入籍', 'other': '替代路线'}
+         'passive': '被动收入居留', 'residence-by-investment': '投资居留', 'citizenship': '入籍', 'other': '替代路线',
+         'lottery': '移民抽签', 'exchange': '交流签证'}
 ROUTE_ICON = {'digital-nomad': '💻', 'work': '🧑‍💻', 'startup': '🚀', 'self-employed': '🧾', 'passive': '🏖️',
-              'residence-by-investment': '💰', 'citizenship': '🛂', 'other': '🧩'}
+              'residence-by-investment': '💰', 'citizenship': '🛂', 'other': '🧩',
+              'lottery': '🎟️', 'exchange': '🎓'}
 ROUTE_COLOR = {'digital-nomad': '1d4ed8', 'work': '0f766e', 'startup': '6d28d9', 'self-employed': '6d28d9',
-               'passive': '0e7490', 'residence-by-investment': 'b45309', 'citizenship': 'b45309', 'other': '667085'}
+               'passive': '0e7490', 'residence-by-investment': 'b45309', 'citizenship': 'b45309', 'other': '667085',
+               'lottery': '0f766e', 'exchange': '2563eb'}
 ORDER = ['digital-nomad', 'work', 'startup', 'self-employed', 'passive', 'residence-by-investment', 'citizenship', 'other']
 PROFILES = json.load(open(os.path.join(RUN, 'data', 'country_profiles.json')))
 

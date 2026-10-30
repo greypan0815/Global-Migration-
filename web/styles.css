@@ -369,3 +369,15 @@ dialog::backdrop{background:rgba(2,9,19,.75);backdrop-filter:blur(4px)}
  .matcher-promo h2{font-size:17px}
  .matcher-promo .button{margin-left:51px;font-size:12px}
 }
+
+/* Verified time-sensitive US/Canada/UK youth, lottery and exchange programmes */
+.ballot-section{padding-top:72px}
+.ballot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ballot-card{display:flex;flex-direction:column;gap:9px;padding:19px;border-radius:14px;border:1px solid #32586b;background:linear-gradient(145deg,#142f43,#12333b);min-height:191px;transition:background .15s,border-color .15s}
+.ballot-card:hover{background:#1b4851;border-color:#68caaa}
+.ballot-card strong{font-size:16px;line-height:1.43}
+.ballot-card>span:nth-child(3){font-size:11px;line-height:1.7;color:#b1c7d1;flex:1}
+.ballot-country{font-size:11px;color:#a7e3d2;font-weight:800}
+.ballot-open{font-size:11px;color:#7ce8bc;font-weight:800}
+@media(max-width:1050px){.ballot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ballot-grid{grid-template-columns:1fr}.ballot-card{min-height:145px}}

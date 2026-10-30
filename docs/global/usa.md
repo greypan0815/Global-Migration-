@@ -8,7 +8,7 @@
 
 **机会最大，但中国大陆出生的职业移民排期最长**
 
-[🧑‍💻 F-1 留学 → OPT → H-1B](#us-h1b) · [🧑‍💻 EB-1A 杰出人才 / EB-2 NIW 国家利益豁免](#us-eb1a-niw) · [💰 EB-5 投资移民](#us-eb5) · [📖 深度解读](#deep)
+[🧑‍💻 F-1 留学 → OPT → H-1B](#us-h1b) · [🧑‍💻 EB-1A 杰出人才 / EB-2 NIW 国家利益豁免](#us-eb1a-niw) · [💰 EB-5 投资移民](#us-eb5) · [🎟️ DV 綠卡樂透抽籤](#us-dv-lottery) · [🎓 J-1 Summer Work Travel](#us-j1-summer-work-travel) · [📖 深度解读](#deep)
 
 </div>
 
@@ -35,6 +35,8 @@
 | [F-1 留学 → OPT → H-1B](#us-h1b) | 🧑‍💻 技术工作 | 最常见的路径：读书 → 实习工作 → 抽签拿工作签证 → 雇主办绿卡。 | 🟢 开放 |
 | [EB-1A 杰出人才 / EB-2 NIW 国家利益豁免](#us-eb1a-niw) | 🧑‍💻 技术工作 | 不需要雇主，自己申请绿卡；科研人员和高成就专业人士的主要途径。 | 🟢 开放 |
 | [EB-5 投资移民](#us-eb5) | 💰 投资居留 | 投资 80 万美元（TEA 区域）直接申请绿卡，乡村预留名额可绕开中国排期。 | 🟢 开放 |
+| [DV 綠卡樂透](#us-dv-lottery) | 🎟️ 移民抽籤 | 依出生地／學歷等資格隨機抽選；2026-10-31 新登記未開放，DV 核發暫停 | 🟠 未開放登記／核發暫停 |
+| [J-1 Summer Work Travel](#us-j1-summer-work-travel) | 🎓 學生交流工作 | 合格全職在學學生的暑期交流，最長四個月；非通用 Working Holiday | 🔎 依交流 Sponsor 辦理 |
 
 ---
 
@@ -166,6 +168,45 @@ flowchart LR
 > - 递交日锁定投资额，2026 年底前递交仍按 80 万
 
 <sub>[↑ 回到顶部](#top)</sub>
+
+---
+
+
+<a id="us-dv-lottery"></a>
+
+## 🎟️ 美國 Diversity Visa（DV）綠卡樂透（2026-10-31 核查）
+
+**此為移民簽證的隨機抽選制度，不是打工度假。**
+
+| 項目 | 官方規則摘要 |
+|---|---|
+| 出生地 | 原則上依出生地／chargeability，而非只看台灣護照；DV-2026 台灣出生者在合格名單，DV-2027 須待當期規則 |
+| 新登記 | [E-DV](https://dvprogram.state.gov/) 目前未受理新登記；[DV-2027 報名起始日另行公布](https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html) |
+| 核發 | [2026-08-31 最新官方指引](https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html) 暫停 DV 簽證核發，並非一般正常核發狀態 |
+| 其他資格 | 需符合該年度高中／合格工作經驗條件與個案申請程序 |
+| 永居 | 抽中只是可能獲得申請機會；不自動核發移民簽證、工作許可或綠卡 |
+
+官方來源：[DV Instructions](https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry/diversity-visa-instructions.html) · [E-DV](https://dvprogram.state.gov/)。
+
+---
+
+<a id="us-j1-summer-work-travel"></a>
+
+## 🎓 美國 J-1 Summer Work Travel（暑期工作旅遊）
+
+美國沒有供一般台灣畢業青年直接使用、與加拿大 IEC Working Holiday／英國 YMS 完全對等的通用開放式打工度假簽證。
+
+| 項目 | 官方規則摘要 |
+|---|---|
+| 學生 | 需在美國境外認可大專院校全職就讀，至少完成一學期 |
+| 語言 | 有足以於英語環境互動的英文能力 |
+| 長度 | 最長四個月，須配合學校長假期及交流計畫 |
+| 工作 | 經合資格 sponsor 安排與許可的臨時／季節性工作 |
+| 永居 | J-1 SWT 本身不直接通往美國永久居留 |
+
+官方來源：[BridgeUSA Summer Work Travel](https://j1visa.state.gov/programs/summer-work-travel/)。
+
+詳見 [台灣讀者抽籤及青年簽證比較](../taiwan/lotteries-and-youth-visas.md)。
 
 ---
 

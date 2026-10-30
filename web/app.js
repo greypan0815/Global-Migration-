@@ -46,7 +46,8 @@
     invitation_based:'邀請制，需另符合條件',
     priority_date_based:'依每月排期判定',
     quota_and_check:'有年度名額 · 須查窗口',
-    paused:'暫停新申請'
+    paused:'暫停新申請',
+    registration_not_open:'DV 新登記未開放 · 核發暫停'
   };
   const status=r=>r.audit?.window?.state
     ?(windowLabels[r.audit.window.state]||'依當期官方規則申請')
@@ -57,7 +58,8 @@
   const prLabels={
     not_direct:'非直接永居',separate_application:'需另申請 PR',
     conditional_settlement:'符合條件可申請永居',status_upgrade_not_pr:'居留升級 ≠ 永居',
-    direct_residence_application:'通過 PR 審查才取得',resident_visa:'核准為 Resident Visa'
+    direct_residence_application:'通過 PR 審查才取得',resident_visa:'核准為 Resident Visa',
+    conditional_immigrant_visa:'中籤不代表核准，須另通過移民簽證審查'
   };
   const prLabel=r=>r.audit?.settlement?.state
     ?(prLabels[r.audit.settlement.state]||'依官方規則評估')

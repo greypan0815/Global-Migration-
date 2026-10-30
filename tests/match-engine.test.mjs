@@ -21,9 +21,9 @@ const find=(data,id)=>{
  assert.ok(r,'missing route '+id);
  return r;
 };
-test('analyzes curated 24 routes with no fabricated approval probability',()=>{
+test('analyzes curated 26 routes with no fabricated approval probability',()=>{
  const data=matchRoutes(actual(),{});
- assert.equal(data.counts.analyzed,24);
+ assert.equal(data.counts.analyzed,26);
  assert.equal(data.counts.unassessed,126);
  assert.match(data.statement,/不是官方計分/);
  for(const r of data.items){
@@ -101,7 +101,7 @@ test('offer/age checks do not assume missing values are eligible',()=>{
  assert.equal(p.auYears,null);
 });
 test('country model links and privacy behavior are explicit',()=>{
- assert.equal(MODELS.length,24);
+ assert.equal(MODELS.length,26);
  for(const [,name,url] of MODELS){assert.ok(name.length>3);assert.ok(url.startsWith('https://'));}
  assert.ok(SOURCE.crs.includes('canada.ca'));
  assert.ok(SOURCE.au189.includes('homeaffairs.gov.au'));
@@ -112,4 +112,28 @@ test('country model links and privacy behavior are explicit',()=>{
  const markup=fs.readFileSync(new URL('../web/match.html',import.meta.url),'utf8');
  assert.ok(markup.includes('id="profileForm"'));
  assert.ok(markup.includes('id="matchResults"'));
+});
+
+
+test('US DV lottery depends on birthplace and has no currently open new entry',()=>{
+  const catalog=actual();
+  const unknown=find(matchRoutes(catalog,{birthPlace:'unknown',education:'bachelor'}),'global:us-dv-lottery');
+  assert.equal(unknown.season,true);
+  assert.ok(unknown.checks.some(x=>x.label==='出生地資格'&&x.state==='unknown'));
+  const tw=find(matchRoutes(catalog,{birthPlace:'taiwan',education:'bachelor'}),'global:us-dv-lottery');
+  assert.equal(tw.season,true);
+  assert.notEqual(tw.tier,'prioritize');
+  assert.ok(tw.checks.some(x=>x.label==='出生地歷史資格'&&x.state==='met'));
+  assert.ok(tw.checks.some(x=>x.reason.includes('2026-08-31')));
+  const mainland=find(matchRoutes(catalog,{birthPlace:'mainland',education:'bachelor'}),'global:us-dv-lottery');
+  assert.ok(mainland.checks.some(x=>x.label==='出生地歷史資格'&&x.state==='missing'));
+});
+test('J-1 Summer Work Travel excludes non-students as a hard condition',()=>{
+  const catalog=actual();
+  const alumni=find(matchRoutes(catalog,{student:'no',objective:'temporary'}),'global:us-j1-summer-work-travel');
+  assert.equal(alumni.tier,'out_of_range');
+  assert.ok(alumni.checks.some(x=>x.label==='合格全職在學身分'&&x.state==='blocked'));
+  const current=find(matchRoutes(catalog,{student:'yes',objective:'temporary'}),'global:us-j1-summer-work-travel');
+  assert.ok(current.checks.some(x=>x.label==='合格全職在學身分'&&x.state==='met'));
+  assert.notEqual(current.score,100);
 });

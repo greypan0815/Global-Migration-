@@ -63,7 +63,7 @@ function matchCard(item){
  const audit=item.reviewed?'已核對部分政策欄位 '+item.reviewDate:
    '尚未完整官方核對的探索項目';
  let statusWarning='';
- if(item.season)statusWarning='<p class="match-card-warning">這個計畫的 2026 申請季已關閉；已符合年齡並不表示現在可參加當年度抽選。</p>';
+ if(item.season)statusWarning='<p class="match-card-warning">'+(item.id==='global:us-dv-lottery'?'美國 DV 官方目前尚未受理新登記，且 2026-08-31 指引暫停簽證核發；中籤也不等於取得綠卡。':'這個計畫的 2026 申請季已關閉；已符合年齡並不表示現在可參加當年度抽選。')+'</p>';
  if(item.tier==='out_of_range')statusWarning='<p class="match-card-warning">已有明確不符合的條件，請先查看說明。網站不會把這條視為目前可申請。</p>';
  if(item.reviewed&&dueForRecheck(item.reviewDate))statusWarning+='<p class="match-card-warning">官方政策核查已逾 90 天，需重新確認有效日期、薪資和受理窗口。</p>';
  return '<article class="match-card'+css+'">'+

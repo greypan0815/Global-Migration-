@@ -33,7 +33,7 @@
 > 此 Fork 目前**同時服務臺灣與中國大陸護照讀者**。下方原始國家資料、免簽比較、文件準備與「中國護照不適用」段落仍沿用上游**中國大陸護照**視角，**尚未全面驗證臺灣護照**。首次官方核查：2026-10-30。
 
 - **[繁體中文主入口](README.zh-TW.md)** · **[臺灣護照專區與路線表](docs/taiwan/README.md)**
-- [加拿大 IEC（**2026 候選池已關閉**）](docs/taiwan/canada-iec.md) · [臺灣工程師就業研究](docs/taiwan/tech-employment.md) · [官方核查範圍](docs/taiwan/audit-methodology.md) · [臺灣資格 CSV](data/taiwan_applicability.csv)
+- [美國 DV／J-1、加拿大 IEC、英國 YMS 官方比較](docs/taiwan/lotteries-and-youth-visas.md) · [加拿大 IEC（**2026 候選池已關閉**）](docs/taiwan/canada-iec.md) · [臺灣工程師就業研究](docs/taiwan/tech-employment.md) · [官方核查範圍](docs/taiwan/audit-methodology.md) · [臺灣資格 CSV](data/taiwan_applicability.csv)
 - **已核對的臺灣特殊路線**：加拿大 IEC、捷克 Digital Nomad、英國 YMS、日本打工度假、澳洲 417、紐西蘭打工度假、美國 E-1／E-2。**國籍適用不代表開放申請、保證獲批或可取得 PR**。
 
 原始內容來源：[BryceYuuu/RUN](https://github.com/BryceYuuu/RUN)。最終資格以各國官方來源為準。
