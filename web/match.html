@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#0b1425">
+<title>個人移民路徑適配分析｜Global Migration</title>
+<meta name="description" content="依台灣護照、年齡、學經歷、語言與工作條件探索適合研究的移民途徑；區分探索準備度及真正的官方積分。">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/match.css">
+<script type="module" src="/match-app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#profile">跳到分析條件</a>
+<header class="site-header"><div class="container header-inner">
+ <a class="brand" href="/"><span class="brand-symbol" aria-hidden="true">✳</span><span class="brand-words"><strong>GLOBAL MIGRATION</strong><small>全球移居路線地圖</small></span></a>
+ <nav class="desktop-nav" aria-label="導覽"><a href="/">探索所有路線</a><a class="nav-active" href="/match.html" aria-current="page">個人適配分析</a><a href="/#method">核查說明</a></nav>
+ <div class="match-header-note"><span aria-hidden="true">●</span> 本機運算 · 不上傳個人資料</div>
+</div></header>
+<main class="match-main">
+<section class="container match-hero">
+ <div class="section-kicker">YOUR PERSONAL IMMIGRATION EXPLORER</div>
+ <h1>找出你的<span>可能路徑</span>，<br>看懂還缺什麼條件。</h1>
+ <p>用同一份個人條件探索加拿大、德國、澳洲等不同移民制度。不同國家採用不同評估方法；本站清楚區分<span class="emphasis">自訂探索準備度</span>與<span class="emphasis">官方積分</span>，不預測核准率。</p>
+ <div class="hero-tags"><span>🇹🇼 台灣護照優先</span><span>✦ 找出條件缺口</span><span>◈ 對照官方來源</span><span>⌁ 即時調整分析</span></div>
+</section>
+<section class="container match-workspace" id="profile">
+  <form class="match-form" id="profileForm" autocomplete="off">
+   <div class="form-header"><div><p class="tiny-overline">STEP 01 — YOUR PROFILE</p><h2>你的個人條件</h2></div><span class="privacy-label">不儲存、不上傳</span></div>
+   <div class="form-note">只填知道的內容即可；不確定的條件保持「尚未確認」。我們不會替你假設學位已獲承認或已有合法簽證資格。</div>
+   <fieldset><legend><span class="form-step">1</span>基本資料</legend>
+    <div class="match-fields two">
+     <label>護照身分 <span class="required">固定台灣版</span><select disabled><option>🇹🇼 中華民國（臺灣）護照</option></select></label>
+     <label>目前年齡 <span class="mini-help">（整歲）</span><input name="age" type="number" min="0" max="110" step="1" inputmode="numeric" placeholder="例如 27"></label>
+     <label>工作職類<select name="field"><option value="software">軟體工程／資訊技術</option><option value="stem">其他 STEM／工程</option><option value="marketing">數位行銷</option><option value="health">醫療／健康</option><option value="business">商務／財務／管理</option><option value="other">其他</option><option value="unknown">還不確定</option></select></label>
+     <label>最高學歷<select name="education"><option value="unknown">尚未確認／尚未填寫</option><option value="highschool">高中職</option><option value="diploma">專科或職業資格</option><option value="bachelor">學士</option><option value="master">碩士</option><option value="phd">博士</option></select></label>
+     <label>相關工作年資 <span class="mini-help">（年）</span><input name="years" type="number" min="0" max="60" step=".5" inputmode="decimal" placeholder="例如 3"></label>
+     <label>英文程度 <span class="mini-help">（自評，不等於官方測驗）</span><select name="english"><option value="unknown">尚未確認</option><option value="none">沒有能力證明</option><option value="a1">A1</option><option value="a2">A2</option><option value="b1">B1</option><option value="b2">B2</option><option value="c1">C1</option><option value="c2">C2</option></select></label>
+     <label>德語程度 <span class="mini-help">（自評）</span><select name="german"><option value="unknown">尚未確認</option><option value="none">尚未學習</option><option value="a1">A1</option><option value="a2">A2</option><option value="b1">B1</option><option value="b2">B2</option><option value="c1">C1</option><option value="c2">C2</option></select></label>
+    </div>
+   </fieldset>
+   <fieldset><legend><span class="form-step">2</span>移居目標</legend>
+    <div class="match-fields two">
+     <label>主要目標<select name="objective"><option value="settlement">長期工作 → PR／永久居留</option><option value="temporary">先海外生活、打工度假</option><option value="remote">維持境外雇主遠距工作</option></select></label>
+     <label>優先地區<select name="destination"><option value="all">全球不限</option><option value="europe">歐洲</option><option value="americas">北美洲</option><option value="oceania">澳洲／紐西蘭</option><option value="asia">亞洲</option></select></label>
+     <label>工作模式<select name="mode"><option value="employment">當地正式雇主聘僱</option><option value="remote">跨國遠距工作</option></select></label>
+    </div>
+   </fieldset>
+   <fieldset><legend><span class="form-step">3</span>工作機會與聘僱</legend>
+    <div class="match-fields two">
+     <label>是否已有海外工作 offer<select id="offerCountry" name="offerCountry"><option value="none">尚未取得</option><option value="canada">🇨🇦 加拿大</option><option value="germany">🇩🇪 德國</option><option value="ireland">🇮🇪 愛爾蘭</option><option value="netherlands">🇳🇱 荷蘭</option><option value="united-kingdom">🇬🇧 英國</option><option value="australia">🇦🇺 澳洲</option><option value="new-zealand">🇳🇿 紐西蘭</option><option value="japan">🇯🇵 日本</option></select></label>
+     <label>雇主是否具擔保資格<select name="sponsor"><option value="unknown">尚未確認／無 offer</option><option value="yes">已確認符合相關擔保資格</option><option value="no">已確認目前不符合</option></select></label>
+     <label>Offer 稅前薪資 <span class="mini-help" id="currencyHint">請填目的國的當地幣別（非台幣）</span><input name="salary" type="number" min="0" step="1" inputmode="decimal" placeholder="有 offer 再填寫"></label>
+     <label>薪資計算期間<select name="salaryUnit"><option value="year">每年</option><option value="month">每月</option></select></label>
+    </div>
+    <p class="field-help">薪資只和相同國家的 2026 官方一般門檻比較；沒有 offer 不會虛構薪資。津貼、going rate、職業豁免與雇主要求仍需個別核查。</p>
+   </fieldset>
+   <details class="extra-fields" id="extraFields"><summary>進階條件（加拿大／澳洲積分、實習、創業等）<span aria-hidden="true">＋</span></summary>
+    <div class="extra-fields-inner">
+     <p class="advanced-intro">只有你確定的條件才選「已確認」。澳洲積分計算只能把已承認的項目列入小計。</p>
+     <div class="match-fields two">
+      <label>已在加拿大合格工作年數<input name="canadianYears" type="number" min="0" max="60" step=".5" inputmode="decimal" placeholder="不確定可留白"></label>
+      <label>目前是否在學<select name="student"><option value="unknown">尚未確認</option><option value="yes">是，符合在學條件</option><option value="no">否</option></select></label>
+      <label>臺灣戶籍證明<select name="taiwanHousehold"><option value="unknown">尚未確認</option><option value="yes">有臺灣戶籍可證明</option><option value="no">沒有臺灣戶籍</option></select></label>
+      <label>是否已有境外遠距受僱／自營安排<select name="remoteWork"><option value="unknown">尚未確認</option><option value="yes">有</option><option value="no">沒有</option></select></label>
+      <label>是否有實質貿易／投資企業計畫<select name="business"><option value="unknown">尚未確認</option><option value="yes">有可證明計畫</option><option value="no">沒有</option></select></label>
+      <label>是否有 EB-1A／NIW 專業證據<select name="achievements"><option value="unknown">尚未評估</option><option value="yes">已整理部分證據</option><option value="no">目前沒有</option></select></label>
+      <label>英國 HPI 學位是否在畢業年度名單<select name="hpiUniversity"><option value="unknown">尚未對照官方名單</option><option value="yes">已核對近五年合格大學</option><option value="no">已確認不符合</option></select></label>
+     </div>
+     <div class="advanced-australia">
+      <h3>🇦🇺 澳洲 189：僅已證明項目之積分小計</h3>
+      <p>這裡的數字才是「官方積分項目」，但仍不是完整 SkillSelect 分數。不能用一般英文自評取代測驗。</p>
+      <div class="match-fields two">
+       <label>提名職業與技能評估<select name="auOccupation"><option value="unknown">尚未確認</option><option value="yes">已確認合格／有有效評估</option><option value="no">已確認不符合</option></select></label>
+       <label>已取得澳洲承認英語考試級別<select name="auEnglish"><option value="unknown">尚未取得／不確定</option><option value="competent">Competent（0 分）</option><option value="proficient">Proficient（10 分）</option><option value="superior">Superior（20 分）</option></select></label>
+       <label>學歷是否已獲澳洲認可<select name="auDegree"><option value="unknown">尚未確認</option><option value="yes">已獲得認可</option><option value="no">未獲認可</option></select></label>
+       <label>工作年資是否已符合澳洲技術評估<select name="auWorkVerified"><option value="unknown">尚未確認</option><option value="yes">已確認相關性、工時及年資</option><option value="no">未確認合格</option></select></label>
+       <label>合格澳洲境內技術工作年資<input name="auYears" type="number" min="0" max="60" step=".5" inputmode="decimal" placeholder="不確定請留白"></label>
+       <label>配偶／單身官方資格<select name="partner"><option value="unknown">尚未確認</option><option value="single">符合單身／澳洲籍配偶等 10 分資格</option><option value="partnerSkilled">配偶符合技能評估等 10 分資格</option><option value="partnerEnglish">配偶符合英文 5 分資格</option><option value="none">已確認不符合配偶相關加分</option></select></label>
+      </div>
+      <a class="official-small" href="https://immi.homeaffairs.gov.au/supporting/Pages/Work/189-points-table.aspx" rel="noopener noreferrer" target="_blank">澳洲內政部：完整 189 官方積分表 ↗</a>
+     </div>
+    </div>
+   </details>
+   <div class="form-actions"><button class="button button-primary submit-match" type="submit" id="analyzeButton">分析我的移居路線 <span aria-hidden="true">↗</span></button><button class="button button-outline" type="reset">清除全部條件</button></div>
+   <p class="privacy-explainer"><span aria-hidden="true">◈</span> 所有輸入只在目前瀏覽器記憶體處理；不會發給伺服器、不用 cookies 或 localStorage 儲存。重新整理頁面會清除資料。</p>
+  </form>
+  <section class="match-results" id="matchResults" aria-live="polite" aria-label="移居適配結果">
+   <div class="result-empty"><div class="result-empty-art" aria-hidden="true">✳</div><p class="tiny-overline">PERSONALISED PATHWAY DISCOVERY</p><h2>你的移居分析<br>從這裡開始。</h2><p>填入左側條件後，會看到每條路線目前具備的條件、尚缺項目，以及哪些制度採官方積分、哪些只是必要資格審查。</p>
+    <div class="teaser-bars" aria-hidden="true"><i style="width:88%"></i><i style="width:65%"></i><i style="width:42%"></i><i style="width:72%"></i></div>
+    <span class="result-empty-hint">從年齡、學經歷與移居目標開始即可</span>
+   </div>
+  </section>
+</section>
+<section class="container explain-section" id="method">
+ <div class="section-heading"><div><p class="section-kicker">TWO VERY DIFFERENT SCORES</p><h2>「符合條件」和「官方積分」不能混為一談</h2><p>網站為每條路線列出證據與缺口；只有提供足夠官方依據時，才會顯示法定積分項目。</p></div></div>
+ <div class="explain-grid">
+  <article><div class="explain-number">01</div><h3>自訂探索準備度</h3><p>已填入且符合初步條件的加權比例。用來整理下一步，不是批准機率，也不是任何國家的正式評分。</p></article>
+  <article><div class="explain-number">02</div><h3>正式法定積分</h3><p>澳洲 189 僅顯示已證明項目小計；加拿大 CRS、德國機會卡、紐西蘭 SMC 等連到官方制度或計算工具。</p></article>
+  <article><div class="explain-number">03</div><h3>真實申請資格</h3><p>雇主擔保、名額、學歷認證、工作所在地與永久居留申請，均有個別條件。未知資料不能當作已符合。</p></article>
+ </div>
+ <div class="official-directory"><h3>政府官方評分與資格入口</h3><div class="directory-grid">
+  <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">🇨🇦 加拿大 CRS 計算器 ↗</a>
+  <a href="https://immi.homeaffairs.gov.au/supporting/Pages/Work/189-points-table.aspx" target="_blank" rel="noopener noreferrer">🇦🇺 澳洲 189 官方積分表 ↗</a>
+  <a href="https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/" target="_blank" rel="noopener noreferrer">🇳🇿 紐西蘭 SMC 路徑 ↗</a>
+  <a href="https://www.make-it-in-germany.com/en/advice-support/newsletter/the-new-opportunity-card-what-do-i-need-to-know" target="_blank" rel="noopener noreferrer">🇩🇪 德國機會卡積分規定 ↗</a>
+  <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-skilled-worker" target="_blank" rel="noopener noreferrer">🇬🇧 英國 Skilled Worker 必要點數 ↗</a>
+  <a href="https://www.moj.go.jp/isa/applications/resources/newimmiact_3_index.html" target="_blank" rel="noopener noreferrer">🇯🇵 日本高度人才積分規定 ↗</a>
+ </div></div>
+ <div class="match-disclaimer">資料核查基準日：2026-10-30。法律及計分方式可能隨時變更，尤其加拿大 CRS 已宣布近期制度調整。這是一個不留存個資的研究輔助工具，不能替代政府官方評分、正式職業評估或移民法律意見。<a href="/#method">原網站核查方法 ↗</a></div>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><span class="brand-symbol">✳</span><span><strong>GLOBAL MIGRATION</strong><small>Make the next move intentional.</small></span></div><div class="footer-legal">台灣護照研究工具 · 原始資料依 CC BY-SA 4.0 授權 · 不蒐集表單資料<br>不是移民顧問、官方計算器或法律意見。</div><a class="back-top" href="/">回路線總覽 ↑</a></div></footer>
+</body></html>
