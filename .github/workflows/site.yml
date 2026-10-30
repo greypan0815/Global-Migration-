@@ -37,6 +37,8 @@ jobs:
       - name: Static JavaScript syntax check
         run: |
           node --check web/app.js
+          node --check web/match-app.js
+          node --check web/match-engine.mjs
           node --check scripts/build_site.mjs
           node --check scripts/serve_site.mjs
       - name: Unit tests
@@ -74,6 +76,11 @@ jobs:
           assert.equal(data.routes.filter(r=>r.origin==='taiwan').length,9);
           for(const file of ['dist/index.html','dist/app.js','dist/styles.css','dist/_headers','dist/favicon.svg'])
             assert.ok(fs.existsSync(file),file);
+          for(const file of ['dist/match.html','dist/match-app.js','dist/match-engine.mjs','dist/match.css'])
+            assert.ok(fs.existsSync(file),file);
+          const matcherHtml=fs.readFileSync('dist/match.html','utf8');
+          assert.ok(matcherHtml.includes('id="profileForm"'));
+          assert.ok(matcherHtml.includes('id="matchResults"'));
           const html=fs.readFileSync('dist/index.html','utf8');
           const js=fs.readFileSync('dist/app.js','utf8');
           assert.ok(html.includes('id="evidenceFilter"'));
@@ -91,6 +98,8 @@ jobs:
             sleep 1
           done
           grep -q 'GLOBAL MIGRATION' /tmp/gm-home.html
+          curl --fail --silent http://127.0.0.1:4173/match.html | grep -q '個人移民路徑適配分析'
+          curl --fail --silent http://127.0.0.1:4173/match-engine.mjs | grep -q 'export function matchRoutes'
           curl --fail --silent http://127.0.0.1:4173/data/catalog.json |
             node -e 'let s=""; process.stdin.on("data",c=>s+=c); process.stdin.on("end",()=>{if(JSON.parse(s).counts.routes!==150)process.exit(1);});'
       - uses: actions/upload-artifact@v4

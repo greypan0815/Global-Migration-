@@ -24,6 +24,15 @@
 
 **本專案尚未幫你在 Cloudflare 帳號建立 Pages 專案**，上面是部署設定，不代表已經有公開網址。部署成功前勿猜測 \`pages.dev\` URL。
 
+## 新增個人適配分析頁面
+
+部署後可從首頁點選「開始個人移民適配分析」，或直接進入網站的 **`/match.html`**。
+
+- 個人條件不會發往 GitHub／Cloudflare API，也不會在 localStorage 儲存（僅由本機瀏覽器執行 `web/match-engine.mjs`）。
+- 建置時會將 `web/match.html`、`web/match-app.js`、`web/match-engine.mjs` 與 `web/match.css` 一併複製到 `dist/`。
+- 必須仍使用 `npm run build` 與 `dist` 輸出目錄。若看到 404，請確認 Cloudflare Workers／Pages 已更新到最新 main。
+- 分析頁面的「條件準備度」**不是**官方計分，澳洲 189 也只計算使用者提供且聲明已有官方認證的項目小計；請勿當作核准或獲邀預測。
+
 ## 二、專案如何運作
 
 \`\`\`text
