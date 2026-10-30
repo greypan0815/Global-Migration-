@@ -48,7 +48,7 @@ export const MODELS=[
  ['global:jp-hsp','官方高度人才積分制',SOURCE.jphsp]
 ];
 export const DEFAULT_PROFILE={
- age:'',field:'software',education:'unknown',years:'',english:'unknown',german:'unknown',
+ age:'',field:'unknown',education:'unknown',years:'',english:'unknown',german:'unknown',
  objective:'settlement',mode:'employment',offerCountry:'none',salary:'',salaryUnit:'year',
  sponsor:'unknown',taiwanHousehold:'unknown',student:'unknown',remoteWork:'unknown',
  business:'unknown',achievements:'unknown',canadianYears:'',auOccupation:'unknown',
