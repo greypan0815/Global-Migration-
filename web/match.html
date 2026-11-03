@@ -56,9 +56,14 @@
    </fieldset>
    <details class="extra-fields" id="extraFields"><summary>進階條件（加拿大／澳洲積分、實習、創業等）<span aria-hidden="true">＋</span></summary>
     <div class="extra-fields-inner">
-     <p class="advanced-intro">只有你確定的條件才選「已確認」。澳洲積分計算只能把已承認的項目列入小計。</p>
+     <p class="advanced-intro">只有你確定的條件才選「已確認」。加拿大 2026-11-03 新 CRS 的合格工作經驗與高薪 NOC offer 擇高、不能相加；級距取決於整個 NOC 職業的薪資統計，不是你的個人薪資。澳洲積分仍只計入已確認項目。</p>
      <div class="match-fields two">
-      <label>已在加拿大合格工作年數<input name="canadianYears" type="number" min="0" max="60" step=".5" inputmode="decimal" placeholder="不確定可留白"></label>
+      <label>加拿大合格工作年數（最近十年）<input name="canadianYears" type="number" min="0" max="60" step=".5" inputmode="decimal" placeholder="不確定可留白"></label>
+      <label>是否確認工作經驗符合 IRCC 規則<select name="canadianWorkEligible"><option value="unknown">尚未確認 NOC／工時／工作地</option><option value="yes">已確認合格 TEER 0–3 年資</option><option value="no">沒有符合資格的加拿大經驗</option></select></label>
+      <label>加拿大 CRS 配偶狀態<select name="canadaSpouseAccompanying"><option value="unknown">尚未確認</option><option value="no">按 IRCC 規則視為無隨行配偶</option><option value="yes">有隨行配偶／同居伴侶</option></select></label>
+      <label>工作經驗的高薪 NOC 級距<select name="canadaExperienceNocBand"><option value="unknown">尚未核對官方 NOC 名單</option><option value="below">非高薪 NOC／不符高薪年資</option><option value="tier13">已確認 1.3 倍級距及 12 個月經驗</option><option value="tier15">已確認 1.5 倍級距及 12 個月經驗</option><option value="tier20">已確認 2.0 倍級距及 12 個月經驗</option></select></label>
+      <label>加拿大 Job Offer 是否合格<select name="canadianOfferEligible"><option value="unknown">尚未確認</option><option value="yes">已確認合格且真實的 offer</option><option value="no">沒有合格 offer</option></select></label>
+      <label>Job Offer 的高薪 NOC 級距<select name="canadaOfferNocBand"><option value="unknown">尚未核對官方 NOC 名單</option><option value="below">非高薪 NOC（加分為零）</option><option value="tier13">已確認 1.3 倍級距</option><option value="tier15">已確認 1.5 倍級距</option><option value="tier20">已確認 2.0 倍級距</option></select></label>
       <label>目前是否在學<select name="student"><option value="unknown">尚未確認</option><option value="yes">是，符合在學條件</option><option value="no">否</option></select></label>
       <label>出生地（DV 按出生地判斷，非護照）<select name="birthPlace"><option value="unknown">尚未提供／其他地區待查</option><option value="taiwan">台灣出生</option><option value="mainland">中國大陸出生</option><option value="hongkong">香港出生</option><option value="other">其他國家／地區出生</option></select></label>
       <label>臺灣戶籍證明<select name="taiwanHousehold"><option value="unknown">尚未確認</option><option value="yes">有臺灣戶籍可證明</option><option value="no">沒有臺灣戶籍</option></select></label>
