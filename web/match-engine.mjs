@@ -173,12 +173,24 @@ function checksFor(r,p){
  case 'global:au-482':out.push(experience(p),salary(p,'australia',79423));break;
  case 'global:nz-smc':
    out.push(age(p,18,55),unknown('SMC 各路徑核算','有六分制、技術工作經驗及技工／技術人員路徑；仍須核對紐西蘭當地年資。',2));break;
- case 'global:ca-ee':
-   out.push(p.canadianYears===null?unknown('CEC 加拿大經驗','尚未填加拿大合格工作經驗；也可研究 FSW／FST。',3)
-    :p.canadianYears>=1?ok('CEC 加拿大經驗','填寫已有至少一年年資，但工作地、雇主及 NOC 須重新核實。',3)
-    :need('CEC 加拿大經驗','CEC 通常需一年合格加拿大工作，或另評估 FSW／FST。',3),
-    unknown('官方 CRS 語言與學歷','CRS 要求有效四技能語言成績、婚姻、ECA 等；英文自評不能直接換算。',2));
+ case 'global:ca-ee':{
+   out.push(p.canadianYears===null||p.canadianWorkEligible==='unknown'
+     ?unknown('加拿大合格工作經驗','需確認最近十年的加拿大 TEER 0–3 合格年資；只填工作年數不能直接認定符合 CRS。',3)
+     :p.canadianYears>=1&&p.canadianWorkEligible==='yes'
+       ?ok('加拿大合格工作經驗','已聲明具備合格加拿大工作年資，仍須政府查核 NOC、工作地及工時。',3)
+       :need('加拿大合格工作經驗','可改研究 FSW／其他 EE 途徑，CEC 通常需要至少一年符合條件的工作經驗。',3));
+   out.push(p.canadaExperienceNocBand==='unknown'
+     ?unknown('高薪 NOC 職類','官方看 NOC 職業中位數，不是你的個人薪資；請先核對政府名單。',2)
+     :unknown('NOC 級距需官方證明','已選級距，仍須核對 2026-11-03 政府 NOC 名單與至少十二個月合格經驗。',2));
+   out.push(p.offerCountry==='canada'&&p.canadianOfferEligible==='yes'
+     ?ok('合格加拿大 job offer','已聲明有符合資格的 offer；2026-11-03 起不要求 LMIA，但仍須由 IRCC 核實真實性。',2)
+     :p.canadianOfferEligible==='no'||p.offerCountry==='none'
+       ?need('合格加拿大 job offer','目前未有 offer；不代表所有 EE 類別都需要 offer。',2)
+       :unknown('合格加拿大 job offer','須核對加拿大 offer 及對應官方高薪職業級距，非所有 offer 都取得 CRS 分。',2));
+   out.push(unknown('Labour Market Integration 分數','合法加拿大工作經驗與合格高薪 NOC offer 擇高，不能重複加總。',1),
+     unknown('完整 CRS 分數','語言四技能、ECA、婚姻／配偶、轉移技能及其他分數仍須 IRCC 正式計分器。',2));
    break;
+ }
  case 'global:ca-pnp':out.push(offer(p,'canada'),unknown('省分／提名類別','須依各省實際計畫、配額與雇主要求核實。',2));break;
  case 'tw:iec_wh':case 'tw:iec_yp':case 'tw:iec_coop':
    out.push(age(p,18,35));
