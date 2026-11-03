@@ -5,6 +5,14 @@
 
 **积分制技术移民的标杆**，但 2024 年起大幅压缩临时居民（留学生、工签）规模，Express Entry 越来越依赖**定向类别抽签**（法语、医疗、交通、加拿大经验等）。**联邦创业签证（SUV）已于 2026-06-30 完全暂停**，新的企业家试点规则尚未公布。
 
+## 2026-11-03 已生效：Express Entry Labour Market Integration
+
+加拿大 IRCC [官方修订](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html) 自 11/03 起调整 CRS：符合资格的加拿大工作经验（基本年资分＋高薪 NOC 职类经验额外分）与合格高薪职业 job offer **择较高者**，不能叠加。offer 的 1.3／1.5／2.0 倍高薪职业 NOC 级距可获得 50／70／100 分；至少十二个月的合格加拿大高薪 NOC 工作经验，额外加分为 20／40／70 分。
+
+重要：级距依据 [IRCC NOC 官方职业统计](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html)，**不是个人薪水**。符合要求的 offer 自 11/03 起不再要求 LMIA，但仍须审核真实性。CRS 旧档案重新计分可能需两周，**期间暂时停止邀请轮次**。
+
+完整分数还涉及语言、ECA、配偶与技能转移等条件，请使用 [IRCC 官方 CRS](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html)。IEC 工签工作并不当然符合 CEC／CRS 年资资格。
+
 ## 主要路线
 
 | 路线 | 要点 | 现状 |

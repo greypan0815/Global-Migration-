@@ -6,9 +6,13 @@
 
 [繁體中文入口](../../README.zh-TW.md) ｜ [工程師直接就業](tech-employment.md) ｜ [核對方法](audit-methodology.md) ｜ [加拿大 IEC](canada-iec.md) ｜ [臺灣文件](documents.md) ｜ [資料表](../../data/taiwan_applicability.csv)
 
+## 📅 2026-11-03 政策同步
+
+[查看加拿大 CRS／英國 Earned Settlement／比利時藍卡官方核查報告](november-2026-policy-update.md)。加拿大新 CRS 已生效；英國政府公布改革後仍須與目前實際適用的 Immigration Rules 分開呈現。
+
 ## 🔎 2026-10-30 本輪政策核查範圍
 
-- **152 條路線**可搜尋，但僅有 **24 條優先路線的特定政策欄位**經官方頁面核查；其餘 **128 條仍屬上游參考，不能直接據此申請**。
+- **152 條路線**可搜尋，但僅有 **26 條優先路線的特定政策欄位**經官方頁面核查；其餘 **126 條仍屬上游參考，不能直接據此申請**。
 - **10 條**路線已從政府資料明確確認臺灣在國籍／地區適用範圍（原有 9 條，加上捷克 Digital Nomad Program）。**其餘 142 條未核對不等於不適用台灣**。
 - 已核對路線清楚區分**台灣資格、2026 受理狀態、工作許可、永久居留**；只對 `data/policy_reviews.json` 中明列的欄位核查，沒有核查的欄位不會假裝已認證。
 - 優先閱讀 [臺灣軟體工程師直接海外就業指南](tech-employment.md) 及 [官方證據品質分級](audit-methodology.md)。

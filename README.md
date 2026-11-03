@@ -27,6 +27,15 @@
 
 ---
 
+## 2026-11-03 加拿大／英國／比利時政策同步
+
+- 加拿大 CRS 新的 **Labour Market Integration** 因子已生效：合格加拿大經驗或高薪 NOC offer **擇高，不疊加**。
+- 英國 Earned Settlement 於 11/02 **公布政策**，但須與當下有效的五年 Skilled Worker／十年 Long Residence 等條款分開。
+- 比利時 EU Blue Card 官方審理上限 **90 天**（不保證核發）。
+- 保留台灣護照 IEC／YMS／DV／J-1 等既有路線、**152 條路線**與個人適配分析。
+
+[完整官方來源與核查](docs/taiwan/november-2026-policy-update.md)
+
 ## 🇹🇼 臺灣護照讀者入口（首次適配）
 
 > [!IMPORTANT]

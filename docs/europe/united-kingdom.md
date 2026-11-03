@@ -6,21 +6,25 @@
 
 ![欧盟](https://img.shields.io/badge/%E6%AC%A7%E7%9B%9F-%E5%90%A6-8b949e) ![申根](https://img.shields.io/badge/%E7%94%B3%E6%A0%B9-%E5%90%A6-8b949e) ![货币](https://img.shields.io/badge/%E8%B4%A7%E5%B8%81-GBP%20%E8%8B%B1%E9%95%91-0969da) ![收录路线](https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E8%B7%AF%E7%BA%BF-4-6e40c9) ![数据核查](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%A0%B8%E6%9F%A5-2026--10--25-57606a)
 
-**投资移民已关闭；永居拟从 5 年改为 10 年**
+**现行 Skilled Worker ILR 通常五年；11/02 已公布 Earned Settlement 改革，正式实施待进一步规则**
 
 [🧑‍💻 技术工作签证（Skilled Worker）](#uk-skilled-worker) · [🧑‍💻 全球人才签证（Global Talent）](#uk-global-talent) · [🧑‍💻 高潜力人才签证（HPI）](#uk-hpi) · [💰 UK Tier 1 Investor Visa](#uk-tier-1-investor-visa) · [📖 深度解读](#deep) · [🔗 延伸阅读](#more)
 
 </div>
 
 > [!TIP]
-> **一句话判断**：**非欧盟、非申根**，英语国家。**Tier 1 投资移民已于 2022-02-17 关闭**，投资移民这条路没了；现在主要靠**技术工作签证（Skilled Worker）**、**全球人才（Global Talent）**、**创新创业（Innovator Founder）**、**高潜力人才（HPI）**、**扩张签证（Scale-up）** 等。**永居政策正在收紧**：政府提议将标准永居年限从 5 年延长到 10 年（"earned settlement"，截至 2026-10 尚未立法）。
+> **一句话判断**：**非欧盟、非申根**，英语国家。**Tier 1 投资移民已于 2022-02-17 关闭**，投资移民这条路没了；现在主要靠**技术工作签证（Skilled Worker）**、**全球人才（Global Talent）**、**创新创业（Innovator Founder）**、**高潜力人才（HPI）**、**扩张签证（Scale-up）** 等。**2026-11-02 政府已公布 Earned Settlement 政策方向，但截至 2026-11-03 GOV.UK 的现行 Skilled Worker ILR 五年及 Long Residence 十年规则仍在。**
+
+> [!IMPORTANT]
+> **2026-11-03 官方核查**：GOV.UK [Skilled Worker 現行永居規則](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk) 仍列五年，[Long Residence](https://www.gov.uk/long-residence) 仍保留十年合法長居途徑。11/02 的 [Earned Settlement 政策公告](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk) 不等於全面生效，個案申請須依正式 Immigration Rules。
+> 另見 [台灣讀者 11 月政策更新](../taiwan/november-2026-policy-update.md)。
 
 ## 🏙️ 生活与身份档案
 
 <table>
 <tr><td width="33%" valign="top"><sub>💶 生活成本指数（纽约=100）</sub><br><b>68.2 ●●●○○</b></td><td width="33%" valign="top"><sub>🏠 房租指数（纽约=100）</sub><br><b>30.1 ●●●○○</b></td><td width="33%" valign="top"><sub>🛡️ 安全指数</sub><br><b>51.8 ●●○○○</b></td></tr>
 <tr><td width="33%" valign="top"><sub>💼 平均年薪（总额）</sub><br><b>—</b></td><td width="33%" valign="top"><sub>🧾 最高个税税率</sub><br><b>45%</b></td><td width="33%" valign="top"><sub>🛂 护照免签目的地</sub><br><b>182 个（中国 81）</b></td></tr>
-<tr><td width="33%" valign="top"><sub>🏠 永居年限</sub><br><b>5 年（拟改 10 年）</b></td><td width="33%" valign="top"><sub>🎖️ 入籍年限</sub><br><b>永居后 1 年</b></td><td width="33%" valign="top"><sub>🔁 双重国籍</sub><br><b>✅ 可保留原国籍</b></td></tr>
+<tr><td width="33%" valign="top"><sub>🏠 永居年限</sub><br><b>现行通常 5 年；11/02 改革已公布待实施</b></td><td width="33%" valign="top"><sub>🎖️ 入籍年限</sub><br><b>永居后 1 年</b></td><td width="33%" valign="top"><sub>🔁 双重国籍</sub><br><b>✅ 可保留原国籍</b></td></tr>
 <tr><td width="33%" valign="top"><sub>🗣️ 语言要求</sub><br><b>英语 B1 + Life in UK</b></td><td width="33%" valign="top"><sub>✈️ 中国护照入境</sub><br><b>英国签证</b></td><td width="33%" valign="top"></td></tr>
 </table>
 
@@ -49,7 +53,7 @@
 
 <table>
 <tr><td width="33%" valign="top"><sub>薪资</sub><br><b>≥ GBP 41,700/年或职业标准工资（取高者），时薪 ≥ GBP 17.13</b></td><td width="33%" valign="top"><sub>岗位</sub><br><b>RQF 6（学士级）以上；中等技能岗位需在紧缺清单</b></td><td width="33%" valign="top"><sub>英语</sub><br><b>B2（2026-01-08 起）</b></td></tr>
-<tr><td width="33%" valign="top"><sub>雇主</sub><br><b>持牌担保雇主</b></td><td width="33%" valign="top"><sub>永居</sub><br><b>现行 5 年；拟改为 10 年（earned settlement）</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>雇主</sub><br><b>持牌担保雇主</b></td><td width="33%" valign="top"><sub>永居</sub><br><b>现行通常五年；Earned Settlement 已公布但未全面实施</b></td><td width="33%" valign="top"></td></tr>
 </table>
 
 <table><tr>
@@ -101,7 +105,7 @@ flowchart LR
 
 ![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%8A%80%E6%9C%AF%E5%B7%A5%E4%BD%9C-0f766e) ![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%BC%80%E6%94%BE-2ea44f) ![家属](https://img.shields.io/badge/%E5%AE%B6%E5%B1%9E-%E5%8F%AF%E5%B8%A6-0969da) ![永居](https://img.shields.io/badge/%E6%B0%B8%E5%B1%85-%E5%8F%AF%E8%83%BD-0969da) ![来源](https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-RUN%20%E8%A1%A5%E5%85%85-e36209)
 
-> **科研、数字技术、艺术、设计等领域顶尖或潜力人才，无需雇主，最长 5 年，可快速永居。**
+> **科研、数字技术、艺术与设计领域顶尖或潜力人才；现行依背书／奖项类型符合条件者可于三年或五年申请 ILR，改革尚待正式实施。**
 
 <table>
 <tr><td width="33%" valign="top"><sub>背书</sub><br><b>认可机构背书（2026-08 起 100 多家企业可为研究人员背书）</b></td><td width="33%" valign="top"><sub>雇主</sub><br><b>不需要</b></td><td width="33%" valign="top"><sub>期限</sub><br><b>最长 5 年</b></td></tr>

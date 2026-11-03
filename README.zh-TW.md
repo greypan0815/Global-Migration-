@@ -20,9 +20,18 @@
 
 專案採原生 HTML／CSS／JavaScript，透過 `npm run build` 產生 `dist/`。Cloudflare Pages 設定：**Build command = `npm run build`、Output = `dist`、Production branch = `main`**。初次部署仍需在你的 Cloudflare 帳號授權連接此 GitHub Repository。
 
+## 🇨🇦🇬🇧🇧🇪 2026-11-03 官方政策同步
+
+已依 IRCC、GOV.UK、歐盟委員會官方來源更新 [加拿大 CRS／英國 Earned Settlement／比利時 EU Blue Card 專頁](docs/taiwan/november-2026-policy-update.md)。
+
+- **加拿大 Express Entry：** 11/03 新 Labour Market Integration 因子生效，合格加拿大工作經驗或高薪 NOC job offer 擇高計分、不可相加，LMIA 不再是合格 offer 的必要條件；重算期間暫停邀請輪次。
+- **英國 Skilled Worker／Global Talent／HPI：** 11/02 公布 Earned Settlement 政策，但**現行 ILR 法律及後續正式實施日須分開**；不能直接說所有人都已改十年。
+- **比利時 EU Blue Card：** 歐盟官網列完整申請審理上限 90 天，不等於保證核發。
+- **2026/11 更新後：** 152 條路線不變、26 條部分欄位有政府核查、126 條仍待逐項驗證，個人適配模型仍為 26 條。
+
 ## 官方政策核查更新（2026-10-30）
 
-- 152 條路線可搜尋，目前 **24 條優先路線的部分欄位**附有政府來源與核查日期；其餘 128 條仍需審查（本輪最新核查 2026-10-31）。
+- 152 條路線可搜尋，目前 **26 條優先路線的部分欄位**附有政府來源與核查日期；其餘 126 條仍需審查（新增 2026-11-03 加拿大、英國、比利時核查）。
 - **10 條**路線有臺灣適用國籍／地區的官方明確依據（含捷克 Digital Nomad Program），不代表其它 140 條不適用。
 - 2026 加拿大 IEC 已關閉候選人池；英國 YMS 及紐西蘭台灣打工度假已結束當年度窗口。
 - [軟體工程師直接海外就業指南](docs/taiwan/tech-employment.md) ｜ [官方核查方式及證據品質](docs/taiwan/audit-methodology.md)

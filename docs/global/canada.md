@@ -19,6 +19,9 @@
 > 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。
 
 
+> [!IMPORTANT]
+> **2026-11-03 IRCC 新制已生效**：Express Entry 新 Labour Market Integration 因子採加拿大工作經驗（基本年資加可能的高薪 NOC 經驗分）**或**合格高薪 NOC offer，二者擇高、不能疊加；符合資格的 offer 不需 LMIA，但仍須確認真實性。高薪級距看 [官方 NOC 名單](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html)，不是個人薪資。IRCC 重新計分期間暫停邀請輪次。詳見 [IRCC 官方新制](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html) 及 [台灣讀者指南](../taiwan/november-2026-policy-update.md)。
+
 ## 🏙️ 生活档案
 
 <table>
@@ -32,7 +35,7 @@
 
 | 路线 | 类型 | 一句话 | 状态 |
 |---|---|---|:-:|
-| [Express Entry 快速通道](#ca-ee) | 🧑‍💻 技术工作 | CRS 打分池，按类别定期抽签，获邀后约 6 个月拿永居。 | 🟢 开放 |
+| [Express Entry 快速通道](#ca-ee) | 🧑‍💻 技术工作 | 2026-11-03 CRS 新因子：加拿大合格經驗或高薪 NOC offer 擇高，IRCC 重算期間暫停邀請；獲 ITA 才能正式申請 PR。 | 🟢 开放 |
 | [省提名 PNP](#ca-pnp) | 🧑‍💻 技术工作 | 各省按需求提名，获提名后 Express Entry 加 600 分。 | 🟢 开放 |
 | [联邦创业签证 SUV](#ca-suv) | 🚀 创业 | 2026-06-30 起完全暂停，新的企业家试点规则尚未公布。 | ⛔ 已关闭 |
 
