@@ -1,6 +1,8 @@
 /* Global Migration route matching v1 — local-browser checklist, NOT immigration points/probability. */
 export const SOURCE={
   crs:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html',
+  canadaChanges:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html',
+  canadaNoc:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html',
   iec:'https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html',
   au189:'https://immi.homeaffairs.gov.au/supporting/Pages/Work/189-points-table.aspx',
   nz:'https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/',
@@ -57,7 +59,9 @@ export const DEFAULT_PROFILE={
  sponsor:'unknown',taiwanHousehold:'unknown',student:'unknown',remoteWork:'unknown',
  business:'unknown',achievements:'unknown',canadianYears:'',auOccupation:'unknown',
  auEnglish:'unknown',auDegree:'unknown',auWorkVerified:'unknown',auYears:'',
- partner:'unknown',hpiUniversity:'unknown',birthPlace:'unknown',destination:'all'
+ partner:'unknown',hpiUniversity:'unknown',birthPlace:'unknown',destination:'all',
+ canadianWorkEligible:'unknown',canadaSpouseAccompanying:'unknown',canadaExperienceNocBand:'unknown',
+ canadianOfferEligible:'unknown',canadaOfferNocBand:'unknown'
 };
 const region={
  germany:'europe',ireland:'europe',netherlands:'europe','united-kingdom':'europe',
@@ -271,7 +275,8 @@ export function matchRoutes(catalog,raw={}){
      gaps:checks.filter(x=>x.state==='missing'||x.state==='blocked').length,
      season,reviewed:Boolean(r.audit?.checkedAt),reviewDate:r.audit?.checkedAt||'',
      reference:r.referenceUrl,settlement:r.audit?.settlement?.detail||'尚未完成官方查核',
-     points:id==='global:au-189'?australia189Subtotal(profile):null};
+     points:id==='global:au-189'?australia189Subtotal(profile):null,
+     canadaLMI:id==='global:ca-ee'?estimateCanadaLMI(profile):null};
  }).filter(Boolean);
  const rank={prioritize:0,prepare:1,research:2,out_of_range:3};
  matches.sort((a,b)=>rank[a.tier]-rank[b.tier]||b.score-a.score||Number(b.reviewed)-Number(a.reviewed)||a.id.localeCompare(b.id));
