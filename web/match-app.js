@@ -50,6 +50,24 @@ function breakdownCard(result){
    '<a class="official-small" href="'+escapeHtml(checkedLink(points.official))+
    '" target="_blank" rel="noopener noreferrer">查看澳洲完整官方積分表 ↗</a></div>';
 }
+
+function canadaLMICard(entry){
+ const d=entry.canadaLMI;
+ if(!d)return '';
+ const show=v=>typeof v==='number'?v+' 分':'尚未確認';
+ const detail=d.selected===null?'尚不能估算':d.selected+' 分';
+ return '<div class="partial-points"><h4>🇨🇦 2026-11-03 CRS Labour Market Integration 因子</h4>'+
+  '<p>以下僅依填入且自述已核實的資格，列出單一計分因子的條件式情境；<strong>不是完整 CRS</strong>。</p>'+
+  '<ul><li>加拿大合格工作經驗：<strong>'+show(d.experience?.total)+'</strong></li>'+
+  '<li>合格高薪 NOC offer：<strong>'+show(d.offer?.total)+'</strong></li></ul>'+
+  '<div class="partial-big">'+detail+' <small>兩種方案擇高，不能相加</small></div>'+
+  '<p>'+escapeHtml(d.explanation)+'</p>'+
+  (d.notes?.length?'<p>尚待核實：'+escapeHtml(d.notes.join(' '))+'</p>':'')+
+  '<a class="official-small" href="'+escapeHtml(checkedLink(SOURCE.canadaChanges))+
+  '" target="_blank" rel="noopener noreferrer">IRCC 新制 ↗</a>　'+
+  '<a class="official-small" href="'+escapeHtml(checkedLink(SOURCE.canadaNoc))+
+  '" target="_blank" rel="noopener noreferrer">高薪 NOC 名單 ↗</a></div>';
+}
 function checkRow(check){
  const symbol={met:'✓',missing:'!',unknown:'?',blocked:'×'}[check.state]||'?';
  return '<li><span class="check-state '+escapeHtml(check.state)+'">'+symbol+'</span>'+
@@ -82,6 +100,7 @@ function matchCard(item){
   '<div class="audit-foot">永久居留：'+escapeHtml(item.settlement)+
   '<br>本分析不涵蓋全部移民法規，也不證明個人資格已獲政府認定。</div></details>'+
   breakdownCard(item)+
+  canadaLMICard(item)+
   '<div class="match-card-actions"><a href="'+escapeHtml(checkedLink(item.official))+
   '" target="_blank" rel="noopener noreferrer">查看政府規定 ↗</a>'+
   '<a href="/#route='+encodeURIComponent(item.id)+'">查看網站路線詳情 ↗</a></div>'+
