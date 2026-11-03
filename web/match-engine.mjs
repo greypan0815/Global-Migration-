@@ -1,6 +1,8 @@
 /* Global Migration route matching v1 — local-browser checklist, NOT immigration points/probability. */
 export const SOURCE={
   crs:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html',
+  canadaChanges:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html',
+  canadaNoc:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html',
   iec:'https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html',
   au189:'https://immi.homeaffairs.gov.au/supporting/Pages/Work/189-points-table.aspx',
   nz:'https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/',
@@ -57,7 +59,9 @@ export const DEFAULT_PROFILE={
  sponsor:'unknown',taiwanHousehold:'unknown',student:'unknown',remoteWork:'unknown',
  business:'unknown',achievements:'unknown',canadianYears:'',auOccupation:'unknown',
  auEnglish:'unknown',auDegree:'unknown',auWorkVerified:'unknown',auYears:'',
- partner:'unknown',hpiUniversity:'unknown',birthPlace:'unknown',destination:'all'
+ partner:'unknown',hpiUniversity:'unknown',birthPlace:'unknown',destination:'all',
+ canadianWorkEligible:'unknown',canadaSpouseAccompanying:'unknown',canadaExperienceNocBand:'unknown',
+ canadianOfferEligible:'unknown',canadaOfferNocBand:'unknown'
 };
 const region={
  germany:'europe',ireland:'europe',netherlands:'europe','united-kingdom':'europe',
@@ -169,12 +173,24 @@ function checksFor(r,p){
  case 'global:au-482':out.push(experience(p),salary(p,'australia',79423));break;
  case 'global:nz-smc':
    out.push(age(p,18,55),unknown('SMC 各路徑核算','有六分制、技術工作經驗及技工／技術人員路徑；仍須核對紐西蘭當地年資。',2));break;
- case 'global:ca-ee':
-   out.push(p.canadianYears===null?unknown('CEC 加拿大經驗','尚未填加拿大合格工作經驗；也可研究 FSW／FST。',3)
-    :p.canadianYears>=1?ok('CEC 加拿大經驗','填寫已有至少一年年資，但工作地、雇主及 NOC 須重新核實。',3)
-    :need('CEC 加拿大經驗','CEC 通常需一年合格加拿大工作，或另評估 FSW／FST。',3),
-    unknown('官方 CRS 語言與學歷','CRS 要求有效四技能語言成績、婚姻、ECA 等；英文自評不能直接換算。',2));
+ case 'global:ca-ee':{
+   out.push(p.canadianYears===null||p.canadianWorkEligible==='unknown'
+     ?unknown('加拿大合格工作經驗','需確認最近十年的加拿大 TEER 0–3 合格年資；只填工作年數不能直接認定符合 CRS。',3)
+     :p.canadianYears>=1&&p.canadianWorkEligible==='yes'
+       ?ok('加拿大合格工作經驗','已聲明具備合格加拿大工作年資，仍須政府查核 NOC、工作地及工時。',3)
+       :need('加拿大合格工作經驗','可改研究 FSW／其他 EE 途徑，CEC 通常需要至少一年符合條件的工作經驗。',3));
+   out.push(p.canadaExperienceNocBand==='unknown'
+     ?unknown('高薪 NOC 職類','官方看 NOC 職業中位數，不是你的個人薪資；請先核對政府名單。',2)
+     :unknown('NOC 級距需官方證明','已選級距，仍須核對 2026-11-03 政府 NOC 名單與至少十二個月合格經驗。',2));
+   out.push(p.offerCountry==='canada'&&p.canadianOfferEligible==='yes'
+     ?ok('合格加拿大 job offer','已聲明有符合資格的 offer；2026-11-03 起不要求 LMIA，但仍須由 IRCC 核實真實性。',2)
+     :p.canadianOfferEligible==='no'||p.offerCountry==='none'
+       ?need('合格加拿大 job offer','目前未有 offer；不代表所有 EE 類別都需要 offer。',2)
+       :unknown('合格加拿大 job offer','須核對加拿大 offer 及對應官方高薪職業級距，非所有 offer 都取得 CRS 分。',2));
+   out.push(unknown('Labour Market Integration 分數','合法加拿大工作經驗與合格高薪 NOC offer 擇高，不能重複加總。',1),
+     unknown('完整 CRS 分數','語言四技能、ECA、婚姻／配偶、轉移技能及其他分數仍須 IRCC 正式計分器。',2));
    break;
+ }
  case 'global:ca-pnp':out.push(offer(p,'canada'),unknown('省分／提名類別','須依各省實際計畫、配額與雇主要求核實。',2));break;
  case 'tw:iec_wh':case 'tw:iec_yp':case 'tw:iec_coop':
    out.push(age(p,18,35));
@@ -255,6 +271,44 @@ export function australia189Subtotal(raw={}){
    official:SOURCE.au189,threshold:65,complete:false,
    note:'只顯示已聲明具有正式證明的部分積分；仍缺澳洲在學、偏遠地區、專業年、社區語言等可能加分，以及職業評估與邀請資格。65 分是最低門檻，不是獲邀或核准機率。'};
 }
+
+/**
+ * 加拿大 2026-11-03 Labour Market Integration 因子情境推估。
+ * 高薪級距依 IRCC 的 NOC 職業整體中位數，不是個人的薪資。
+ * 輸入是使用者自述，非完整 CRS、有效 job offer 或政府資格認定。
+ */
+export function estimateCanadaLMI(raw={}){
+ const p=normalizeProfile(raw);
+ const basic={yes:[0,35,46,56,63,70],no:[0,40,53,64,72,80]};
+ const wageExtra={below:0,tier13:20,tier15:40,tier20:70};
+ const offerTier={below:0,tier13:50,tier15:70,tier20:100};
+ const reasons=[];
+ const expConfirmed=p.canadianWorkEligible==='yes'&&p.canadianYears!==null&&
+   Object.hasOwn(basic,p.canadaSpouseAccompanying);
+ let experience=null;
+ if(expConfirmed){
+   const years=Math.min(5,Math.floor(p.canadianYears));
+   const base=basic[p.canadaSpouseAccompanying][years];
+   const highWage=p.canadianYears<1?0:Object.hasOwn(wageExtra,p.canadaExperienceNocBand)
+     ?wageExtra[p.canadaExperienceNocBand]:null;
+   experience={base,highWage,total:highWage===null?null:base+highWage};
+   if(highWage===null)reasons.push('需確認合格加拿大工作經驗的高薪 NOC 級距。');
+ }else reasons.push('加拿大年資、合法工作資格或隨行配偶欄位未經確認，不能計算工作經驗方案。');
+ const offer=p.offerCountry==='canada'&&p.canadianOfferEligible==='yes'&&
+   Object.hasOwn(offerTier,p.canadaOfferNocBand)
+   ?{total:offerTier[p.canadaOfferNocBand]}:null;
+ if(!offer)reasons.push('需有真實且符合 IRCC 規則的加拿大 job offer，並確認官方 NOC 高薪級距。');
+ const known=[experience?.total,offer?.total].filter(v=>typeof v==='number');
+ const selected=known.length?Math.max(...known):null;
+ return {experience,offer,selected,
+   alternativesFullyProvided:experience?.total!==null&&experience?.total!==undefined&&offer!==null,
+   officialCriteriaVerified:false,completeCRS:false,
+   checkedAsOf:'2026-11-03',sources:[SOURCE.canadaChanges,SOURCE.canadaNoc,SOURCE.crs],
+   notes:reasons,
+   explanation:'僅供研究的 2026-11-03 Labour Market Integration 情境值，依使用者自述資料推估。加拿大工作經驗方案（年資分加高薪職業額外分）與合格 offer 方案擇高、不相加。職業高薪 NOC 依 IRCC 官方職業名單而非個人薪水。完整 CRS、各類別資格、邀請及移民官核定均未計算。'
+ };
+}
+
 export function matchRoutes(catalog,raw={}){
  const profile=normalizeProfile(raw),routes=Array.isArray(catalog?.routes)?catalog.routes:[];
  const lookup=new Map(routes.map(x=>[x.id,x]));
@@ -271,7 +325,8 @@ export function matchRoutes(catalog,raw={}){
      gaps:checks.filter(x=>x.state==='missing'||x.state==='blocked').length,
      season,reviewed:Boolean(r.audit?.checkedAt),reviewDate:r.audit?.checkedAt||'',
      reference:r.referenceUrl,settlement:r.audit?.settlement?.detail||'尚未完成官方查核',
-     points:id==='global:au-189'?australia189Subtotal(profile):null};
+     points:id==='global:au-189'?australia189Subtotal(profile):null,
+     canadaLMI:id==='global:ca-ee'?estimateCanadaLMI(profile):null};
  }).filter(Boolean);
  const rank={prioritize:0,prepare:1,research:2,out_of_range:3};
  matches.sort((a,b)=>rank[a.tier]-rank[b.tier]||b.score-a.score||Number(b.reviewed)-Number(a.reviewed)||a.id.localeCompare(b.id));

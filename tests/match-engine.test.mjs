@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {matchRoutes,australia189Subtotal,normalizeProfile,MODELS,SOURCE} from '../web/match-engine.mjs';
+import {matchRoutes,australia189Subtotal,estimateCanadaLMI,normalizeProfile,MODELS,SOURCE} from '../web/match-engine.mjs';
 import {buildCatalog,parseCsv} from '../scripts/build_site.mjs';
 
 const readJson=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
@@ -136,4 +136,35 @@ test('J-1 Summer Work Travel excludes non-students as a hard condition',()=>{
   const current=find(matchRoutes(catalog,{student:'yes',objective:'temporary'}),'global:us-j1-summer-work-travel');
   assert.ok(current.checks.some(x=>x.label==='合格全職在學身分'&&x.state==='met'));
   assert.notEqual(current.score,100);
+});
+
+test('Canadian November 2026 LMI work experience and offer are mutually exclusive',()=>{
+ const scenario=estimateCanadaLMI({canadianYears:3,canadianWorkEligible:'yes',
+   canadaSpouseAccompanying:'no',canadaExperienceNocBand:'tier13',
+   offerCountry:'canada',canadianOfferEligible:'yes',canadaOfferNocBand:'tier20'});
+ assert.equal(scenario.experience.total,84);
+ assert.equal(scenario.offer.total,100);
+ assert.equal(scenario.selected,100);
+ assert.equal(scenario.completeCRS,false);
+ assert.equal(scenario.alternativesFullyProvided,true);
+ const noSpouse=estimateCanadaLMI({canadianYears:5,canadianWorkEligible:'yes',
+   canadaSpouseAccompanying:'no',canadaExperienceNocBand:'tier20'});
+ assert.equal(noSpouse.experience.total,150);
+ const withSpouse=estimateCanadaLMI({canadianYears:5,canadianWorkEligible:'yes',
+   canadaSpouseAccompanying:'yes',canadaExperienceNocBand:'tier20'});
+ assert.equal(withSpouse.experience.total,140);
+});
+test('personal salary is not a proxy for IRCC NOC high-wage category',()=>{
+ const empty=estimateCanadaLMI({salary:500000,offerCountry:'canada',canadianYears:5});
+ assert.equal(empty.selected,null);
+ assert.equal(empty.experience,null);
+ const offer=estimateCanadaLMI({offerCountry:'canada',canadianOfferEligible:'yes',
+  canadaOfferNocBand:'tier15'});
+ assert.equal(offer.selected,70);
+ assert.equal(offer.alternativesFullyProvided,false);
+ const noRealOffer=estimateCanadaLMI({offerCountry:'none',canadianOfferEligible:'yes',
+  canadaOfferNocBand:'tier20'});
+ assert.equal(noRealOffer.offer,null);
+ const r=find(matchRoutes(actual(),{canadianYears:1}),'global:ca-ee');
+ assert.ok(r.checks.some(c=>c.label==='加拿大合格工作經驗'&&c.state==='unknown'));
 });

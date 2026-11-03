@@ -339,6 +339,15 @@
       '<div class="detail-tags">'+pill(ver.text)+pill(status(r))+pill(sourceLabel(r))+'</div>'+
       '<div class="detail-callout">'+esc(warning)+'</div>'+
       auditSection+
+      (r.audit?.policyTimeline
+        ? block('政策時間軸：現行規則與已宣布但未完全實施的新政策',
+            '<div class="audit-grid"><div class="audit-row"><strong>現行法規（截至核查日）</strong><p>'+
+            esc(r.audit.policyTimeline.currentRule)+'</p></div>'+
+            '<div class="audit-row"><strong>政府已公布的後續改革 · 不能當作現行規則</strong><p>'+
+            esc(r.audit.policyTimeline.announcedRule)+'</p></div></div>'+
+            '<p class="audit-foot">公布日：'+esc(r.audit.policyTimeline.announcedOn||'未確認')+
+            ' · 完整生效日：'+esc(r.audit.policyTimeline.effectiveOn||'尚待正式 Immigration Rules／指引')+
+            ' · 不可將政策發布日當成法規生效日。</p>'):'')+
       block('核心條件與概要',factsHtml(facts))+
       block('申請與轉換流程（摘要）',stepHtml)+
       block('較適合的情況',(r.fit||[]).length?bulletHtml(r.fit):'')+

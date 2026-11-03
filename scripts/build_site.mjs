@@ -212,6 +212,15 @@ function applyReview(route,review){
     work:review.work,
     settlement:review.settlement,
     note:review.note||'',
+    // Keep a visible distinction between government announcements and legally operative rules.
+    policyTimeline:review.policyTimeline?{
+      state:review.policyTimeline.state||'unknown',
+      announcedOn:review.policyTimeline.announcedOn||null,
+      effectiveOn:review.policyTimeline.effectiveOn||null,
+      currentRule:asText(review.policyTimeline.currentRule||''),
+      announcedRule:asText(review.policyTimeline.announcedRule||''),
+      sources:sourcesFrom(review.policyTimeline.sources)
+    }:null,
     priority:Number.isFinite(review.priority)?review.priority:0
   };
   // An official check of selected fields must not imply every old claim is checked.
@@ -311,7 +320,7 @@ export function buildCatalog(input) {
   for(const id of Object.keys(policyReviews))if(!byId.has(id))throw Error('Policy review points to missing route: '+id);
   for(const route of routes)applyReview(route,policyReviews[route.id]);
   const types=Object.entries(TYPE_LABELS).map(([id,label])=>({id,label,count:routes.filter(r=>r.type===id).length})).filter(x=>x.count);
-  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-10-31',
+  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-11-03',
     policyAuditScope:'僅 audit.reviewedFields 欄位有當日官方來源核查；其餘舊資料為上游參考。',
     dataNotice:'原始中國大陸導向資料與臺灣額外官方核對資料分層呈現；非法律意見。',
     counts:{countries:countries.size,routes:routes.length,taiwanChecked:routes.filter(r=>r.verification==='official_checked').length,

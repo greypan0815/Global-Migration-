@@ -4,6 +4,8 @@
 >
 > [互動網站資料庫](../../README.zh-TW.md) ｜ [臺灣專區](README.md) ｜ [核查方法](audit-methodology.md)
 
+> **2026-11-03 重要補充：** 加拿大 CRS 新 Labour Market Integration 已生效；英國 Earned Settlement 11/02 公布但尚不能當作全面生效。請先看 [最新官方政策核查報告](november-2026-policy-update.md)，勿單靠下方 2026 年 10 月表格判斷。
+
 ## 先分清四個決策
 
 1. **臺灣資格／申請對象**：有台灣護照，或符合一般第三國居民制度，並不代表所有國籍、戶籍與學歷條件都已滿足。

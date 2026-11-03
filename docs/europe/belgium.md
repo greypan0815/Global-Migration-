@@ -15,6 +15,9 @@
 > [!TIP]
 > **一句话判断**：欧盟 + 申根 + 欧元区，欧盟总部所在地。**没有数字游民签证**。比利时最特别的地方：**工作许可按大区审批，居留由联邦负责**——弗拉芒、布鲁塞尔首都、瓦隆、德语区四个主管机构，**工资门槛各不相同**。自由职业者看各大区的**专业卡（Professional Card）**。
 
+> [!NOTE]
+> **2026-11-03 補充核查**：歐盟委員會 [EU Blue Card Belgium](https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/eu-blue-card/eu-blue-card-belgium_en) 已列完整申請的法定審理上限為 **90 天**，不等於保證在 90 天內獲准。本次**未核對到**所謂「2026-10 才由 120 天縮短」的精確生效依據；薪資仍按大區當期規範審查。
+
 ## 🏙️ 生活与身份档案
 
 <table>

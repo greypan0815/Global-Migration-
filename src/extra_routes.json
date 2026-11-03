@@ -669,8 +669,12 @@
      "持牌担保雇主"
     ],
     [
-     "永居",
-     "现行 5 年；拟改为 10 年（earned settlement）"
+     "目前法定 ILR",
+     "GOV.UK 截至 2026-11-03 仍列通常五年合格居留"
+    ],
+    [
+     "政府宣布未生效改革",
+     "2026-11-02 公布 Earned Settlement：一般十年，部分高收入／特殊人才較短；仍待正式移民規則施行"
     ]
    ],
    "fit": [
@@ -704,16 +708,21 @@
     "肺结核检测（中国申请人需要）"
    ],
    "tips": [
-    "2026-04 起按每个发薪期核查工资合规"
+    "2026-04 起按每个发薪期核查工资合规",
+    "11/02 改革是政府公告，不代表已全面修改當前 ILR 法律或廢除現有 Long Residence。"
    ],
    "sources": [
     [
-     "GOV.UK Skilled Worker visa",
+     "GOV.UK Skilled Worker",
      "https://www.gov.uk/skilled-worker-visa"
     ],
     [
-     "Kenton Solicitors: 2026 thresholds",
-     "https://kentonsolicitors.co.uk/skilled-worker-visa-2026-salary-changes/"
+     "GOV.UK 現行 Skilled Worker ILR",
+     "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk"
+    ],
+    [
+     "GOV.UK 2026-11-02 Earned Settlement 政策",
+     "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
     ]
    ]
   },
@@ -721,7 +730,7 @@
    "id": "uk-global-talent",
    "name": "英国全球人才签证（Global Talent）",
    "type": "work",
-   "summary": "科研、数字技术、艺术、设计等领域顶尖或潜力人才，无需雇主，最长 5 年，可快速永居。",
+   "summary": "英國學術、藝術與數位科技頂尖或潛力人才適用的工作簽證；2026-11-03 現行 ILR 依背書／獎項類別分三年或五年。政府新 Earned Settlement 政策已宣布但尚待施行。",
    "facts": [
     [
      "背书",
@@ -742,6 +751,14 @@
     [
      "新增",
      "2026-07 起设计领域"
+    ],
+    [
+     "現行 ILR",
+     "依背書／獎項類型與個案資格，可於三年或五年申請"
+    ],
+    [
+     "未來改革",
+     "11/02 政府公布 Earned Settlement，仍須等正式 Immigration Rules 實施"
     ]
    ],
    "fit": [
@@ -762,8 +779,16 @@
    ],
    "sources": [
     [
-     "GOV.UK Global Talent visa",
-     "https://www.gov.uk/global-talent"
+     "GOV.UK Global Talent",
+     "https://www.gov.uk/global-talent/overview"
+    ],
+    [
+     "GOV.UK Global Talent ILR",
+     "https://www.gov.uk/indefinite-leave-to-remain-business-investor-global-talent/eligibility"
+    ],
+    [
+     "GOV.UK Earned Settlement 政策",
+     "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
     ]
    ]
   },
@@ -790,8 +815,16 @@
      "B2"
     ],
     [
-     "永居",
-     "不直接通向，可转其他签证"
+     "HPI 自身定居",
+     "HPI 並非直接通往永居的簽證，合格持有人可考慮依規定轉其他簽證"
+    ],
+    [
+     "現行 10 年合法長居",
+     "獨立 Long Residence 計算須查現行法定條件；不可直接推定 HPI 一律從所有長居年資排除"
+    ],
+    [
+     "未來 Earned Settlement",
+     "11/02 政府公告，尚未當作全面正式生效"
     ]
    ],
    "fit": [
@@ -816,13 +849,20 @@
    ],
    "sources": [
     [
-     "GOV.UK High Potential Individual visa",
+     "GOV.UK HPI",
      "https://www.gov.uk/high-potential-individual-visa"
     ],
     [
-     "Fragomen: UK widens HPI",
-     "https://www.fragomen.com/insights/uk-widens-access-to-the-high-potential-individual-visa-to-attract-the-worlds-top-graduate-talent-or-mobilityminute.html"
+     "GOV.UK Long Residence",
+     "https://www.gov.uk/long-residence"
+    ],
+    [
+     "GOV.UK Earned Settlement",
+     "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
     ]
+   ],
+   "tips": [
+    "HPI 不是直接 settlement route；若考慮 10 年 Long Residence，需看實際有效的 Immigration Rules 和個人簽證史。"
    ]
   }
  ]
