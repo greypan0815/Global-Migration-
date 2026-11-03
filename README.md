@@ -194,7 +194,8 @@
 | 2026-06-30 | 🇰🇷 [韩国](docs/global/south-korea.md) | 🆕 新开 | F-1-D 数字游民签证转为正式签证，最长 3 年 |
 | 2026-09-15 | 🇱🇻 [拉脱维亚](docs/europe/latvia.md) | ⛔ 关闭 | 新《移民法》关闭买房居留和银行次级债居留 |
 | 2026-09-30 | 🇺🇸 [美国](docs/global/usa.md) | 🔄 变化 | 法院阻止执行 H-1B 10 万美元附加费；抽签改为按工资加权 |
-| 咨询中 | 🇬🇧 [英国](docs/europe/united-kingdom.md) | 🔺 收紧 | 永居拟从 5 年改为 10 年（earned settlement） |
+| 2026-11-02 | 🇬🇧 [英国](docs/europe/united-kingdom.md) | 🔄 政策已公布 | Earned Settlement 公布：方向為一般 10 年；現行 Skilled Worker ILR 5 年及 Long Residence 10 年法定途徑尚待後續正式修訂 | 
+| 2026-11-03 | 🇨🇦 [加拿大](docs/global/canada.md) | 🔄 新制生效 | CRS 新 Labour Market Integration 因子：加拿大合格工作經驗與高薪 NOC offer 擇高、不疊加；job offer 取消 LMIA 要求 |
 <!-- /AUTO -->
 
 ---
