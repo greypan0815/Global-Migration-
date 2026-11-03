@@ -62,16 +62,23 @@ jobs:
           assert.equal(data.counts.countries,49);
           assert.equal(data.counts.routes,152);
           assert.equal(data.counts.taiwanChecked,10);
-          assert.equal(data.counts.officialFieldReviews,24);
-          assert.equal(data.counts.nonAudited,128);
+          assert.equal(data.counts.officialFieldReviews,26);
+          assert.equal(data.counts.nonAudited,126);
           const checked=data.routes.filter(r=>r.audit?.checkedAt);
-          assert.equal(checked.length,24);
+          assert.equal(checked.length,26);
           assert.equal(data.routes.find(r=>r.id==='eu:czechia-digital-nomad-program').verification,'official_checked');
           for(const id of ['tw:iec_wh','tw:iec_yp','tw:iec_coop']){
             const r=data.routes.find(x=>x.id===id);
             assert.equal(r.status,'closed_window');
             assert.equal(r.audit.window.state,'season_closed');
           }
+          const ee=data.routes.find(r=>r.id==='global:ca-ee');
+          assert.equal(ee.audit.effectiveOn,'2026-11-03');
+          const uk=data.routes.find(r=>r.id==='extra:uk-skilled-worker');
+          assert.equal(uk.audit.policyTimeline.state,'announced_not_fully_implemented');
+          assert.equal(uk.audit.policyTimeline.effectiveOn,null);
+          const belgium=data.routes.find(r=>r.id==='eu:belgium-eu-blue-card');
+          assert.equal(belgium.audit.checkedAt,'2026-11-03');
           const dv=data.routes.find(r=>r.id==='global:us-dv-lottery');
           assert.equal(dv.status,'registration_not_open');
           assert.equal(dv.audit.passport.state,'chargeability_matters');
