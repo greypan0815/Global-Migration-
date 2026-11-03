@@ -259,6 +259,44 @@ export function australia189Subtotal(raw={}){
    official:SOURCE.au189,threshold:65,complete:false,
    note:'只顯示已聲明具有正式證明的部分積分；仍缺澳洲在學、偏遠地區、專業年、社區語言等可能加分，以及職業評估與邀請資格。65 分是最低門檻，不是獲邀或核准機率。'};
 }
+
+/**
+ * 加拿大 2026-11-03 Labour Market Integration 因子情境推估。
+ * 高薪級距依 IRCC 的 NOC 職業整體中位數，不是個人的薪資。
+ * 輸入是使用者自述，非完整 CRS、有效 job offer 或政府資格認定。
+ */
+export function estimateCanadaLMI(raw={}){
+ const p=normalizeProfile(raw);
+ const basic={yes:[0,35,46,56,63,70],no:[0,40,53,64,72,80]};
+ const wageExtra={below:0,tier13:20,tier15:40,tier20:70};
+ const offerTier={below:0,tier13:50,tier15:70,tier20:100};
+ const reasons=[];
+ const expConfirmed=p.canadianWorkEligible==='yes'&&p.canadianYears!==null&&
+   Object.hasOwn(basic,p.canadaSpouseAccompanying);
+ let experience=null;
+ if(expConfirmed){
+   const years=Math.min(5,Math.floor(p.canadianYears));
+   const base=basic[p.canadaSpouseAccompanying][years];
+   const highWage=p.canadianYears<1?0:Object.hasOwn(wageExtra,p.canadaExperienceNocBand)
+     ?wageExtra[p.canadaExperienceNocBand]:null;
+   experience={base,highWage,total:highWage===null?null:base+highWage};
+   if(highWage===null)reasons.push('需確認合格加拿大工作經驗的高薪 NOC 級距。');
+ }else reasons.push('加拿大年資、合法工作資格或隨行配偶欄位未經確認，不能計算工作經驗方案。');
+ const offer=p.offerCountry==='canada'&&p.canadianOfferEligible==='yes'&&
+   Object.hasOwn(offerTier,p.canadaOfferNocBand)
+   ?{total:offerTier[p.canadaOfferNocBand]}:null;
+ if(!offer)reasons.push('需有真實且符合 IRCC 規則的加拿大 job offer，並確認官方 NOC 高薪級距。');
+ const known=[experience?.total,offer?.total].filter(v=>typeof v==='number');
+ const selected=known.length?Math.max(...known):null;
+ return {experience,offer,selected,
+   alternativesFullyProvided:experience?.total!==null&&experience?.total!==undefined&&offer!==null,
+   officialCriteriaVerified:false,completeCRS:false,
+   checkedAsOf:'2026-11-03',sources:[SOURCE.canadaChanges,SOURCE.canadaNoc,SOURCE.crs],
+   notes:reasons,
+   explanation:'僅供研究的 2026-11-03 Labour Market Integration 情境值，依使用者自述資料推估。加拿大工作經驗方案（年資分加高薪職業額外分）與合格 offer 方案擇高、不相加。職業高薪 NOC 依 IRCC 官方職業名單而非個人薪水。完整 CRS、各類別資格、邀請及移民官核定均未計算。'
+ };
+}
+
 export function matchRoutes(catalog,raw={}){
  const profile=normalizeProfile(raw),routes=Array.isArray(catalog?.routes)?catalog.routes:[];
  const lookup=new Map(routes.map(x=>[x.id,x]));
