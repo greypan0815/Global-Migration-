@@ -1,8 +1,8 @@
 {
   "_meta": {
     "title": "Taiwan-first official evidence overlay",
-    "lastReviewed": "2026-10-31",
-    "scope": "Only the fields explicitly listed in reviewedFields have been checked against corresponding official pages. Legacy original facts must not be silently mixed with reviewed facts.",
+    "lastReviewed": "2026-11-03",
+    "scope": "26 selected routes contain official-source evidence for stated reviewedFields only. UK earned settlement policy announcement and current legally operative rules are explicitly separated.",
     "statuses": {
       "passport": [
         "confirmed_for_taiwan",
@@ -967,7 +967,7 @@
       },
       "window": {
         "state": "invitation_based",
-        "detail": "有邀請輪次（ITA）與分數／類別排名；能建立檔案不代表必定獲邀。"
+        "detail": "2026-11-03 新 CRS 規則生效；IRCC 將重新計算既有檔案分數（可能需最多兩週），重算期間暫停 Express Entry 邀請輪次。此為暫時政策／系統作業狀態，不代表永久停止 EE。"
       },
       "work": {
         "state": "not_a_work_permit",
@@ -977,57 +977,98 @@
         "state": "direct_residence_application",
         "detail": "獲邀後符合資格並通過完整審查，才可能取得加拿大 PR；不是工作一年就自動核發。"
       },
-      "summary": "加拿大 Express Entry 管理 CEC／FSW／FST 等永久居留申請。必須先符合至少一個計畫資格，再依邀請輪次獲得 ITA；無法保證錄取。",
+      "summary": "加拿大 Express Entry（CEC／FSW／FST）於 2026-11-03 啟用新的 CRS Labour Market Integration 計分：符合條件的加拿大工作經驗或高薪職業 job offer 擇一計分，不能疊加，仍須符合計畫資格並等待 ITA。",
       "facts": [
         [
-          "資格入口",
-          "CEC／FSW／FST，需符合至少一項"
+          "生效日期",
+          "2026-11-03（CRS Labour Market Integration）"
         ],
         [
-          "邀請",
-          "CRS／類別輪次，獲邀不保證核准"
+          "加拿大合格工作經驗基本分",
+          "有隨行配偶：1／2／3／4／5+ 年為 35／46／56／63／70；無隨行配偶：40／53／64／72／80"
         ],
         [
-          "工作權",
-          "EE 檔案不是工簽"
+          "高薪職業合格加分",
+          "至少 12 個月符合高薪 NOC：1.3／1.5／2.0 倍級距分別加 20／40／70"
+        ],
+        [
+          "合格高薪職業 offer 分",
+          "依 NOC 高薪級距 1.3／1.5／2.0 倍分別為 50／70／100"
+        ],
+        [
+          "不能重複計分",
+          "新 Labour Market Integration：加拿大經驗路線（基礎＋高薪加分）與 job offer 路線擇高，不能相加"
+        ],
+        [
+          "LMIA 規則",
+          "2026-11-03 起符合條件的 offer 不再以 LMIA 為前提；仍需真實且符合移民條件的 offer"
+        ],
+        [
+          "重要澄清",
+          "高薪 NOC 級距依該職業在加拿大的薪資中位數，不是個人拿多少薪資"
+        ],
+        [
+          "CRS 全部分數",
+          "包含婚姻、語言四技能、學歷認證等因素；本站只提供單一計分因子的條件式參考"
         ]
       ],
       "sources": [
         {
-          "title": "IRCC：Express Entry",
-          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+          "title": "IRCC：2026 CRS 正式計分規則",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
         },
         {
-          "title": "IRCC：Canadian Experience Class",
-          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+          "title": "IRCC：高薪 NOC 職業級距名單（11/03 起）",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html"
+        },
+        {
+          "title": "IRCC：完整 CRS 官網計分器",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html"
+        },
+        {
+          "title": "IRCC：Express Entry 主要資格",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
         }
       ],
       "reviewedFields": [
         "program_type",
         "work_not_permit",
-        "pr_process"
+        "pr_process",
+        "2026_11_03_lmi",
+        "offer_vs_experience_exclusive",
+        "noc_not_personal_salary",
+        "no_lmia_qualifying_offer"
       ],
-      "note": "CEC 的遠距工作須實際人在加拿大且替加拿大雇主工作；一般全職在學實習／自雇不計入。",
-      "checkedAt": "2026-10-30",
+      "note": "合格工作經驗與 job offer 方案不可相加；高薪 NOC 職類取決於官方職業級距而非個人薪資。IRCC 在兩週重新計分期間暫停邀請輪次。job offer 可以符合 FSW/FST 計畫資格，卻未必有高薪職業 CRS 加分。",
+      "checkedAt": "2026-11-03",
       "reviewType": "selective_official_audit",
       "steps": [
         [
-          "確認符合 CEC／FSW／FST 之一",
-          "依類別準備規定的語言、學歷與工作證明"
+          "先確認符合 CEC／FSW／FST 至少一項資格",
+          "建檔不等於獲邀，合法工作許可仍需另行取得"
         ],
         [
-          "建立 Express Entry 檔案",
-          "符合建檔資格不代表獲邀"
+          "核對合格工作經驗及高薪 NOC 職業級距",
+          "看 IRCC 的官方 NOC 1.3／1.5／2.0 倍名單，不以個人薪資猜測"
         ],
         [
-          "留意官方邀請輪次與 CRS",
-          "等待 ITA"
+          "確認有無符合規定的 job offer",
+          "2026-11-03 起符合條件者不需 LMIA，但會核對真實性與工作規範"
         ],
         [
-          "獲邀後依法遞交完整 PR 申請",
-          "通過審查才可能取得永久居民身分"
+          "在官網 CRS 工具取得完整評分",
+          "工作經驗和 offer 在 LMI 因子中擇高，不得相加"
+        ],
+        [
+          "等待 IRCC 恢復邀請輪次並核對當期 ITA",
+          "系統重新計分可能需最多兩週"
+        ],
+        [
+          "獲邀後正式遞交永久居留申請",
+          "仍需符合聯邦資格及相關證明"
         ]
-      ]
+      ],
+      "effectiveOn": "2026-11-03"
     },
     "global:ca-pnp": {
       "priority": 70,
@@ -1412,45 +1453,63 @@
       },
       "settlement": {
         "state": "conditional_settlement",
-        "detail": "日後可能符合 settlement，但實際年限／規範會變動；不得保證持簽證滿固定年數即獲永久身分。"
+        "detail": "現行 GOV.UK Skilled Worker ILR 申請原則仍列滿五年合格居留，另須薪資、連續居留等條件。2026-11-02 政府公布 Earned Settlement 改革（一般十年、高收入或特殊人才可能縮短），但具體未來適用與過渡條款應以實際生效的 Immigration Rules 為準。"
       },
-      "summary": "英國 Skilled Worker：2026 一般年薪至少 £41,700 或職業 going rate（取較高者），部分情況適用例外與不同標準。",
+      "summary": "英國 Skilled Worker 需合格擔保雇主、合格職務、英文及薪資。GOV.UK 截至 2026-11-03 的永居頁面仍列五年資格；11/02 Earned Settlement 公告提出一般十年等改革，但尚需正式移民規則實施。",
       "threshold": "一般 £41,700／年或職業 going rate，取較高者",
       "facts": [
         [
+          "目前 GOV.UK 法定路徑",
+          "Skilled Worker 合格連續居留通常五年，可另行申請 ILR；並非自動核准"
+        ],
+        [
+          "2026-11-02 已公布改革方向",
+          "Earned Settlement 一般十年；部分高收入／高階人才／公共服務類別可能三或五年，待法規實施"
+        ],
+        [
+          "一般工作簽證最低年薪",
+          "£41,700／年或職業 going rate 取較高（有合法例外）"
+        ],
+        [
           "雇主",
-          "須 Home Office approved sponsor"
+          "須持有有效 sponsorship／CoS"
         ],
         [
-          "一般年薪門檻",
-          "£41,700／年或職業 going rate 較高者"
-        ],
-        [
-          "職業",
-          "需符合可申請職類、SOC code"
-        ],
-        [
-          "例外",
-          "特定轉簽、醫護、教育等另有標準"
+          "現行 10 年 Long Residence",
+          "GOV.UK 仍保留獨立的連續合法居留十年途徑；政策公布不能視為已立即廢止"
         ]
       ],
       "sources": [
         {
-          "title": "GOV.UK：Skilled Worker 職位與薪資",
+          "title": "GOV.UK：現行 Skilled Worker ILR 五年規則",
+          "url": "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk"
+        },
+        {
+          "title": "GOV.UK：Skilled Worker 薪資與職務",
           "url": "https://www.gov.uk/skilled-worker-visa/your-job"
         },
         {
-          "title": "GOV.UK：Skilled Worker Overview",
-          "url": "https://www.gov.uk/skilled-worker-visa"
+          "title": "GOV.UK：目前十年長居途徑",
+          "url": "https://www.gov.uk/long-residence"
+        },
+        {
+          "title": "GOV.UK：11/02 Earned Settlement 公告",
+          "url": "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+        },
+        {
+          "title": "GOV.UK：諮詢回應與後續法規實施",
+          "url": "https://www.gov.uk/government/consultations/earned-settlement"
         }
       ],
       "reviewedFields": [
         "2026_salary",
         "sponsor",
         "job_codes",
-        "pr_uncertainty"
+        "pr_uncertainty",
+        "current_5yr_vs_announced_10yr",
+        "legal_effective_date_separation"
       ],
-      "checkedAt": "2026-10-30",
+      "checkedAt": "2026-11-03",
       "reviewType": "selective_official_audit",
       "steps": [
         [
@@ -1469,7 +1528,33 @@
           "合法工作並留意換工作規則",
           "定居條件須在申請當下重新核對"
         ]
-      ]
+      ],
+      "policyTimeline": {
+        "state": "announced_not_fully_implemented",
+        "announcedOn": "2026-11-02",
+        "effectiveOn": null,
+        "currentRule": "截至 2026-11-03，GOV.UK 現行 Skilled Worker ILR 官方資格仍列五年；Long Residence 的合法連續居住十年途徑也仍在正式規則中。",
+        "announcedRule": "Earned Settlement 政府政策公布：一般基準擬調整為十年，部分高收入、公共服務及高階人才可能較短。具體適用對象、過渡條款與計算方式須等待後續 Immigration Rules／指南；不能將公布當成當日全面生效。",
+        "sources": [
+          {
+            "title": "GOV.UK：2026-11-02 政策公告",
+            "url": "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+          },
+          {
+            "title": "GOV.UK：政府諮詢回應",
+            "url": "https://www.gov.uk/government/consultations/earned-settlement"
+          },
+          {
+            "title": "GOV.UK：現行 Skilled Worker 永居五年",
+            "url": "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk"
+          },
+          {
+            "title": "GOV.UK：現行 Long Residence",
+            "url": "https://www.gov.uk/long-residence"
+          }
+        ]
+      },
+      "note": "政府宣布的改革不是已生效規則；簽證轉換、薪資例外及適用年數應在將來正式申請時重核。"
     },
     "extra:uk-hpi": {
       "priority": 45,
@@ -1487,34 +1572,46 @@
       },
       "settlement": {
         "state": "not_direct",
-        "detail": "HPI 最長一般 2 年（博士 3 年），不能續簽；HPI 停留期間不計入依該途徑申請定居年限，但可能另轉符合條件的簽證。"
+        "detail": "HPI 簽證本身不是定居路線，HPI 時間不計入 Skilled Worker 等五年工作簽路線的直接永居年資；但截至 2026-11-03，獨立的 Long Residence 十年合法居留規則仍可能計算大部分合法簽證停留。政府 11/02 宣布的改革不得當成已完成修法。"
       },
-      "summary": "英國 HPI 不需要先有雇主 offer，但必須在近五年取得指定年度合格大學學位；不能續簽，HPI 時間不直接計入定居資格。",
+      "summary": "英國 HPI 需近五年合格海外大學學位、符合資格條件，不要求事先有雇主 offer。HPI 本身不屬直接定居路線；2026-11-02 Earned Settlement 政策公布後，還需核對未來正式施行與現行十年 Long Residence 的差異。",
       "facts": [
         [
-          "學歷",
-          "近五年合格大學的合格學位（依授予年份清單）"
+          "簽證性質",
+          "無需事先持有合格雇主 offer 的暫時工作居留"
         ],
         [
-          "雇主 offer",
-          "不需要"
+          "畢業條件",
+          "近五年取得對應畢業年度 Global Universities List 的合格學位"
         ],
         [
-          "期限",
-          "一般 2 年、博士 3 年"
+          "目前停留期限",
+          "通常二年；博士三年，不可延長此類簽證"
         ],
         [
-          "續簽／定居",
-          "不能續簽；HPI 期間不直接計入 Settlement"
+          "永居重要區別",
+          "HPI 本身不是定居路線；現行 Long Residence 是否計入須按獨立法規及個別歷史核對"
+        ],
+        [
+          "政府宣布改革",
+          "2026-11-02 Earned Settlement 公布，尚待正式施行與過渡安排"
         ]
       ],
       "sources": [
         {
-          "title": "GOV.UK：HPI Eligibility",
-          "url": "https://www.gov.uk/high-potential-individual-visa/eligibility"
+          "title": "GOV.UK：HPI 官方規則",
+          "url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-high-potential-individual"
         },
         {
-          "title": "GOV.UK：HPI Overview",
+          "title": "GOV.UK：現行 Long Residence",
+          "url": "https://www.gov.uk/long-residence"
+        },
+        {
+          "title": "GOV.UK：Earned Settlement 政策公告",
+          "url": "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+        },
+        {
+          "title": "GOV.UK：HPI 申請指南",
           "url": "https://www.gov.uk/high-potential-individual-visa"
         }
       ],
@@ -1522,9 +1619,12 @@
         "degree_eligibility",
         "annual_quota",
         "work_without_offer",
-        "pr_restriction"
+        "pr_restriction",
+        "hpi_not_direct_settlement",
+        "long_residence_current",
+        "earned_settlement_announced_not_in_force"
       ],
-      "checkedAt": "2026-10-30",
+      "checkedAt": "2026-11-03",
       "reviewType": "selective_official_audit",
       "steps": [
         [
@@ -1543,7 +1643,33 @@
           "在許可到期前評估轉簽",
           "HPI 不可續簽且其居留期間不直接計入 Settlement"
         ]
-      ]
+      ],
+      "policyTimeline": {
+        "state": "announced_not_fully_implemented",
+        "announcedOn": "2026-11-02",
+        "effectiveOn": null,
+        "currentRule": "截至 2026-11-03，GOV.UK 現行 Skilled Worker ILR 官方資格仍列五年；Long Residence 的合法連續居住十年途徑也仍在正式規則中。",
+        "announcedRule": "Earned Settlement 政府政策公布：一般基準擬調整為十年，部分高收入、公共服務及高階人才可能較短。具體適用對象、過渡條款與計算方式須等待後續 Immigration Rules／指南；不能將公布當成當日全面生效。",
+        "sources": [
+          {
+            "title": "GOV.UK：2026-11-02 政策公告",
+            "url": "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+          },
+          {
+            "title": "GOV.UK：政府諮詢回應",
+            "url": "https://www.gov.uk/government/consultations/earned-settlement"
+          },
+          {
+            "title": "GOV.UK：現行 Skilled Worker 永居五年",
+            "url": "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk"
+          },
+          {
+            "title": "GOV.UK：現行 Long Residence",
+            "url": "https://www.gov.uk/long-residence"
+          }
+        ]
+      },
+      "note": "HPI 本身不直接通向 ILR；不可把「不計入 HPI 本身定居路線」誤寫成「目前所有合法長居計算均不計入」。"
     },
     "global:us-dv-lottery": {
       "priority": 64,
@@ -1717,6 +1843,187 @@
         }
       ],
       "note": "若已畢業且非目前合資格全職在學生，不宜將本計畫當成一般 Working Holiday。"
+    },
+    "extra:uk-global-talent": {
+      "checkedAt": "2026-11-03",
+      "reviewType": "selective_official_audit",
+      "priority": 58,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "Global Talent 可由符合資格的第三國成年人經認可背書或特定獎項方式申請；臺灣護照不代表已獲核准。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "按 GOV.UK 的 Global Talent 官方申請／背書條件辦理，不是抽選或固定 IEC 名額。"
+      },
+      "work": {
+        "state": "open_with_conditions",
+        "detail": "適用領域包含學術研究、藝術文化與數位科技，須依 Global Talent 許可與英國工作規則活動。"
+      },
+      "settlement": {
+        "state": "conditional_settlement",
+        "detail": "GOV.UK 現行 Global Talent 依背書類別／獎項，可能在三年或五年申請 ILR；2026-11-02 公布新 Earned Settlement 政策後應持續查核正式修法。不是所有 Global Talent 都固定三年。"
+      },
+      "summary": "Global Talent 可由符合資格的頂尖／潛力人才透過背書或符合規定獎項申請；目前 GOV.UK 按具體類別列三年或五年 ILR。Earned Settlement 改革已公布但尚待正式規則實施。",
+      "facts": [
+        [
+          "合格領域",
+          "學術研究、藝術文化、數位科技"
+        ],
+        [
+          "雇主擔保",
+          "不需一般 Skilled Worker 的 employer sponsor；背書或符合要求的獎項另有標準"
+        ],
+        [
+          "現行永居",
+          "按背書或獎項資格為三年或五年；符合全部條件才可申請"
+        ],
+        [
+          "未來政策",
+          "2026-11-02 Earned Settlement 公布，尚未將所有細節全面寫入 Immigration Rules"
+        ]
+      ],
+      "steps": [
+        [
+          "核對領域、認可背書機構或得獎資格",
+          "需符合精確的官方高階人才要求"
+        ],
+        [
+          "準備成就證據及申請",
+          "獲准後依准許的活動居留工作"
+        ],
+        [
+          "按背書類別與條件評估三年或五年 ILR",
+          "後續 Earned Settlement 變更應以實際生效規則為準"
+        ]
+      ],
+      "policyTimeline": {
+        "state": "announced_not_fully_implemented",
+        "announcedOn": "2026-11-02",
+        "effectiveOn": null,
+        "currentRule": "截至 2026-11-03，GOV.UK 現行 Skilled Worker ILR 官方資格仍列五年；Long Residence 的合法連續居住十年途徑也仍在正式規則中。",
+        "announcedRule": "Earned Settlement 政府政策公布：一般基準擬調整為十年，部分高收入、公共服務及高階人才可能較短。具體適用對象、過渡條款與計算方式須等待後續 Immigration Rules／指南；不能將公布當成當日全面生效。",
+        "sources": [
+          {
+            "title": "GOV.UK：2026-11-02 政策公告",
+            "url": "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+          },
+          {
+            "title": "GOV.UK：政府諮詢回應",
+            "url": "https://www.gov.uk/government/consultations/earned-settlement"
+          },
+          {
+            "title": "GOV.UK：現行 Skilled Worker 永居五年",
+            "url": "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk"
+          },
+          {
+            "title": "GOV.UK：現行 Long Residence",
+            "url": "https://www.gov.uk/long-residence"
+          }
+        ]
+      },
+      "reviewedFields": [
+        "current_3_5_year_talent_ilr",
+        "professional_endorsement",
+        "earned_settlement_announced_not_in_force"
+      ],
+      "sources": [
+        {
+          "title": "GOV.UK：Global Talent 簽證規則",
+          "url": "https://www.gov.uk/global-talent/overview"
+        },
+        {
+          "title": "GOV.UK：Global Talent 申請 ILR 年限",
+          "url": "https://www.gov.uk/indefinite-leave-to-remain-business-investor-global-talent/eligibility"
+        },
+        {
+          "title": "GOV.UK：Earned Settlement 政策公告",
+          "url": "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+        },
+        {
+          "title": "GOV.UK：政府諮詢回應",
+          "url": "https://www.gov.uk/government/consultations/earned-settlement"
+        }
+      ]
+    },
+    "eu:belgium-eu-blue-card": {
+      "checkedAt": "2026-11-03",
+      "reviewType": "selective_official_audit",
+      "priority": 37,
+      "passport": {
+        "state": "third_country_route",
+        "detail": "比利時 EU Blue Card 面向符合高技能職位、有效合約與薪資資格的第三國人士；臺灣籍可依一般第三國規則評估，須符合各大區具體要求。"
+      },
+      "window": {
+        "state": "no_fixed_season",
+        "detail": "有合格至少六個月工作合約或具約束力的聘用 offer，需向適用大區政府申請；非抽籤／每年固定申請季。"
+      },
+      "work": {
+        "state": "employer_specific",
+        "detail": "EU Blue Card 必須符合指定高技能職位與工作居留條件，不是一般無限制開放式工作簽證。"
+      },
+      "settlement": {
+        "state": "conditional_settlement",
+        "detail": "EU Blue Card 不會自動發給比利時永久居留；長期居留及 EU 長期居民另有條件、年限與個案審查。"
+      },
+      "summary": "比利時 EU Blue Card 各大區年薪門檻不同；歐盟官方移民入口列完整申請處理上限為 90 天，並非保證在 90 天取得簽證或工作身分。請依大區核對當期薪資門檻。",
+      "facts": [
+        [
+          "政府審理上限",
+          "歐盟官方列法定最長 90 天（完整申請資料）；不保證獲准"
+        ],
+        [
+          "雇主",
+          "至少六個月有效高技能工作合約或具約束力 offer"
+        ],
+        [
+          "最低薪資",
+          "依 Flanders、Brussels、Wallonia、德語區當期規則不同；原上游 2026 數字需另核對"
+        ],
+        [
+          "勞動市場測試",
+          "歐盟官方說明 Blue Card 在比利時不適用一般 LMT"
+        ],
+        [
+          "電子簽署",
+          "上游所稱「2026-10 新改可接受」未有足夠官方證據，本次不列為已核對條件"
+        ]
+      ],
+      "steps": [
+        [
+          "確認預期工作地的大區",
+          "門檻及申請方式依大區變動"
+        ],
+        [
+          "取得六個月以上合格高技能聘僱證據",
+          "準備學歷／專業資格、健康保險及其他文件"
+        ],
+        [
+          "由主管機關受理完整 Blue Card 申請",
+          "90 天是規定審理上限，不是核准保證"
+        ],
+        [
+          "取得准許後合法工作及維持居留",
+          "永久居留須另行依法申請"
+        ]
+      ],
+      "reviewedFields": [
+        "eu_blue_card_processing_90_days",
+        "region_salary_variance",
+        "work_and_contract_conditions",
+        "not_auto_pr"
+      ],
+      "sources": [
+        {
+          "title": "European Commission：EU Blue Card in Belgium",
+          "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/eu-blue-card/eu-blue-card-belgium_en"
+        },
+        {
+          "title": "European Commission：EU Blue Card 通則",
+          "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/eu-blue-card_en"
+        }
+      ],
+      "note": "90 天為法定處理上限，不是實務核准承諾；未驗證『2026-10 才由 120 天改成 90 天』或電子簽章生效時間。"
     }
   }
 }
