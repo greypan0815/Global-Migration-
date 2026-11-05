@@ -123,8 +123,8 @@ test('US DV lottery depends on birthplace and has no currently open new entry',(
   const tw=find(matchRoutes(catalog,{birthPlace:'taiwan',education:'bachelor'}),'global:us-dv-lottery');
   assert.equal(tw.season,true);
   assert.notEqual(tw.tier,'prioritize');
-  assert.ok(tw.checks.some(x=>x.label==='出生地歷史資格'&&x.state==='met'));
-  assert.ok(tw.checks.some(x=>x.reason.includes('2026-08-31')));
+  assert.ok(tw.checks.some(x=>x.label==='出生地年度資格'&&x.state==='unknown'));
+  assert.ok(tw.checks.some(x=>x.reason.includes('不再有效')));
   const mainland=find(matchRoutes(catalog,{birthPlace:'mainland',education:'bachelor'}),'global:us-dv-lottery');
   assert.ok(mainland.checks.some(x=>x.label==='出生地歷史資格'&&x.state==='missing'));
 });
@@ -167,4 +167,37 @@ test('personal salary is not a proxy for IRCC NOC high-wage category',()=>{
  assert.equal(noRealOffer.offer,null);
  const r=find(matchRoutes(actual(),{canadianYears:1}),'global:ca-ee');
  assert.ok(r.checks.some(c=>c.label==='加拿大合格工作經驗'&&c.state==='unknown'));
+});
+
+
+test('Taiwan ordinary IEC is not once per category and RO is not automatic eligibility',()=>{
+ const c=actual();
+ for(const id of ['tw:iec_wh','tw:iec_yp','tw:iec_coop']){
+  assert.equal(find(matchRoutes(c,{age:27,iecUsed:'yes',iecChannel:'bilateral'}),id).tier,'out_of_range');
+  const ro=find(matchRoutes(c,{age:27,iecUsed:'yes',iecChannel:'ro',iecROConfirmation:'yes'}),id);
+  assert.ok(ro.checks.some(x=>x.label==='RO 額外參與需另審'&&x.state==='unknown'));
+  assert.notEqual(ro.tier,'prioritize');
+ }
+});
+test('Taiwan IEC requires passport ID and a specific Taiwan-school co-op assessment',()=>{
+ const c=actual();
+ assert.equal(find(matchRoutes(c,{age:27,twPassportPersonalId:'no'}),'tw:iec_wh').tier,'out_of_range');
+ const unknown=find(matchRoutes(c,{age:27}),'tw:iec_wh');
+ assert.ok(unknown.checks.some(x=>x.label==='護照上的身分證字號'&&x.state==='unknown'));
+ const coop=find(matchRoutes(c,{age:27,student:'yes',iecCoopTaiwanStudent:'no'}),'tw:iec_coop');
+ assert.equal(coop.tier,'out_of_range');
+});
+test('YMS excludes prior participation and dependent children and does not invent financial eligibility',()=>{
+ const c=actual();
+ for(const answer of [{ymsUsed:'yes'},{ymsDependentChildren:'yes'}]){
+  assert.equal(find(matchRoutes(c,{age:27,...answer}),'tw:yms').tier,'out_of_range');
+ }
+ const u=find(matchRoutes(c,{age:27}),'tw:yms');
+ assert.ok(u.checks.some(x=>x.label==='YMS 財力證明'&&x.state==='unknown'));
+ const younger=find(matchRoutes(c,{age:17}),'tw:yms');
+ assert.ok(younger.checks.some(x=>x.label==='年齡日期需核對'&&x.state==='unknown'));
+});
+test('missing required foreign offer cannot become a prioritize tier just because other answers score well',()=>{
+ const x=find(matchRoutes(actual(),{age:27,field:'software',education:'phd',years:10,english:'c2',offerCountry:'none'}),'eu:germany-eu-blue-card');
+ assert.notEqual(x.tier,'prioritize');
 });

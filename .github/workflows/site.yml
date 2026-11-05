@@ -123,6 +123,11 @@ jobs:
           curl --fail --silent http://127.0.0.1:4173/match-engine.mjs | grep -q 'export function matchRoutes'
           curl --fail --silent http://127.0.0.1:4173/data/catalog.json |
             node -e 'let s=""; process.stdin.on("data",c=>s+=c); process.stdin.on("end",()=>{if(JSON.parse(s).counts.routes!==152)process.exit(1);});'
+      - name: Real-browser smoke under production security headers
+        run: |
+          npm install --prefix "$RUNNER_TEMP/gm-browser-qa" --no-audit --no-fund --ignore-scripts playwright@1.64.1
+          "$RUNNER_TEMP/gm-browser-qa/node_modules/.bin/playwright" install --with-deps --only-shell chromium
+          PLAYWRIGHT_MODULE="$RUNNER_TEMP/gm-browser-qa/node_modules/playwright/index.mjs" node tests/browser-smoke.mjs
       - uses: actions/upload-artifact@v4
         with:
           name: cloudflare-pages-static-site

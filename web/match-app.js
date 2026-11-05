@@ -81,7 +81,7 @@ function matchCard(item){
  const audit=item.reviewed?'已核對部分政策欄位 '+item.reviewDate:
    '尚未完整官方核對的探索項目';
  let statusWarning='';
- if(item.season)statusWarning='<p class="match-card-warning">'+(item.id==='global:us-dv-lottery'?'美國 DV 官方目前尚未受理新登記，且 2026-08-31 指引暫停簽證核發；中籤也不等於取得綠卡。':'這個計畫的 2026 申請季已關閉；已符合年齡並不表示現在可參加當年度抽選。')+'</p>';
+ if(item.season)statusWarning='<p class="match-card-warning">'+(item.id==='global:us-dv-lottery'?'美國 DV 新登記未開放；核發頁已有舊暫停失效的新通知，但殘留文字互相衝突，需按最新官方及領館指示確認。中籤不等於取得綠卡。':'這個計畫的 2026 申請季已關閉；已符合年齡並不表示現在可參加當年度抽選。')+'</p>';
  if(item.tier==='out_of_range')statusWarning='<p class="match-card-warning">已有明確不符合的條件，請先查看說明。網站不會把這條視為目前可申請。</p>';
  if(item.reviewed&&dueForRecheck(item.reviewDate))statusWarning+='<p class="match-card-warning">官方政策核查已逾 90 天，需重新確認有效日期、薪資和受理窗口。</p>';
  return '<article class="match-card'+css+'">'+
@@ -92,7 +92,7 @@ function matchCard(item){
   '<span class="match-status '+escapeHtml(kind.css)+'">'+escapeHtml(kind.label)+'</span></div>'+
   '<div class="meter-labels"><span>自訂條件準備度 · 非核准率／官方積分</span>'+
   '<strong>'+progress+'／100</strong></div>'+
-  '<div class="meter" role="meter" aria-label="'+escapeHtml(item.name)+'自訂條件準備度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+progress+'"><span style="width:'+progress+'%"></span></div>'+
+  '<div class="meter" role="meter" aria-label="'+escapeHtml(item.name)+'自訂條件準備度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+progress+'"><span class="progress-'+progress+'"></span></div>'+
   '<div class="meter-legend"><span><b>'+escapeHtml(metText)+'</b></span></div>'+
   statusWarning+
   '<details class="check-details"><summary>展開條件分析（'+item.checks.length+' 項）</summary>'+
@@ -136,9 +136,9 @@ function render(){
   '</div>';
  if(!visible.length)markup+='<div class="results-empty-filter">目前沒有符合這個分析分類的路線。可以切換「全部」或更改條件。</div>';
  else markup+=visible.map(matchCard).join('');
- if(items.length>visible.length)markup+='<button type="button" id="showMoreMatches" class="button button-outline" style="width:100%">顯示更多路線（尚有 '+(items.length-visible.length)+' 條） ↓</button>';
+ if(items.length>visible.length)markup+='<button type="button" id="showMoreMatches" class="button button-outline full-width">顯示更多路線（尚有 '+(items.length-visible.length)+' 條） ↓</button>';
  markup+='<div class="results-end">除上列優先研究項目外，還有 <strong>'+counts.unassessed+
-  '</strong> 條未納入此問卷評估，並非不適合臺灣人。請使用 <a href="/">完整 150 條移居路線清單</a> 延伸研究。<br>本工具沒有計算官方 CRS、SMC、機會卡或日本高度人才完整分數。資料及限制請看政府官方網站。</div>';
+  '</strong> 條未納入此問卷評估，並非不適合臺灣人。請使用 <a href="/">完整移居路線清單</a> 延伸研究。<br>本工具沒有計算官方 CRS、SMC、機會卡或日本高度人才完整分數。資料及限制請看政府官方網站。</div>';
  section.innerHTML=markup;
  section.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
    state.filter=button.dataset.filter;state.limit=9;render();

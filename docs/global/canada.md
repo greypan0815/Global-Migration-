@@ -18,10 +18,6 @@
 > [!IMPORTANT]
 > 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。
 
-
-> [!IMPORTANT]
-> **2026-11-03 IRCC 新制已生效**：Express Entry 新 Labour Market Integration 因子採加拿大工作經驗（基本年資加可能的高薪 NOC 經驗分）**或**合格高薪 NOC offer，二者擇高、不能疊加；符合資格的 offer 不需 LMIA，但仍須確認真實性。高薪級距看 [官方 NOC 名單](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html)，不是個人薪資。IRCC 重新計分期間暫停邀請輪次。詳見 [IRCC 官方新制](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html) 及 [台灣讀者指南](../taiwan/november-2026-policy-update.md)。
-
 ## 🏙️ 生活档案
 
 <table>
@@ -35,7 +31,7 @@
 
 | 路线 | 类型 | 一句话 | 状态 |
 |---|---|---|:-:|
-| [Express Entry 快速通道](#ca-ee) | 🧑‍💻 技术工作 | 2026-11-03 CRS 新因子：加拿大合格經驗或高薪 NOC offer 擇高，IRCC 重算期間暫停邀請；獲 ITA 才能正式申請 PR。 | 🟢 开放 |
+| [Express Entry 快速通道](#ca-ee) | 🧑‍💻 技术工作 | 2026-11-03 新制：Express Entry 的 CRS Labour Market Integration 因子採合格加拿大工作經驗或高薪職業 job offer 擇高（不可疊加），官方重新計分期間暫停邀請輪次。 | 🟢 开放 |
 | [省提名 PNP](#ca-pnp) | 🧑‍💻 技术工作 | 各省按需求提名，获提名后 Express Entry 加 600 分。 | 🟢 开放 |
 | [联邦创业签证 SUV](#ca-suv) | 🚀 创业 | 2026-06-30 起完全暂停，新的企业家试点规则尚未公布。 | ⛔ 已关闭 |
 
@@ -47,11 +43,12 @@
 
 ![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%8A%80%E6%9C%AF%E5%B7%A5%E4%BD%9C-0f766e) ![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%BC%80%E6%94%BE-2ea44f)
 
-> **CRS 打分池，按类别定期抽签，获邀后约 6 个月拿永居。**
+> **2026-11-03 新制：Express Entry 的 CRS Labour Market Integration 因子採合格加拿大工作經驗或高薪職業 job offer 擇高（不可疊加），官方重新計分期間暫停邀請輪次。**
 
 <table>
-<tr><td width="33%" valign="top"><sub>CEC 分数线</sub><br><b>2026 年约 507–523</b></td><td width="33%" valign="top"><sub>法语类</sub><br><b>382–420</b></td><td width="33%" valign="top"><sub>医疗类</sub><br><b>467–475</b></td></tr>
-<tr><td width="33%" valign="top"><sub>省提名加分</sub><br><b>+600</b></td><td width="33%" valign="top"><sub>2026 至 10 月</sub><br><b>已发 13.5 万份邀请</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>2026-11-03 新制</sub><br><b>加拿大工作經驗（基本年資分＋高薪職業額外分）或合格高薪 offer 分，兩者擇高</b></td><td width="33%" valign="top"><sub>合格工作年資</sub><br><b>最近十年加拿大 TEER 0–3 經驗，需依完整規則核對</b></td><td width="33%" valign="top"><sub>高薪 NOC（非個人薪資）</sub><br><b>對應 NOC 職類整體薪資中位數為全體職業平均中位數的 1.3／1.5／2 倍以上</b></td></tr>
+<tr><td width="33%" valign="top"><sub>offer 分</sub><br><b>高薪 NOC 1.3／1.5／2 倍，依級距可為 50／70／100 分</b></td><td width="33%" valign="top"><sub>經驗附加分</sub><br><b>至少十二個月合格高薪 NOC 經驗可額外得到 20／40／70 分，並結合工作年數分</b></td><td width="33%" valign="top"><sub>LMIA</sub><br><b>2026-11-03 起符合條件的 offer 不再要求 LMIA；仍須移民官查核真實性與合法條件</b></td></tr>
+<tr><td width="33%" valign="top"><sub>系統進度</sub><br><b>2026-11-03 重新計分最多需約兩週，期間暫停邀請輪次</b></td><td width="33%" valign="top"><sub>省提名</sub><br><b>符合 EE-aligned 省提名者仍可有 600 CRS 分，省分條件各異</b></td><td width="33%" valign="top"></td></tr>
 </table>
 
 <table><tr>
@@ -79,7 +76,10 @@ flowchart LR
 
 > [!WARNING]
 > **注意**
-> - 法语是目前最有效的加分项
+> - CRS 勞動市場整合因子不能把工作經驗分和 offer 分相加；應依當期政府計分器確認。
+> - 是否屬高薪職業看官方 NOC 名單，不是個人年薪，也不是所有軟體工程師都自動符合。
+> - 一份 offer 可符合 FSW/FST 計畫入池資格卻不一定取得高薪 CRS offer 分。
+> - 完整 CRS 仍須使用 IRCC 指定語言考試、婚姻／配偶資料與 ECA 等資訊。
 
 <sub>[↑ 回到顶部](#top)</sub>
 
@@ -138,6 +138,14 @@ flowchart LR
 ### 一句话判断
 
 **积分制技术移民的标杆**，但 2024 年起大幅压缩临时居民（留学生、工签）规模，Express Entry 越来越依赖**定向类别抽签**（法语、医疗、交通、加拿大经验等）。**联邦创业签证（SUV）已于 2026-06-30 完全暂停**，新的企业家试点规则尚未公布。
+
+### 2026-11-03 已生效：Express Entry Labour Market Integration
+
+加拿大 IRCC [官方修订](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html) 自 11/03 起调整 CRS：符合资格的加拿大工作经验（基本年资分＋高薪 NOC 职类经验额外分）与合格高薪职业 job offer **择较高者**，不能叠加。offer 的 1.3／1.5／2.0 倍高薪职业 NOC 级距可获得 50／70／100 分；至少十二个月的合格加拿大高薪 NOC 工作经验，额外加分为 20／40／70 分。
+
+重要：级距依据 [IRCC NOC 官方职业统计](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html)，**不是个人薪水**。符合要求的 offer 自 11/03 起不再要求 LMIA，但仍须审核真实性。CRS 旧档案重新计分可能需两周，**期间暂时停止邀请轮次**。
+
+完整分数还涉及语言、ECA、配偶与技能转移等条件，请使用 [IRCC 官方 CRS](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html)。IEC 工签工作并不当然符合 CEC／CRS 年资资格。
 
 ### 主要路线
 

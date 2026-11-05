@@ -1,8 +1,8 @@
 {
   "_meta": {
     "title": "Taiwan-first official evidence overlay",
-    "lastReviewed": "2026-11-03",
-    "scope": "26 selected routes contain official-source evidence for stated reviewedFields only. UK earned settlement policy announcement and current legally operative rules are explicitly separated.",
+    "lastReviewed": "2026-11-06",
+    "scope": "26 routes have selected-field evidence, not a complete audit. On 2026-11-06 only the recorded fieldChecks were revisited; original checkedAt values remain available. DV issuance requires reconfirmation.",
     "statuses": {
       "passport": [
         "confirmed_for_taiwan",
@@ -34,12 +34,13 @@
       "priority": 90,
       "passport": {
         "state": "confirmed_for_taiwan",
-        "detail": "IRCC 官方資格表列有 Taiwan，年齡 18–35 歲；仍須符合該類別其他規定。"
+        "detail": "臺灣護照須含個人身分證字號；年齡一般 18–35 歲。臺灣雙邊 IEC 三類別合計一般僅一次、最長 12 個月；不能直接規劃 WH 後再用另一份一般 YP。RO 額外參與須另符合資格與取得確認信。"
       },
       "window": {
         "state": "season_closed",
-        "detail": "2026 IEC 候選人池已關閉。已收到 ITA 者仍可能依期限遞交申請；未獲邀者須等 2027 池重新開放（開放日期尚待公告）。",
-        "period": "2026"
+        "detail": "截至 2026-11-06，IRCC 2026 IEC 候選池已關閉；已收到 ITA 者仍可依期限申請。未收到者需待 2027 開池重新建立 profile，尚未查得正式開放日期，不能假定固定在一月。",
+        "period": "2026",
+        "checkedAt": "2026-11-06"
       },
       "work": {
         "state": "open_permit",
@@ -52,16 +53,32 @@
       "summary": "IEC Working Holiday 為打工度假路線，通常使用開放式工作許可；適合依法尋找加拿大雇主工作。 2026 年 IEC 候選人池已關閉，已持 ITA 者可依官方要求繼續申請。",
       "facts": [
         [
-          "2026 申請季",
-          "候選人池已關閉，非永久取消制度"
+          "臺灣護照",
+          "有效且載有個人身分證字號"
         ],
         [
-          "臺灣年齡",
-          "18–35 歲"
+          "臺灣一般年齡",
+          "18–35 歲；TGPI 有另行規定"
         ],
         [
-          "2027 申請季",
-          "尚待 IRCC 宣布開放日期"
+          "一般雙邊參與",
+          "三類別合計一般一次；最長 12 個月，不是每類別各一次"
+        ],
+        [
+          "RO 額外機會",
+          "IRCC 說明額外兩次終身參與、每季最多一份許可；各 RO 條件、類別、費用、名額與確認信另查"
+        ],
+        [
+          "資金及保險",
+          "至少 CAD 2,500、全停留期間健康保險、回程機票或購票資金；不是完整生活預算"
+        ],
+        [
+          "何時算參加",
+          "抵達加拿大並取得工作許可才計一次；只獲核准而未入境領許可不算"
+        ],
+        [
+          "2026／2027 狀態",
+          "2026 池關閉；2027 正式日期待公告（本次核對 2026-11-06）"
         ]
       ],
       "steps": [
@@ -98,28 +115,65 @@
         {
           "title": "IRCC：Canadian Experience Class",
           "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        },
+        {
+          "title": "IRCC：臺灣三類別完整條件與一般一次限制",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility/eligibility-by-country.html"
+        },
+        {
+          "title": "IRCC：2026 關池／2027 等待公告",
+          "url": "https://www.ircc.canada.ca/english/work/iec/selections.asp"
         }
       ],
       "reviewedFields": [
         "taiwan_eligibility",
         "2026_window",
         "permit_type",
-        "pr_separation"
+        "pr_separation",
+        "taiwan_identity_number",
+        "bilateral_participations",
+        "max_duration_and_funds",
+        "2026_2027_window",
+        "ro_is_separate_assessment"
       ],
-      "note": "RO 額外兩次終身參與的官方文字不能直接推定可重複同一類別；每一 RO 可能有個別資格限制。",
+      "note": "普通雙邊資格與 RO 額外資格分開審查；不得以額外兩次推定任何 RO 或任何同類別保證可重複。護照字號、已用次數和類別條件會影響個案資格。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "lastRecheckedAt": "2026-11-06",
+      "fieldChecks": {
+        "taiwan_identity_number": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "bilateral_participations": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "max_duration_and_funds": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "2026_2027_window": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "ro_is_separate_assessment": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        }
+      }
     },
     "tw:iec_yp": {
       "priority": 90,
       "passport": {
         "state": "confirmed_for_taiwan",
-        "detail": "IRCC 官方資格表列有 Taiwan，年齡 18–35 歲；仍須符合該類別其他規定。"
+        "detail": "臺灣護照須含個人身分證字號；年齡一般 18–35 歲。臺灣雙邊 IEC 三類別合計一般僅一次、最長 12 個月；不能直接規劃 WH 後再用另一份一般 YP。RO 額外參與須另符合資格與取得確認信。"
       },
       "window": {
         "state": "season_closed",
-        "detail": "2026 IEC 候選人池已關閉。已收到 ITA 者仍可能依期限遞交申請；未獲邀者須等 2027 池重新開放（開放日期尚待公告）。",
-        "period": "2026"
+        "detail": "截至 2026-11-06，IRCC 2026 IEC 候選池已關閉；已收到 ITA 者仍可依期限申請。未收到者需待 2027 開池重新建立 profile，尚未查得正式開放日期，不能假定固定在一月。",
+        "period": "2026",
+        "checkedAt": "2026-11-06"
       },
       "work": {
         "state": "employer_specific",
@@ -132,16 +186,36 @@
       "summary": "IEC Young Professionals 以符合專業發展規則的加拿大雇主 offer 申請指定雇主工作許可。 2026 年 IEC 候選人池已關閉，已持 ITA 者可依官方要求繼續申請。",
       "facts": [
         [
-          "2026 申請季",
-          "候選人池已關閉，非永久取消制度"
+          "臺灣護照",
+          "有效且載有個人身分證字號"
         ],
         [
-          "臺灣年齡",
-          "18–35 歲"
+          "臺灣一般年齡",
+          "18–35 歲；TGPI 有另行規定"
         ],
         [
-          "2027 申請季",
-          "尚待 IRCC 宣布開放日期"
+          "一般雙邊參與",
+          "三類別合計一般一次；最長 12 個月，不是每類別各一次"
+        ],
+        [
+          "RO 額外機會",
+          "IRCC 說明額外兩次終身參與、每季最多一份許可；各 RO 條件、類別、費用、名額與確認信另查"
+        ],
+        [
+          "資金及保險",
+          "至少 CAD 2,500、全停留期間健康保險、回程機票或購票資金；不是完整生活預算"
+        ],
+        [
+          "何時算參加",
+          "抵達加拿大並取得工作許可才計一次；只獲核准而未入境領許可不算"
+        ],
+        [
+          "2026／2027 狀態",
+          "2026 池關閉；2027 正式日期待公告（本次核對 2026-11-06）"
+        ],
+        [
+          "YP 事先工作安排",
+          "建立 profile 前需已簽署合格工作 offer／合約；職務需促進專業發展"
         ]
       ],
       "steps": [
@@ -178,28 +252,65 @@
         {
           "title": "IRCC：Canadian Experience Class",
           "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        },
+        {
+          "title": "IRCC：臺灣三類別完整條件與一般一次限制",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility/eligibility-by-country.html"
+        },
+        {
+          "title": "IRCC：2026 關池／2027 等待公告",
+          "url": "https://www.ircc.canada.ca/english/work/iec/selections.asp"
         }
       ],
       "reviewedFields": [
         "taiwan_eligibility",
         "2026_window",
         "permit_type",
-        "pr_separation"
+        "pr_separation",
+        "taiwan_identity_number",
+        "bilateral_participations",
+        "max_duration_and_funds",
+        "2026_2027_window",
+        "ro_is_separate_assessment"
       ],
-      "note": "RO 額外兩次終身參與的官方文字不能直接推定可重複同一類別；每一 RO 可能有個別資格限制。",
+      "note": "普通雙邊資格與 RO 額外資格分開審查；不得以額外兩次推定任何 RO 或任何同類別保證可重複。護照字號、已用次數和類別條件會影響個案資格。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "lastRecheckedAt": "2026-11-06",
+      "fieldChecks": {
+        "taiwan_identity_number": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "bilateral_participations": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "max_duration_and_funds": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "2026_2027_window": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "ro_is_separate_assessment": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        }
+      }
     },
     "tw:iec_coop": {
       "priority": 90,
       "passport": {
         "state": "confirmed_for_taiwan",
-        "detail": "IRCC 官方資格表列有 Taiwan，年齡 18–35 歲；仍須符合該類別其他規定。"
+        "detail": "臺灣護照須含個人身分證字號；年齡一般 18–35 歲。臺灣雙邊 IEC 三類別合計一般僅一次、最長 12 個月；不能直接規劃 WH 後再用另一份一般 YP。RO 額外參與須另符合資格與取得確認信。"
       },
       "window": {
         "state": "season_closed",
-        "detail": "2026 IEC 候選人池已關閉。已收到 ITA 者仍可能依期限遞交申請；未獲邀者須等 2027 池重新開放（開放日期尚待公告）。",
-        "period": "2026"
+        "detail": "截至 2026-11-06，IRCC 2026 IEC 候選池已關閉；已收到 ITA 者仍可依期限申請。未收到者需待 2027 開池重新建立 profile，尚未查得正式開放日期，不能假定固定在一月。",
+        "period": "2026",
+        "checkedAt": "2026-11-06"
       },
       "work": {
         "state": "internship",
@@ -212,16 +323,36 @@
       "summary": "IEC International Co-op 是符合資格的在學生及合格實習路線，不能當作一般就業許可。 2026 年 IEC 候選人池已關閉，已持 ITA 者可依官方要求繼續申請。",
       "facts": [
         [
-          "2026 申請季",
-          "候選人池已關閉，非永久取消制度"
+          "臺灣護照",
+          "有效且載有個人身分證字號"
         ],
         [
-          "臺灣年齡",
-          "18–35 歲"
+          "臺灣一般年齡",
+          "18–35 歲；TGPI 有另行規定"
         ],
         [
-          "2027 申請季",
-          "尚待 IRCC 宣布開放日期"
+          "一般雙邊參與",
+          "三類別合計一般一次；最長 12 個月，不是每類別各一次"
+        ],
+        [
+          "RO 額外機會",
+          "IRCC 說明額外兩次終身參與、每季最多一份許可；各 RO 條件、類別、費用、名額與確認信另查"
+        ],
+        [
+          "資金及保險",
+          "至少 CAD 2,500、全停留期間健康保險、回程機票或購票資金；不是完整生活預算"
+        ],
+        [
+          "何時算參加",
+          "抵達加拿大並取得工作許可才計一次；只獲核准而未入境領許可不算"
+        ],
+        [
+          "2026／2027 狀態",
+          "2026 池關閉；2027 正式日期待公告（本次核對 2026-11-06）"
+        ],
+        [
+          "台灣 Co-op 在學資格",
+          "在臺灣大專院校註冊，實習全程保持在學，實習符合課程且事先簽署安排"
         ]
       ],
       "steps": [
@@ -258,17 +389,53 @@
         {
           "title": "IRCC：Canadian Experience Class",
           "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html"
+        },
+        {
+          "title": "IRCC：臺灣三類別完整條件與一般一次限制",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility/eligibility-by-country.html"
+        },
+        {
+          "title": "IRCC：2026 關池／2027 等待公告",
+          "url": "https://www.ircc.canada.ca/english/work/iec/selections.asp"
         }
       ],
       "reviewedFields": [
         "taiwan_eligibility",
         "2026_window",
         "permit_type",
-        "pr_separation"
+        "pr_separation",
+        "taiwan_identity_number",
+        "bilateral_participations",
+        "max_duration_and_funds",
+        "2026_2027_window",
+        "ro_is_separate_assessment"
       ],
-      "note": "RO 額外兩次終身參與的官方文字不能直接推定可重複同一類別；每一 RO 可能有個別資格限制。",
+      "note": "普通雙邊資格與 RO 額外資格分開審查；不得以額外兩次推定任何 RO 或任何同類別保證可重複。護照字號、已用次數和類別條件會影響個案資格。",
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "lastRecheckedAt": "2026-11-06",
+      "fieldChecks": {
+        "taiwan_identity_number": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "bilateral_participations": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "max_duration_and_funds": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "2026_2027_window": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "ro_is_separate_assessment": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        }
+      }
     },
     "tw:e1": {
       "priority": 34,
@@ -376,12 +543,13 @@
       "priority": 30,
       "passport": {
         "state": "confirmed_for_taiwan",
-        "detail": "英國政府明定 Taiwan 申請者需先參加 Youth Mobility Scheme ballot，並符合 18–30 歲及其他條件。"
+        "detail": "臺灣須先依官方 ballot 取得邀請並在期限內申請。申請日不超過 30 歲、簽證生效日年滿 18；曾在英國以 YMS 停留者不得再次申請此入境許可。"
       },
       "window": {
         "state": "season_closed",
-        "detail": "2026 年 Youth Mobility Scheme 兩次 ballot 均已結束，英國政府表示 2026 年沒有其他抽選；2027 日期待公告。",
-        "period": "2026"
+        "detail": "截至 2026-11-06，GOV.UK 明示 2026 ballot 均關閉，2027 下一輪日期將於同一官方頁公布；沒有正式日期，不應預填申請起訖。",
+        "period": "2026",
+        "checkedAt": "2026-11-06"
       },
       "work": {
         "state": "temporary_work",
@@ -391,19 +559,35 @@
         "state": "not_direct",
         "detail": "YMS 不直接取得永久居留，日後若有合格聘僱需另查可否轉簽及後續規定。"
       },
-      "summary": "臺灣可參加英國青年流動計畫，須先經抽選；2026 年所有 ballot 已結束，2027 日期待公告。",
+      "summary": "臺灣 YMS 需先抽中 ballot；2026 抽選已結束，2027 日期待公告。台灣護照通常最多 24 個月，不適用澳洲／加拿大／紐西蘭的一年延長。曾用 YMS、受扶養子女與財力亦有規定。",
       "facts": [
         [
-          "年齡",
-          "18–30 歲"
+          "申請年齡與生效年齡",
+          "申請日 ≤30 歲；入境許可生效日 ≥18 歲，兩者不可混用"
         ],
         [
-          "申請方式",
-          "Taiwan 須先參加 ballot"
+          "台灣停留上限",
+          "通常最多 24 個月；台灣不在一年延長資格名單"
         ],
         [
-          "2026 狀態",
-          "全年抽選已結束"
+          "過往參加",
+          "曾在英國以 YMS 停留者不符合再次入境申請條件"
+        ],
+        [
+          "子女條件",
+          "不得有同住或經濟依賴申請人的未滿 18 歲子女"
+        ],
+        [
+          "財力",
+          "至少 GBP 2,530，連續持有 28 天，最後一天在申請前 31 天內"
+        ],
+        [
+          "2027 抽選",
+          "正式日期待 GOV.UK 公告，不能套用過往日期"
+        ],
+        [
+          "工作與家屬",
+          "多數工作可做，但有禁限；不可在此申請附帶家屬，非直接定居路線"
         ]
       ],
       "sources": [
@@ -414,15 +598,51 @@
         {
           "title": "GOV.UK：YMS eligibility",
           "url": "https://www.gov.uk/youth-mobility/eligibility"
+        },
+        {
+          "title": "GOV.UK：YMS 現行法規與台灣條件",
+          "url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-youth-mobility-scheme"
+        },
+        {
+          "title": "GOV.UK：延長僅澳／加／紐",
+          "url": "https://www.gov.uk/youth-mobility/extend-your-visa"
         }
       ],
       "reviewedFields": [
         "taiwan_eligibility",
         "2026_ballot_window",
-        "age"
+        "age",
+        "taiwan_max_24_months",
+        "prior_participation",
+        "dependent_children",
+        "funds_holding_period",
+        "2026_2027_window"
       ],
       "checkedAt": "2026-10-30",
-      "reviewType": "selective_official_audit"
+      "reviewType": "selective_official_audit",
+      "lastRecheckedAt": "2026-11-06",
+      "fieldChecks": {
+        "taiwan_max_24_months": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "prior_participation": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "dependent_children": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "funds_holding_period": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "2026_2027_window": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        }
+      }
     },
     "tw:working_holiday": {
       "priority": 32,
@@ -971,7 +1191,7 @@
       },
       "work": {
         "state": "not_a_work_permit",
-        "detail": "Express Entry 本身是移民申請管理系統，不是工作許可；想先在加拿大工作需另有合法工作身分。"
+        "detail": "Express Entry／CRS 是永久居留申請與排序制度，不是工作許可。2026-11-03 的 LMIA 豁免針對 EE 合格 offer／特定 PR 計畫資格，不能推論已取得加拿大工作許可、免雇主程序或可立即入境工作。"
       },
       "settlement": {
         "state": "direct_residence_application",
@@ -1010,6 +1230,14 @@
         [
           "CRS 全部分數",
           "包含婚姻、語言四技能、學歷認證等因素；本站只提供單一計分因子的條件式參考"
+        ],
+        [
+          "LMIA 豁免範圍",
+          "EE/CRS 與 FSW/FST 的特定 PR 資格安排，不是通用臨時工簽豁免"
+        ],
+        [
+          "兩種年資視窗",
+          "LMI 的加拿大經驗一般看最近十年；CEC 最低一年合格工作經驗仍看申請前三年，兩者不可互換"
         ]
       ],
       "sources": [
@@ -1028,6 +1256,14 @@
         {
           "title": "IRCC：Express Entry 主要資格",
           "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+        },
+        {
+          "title": "IRCC：現行 CRS 各項計分表",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html"
+        },
+        {
+          "title": "IRCC：LMIA 豁免臨時公共政策之適用範圍",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/public-policies/exempt-lmia-express-entry.html"
         }
       ],
       "reviewedFields": [
@@ -1037,7 +1273,10 @@
         "2026_11_03_lmi",
         "offer_vs_experience_exclusive",
         "noc_not_personal_salary",
-        "no_lmia_qualifying_offer"
+        "no_lmia_qualifying_offer",
+        "lmi_vs_cec_time_windows",
+        "ee_lmia_not_work_permit",
+        "lmi_non_additive_recheck"
       ],
       "note": "合格工作經驗與 job offer 方案不可相加；高薪 NOC 職類取決於官方職業級距而非個人薪資。IRCC 在兩週重新計分期間暫停邀請輪次。job offer 可以符合 FSW/FST 計畫資格，卻未必有高薪職業 CRS 加分。",
       "checkedAt": "2026-11-03",
@@ -1068,7 +1307,22 @@
           "仍需符合聯邦資格及相關證明"
         ]
       ],
-      "effectiveOn": "2026-11-03"
+      "effectiveOn": "2026-11-03",
+      "lastRecheckedAt": "2026-11-06",
+      "fieldChecks": {
+        "lmi_vs_cec_time_windows": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "ee_lmia_not_work_permit": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "lmi_non_additive_recheck": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        }
+      }
     },
     "global:ca-pnp": {
       "priority": 70,
@@ -1681,7 +1935,8 @@
       },
       "window": {
         "state": "registration_not_open",
-        "detail": "截至 2026-10-31，E-DV 官方登記入口不接受新的 DV 申請；美國國務院曾公告 DV-2027 登記開始日期將另行公布。另依 2026-08-31 官方更新，DV 簽證核發暫停；登記與核發是兩件不同的事。"
+        "checkedAt": "2026-11-06",
+        "detail": "本次 E-DV 查核仍未受理新登記，DV-2027 起始日期待國務院公告。這只描述新報名窗口，與已選中個案是否可核發簽證是不同問題。"
       },
       "work": {
         "state": "not_a_work_permit",
@@ -1689,60 +1944,58 @@
       },
       "settlement": {
         "state": "conditional_immigrant_visa",
-        "detail": "DV 是移民簽證抽籤，不是 WH／YMS；中籤仍須學歷／合格工作經驗等條件、背景審查、年度簽證名額及核發恢復，且不保證取得綠卡。"
+        "detail": "中籤仍需符合出生地歸屬、學歷／合格工作經驗、可入境、當年度名額與完整簽證審查；不自動授予綠卡或工作權。核發狀態與新登記窗口須分開確認。"
       },
-      "summary": "移民簽證的隨機抽選制度，不是一般工作簽證。2026-10-31 官方尚未開放新的 DV 登記，DV-2027 登記日期待公告；2026-08-31 官方公告暫停 DV 簽證核發。",
+      "summary": "美國 DV 是按出生地及教育／工作資格的移民抽選，不是打工度假。截至 2026-11-06 官方未受理新登記、DV-2027 日期待公告；核發頁已有撤銷舊暫停的新說明及殘留舊文，不能再斷言「目前全面暫停」。",
       "facts": [
         [
-          "參加資格",
-          "原則上依出生地／chargeability（非護照），且符合高中學歷或規定的合格工作經驗"
+          "出生地與年度資格",
+          "一般依出生地／chargeability，非單看台灣護照；DV-2026 台灣出生資格不能代替未公布年度的新名單"
         ],
         [
-          "台灣出生紀錄",
-          "DV-2026 官方說明明列 Taiwan 出生者符合國籍／地區資格；未來年度名單須重新核查"
+          "新報名窗口（2026-11-06）",
+          "官方不接受新登記；DV-2027 開始日期仍待公告"
         ],
         [
-          "2026-10-31 報名狀態",
-          "官方 E-DV 入口未開放新登記，DV-2027 登記起始日尚未公告"
+          "核發狀態需重新核實",
+          "8/31 頁首已指舊暫停依 8/28 法院命令不再有效；下方殘留舊文，不能只讀 FAQ 就判定全面暫停"
         ],
         [
-          "簽證核發狀態",
-          "2026-08-31 美國國務院公告暫停所有 DV 核發，須持續注意最新法律與公告"
+          "學歷／工作條件",
+          "依當期完整指示確認高中教育或合格工作經驗"
         ],
         [
-          "抽中後",
-          "抽中不保證取得簽證；需符合所有資格、排程、面試及年度名額"
+          "抽中並非核准",
+          "還需通過年度資格、審查、面試、名額及實際核發程序"
         ]
       ],
       "steps": [
         [
-          "等待官方公布 DV 登記日",
-          "每年報名期間不固定，不能自行假設十月必定開放"
+          "等待官方新登記日期",
+          "只以 E-DV／國務院公告為準"
         ],
         [
-          "核對出生地與該年度合格地區",
-          "部分申請者可依法使用配偶或父母的出生地歸屬例外"
+          "確認當期出生地及教育／工作資格",
+          "歷史台灣出生者合格不能保證下年度名單"
         ],
         [
-          "符合資格且報名窗口開啟後，透過官方入口提交一次",
-          "僅使用 dvprogram.state.gov，保留確認號碼"
+          "在窗口內依官方要求提交並保存確認號",
+          "不相信保證中籤或代辦增加機率"
         ],
         [
-          "依官方 Entrant Status Check 查詢是否中籤",
-          "抽中不表示已獲移民簽證"
-        ],
-        [
-          "若獲選，依官方指示完成資格、簽證／調整身分程序",
-          "目前 DV 簽證核發仍受官方暫停指引影響"
+          "依法查中籤並核對最新核發及法院指引",
+          "報名、中籤、核發、取得永久身分是不同階段"
         ]
       ],
       "reviewedFields": [
         "2026_10_registration_status",
-        "2026_08_issuance_pause",
         "birthplace_chargeability",
         "historical_taiwan_eligibility",
         "program_type",
-        "not_work_authorization"
+        "not_work_authorization",
+        "2026_11_06_registration",
+        "issuance_notice_conflict",
+        "birthplace_vs_passport"
       ],
       "sources": [
         {
@@ -1754,7 +2007,7 @@
           "url": "https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html"
         },
         {
-          "title": "2026-08-31 美國國務院 DV 核發暫停指引",
+          "title": "2026-08-31 美國國務院 DV 核發更新（含舊文衝突）",
           "url": "https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html"
         },
         {
@@ -1762,7 +2015,30 @@
           "url": "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry/diversity-visa-instructions.html"
         }
       ],
-      "note": "關鍵：DV-2027 新名單未公告，不得把 DV-2026 台灣出生合格直接說成 DV-2027 已核准報名。簽證核發暫停不等同永久廢除抽籤制度。"
+      "note": "更正前版把 2026-08-31 頁面誤讀為新的全面暫停。官方頁首已說明 2025 年 12 月暫停不再有效；殘留文字造成衝突時，標示待核實而非自行選取較強結論。",
+      "issuance": {
+        "state": "requires_reconfirmation",
+        "checkedAt": "2026-11-06",
+        "supersededPauseDate": "2025-12",
+        "courtOrderDate": "2026-08-28",
+        "source": "https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html",
+        "detail": "國務院 2026-08-31 頁面首段表示：依 8/28 Medani 法院命令，2025 年 12 月的核發暫停已不再有效；但同頁仍保留舊暫停及 FAQ 文字。本網站不據舊文推定目前全面暫停，也不保證每個個案已恢復核發；須以最新法院命令、國務院／受理領館指示再核實。"
+      },
+      "lastRecheckedAt": "2026-11-06",
+      "fieldChecks": {
+        "2026_11_06_registration": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        },
+        "issuance_notice_conflict": {
+          "checkedAt": "2026-11-06",
+          "state": "requires_reconfirmation"
+        },
+        "birthplace_vs_passport": {
+          "checkedAt": "2026-11-06",
+          "state": "confirmed"
+        }
+      }
     },
     "global:us-j1-summer-work-travel": {
       "priority": 18,

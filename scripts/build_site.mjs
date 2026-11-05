@@ -7,6 +7,7 @@
  * an explicit overlay and never inferred from a country's existence.
  */
 import fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -206,6 +207,9 @@ function applyReview(route,review){
   route.audit={
     checkedAt:review.checkedAt||'',
     effectiveOn:review.effectiveOn||null,
+    lastRecheckedAt:review.lastRecheckedAt||null,
+    fieldChecks:review.fieldChecks||{},
+    issuance:review.issuance||null,
     reviewedFields:Array.isArray(review.reviewedFields)?review.reviewedFields:[],
     passport:review.passport,
     window:review.window,
@@ -320,8 +324,8 @@ export function buildCatalog(input) {
   for(const id of Object.keys(policyReviews))if(!byId.has(id))throw Error('Policy review points to missing route: '+id);
   for(const route of routes)applyReview(route,policyReviews[route.id]);
   const types=Object.entries(TYPE_LABELS).map(([id,label])=>({id,label,count:routes.filter(r=>r.type===id).length})).filter(x=>x.count);
-  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-11-03',
-    policyAuditScope:'僅 audit.reviewedFields 欄位有當日官方來源核查；其餘舊資料為上游參考。',
+  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-11-06',
+    policyAuditScope:'依各筆 audit.checkedAt／fieldChecks 日期與明列範圍核對；不是全部路線當日驗證。',
     dataNotice:'原始中國大陸導向資料與臺灣額外官方核對資料分層呈現；非法律意見。',
     counts:{countries:countries.size,routes:routes.length,taiwanChecked:routes.filter(r=>r.verification==='official_checked').length,
       officialFieldReviews:routes.filter(r=>r.audit?.checkedAt).length,
@@ -354,7 +358,9 @@ export function main(){
     if(!entry.isFile())continue;
     fs.copyFileSync(path.join(ROOT,'web',entry.name),path.join(output,entry.name));
   }
-  catalog.sourceCommit=process.env.CF_PAGES_COMMIT_SHA||process.env.GITHUB_SHA||null;
+  catalog.sourceCommit=process.env.CF_PAGES_COMMIT_SHA||process.env.WORKERS_CI_COMMIT_SHA||process.env.GITHUB_SHA||null;
+  if(!catalog.sourceCommit){try{catalog.sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:ROOT,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}}
+  catalog.researchChecks=loadJson('data/research_checks.json');
   fs.writeFileSync(path.join(output,'data/catalog.json'),JSON.stringify(catalog));
   if(!fs.existsSync(path.join(output,'index.html')))throw Error('Missing dist/index.html');
   console.log('Global Migration static build OK:',JSON.stringify(catalog.counts));

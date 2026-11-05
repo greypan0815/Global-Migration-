@@ -15,13 +15,10 @@
 > [!TIP]
 > **一句话判断**：欧盟 + 申根 + 欧元区，欧盟总部所在地。**没有数字游民签证**。比利时最特别的地方：**工作许可按大区审批，居留由联邦负责**——弗拉芒、布鲁塞尔首都、瓦隆、德语区四个主管机构，**工资门槛各不相同**。自由职业者看各大区的**专业卡（Professional Card）**。
 
-> [!NOTE]
-> **2026-11-03 補充核查**：歐盟委員會 [EU Blue Card Belgium](https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/eu-blue-card/eu-blue-card-belgium_en) 已列完整申請的法定審理上限為 **90 天**，不等於保證在 90 天內獲准。本次**未核對到**所謂「2026-10 才由 120 天縮短」的精確生效依據；薪資仍按大區當期規範審查。
-
 ## 🏙️ 生活与身份档案
 
 <table>
-<tr><td width="33%" valign="top"><sub>💶 生活成本指数（纽约=100）</sub><br><b>68.3 ●●●○○</b></td><td width="33%" valign="top"><sub>🏠 房租指数（纽约=100）</sub><br><b>22.0 ●●●●○</b></td><td width="33%" valign="top"><sub>🛡️ 安全指数</sub><br><b>50.5 ●●○○○</b></td></tr>
+<tr><td width="33%" valign="top"><sub>💶 生活成本指数（纽约=100）</sub><br><b>68.3 ●●●○○</b></td><td width="33%" valign="top"><sub>🏠 房租指数（纽约=100）</sub><br><b>22 ●●●●○</b></td><td width="33%" valign="top"><sub>🛡️ 安全指数</sub><br><b>50.5 ●●○○○</b></td></tr>
 <tr><td width="33%" valign="top"><sub>💼 平均年薪（总额）</sub><br><b>EUR 59,632</b></td><td width="33%" valign="top"><sub>🧾 最高个税税率</sub><br><b>53.5%</b></td><td width="33%" valign="top"><sub>🛂 护照免签目的地</sub><br><b>185 个（中国 81）</b></td></tr>
 <tr><td width="33%" valign="top"><sub>🏠 永居年限</sub><br><b>5 年</b></td><td width="33%" valign="top"><sub>🎖️ 入籍年限</sub><br><b>5 年</b></td><td width="33%" valign="top"><sub>🔁 双重国籍</sub><br><b>✅ 可保留原国籍</b></td></tr>
 <tr><td width="33%" valign="top"><sub>🗣️ 语言要求</sub><br><b>荷/法/德语 A2</b></td><td width="33%" valign="top"><sub>✈️ 中国护照入境</sub><br><b>申根签证</b></td><td width="33%" valign="top"></td></tr>
@@ -51,7 +48,7 @@
 
 <table>
 <tr><td width="33%" valign="top"><sub>布鲁塞尔</sub><br><b>EUR 4,748/月</b></td><td width="33%" valign="top"><sub>弗拉芒/德语区</sub><br><b>EUR 63,586/年</b></td><td width="33%" valign="top"><sub>瓦隆</sub><br><b>EUR 68,815/年</b></td></tr>
-<tr><td width="33%" valign="top"><sub>合同</sub><br><b>≥6 个月</b></td><td width="33%" valign="top"><sub>有效期</sub><br><b>1–3 年</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>合同</sub><br><b>≥6 个月</b></td><td width="33%" valign="top"><sub>有效期</sub><br><b>1–3 年</b></td><td width="33%" valign="top"><sub>審理上限</sub><br><b>歐盟官方列法定 90 天（完整申請），不保證獲准</b></td></tr>
 </table>
 
 <table><tr>
@@ -77,6 +74,11 @@ flowchart LR
 
 - [ ] 劳动合同
 - [ ] 学历证明
+
+> [!WARNING]
+> **注意**
+> - 比利時 EU Blue Card 最長 90 天官方審理規則已有既存依據，未核對出是 2026-10 才從 120 天變更。
+> - 各大區的 2026 薪資門檻應以當期區政府規定核對；電子簽章政策須再查正式依據。
 
 <details><summary>🔗 官方来源（4）</summary>
 

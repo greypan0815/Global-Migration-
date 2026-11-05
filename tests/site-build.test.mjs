@@ -159,3 +159,27 @@ test('November 2026 government policy dates do not imply UK law is already effec
   assert.match(r['extra:uk-global-talent'].settlement.detail,/三年或五年/);
   assert.ok(r['eu:belgium-eu-blue-card'].facts.some(x=>x[1].includes('90 天')));
 });
+
+
+test('2026-11-06 evidence ledger retains upstream identity and separates DV registration from issuance',()=>{
+ const ledger=JSON.parse(sourceData('data/research_checks.json'));
+ assert.equal(ledger.upstream.newCommits,0);
+ assert.equal(ledger.upstream.head,ledger.upstream.previousReviewedHead);
+ const r=JSON.parse(sourceData('data/policy_reviews.json')).routes;
+ const dv=r['global:us-dv-lottery'];
+ assert.equal(dv.window.state,'registration_not_open');
+ assert.equal(dv.issuance.state,'requires_reconfirmation');
+ assert.ok(dv.issuance.detail.includes('不再有效'));
+ assert.ok(!dv.reviewedFields.includes('2026_08_issuance_pause'));
+ assert.equal(r['tw:iec_wh'].lastRecheckedAt,'2026-11-06');
+ assert.equal(r['tw:iec_wh'].checkedAt,'2026-10-30');
+ assert.equal(r['tw:wh_417'].checkedAt,'2026-10-30');
+});
+test('matching UI avoids inline styles forbidden by production CSP and preview serves modules as JavaScript',()=>{
+ const page=sourceData('web/match.html');
+ const app=sourceData('web/match-app.js');
+ assert.ok(!page.includes('style="'));
+ assert.ok(!app.includes('style="'));
+ assert.ok(sourceData('scripts/serve_site.mjs').includes("'.mjs':'application/javascript"));
+ assert.ok(sourceData('web/_headers').includes("style-src 'self'"));
+});

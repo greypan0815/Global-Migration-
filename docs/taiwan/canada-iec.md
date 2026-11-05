@@ -8,6 +8,10 @@
 
 加拿大 IRCC [官方首頁](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html) 明確公告：**2026 年 IEC 候選人池已關閉**。已收到 Invitation to Apply（ITA）者仍可依核發規定及期限遞交工作許可；未收到邀請者的 profile 將被移出候選池，可待 **2027 候選池重新開放**時重建 profile。**目前不應把 IEC 標示為仍有 2026 可抽邀名額**；下一季開放日期尚待政府公布。
 
+## 2026-11-06 必須先核對的台灣限制
+
+普通雙邊IEC三類別合計一般一次、最多12個月；護照必須載個人身分證字號。曾用WH不能假定再有普通YP。RO額外參加應獨立審查，不能保證名額或同類別重複。Co-op須核對台灣院校和課程實習，不只一般學生身分。[完整官方查核](research-2026-11-06.md)。
+
 ## 1. 臺灣可參與的 IEC 類別
 
 加拿大 IRCC [資格表](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html?other=table) 將臺灣列在 **18–35 歲**的參與者中，類別包括：

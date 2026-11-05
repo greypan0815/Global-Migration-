@@ -58,13 +58,21 @@
     <div class="extra-fields-inner">
      <p class="advanced-intro">只有你確定的條件才選「已確認」。加拿大 2026-11-03 新 CRS 的合格工作經驗與高薪 NOC offer 擇高、不能相加；級距取決於整個 NOC 職業的薪資統計，不是你的個人薪資。澳洲積分仍只計入已確認項目。</p>
      <div class="match-fields two">
+      <label>台灣護照是否載個人身分證字號<select name="twPassportPersonalId"><option value="unknown">尚未確認（不需輸入實際號碼）</option><option value="yes">是</option><option value="no">否</option></select></label>
+      <label>是否曾入境加拿大取得 IEC 工簽<select name="iecUsed"><option value="unknown">尚未確認</option><option value="no">沒有</option><option value="yes">曾經取得（一般雙邊資格已用）</option></select></label>
+      <label>IEC 想評估的途徑<select name="iecChannel"><option value="bilateral">台灣一般雙邊類別</option><option value="ro">RO 額外參與（須另審）</option></select></label>
+      <label>是否已取得指定 RO 確認信<select name="iecROConfirmation"><option value="unknown">尚未確認</option><option value="yes">已取得（資格仍需另審）</option><option value="no">沒有</option></select></label>
+      <label>台灣院校在學與課程實習資格<select name="iecCoopTaiwanStudent"><option value="unknown">尚未核對台灣 Co-op 要求</option><option value="yes">已確認在台灣院校及課程實習條件</option><option value="no">不符合</option></select></label>
+      <label>是否曾在英國以 YMS 身分停留<select name="ymsUsed"><option value="unknown">尚未確認</option><option value="no">沒有</option><option value="yes">曾經使用</option></select></label>
+      <label>是否有同住或由你扶養的未成年子女<select name="ymsDependentChildren"><option value="unknown">尚未確認</option><option value="no">沒有</option><option value="yes">有</option></select></label>
+      <label>YMS 財力持有期間是否已符合<select name="ymsFunds"><option value="unknown">尚未確認</option><option value="yes">GBP 2,530、28 天及證明日期均符合</option><option value="no">尚未符合</option></select></label>
       <label>加拿大合格工作年數（最近十年）<input name="canadianYears" type="number" min="0" max="60" step=".5" inputmode="decimal" placeholder="不確定可留白"></label>
       <label>是否確認工作經驗符合 IRCC 規則<select name="canadianWorkEligible"><option value="unknown">尚未確認 NOC／工時／工作地</option><option value="yes">已確認合格 TEER 0–3 年資</option><option value="no">沒有符合資格的加拿大經驗</option></select></label>
       <label>加拿大 CRS 配偶狀態<select name="canadaSpouseAccompanying"><option value="unknown">尚未確認</option><option value="no">按 IRCC 規則視為無隨行配偶</option><option value="yes">有隨行配偶／同居伴侶</option></select></label>
       <label>工作經驗的高薪 NOC 級距<select name="canadaExperienceNocBand"><option value="unknown">尚未核對官方 NOC 名單</option><option value="below">非高薪 NOC／不符高薪年資</option><option value="tier13">已確認 1.3 倍級距及 12 個月經驗</option><option value="tier15">已確認 1.5 倍級距及 12 個月經驗</option><option value="tier20">已確認 2.0 倍級距及 12 個月經驗</option></select></label>
       <label>加拿大 Job Offer 是否合格<select name="canadianOfferEligible"><option value="unknown">尚未確認</option><option value="yes">已確認合格且真實的 offer</option><option value="no">沒有合格 offer</option></select></label>
       <label>Job Offer 的高薪 NOC 級距<select name="canadaOfferNocBand"><option value="unknown">尚未核對官方 NOC 名單</option><option value="below">非高薪 NOC（加分為零）</option><option value="tier13">已確認 1.3 倍級距</option><option value="tier15">已確認 1.5 倍級距</option><option value="tier20">已確認 2.0 倍級距</option></select></label>
-      <div class="field-help" style="grid-column:1/-1">加拿大高薪職業級距需先查 <a class="official-small" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html" target="_blank" rel="noopener noreferrer">IRCC 官方 NOC 高薪名單 ↗</a>。即使填完，也只能估計勞動市場整合因子，不能當成完整 CRS。</div>
+      <div class="field-help full-grid">加拿大高薪職業級距需先查 <a class="official-small" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/high-wage.html" target="_blank" rel="noopener noreferrer">IRCC 官方 NOC 高薪名單 ↗</a>。即使填完，也只能估計勞動市場整合因子，不能當成完整 CRS。</div>
       <label>目前是否在學<select name="student"><option value="unknown">尚未確認</option><option value="yes">是，符合在學條件</option><option value="no">否</option></select></label>
       <label>出生地（DV 按出生地判斷，非護照）<select name="birthPlace"><option value="unknown">尚未提供／其他地區待查</option><option value="taiwan">台灣出生</option><option value="mainland">中國大陸出生</option><option value="hongkong">香港出生</option><option value="other">其他國家／地區出生</option></select></label>
       <label>臺灣戶籍證明<select name="taiwanHousehold"><option value="unknown">尚未確認</option><option value="yes">有臺灣戶籍可證明</option><option value="no">沒有臺灣戶籍</option></select></label>
@@ -93,7 +101,7 @@
   </form>
   <section class="match-results" id="matchResults" aria-live="polite" aria-label="移居適配結果">
    <div class="result-empty"><div class="result-empty-art" aria-hidden="true">✳</div><p class="tiny-overline">PERSONALISED PATHWAY DISCOVERY</p><h2>你的移居分析<br>從這裡開始。</h2><p>填入左側條件後，會看到每條路線目前具備的條件、尚缺項目，以及哪些制度採官方積分、哪些只是必要資格審查。</p>
-    <div class="teaser-bars" aria-hidden="true"><i style="width:88%"></i><i style="width:65%"></i><i style="width:42%"></i><i style="width:72%"></i></div>
+    <div class="teaser-bars" aria-hidden="true"><i class="teaser-1"></i><i class="teaser-2"></i><i class="teaser-3"></i><i class="teaser-4"></i></div>
     <span class="result-empty-hint">從年齡、學經歷與移居目標開始即可</span>
    </div>
   </section>
@@ -113,7 +121,7 @@
   <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-skilled-worker" target="_blank" rel="noopener noreferrer">🇬🇧 英國 Skilled Worker 必要點數 ↗</a>
   <a href="https://www.moj.go.jp/isa/applications/resources/newimmiact_3_index.html" target="_blank" rel="noopener noreferrer">🇯🇵 日本高度人才積分規定 ↗</a>
  </div></div>
- <div class="match-disclaimer">資料核查基準日：2026-10-30。法律及計分方式可能隨時變更，尤其加拿大 CRS 已宣布近期制度調整。這是一個不留存個資的研究輔助工具，不能替代政府官方評分、正式職業評估或移民法律意見。<a href="/#method">原網站核查方法 ↗</a></div>
+ <div class="match-disclaimer">最近選定台灣條件複核：2026-11-06（並非全部路線重新查核）。法律及計分方式可能隨時變更，加拿大 EE 的 LMIA 豁免不代表你已取得加拿大工作許可。這是一個不留存個資的研究輔助工具，不能替代政府官方評分、正式職業評估或移民法律意見。<a href="/#method">原網站核查方法 ↗</a></div>
 </section>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><span class="brand-symbol">✳</span><span><strong>GLOBAL MIGRATION</strong><small>Make the next move intentional.</small></span></div><div class="footer-legal">台灣護照研究工具 · 原始資料依 CC BY-SA 4.0 授權 · 不蒐集表單資料<br>不是移民顧問、官方計算器或法律意見。</div><a class="back-top" href="/">回路線總覽 ↑</a></div></footer>

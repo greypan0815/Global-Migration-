@@ -1,5 +1,8 @@
 <div align="center">
 
+> **2026-11-06 選定台灣條件複核：** 上游無新增提交；補上 IEC 普通一次／RO 區別、YMS 排除與財力條件，並更正 DV 全面暫停的過度斷言。[本次研究與政府來源](docs/taiwan/research-2026-11-06.md)。不是全部152條當日查核。
+
+
 # RUN · 润
 
 ### 一本海外移居手册
@@ -167,7 +170,7 @@
 <tr><td width="25%" valign="top"><a href="docs/europe/lithuania.md"><b>🇱🇹 立陶宛</b></a><br><sub>Lithuania · 3 条路线 🚀 🧑‍💻</sub><br><sub>2024 起工作必须本国居留；Startup Visa 免资本要求</sub></td><td width="25%" valign="top"><a href="docs/europe/luxembourg.md"><b>🇱🇺 卢森堡</b></a><br><sub>Luxembourg · 2 条路线 🧑‍💻 🧾</sub><br><sub>蓝卡 EUR 65,652 但首卡 4 年；自雇许可 3 年</sub></td><td width="25%" valign="top"><a href="docs/europe/malta.md"><b>🇲🇹 马耳他</b></a><br><sub>Malta · 8 条路线 💰 💻 🛂 🧑‍💻</sub><br><sub>MPRP 永居约 11–47 万欧；数字游民最长 4 年</sub></td><td width="25%" valign="top"><a href="docs/europe/montenegro.md"><b>🇲🇪 黑山</b></a><br><sub>Montenegro · 2 条路线 💰 💻</sub><br><sub>非申根；数字游民 2+2 年最友好；投资入籍已关闭</sub></td></tr>
 <tr><td width="25%" valign="top"><a href="docs/europe/netherlands.md"><b>🇳🇱 荷兰</b></a><br><sub>Netherlands · 3 条路线 🧑‍💻 🧾</sub><br><sub>高技术移民 30 岁以下 EUR 4,357/月，需认可雇主</sub></td><td width="25%" valign="top"><a href="docs/europe/norway.md"><b>🇳🇴 挪威</b></a><br><sub>Norway · 1 条路线 🧾</sub><br><sub>技术自雇许可禁止远程工作；3 年可申请永居</sub></td><td width="25%" valign="top"><a href="docs/europe/poland.md"><b>🇵🇱 波兰</b></a><br><sub>Poland · 3 条路线 🧑‍💻 🧾</sub><br><sub>工作许可门槛低；2026-04 起全部 MOS 线上递交</sub></td><td width="25%" valign="top"><a href="docs/europe/portugal.md"><b>🇵🇹 葡萄牙</b></a><br><sub>Portugal · 6 条路线 🏖️ 💰 💻 🧑‍💻</sub><br><sub>数字游民 EUR 3,680/月；黄金签证不能买房；入籍改为 10 年</sub></td></tr>
 <tr><td width="25%" valign="top"><a href="docs/europe/romania.md"><b>🇷🇴 罗马尼亚</b></a><br><sub>Romania · 3 条路线 💻 🧑‍💻</sub><br><sub>数字游民门槛最高之一（约 EUR 5,500/月）；蓝卡门槛低</sub></td><td width="25%" valign="top"><a href="docs/europe/slovakia.md"><b>🇸🇰 斯洛伐克</b></a><br><sub>Slovakia · 3 条路线 🧑‍💻 🧾</sub><br><sub>蓝卡门槛全欧最低之一 EUR 1,944/月，首卡 5 年</sub></td><td width="25%" valign="top"><a href="docs/europe/slovenia.md"><b>🇸🇮 斯洛文尼亚</b></a><br><sub>Slovenia · 3 条路线 💻 🧑‍💻</sub><br><sub>数字游民 2025 新开、家属可立即团聚；蓝卡 1 倍平均工资</sub></td><td width="25%" valign="top"><a href="docs/europe/spain.md"><b>🇪🇸 西班牙</b></a><br><sub>Spain · 2 条路线 🏖️ 💻</sub><br><sub>数字游民 EUR 2,442/月起；黄金签证 2025 年已关闭</sub></td></tr>
-<tr><td width="25%" valign="top"><a href="docs/europe/sweden.md"><b>🇸🇪 瑞典</b></a><br><sub>Sweden · 3 条路线 🧑‍💻 🧾</sub><br><sub>2026 起工作许可须达中位工资 90%（SEK 34,470/月）</sub></td><td width="25%" valign="top"><a href="docs/europe/switzerland.md"><b>🇨🇭 瑞士</b></a><br><sub>Switzerland · 1 条路线 🧾</sub><br><sub>第三国国民配额 + 优先本地，基本只适合高端人才</sub></td><td width="25%" valign="top"><a href="docs/europe/turkiye.md"><b>🇹🇷 土耳其</b></a><br><sub>Türkiye · 1 条路线 🛂</sub><br><sub>USD 40 万买房可申请入籍（非欧盟护照）</sub></td><td width="25%" valign="top"><a href="docs/europe/united-kingdom.md"><b>🇬🇧 英国</b></a><br><sub>United Kingdom · 3 条路线 🧑‍💻</sub><br><sub>投资移民已关闭；永居拟从 5 年改为 10 年</sub></td></tr>
+<tr><td width="25%" valign="top"><a href="docs/europe/sweden.md"><b>🇸🇪 瑞典</b></a><br><sub>Sweden · 3 条路线 🧑‍💻 🧾</sub><br><sub>2026 起工作许可须达中位工资 90%（SEK 34,470/月）</sub></td><td width="25%" valign="top"><a href="docs/europe/switzerland.md"><b>🇨🇭 瑞士</b></a><br><sub>Switzerland · 1 条路线 🧾</sub><br><sub>第三国国民配额 + 优先本地，基本只适合高端人才</sub></td><td width="25%" valign="top"><a href="docs/europe/turkiye.md"><b>🇹🇷 土耳其</b></a><br><sub>Türkiye · 1 条路线 🛂</sub><br><sub>USD 40 万买房可申请入籍（非欧盟护照）</sub></td><td width="25%" valign="top"><a href="docs/europe/united-kingdom.md"><b>🇬🇧 英国</b></a><br><sub>United Kingdom · 3 条路线 🧑‍💻</sub><br><sub>现行 Skilled Worker ILR 通常 5 年；11/02 已公布 Earned Settlement 改革，正式实施待细则</sub></td></tr>
 </table>
 <!-- /AUTO -->
 
@@ -194,8 +197,10 @@
 | 2026-06-30 | 🇰🇷 [韩国](docs/global/south-korea.md) | 🆕 新开 | F-1-D 数字游民签证转为正式签证，最长 3 年 |
 | 2026-09-15 | 🇱🇻 [拉脱维亚](docs/europe/latvia.md) | ⛔ 关闭 | 新《移民法》关闭买房居留和银行次级债居留 |
 | 2026-09-30 | 🇺🇸 [美国](docs/global/usa.md) | 🔄 变化 | 法院阻止执行 H-1B 10 万美元附加费；抽签改为按工资加权 |
-| 2026-11-02 | 🇬🇧 [英国](docs/europe/united-kingdom.md) | 🔄 政策已公布 | Earned Settlement 公布：方向為一般 10 年；現行 Skilled Worker ILR 5 年及 Long Residence 10 年法定途徑尚待後續正式修訂 | 
-| 2026-11-03 | 🇨🇦 [加拿大](docs/global/canada.md) | 🔄 新制生效 | CRS 新 Labour Market Integration 因子：加拿大合格工作經驗與高薪 NOC offer 擇高、不疊加；job offer 取消 LMIA 要求 |
+| 咨询中 | 🇬🇧 [英国](docs/europe/united-kingdom.md) | 🔺 收紧 | 永居拟从 5 年改为 10 年（earned settlement） |
+| 2026-11-02 | 🇬🇧 [英國](docs/europe/united-kingdom.md) | 🔄 变化 | 政府公布 Earned Settlement 政策，提出一般十年與例外較短途徑；截至 11/03 GOV.UK 現行 Skilled Worker 五年、Long Residence 十年規定仍在，需等正式施行 |
+| 2026-11-03 | 🇨🇦 [加拿大](docs/global/canada.md) | 🔄 变化 | CRS Labour Market Integration 新制生效；合格加拿大工作經驗和高薪 NOC job offer 擇高計分，不疊加。LMIA 不再是合格 offer 的必要條件，重算期暫停 ITA 輪次 |
+| 2026-11-03 | 🇧🇪 [比利時](docs/europe/belgium.md) | 🔄 变化 | 歐盟官方說明 EU Blue Card 完整申請法定最長審理時間為 90 天；無證據證明是 2026-10 才修改，並非核發保證 |
 <!-- /AUTO -->
 
 ---
