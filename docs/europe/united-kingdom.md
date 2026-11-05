@@ -6,25 +6,21 @@
 
 ![欧盟](https://img.shields.io/badge/%E6%AC%A7%E7%9B%9F-%E5%90%A6-8b949e) ![申根](https://img.shields.io/badge/%E7%94%B3%E6%A0%B9-%E5%90%A6-8b949e) ![货币](https://img.shields.io/badge/%E8%B4%A7%E5%B8%81-GBP%20%E8%8B%B1%E9%95%91-0969da) ![收录路线](https://img.shields.io/badge/%E6%94%B6%E5%BD%95%E8%B7%AF%E7%BA%BF-4-6e40c9) ![数据核查](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%A0%B8%E6%9F%A5-2026--10--25-57606a)
 
-**现行 Skilled Worker ILR 通常五年；11/02 已公布 Earned Settlement 改革，正式实施待进一步规则**
+**现行 Skilled Worker ILR 通常 5 年；11/02 已公布 Earned Settlement 改革，正式实施待细则**
 
 [🧑‍💻 技术工作签证（Skilled Worker）](#uk-skilled-worker) · [🧑‍💻 全球人才签证（Global Talent）](#uk-global-talent) · [🧑‍💻 高潜力人才签证（HPI）](#uk-hpi) · [💰 UK Tier 1 Investor Visa](#uk-tier-1-investor-visa) · [📖 深度解读](#deep) · [🔗 延伸阅读](#more)
 
 </div>
 
 > [!TIP]
-> **一句话判断**：**非欧盟、非申根**，英语国家。**Tier 1 投资移民已于 2022-02-17 关闭**，投资移民这条路没了；现在主要靠**技术工作签证（Skilled Worker）**、**全球人才（Global Talent）**、**创新创业（Innovator Founder）**、**高潜力人才（HPI）**、**扩张签证（Scale-up）** 等。**2026-11-02 政府已公布 Earned Settlement 政策方向，但截至 2026-11-03 GOV.UK 的现行 Skilled Worker ILR 五年及 Long Residence 十年规则仍在。**
-
-> [!IMPORTANT]
-> **2026-11-03 官方核查**：GOV.UK [Skilled Worker 現行永居規則](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk) 仍列五年，[Long Residence](https://www.gov.uk/long-residence) 仍保留十年合法長居途徑。11/02 的 [Earned Settlement 政策公告](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk) 不等於全面生效，個案申請須依正式 Immigration Rules。
-> 另見 [台灣讀者 11 月政策更新](../taiwan/november-2026-policy-update.md)。
+> **一句话判断**：**非欧盟、非申根**，英语国家。**Tier 1 投资移民已于 2022-02-17 关闭**，投资移民这条路没了；现在主要靠**技术工作签证（Skilled Worker）**、**全球人才（Global Talent）**、**创新创业（Innovator Founder）**、**高潜力人才（HPI）**、**扩张签证（Scale-up）** 等。**2026-11-02 政府正式公布 Earned Settlement 政策方向**，但截至 2026-11-03 的 GOV.UK 现行 Skilled Worker ILR 页面仍列五年资格，独立 Long Residence 十年合法居留规则仍有效。**公布政策不能当成所有细则已正式生效。**
 
 ## 🏙️ 生活与身份档案
 
 <table>
 <tr><td width="33%" valign="top"><sub>💶 生活成本指数（纽约=100）</sub><br><b>68.2 ●●●○○</b></td><td width="33%" valign="top"><sub>🏠 房租指数（纽约=100）</sub><br><b>30.1 ●●●○○</b></td><td width="33%" valign="top"><sub>🛡️ 安全指数</sub><br><b>51.8 ●●○○○</b></td></tr>
 <tr><td width="33%" valign="top"><sub>💼 平均年薪（总额）</sub><br><b>—</b></td><td width="33%" valign="top"><sub>🧾 最高个税税率</sub><br><b>45%</b></td><td width="33%" valign="top"><sub>🛂 护照免签目的地</sub><br><b>182 个（中国 81）</b></td></tr>
-<tr><td width="33%" valign="top"><sub>🏠 永居年限</sub><br><b>现行通常 5 年；11/02 改革已公布待实施</b></td><td width="33%" valign="top"><sub>🎖️ 入籍年限</sub><br><b>永居后 1 年</b></td><td width="33%" valign="top"><sub>🔁 双重国籍</sub><br><b>✅ 可保留原国籍</b></td></tr>
+<tr><td width="33%" valign="top"><sub>🏠 永居年限</sub><br><b>現行 Skilled Worker 通常 5 年；2026-11-02 政府已宣布 Earned Settlement 改革，生效須等正式規則</b></td><td width="33%" valign="top"><sub>🎖️ 入籍年限</sub><br><b>永居后 1 年</b></td><td width="33%" valign="top"><sub>🔁 双重国籍</sub><br><b>✅ 可保留原国籍</b></td></tr>
 <tr><td width="33%" valign="top"><sub>🗣️ 语言要求</sub><br><b>英语 B1 + Life in UK</b></td><td width="33%" valign="top"><sub>✈️ 中国护照入境</sub><br><b>英国签证</b></td><td width="33%" valign="top"></td></tr>
 </table>
 
@@ -53,7 +49,7 @@
 
 <table>
 <tr><td width="33%" valign="top"><sub>薪资</sub><br><b>≥ GBP 41,700/年或职业标准工资（取高者），时薪 ≥ GBP 17.13</b></td><td width="33%" valign="top"><sub>岗位</sub><br><b>RQF 6（学士级）以上；中等技能岗位需在紧缺清单</b></td><td width="33%" valign="top"><sub>英语</sub><br><b>B2（2026-01-08 起）</b></td></tr>
-<tr><td width="33%" valign="top"><sub>雇主</sub><br><b>持牌担保雇主</b></td><td width="33%" valign="top"><sub>永居</sub><br><b>现行通常五年；Earned Settlement 已公布但未全面实施</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>雇主</sub><br><b>持牌担保雇主</b></td><td width="33%" valign="top"><sub>目前法定 ILR</sub><br><b>GOV.UK 截至 2026-11-03 仍列通常五年合格居留</b></td><td width="33%" valign="top"><sub>政府宣布未生效改革</sub><br><b>2026-11-02 公布 Earned Settlement：一般十年，部分高收入／特殊人才較短；仍待正式移民規則施行</b></td></tr>
 </table>
 
 <table><tr>
@@ -87,11 +83,13 @@ flowchart LR
 > [!WARNING]
 > **注意**
 > - 2026-04 起按每个发薪期核查工资合规
+> - 11/02 改革是政府公告，不代表已全面修改當前 ILR 法律或廢除現有 Long Residence。
 
-<details><summary>🔗 来源（2）</summary>
+<details><summary>🔗 来源（3）</summary>
 
-- [GOV.UK Skilled Worker visa](https://www.gov.uk/skilled-worker-visa)
-- [Kenton Solicitors: 2026 thresholds](https://kentonsolicitors.co.uk/skilled-worker-visa-2026-salary-changes/)
+- [GOV.UK Skilled Worker](https://www.gov.uk/skilled-worker-visa)
+- [GOV.UK 現行 Skilled Worker ILR](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk)
+- [GOV.UK 2026-11-02 Earned Settlement 政策](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)
 
 </details>
 
@@ -105,11 +103,12 @@ flowchart LR
 
 ![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%8A%80%E6%9C%AF%E5%B7%A5%E4%BD%9C-0f766e) ![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%BC%80%E6%94%BE-2ea44f) ![家属](https://img.shields.io/badge/%E5%AE%B6%E5%B1%9E-%E5%8F%AF%E5%B8%A6-0969da) ![永居](https://img.shields.io/badge/%E6%B0%B8%E5%B1%85-%E5%8F%AF%E8%83%BD-0969da) ![来源](https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-RUN%20%E8%A1%A5%E5%85%85-e36209)
 
-> **科研、数字技术、艺术与设计领域顶尖或潜力人才；现行依背书／奖项类型符合条件者可于三年或五年申请 ILR，改革尚待正式实施。**
+> **英國學術、藝術與數位科技頂尖或潛力人才適用的工作簽證；2026-11-03 現行 ILR 依背書／獎項類別分三年或五年。政府新 Earned Settlement 政策已宣布但尚待施行。**
 
 <table>
 <tr><td width="33%" valign="top"><sub>背书</sub><br><b>认可机构背书（2026-08 起 100 多家企业可为研究人员背书）</b></td><td width="33%" valign="top"><sub>雇主</sub><br><b>不需要</b></td><td width="33%" valign="top"><sub>期限</sub><br><b>最长 5 年</b></td></tr>
-<tr><td width="33%" valign="top"><sub>费用</sub><br><b>GBP 766 + IHS</b></td><td width="33%" valign="top"><sub>新增</sub><br><b>2026-07 起设计领域</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>费用</sub><br><b>GBP 766 + IHS</b></td><td width="33%" valign="top"><sub>新增</sub><br><b>2026-07 起设计领域</b></td><td width="33%" valign="top"><sub>現行 ILR</sub><br><b>依背書／獎項類型與個案資格，可於三年或五年申請</b></td></tr>
+<tr><td width="33%" valign="top"><sub>未來改革</sub><br><b>11/02 政府公布 Earned Settlement，仍須等正式 Immigration Rules 實施</b></td><td width="33%" valign="top"></td><td width="33%" valign="top"></td></tr>
 </table>
 
 <table><tr>
@@ -129,9 +128,11 @@ flowchart LR
 1. **申请背书**
 2. **获背书后申请签证**
 
-<details><summary>🔗 来源（1）</summary>
+<details><summary>🔗 来源（3）</summary>
 
-- [GOV.UK Global Talent visa](https://www.gov.uk/global-talent)
+- [GOV.UK Global Talent](https://www.gov.uk/global-talent/overview)
+- [GOV.UK Global Talent ILR](https://www.gov.uk/indefinite-leave-to-remain-business-investor-global-talent/eligibility)
+- [GOV.UK Earned Settlement 政策](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)
 
 </details>
 
@@ -149,7 +150,8 @@ flowchart LR
 
 <table>
 <tr><td width="33%" valign="top"><sub>学历</sub><br><b>名单内大学近 5 年毕业</b></td><td width="33%" valign="top"><sub>期限</sub><br><b>2 年（博士 3 年），不可续</b></td><td width="33%" valign="top"><sub>名额</sub><br><b>每年 8,000（2025-11 起）</b></td></tr>
-<tr><td width="33%" valign="top"><sub>英语</sub><br><b>B2</b></td><td width="33%" valign="top"><sub>永居</sub><br><b>不直接通向，可转其他签证</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>英语</sub><br><b>B2</b></td><td width="33%" valign="top"><sub>HPI 自身定居</sub><br><b>HPI 並非直接通往永居的簽證，合格持有人可考慮依規定轉其他簽證</b></td><td width="33%" valign="top"><sub>現行 10 年合法長居</sub><br><b>獨立 Long Residence 計算須查現行法定條件；不可直接推定 HPI 一律從所有長居年資排除</b></td></tr>
+<tr><td width="33%" valign="top"><sub>未來 Earned Settlement</sub><br><b>11/02 政府公告，尚未當作全面正式生效</b></td><td width="33%" valign="top"></td><td width="33%" valign="top"></td></tr>
 </table>
 
 <table><tr>
@@ -171,10 +173,15 @@ flowchart LR
 2. **线上申请**
 3. **在英国找工作后转技术工作签证**
 
-<details><summary>🔗 来源（2）</summary>
+> [!WARNING]
+> **注意**
+> - HPI 不是直接 settlement route；若考慮 10 年 Long Residence，需看實際有效的 Immigration Rules 和個人簽證史。
 
-- [GOV.UK High Potential Individual visa](https://www.gov.uk/high-potential-individual-visa)
-- [Fragomen: UK widens HPI](https://www.fragomen.com/insights/uk-widens-access-to-the-high-potential-individual-visa-to-attract-the-worlds-top-graduate-talent-or-mobilityminute.html)
+<details><summary>🔗 来源（3）</summary>
+
+- [GOV.UK HPI](https://www.gov.uk/high-potential-individual-visa)
+- [GOV.UK Long Residence](https://www.gov.uk/long-residence)
+- [GOV.UK Earned Settlement](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)
 
 </details>
 
@@ -233,10 +240,15 @@ flowchart LR
 | Innovator Founder 创新创业 | 创新、可行、可扩展的商业计划，需背书机构认可 |
 | Scale-up | 为高速成长企业工作 |
 
-### 永居（ILR）规则变化
-- **现行**：Skilled Worker 连续合法居住 5 年 + 薪资达标即可申请 ILR。
-- **提议中（earned settlement）**：标准年限 10 年；年收入 > GBP 50,270 可能 5 年；> GBP 125,140 可能 3 年；低于 RQF 6 级岗位可能长达 15 年。咨询期 2025-11 至 2026-02，预计 2027 年 2 月前定案。正在走 5 年路线的人要关注过渡安排。
-- 2027-03-26 起 ILR 英语要求将提高到 B2。
+### 永居（ILR）：现行规则和政府已宣布改革（2026-11-03 核查）
+
+- **现行法律**：[GOV.UK Skilled Worker ILR](https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa/time-uk) 仍列五年符合条件的工作居留；[Long Residence](https://www.gov.uk/long-residence) 仍是连续十年合法居留、符合条件方可申请的独立路线。
+- **11/02 政府公布 Earned Settlement 政策**：一般方向为十年，高收入与特定高阶人才／公共服务等类别可能更早申请。详见[政府新闻稿](https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk)及[正式咨询回應](https://www.gov.uk/government/consultations/earned-settlement)。
+- **法律实施时间和过渡安排**：须等待新的 Immigration Rules 与官方技术指南，不能以新闻公布日直接推定所有申请人即日起变成十年。
+- **Global Talent**：[现行说明](https://www.gov.uk/indefinite-leave-to-remain-business-investor-global-talent/eligibility) 依具体背书／奖项类别为三或五年；不应写成每个人都是三年。
+- **HPI**：HPI 本身不直接通向永居；但要区分它与现行的独立 Long Residence 年资规则，不应把政府未来改革直接当成已经生效的排除规则。
+
+中国大陆护照或台灣护照读者均须依各自实际签证、合法居住历史与申请当日生效规则核对。
 
 ---
 

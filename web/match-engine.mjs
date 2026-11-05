@@ -61,7 +61,9 @@ export const DEFAULT_PROFILE={
  auEnglish:'unknown',auDegree:'unknown',auWorkVerified:'unknown',auYears:'',
  partner:'unknown',hpiUniversity:'unknown',birthPlace:'unknown',destination:'all',
  canadianWorkEligible:'unknown',canadaSpouseAccompanying:'unknown',canadaExperienceNocBand:'unknown',
- canadianOfferEligible:'unknown',canadaOfferNocBand:'unknown'
+ canadianOfferEligible:'unknown',canadaOfferNocBand:'unknown',
+ twPassportPersonalId:'unknown',iecUsed:'unknown',iecChannel:'bilateral',iecROConfirmation:'unknown',
+ iecCoopTaiwanStudent:'unknown',ymsUsed:'unknown',ymsDependentChildren:'unknown',ymsFunds:'unknown'
 };
 const region={
  germany:'europe',ireland:'europe',netherlands:'europe','united-kingdom':'europe',
@@ -149,6 +151,33 @@ function special(p,key,name,reason,hard=false){
    :p[key]==='no'?(hard?block(name,reason,3):need(name,reason,3))
    :unknown(name,reason,3);
 }
+/** Taiwan-specific eligibility: unknown answers are never treated as approval. */
+function taiwanIECChecks(p){
+ const a=[];
+ a.push(p.twPassportPersonalId==='yes'?ok('護照上的身分證字號','已聲明台灣護照載有個人身分證字號；有效期限仍須核對。',2)
+  :p.twPassportPersonalId==='no'?block('護照上的身分證字號','IRCC 台灣類別明確要求護照含個人身分證字號。',2)
+  :unknown('護照上的身分證字號','需要含個人身分證字號的有效台灣護照；有護照不等於滿足這項條件。',2));
+ if(p.iecChannel==='ro'){
+  a.push(unknown('RO 額外參與需另審','RO 可提供額外機會，但需官方確認信、個別資格與名額；不能假設 RO 必然接受或同類別可重複。',3));
+  if(p.iecROConfirmation!=='yes')a.push(need('RO 確認信','選擇 RO 途徑但尚無官方確認信，不能視為目前可遞件。',2));
+ }else{
+  a.push(p.iecUsed==='yes'?block('台灣雙邊 IEC 次數','一般雙邊三類別合計一次；已用 WH 不能再假設有另一份普通 YP。可另研究 RO，但須重新核對。',3)
+   :p.iecUsed==='no'?ok('台灣雙邊 IEC 次數','聲明尚未抵達加拿大並取得過 IEC 工簽；建立 profile 或核准未領工簽本身不算參加。',3)
+   :unknown('台灣雙邊 IEC 次數','需確認是否曾入境並取得 IEC 工簽；一般一次，不是每類別一次。',3));
+ }
+ return a;
+}
+function taiwanYMSChecks(p){
+ const a=[];
+ a.push(p.ymsUsed==='yes'?block('過往 YMS 停留','曾在英國以 YMS 身分停留，不符合再次申請入境的條件。',3)
+  :p.ymsUsed==='no'?ok('過往 YMS 停留','聲明未曾在英國以 YMS 停留。',3):unknown('過往 YMS 停留','需核對是否曾經使用英國 YMS。',3));
+ a.push(p.ymsDependentChildren==='yes'?block('未成年子女條件','有同住或經濟依賴你的未滿18歲子女，不符合 YMS 5.3。',3)
+  :p.ymsDependentChildren==='no'?ok('未成年子女條件','聲明沒有此項法定限制。',3):unknown('未成年子女條件','需確認是否有同住或經濟依賴的未成年子女。',3));
+ a.push(p.ymsFunds==='yes'?ok('YMS 財力證明','聲明 GBP 2,530 已連續持有28天，證明期間符合申請時點要求。',2)
+  :p.ymsFunds==='no'?need('YMS 財力證明','需準備 GBP 2,530 並依官方規定持有28天；不代表整段停留預算足夠。',2)
+  :unknown('YMS 財力證明','不能只看目前餘額；需 GBP 2,530、連續28天與規定的證明日期。',2));
+ return a;
+}
 function checksFor(r,p){
  const id=r.id,out=[goal(p,r)];
  const employers=['eu:germany-eu-blue-card','eu:ireland-critical-skills-employment-permit',
@@ -193,13 +222,14 @@ function checksFor(r,p){
  }
  case 'global:ca-pnp':out.push(offer(p,'canada'),unknown('省分／提名類別','須依各省實際計畫、配額與雇主要求核實。',2));break;
  case 'tw:iec_wh':case 'tw:iec_yp':case 'tw:iec_coop':
-   out.push(age(p,18,35));
+   out.push(age(p,18,35),...taiwanIECChecks(p));
+   if(id==='tw:iec_coop')out.push(special(p,'iecCoopTaiwanStudent','臺灣院校與課程實習','台灣 Co-op 需在台灣大專院校註冊、實習全程保持在學且符合課程；不是任何海外學生都適用。',true));
    if(id==='tw:iec_yp')out.push(offer(p,'canada'));
    if(id==='tw:iec_coop')out.push(special(p,'student','符合學生實習身分','Co-op 主要供符合資格的在學生，需實習安排。',true));
    out.push(need('2026 申請窗口','加拿大 2026 IEC 候選池已關閉，等待 2027 官方公告。',1));break;
  case 'eu:czechia-digital-nomad-program':
    out.push(occupation(p,['software','marketing']),special(p,'remoteWork','境外遠距工作','必須符合境外聘僱／自營及特定職業與公司條件。'));break;
- case 'tw:yms':out.push(age(p,18,30),need('2026 YMS 抽選','2026 抽選已結束，2027 日期待政府公告。'));break;
+ case 'tw:yms':out.push(p.age===17?unknown('年齡日期需核對','申請日不得超過30歲、簽證生效日須滿18歲；17歲不能直接判定永久失格。',2):age(p,18,30),...taiwanYMSChecks(p),need('2026 YMS 抽選','截至 2026-11-06，2026 抽選已結束，2027 日期待公告。'));break;
  case 'tw:working_holiday':case 'tw:wh_417':case 'tw:taiwan_wh':
    out.push(age(p,18,30));
    if(id==='tw:taiwan_wh')out.push(special(p,'taiwanHousehold','臺灣戶籍','紐西蘭臺灣 WH 需臺灣戶籍證明。',true),
@@ -216,7 +246,7 @@ function checksFor(r,p){
    out.push(degree(p),unknown('正式六分或資格認定','機會卡存在免積分資格認定路線與符合條件的六分制，建議使用官方自我檢查。',2));break;
  case 'global:us-dv-lottery':
    out.push(p.birthPlace==='taiwan'?
-     ok('出生地歷史資格','台灣出生者在 DV-2026 官方名單內；DV-2027 的適用出生地需等待新指示，不能視為今年已開放。',3):
+     unknown('出生地年度資格','台灣出生者在 DV-2026 曾列名；當期未公布的資格不能依舊名單自動判定符合。',3):
      p.birthPlace==='mainland'||p.birthPlace==='hongkong'?
        need('出生地歷史資格','DV-2026 排除中國大陸及香港出生者，一些申請人可能依配偶／父母等法定例外另行判定，DV-2027 需新指示。',3):
        unknown('出生地資格','DV 主要依出生地／法定 chargeability（有例外），不是只看台灣護照。',3));
@@ -225,7 +255,7 @@ function checksFor(r,p){
      ['highschool','diploma','bachelor','master','phd'].includes(p.education)?
        ok('學歷初步方向','填寫的學歷具基礎線索，但是否符合 12 年正式教育須按當期官方文件審核。',2):
        need('學歷／職業資格','如未完成合格高中教育，須確認是否有最近五年的合格工作經驗等替代資格。',2));
-   out.push(need('報名與簽證核發狀態','截至 2026-10-31，E-DV 未受理新報名；美國國務院 2026-08-31 指引暫停 DV 簽證核發。',2));
+   out.push(need('報名與簽證核發狀態','截至 2026-11-06，E-DV 未受理新登記；8/31 官方頁首說舊暫停依 8/28 法院命令不再有效，殘留舊文造成核發狀態需再核實，不得宣稱全面暫停。',2));
    break;
  case 'global:us-j1-summer-work-travel':
    out.push(special(p,'student','合格全職在學身分',
@@ -319,6 +349,8 @@ export function matchRoutes(catalog,raw={}){
      hard=checks.some(x=>x.hard),season=['season_closed','registration_not_open'].includes(r.audit?.window?.state);
    let tier=hard?'out_of_range':score>=65?'prioritize':score>=33?'prepare':'research';
    if(season&&tier==='prioritize')tier='prepare';
+   if(checks.some(x=>x.label==='目的國雇主聘用'&&x.state!=='met')&&tier==='prioritize')tier='prepare';
+   if(id.startsWith('tw:iec_')&&profile.iecChannel==='ro'&&tier==='prioritize')tier='prepare';
    return {id,name:r.name,country:r.country,flag:r.flag,countryId:r.countryId,method,official,
      tier,score,checks,met:checks.filter(x=>x.state==='met').length,
      unknown:checks.filter(x=>x.state==='unknown').length,

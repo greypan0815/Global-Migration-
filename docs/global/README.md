@@ -12,7 +12,6 @@
 > [!IMPORTANT]
 > 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。
 
-
 <table>
 <tr><td width="33%" valign="top"><a href="usa.md"><b>🇺🇸 美国</b></a><br><sub>机会最大，但中国大陆出生的职业移民排期最长</sub><br><sub>绿卡排队：EB-2 中国排到 2021-10</sub><br><sub>入籍：绿卡 5 年</sub><br><sub>双重国籍：允许（中国不认）</sub></td><td width="33%" valign="top"><a href="canada.md"><b>🇨🇦 加拿大</b></a><br><sub>积分制移民标杆；定向抽签为主，法语加分大；联邦创业签证已暂停</sub><br><sub>入籍：5 年内住满 1,095 天</sub><br><sub>双重国籍：允许（中国不认）</sub><br><sub>主通道：Express Entry</sub></td><td width="33%" valign="top"><a href="australia.md"><b>🇦🇺 澳大利亚</b></a><br><sub>189 独立技术移民 + 482 雇主担保 + 858 杰出人才</sub><br><sub>入籍：居住 4 年（永居 1 年）</sub><br><sub>双重国籍：允许（中国不认）</sub><br><sub>482 门槛：AUD 79,423</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="new-zealand.md"><b>🇳🇿 新西兰</b></a><br><sub>SMC 6 分制技术移民；投资移民 NZD 500 万起</sub><br><sub>技术移民：6 分制</sub><br><sub>投资：NZD 500 万起</sub><br><sub>父母：Parent Boost 5 年签</sub></td><td width="33%" valign="top"><a href="japan.md"><b>🇯🇵 日本</b></a><br><sub>高度人才 80 分 1 年永住；经营管理签证涨到 3,000 万日元</sub><br><sub>最快永住：1 年（80 分）</sub><br><sub>双重国籍：❌ 不允许</sub><br><sub>经管签资本：¥30,000,000</sub></td><td width="33%" valign="top"><a href="south-korea.md"><b>🇰🇷 韩国</b></a><br><sub>F-1-D 数字游民签证转正、最长 3 年；Top-Tier 3 年永住</sub><br><sub>数字游民：最长 3 年</sub><br><sub>Top-Tier：3 年永住</sub><br><sub>积分居住：F-2-7</sub></td></tr>
@@ -26,11 +25,11 @@
 | 目的地 | 路线 | 类型 | 一句话 |
 |---|---|---|---|
 | 🇺🇸 美国 | [F-1 留学 → OPT → H-1B](usa.md#us-h1b) | 🧑‍💻 技术工作 | 最常见的路径：读书 → 实习工作 → 抽签拿工作签证 → 雇主办绿卡。 |
-| 🇺🇸 美国 | [DV 綠卡樂透抽籤](usa.md#us-dv-lottery) | 🎟️ 移民抽籤 | 按出生地／學歷等資格隨機抽選；2026-10-31 新登記未開放、簽證核發暫停。 |
-| 🇺🇸 美国 | [J-1 Summer Work Travel](usa.md#us-j1-summer-work-travel) | 🎓 學生交流工作 | 限合資格海外全職大專院校在學生，最長四個月；非通用工作假期。 |
 | 🇺🇸 美国 | [EB-1A 杰出人才 / EB-2 NIW 国家利益豁免](usa.md#us-eb1a-niw) | 🧑‍💻 技术工作 | 不需要雇主，自己申请绿卡；科研人员和高成就专业人士的主要途径。 |
 | 🇺🇸 美国 | [EB-5 投资移民](usa.md#us-eb5) | 💰 投资居留 | 投资 80 万美元（TEA 区域）直接申请绿卡，乡村预留名额可绕开中国排期。 |
-| 🇨🇦 加拿大 | [Express Entry 快速通道](canada.md#ca-ee) | 🧑‍💻 技术工作 | CRS 打分池，按类别定期抽签，获邀后约 6 个月拿永居。 |
+| 🇺🇸 美国 | [美國 Diversity Visa（DV）綠卡樂透抽籤](usa.md#us-dv-lottery) | 🎟️ 移民抽签 | 美國 DV 是按出生地及教育／工作資格的移民抽選，不是打工度假。截至 2026-11-06 官方未受理新登記、DV-2027 日期待公告；核發頁已有撤銷舊暫停的新說明及殘留舊文，不能再斷言「目前全面暫停」。 |
+| 🇺🇸 美国 | [美國 J-1 Summer Work Travel（暑期工作旅遊）](usa.md#us-j1-summer-work-travel) | 🎓 交流签证 | 提供合資格海外全職大專院校在學生於暑假赴美短期工作交流，最長四個月。這不是對一般畢業人士開放的美國 Working Holiday，也不直接取得綠卡。 |
+| 🇨🇦 加拿大 | [Express Entry 快速通道](canada.md#ca-ee) | 🧑‍💻 技术工作 | 2026-11-03 新制：Express Entry 的 CRS Labour Market Integration 因子採合格加拿大工作經驗或高薪職業 job offer 擇高（不可疊加），官方重新計分期間暫停邀請輪次。 |
 | 🇨🇦 加拿大 | [省提名 PNP](canada.md#ca-pnp) | 🧑‍💻 技术工作 | 各省按需求提名，获提名后 Express Entry 加 600 分。 |
 | 🇨🇦 加拿大 | [联邦创业签证 SUV](canada.md#ca-suv) | 🚀 创业 | 2026-06-30 起完全暂停，新的企业家试点规则尚未公布。 |
 | 🇦🇺 澳大利亚 | [189 独立技术移民](australia.md#au-189) | 🧑‍💻 技术工作 | 积分制直接永居，不需要雇主，但实际获邀分数很高。 |

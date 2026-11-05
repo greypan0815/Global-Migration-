@@ -47,7 +47,7 @@
     priority_date_based:'依每月排期判定',
     quota_and_check:'有年度名額 · 須查窗口',
     paused:'暫停新申請',
-    registration_not_open:'DV 新登記未開放 · 核發暫停'
+    registration_not_open:'DV 新登記未開放 · 核發另核實'
   };
   const status=r=>r.audit?.window?.state
     ?(windowLabels[r.audit.window.state]||'依當期官方規則申請')
@@ -348,6 +348,8 @@
             '<p class="audit-foot">公布日：'+esc(r.audit.policyTimeline.announcedOn||'未確認')+
             ' · 完整生效日：'+esc(r.audit.policyTimeline.effectiveOn||'尚待正式 Immigration Rules／指引')+
             ' · 不可將政策發布日當成法規生效日。</p>'):'')+
+      (r.audit?.issuance?block('核發與報名分開看：官方證據尚須確認','<div class="detail-callout">'+esc(r.audit.issuance.detail)+'</div>'):'')+
+      (r.audit?.lastRecheckedAt?'<p class="audit-foot">最近分欄複核：'+esc(r.audit.lastRecheckedAt)+'；僅補查 '+esc(Object.keys(r.audit.fieldChecks||{}).join('、'))+'，不是整條路線重新驗證。</p>':'')+
       block('核心條件與概要',factsHtml(facts))+
       block('申請與轉換流程（摘要）',stepHtml)+
       block('較適合的情況',(r.fit||[]).length?bulletHtml(r.fit):'')+
@@ -476,9 +478,9 @@
       ['statCountries',counts.countries],['statRoutes',counts.routes],
       ['statTaiwan',counts.taiwanChecked],['statAudit',counts.officialFieldReviews]
     ])$(key).textContent=value.toLocaleString('zh-TW');
-    $('buildVersion').textContent='官方欄位核查截至 '+catalog.verificationCutoff+
+    $('buildVersion').textContent='最近選定欄位研究 '+catalog.verificationCutoff+
       (catalog.sourceCommit?' · 部署來源 '+catalog.sourceCommit.slice(0,8):'')+
-      ' · 靜態資料不會即時跟隨政府公告';
+      ' · 非全部路線當日查核；請看各欄日期與證據限制';
   }
   async function start(){
     attachEvents();
