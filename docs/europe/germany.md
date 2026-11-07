@@ -18,7 +18,7 @@
 ## 🏙️ 生活与身份档案
 
 <table>
-<tr><td width="33%" valign="top"><sub>💶 生活成本指数（纽约=100）</sub><br><b>68.0 ●●●○○</b></td><td width="33%" valign="top"><sub>🏠 房租指数（纽约=100）</sub><br><b>22.0 ●●●●○</b></td><td width="33%" valign="top"><sub>🛡️ 安全指数</sub><br><b>61.0 ●●●○○</b></td></tr>
+<tr><td width="33%" valign="top"><sub>💶 生活成本指数（纽约=100）</sub><br><b>68 ●●●○○</b></td><td width="33%" valign="top"><sub>🏠 房租指数（纽约=100）</sub><br><b>22 ●●●●○</b></td><td width="33%" valign="top"><sub>🛡️ 安全指数</sub><br><b>61 ●●●○○</b></td></tr>
 <tr><td width="33%" valign="top"><sub>💼 平均年薪（总额）</sub><br><b>EUR 57,408</b></td><td width="33%" valign="top"><sub>🧾 最高个税税率</sub><br><b>47.5%</b></td><td width="33%" valign="top"><sub>🛂 护照免签目的地</sub><br><b>185 个（中国 81）</b></td></tr>
 <tr><td width="33%" valign="top"><sub>🏠 永居年限</sub><br><b>21 个月–5 年</b></td><td width="33%" valign="top"><sub>🎖️ 入籍年限</sub><br><b>5 年</b></td><td width="33%" valign="top"><sub>🔁 双重国籍</sub><br><b>✅ 可保留原国籍</b></td></tr>
 <tr><td width="33%" valign="top"><sub>🗣️ 语言要求</sub><br><b>德语 B1</b></td><td width="33%" valign="top"><sub>✈️ 中国护照入境</sub><br><b>申根签证</b></td><td width="33%" valign="top"></td></tr>
@@ -45,12 +45,12 @@
 
 ![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%8A%80%E6%9C%AF%E5%B7%A5%E4%BD%9C-0f766e) ![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%BC%80%E6%94%BE-2ea44f) ![家属](https://img.shields.io/badge/%E5%AE%B6%E5%B1%9E-%E5%8F%AF%E5%B8%A6-0969da) ![永居](https://img.shields.io/badge/%E6%B0%B8%E5%B1%85-%E5%8F%AF%E8%83%BD-0969da)
 
-> **欧洲最主流的技术移民路线：年薪 5.07 万欧（紧缺职业 4.59 万），IT 无学历也能办，最快 21 个月永居。**
+> **德國 EU Blue Card 分一般、緊缺、近三年畢業及 IT 專業經驗途徑。2026 一般年薪 €50,700，合格低門檻分支 €45,934.20。無正式學位的IT專業人士可按最近七年至少三年大學層級經驗另審，不能一律用學士條件排除。**
 
 <table>
-<tr><td width="33%" valign="top"><sub>标准年薪</sub><br><b>EUR 50,700（无需就业局批准）</b></td><td width="33%" valign="top"><sub>降低门槛</sub><br><b>EUR 45,934.20：紧缺职业 / 应届生 / 无学历 IT</b></td><td width="33%" valign="top"><sub>无学历 IT</sub><br><b>近 7 年内 3 年学术水平 IT 经验</b></td></tr>
-<tr><td width="33%" valign="top"><sub>合同</sub><br><b>≥6 个月</b></td><td width="33%" valign="top"><sub>有效期</sub><br><b>合同期 + 6 个月，最长 4 年</b></td><td width="33%" valign="top"><sub>永居</sub><br><b>B1 德语 21 个月 / A1 德语 27 个月</b></td></tr>
-<tr><td width="33%" valign="top"><sub>家属</sub><br><b>配偶可工作</b></td><td width="33%" valign="top"><sub>入籍</sub><br><b>一般 5 年</b></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>一般資格</sub><br><b>德國／認可可比對學位，或符合要求至少三年第三級Level6資格；工作需匹配</b></td><td width="33%" valign="top"><sub>2026 一般薪資</sub><br><b>€50,700 稅前年薪；不是每個分支都用相同門檻</b></td><td width="33%" valign="top"><sub>緊缺／近三年畢業</sub><br><b>合格職業或近三年取得資格，2026可用€45,934.20，另需BA同意</b></td></tr>
+<tr><td width="33%" valign="top"><sub>IT 無正式學位途徑</sub><br><b>最近七年至少三年IT經驗，達大學層級且為該職務所需，不能只看總工作年資</b></td><td width="33%" valign="top"><sub>IT 分支薪資與期限</sub><br><b>2026至少€45,934.20；至少六個月的合格德國IT聘僱；BA規則須核對</b></td><td width="33%" valign="top"><sub>工作期限</sub><br><b>所有分支都需至少六個月合格聘僱</b></td></tr>
+<tr><td width="33%" valign="top"><sub>受規管職業</sub><br><b>另須相應執業資格；藍卡不是自動核准或永久居留</b></td><td width="33%" valign="top"></td><td width="33%" valign="top"></td></tr>
 </table>
 
 <table><tr>
@@ -62,23 +62,17 @@
 
 ```mermaid
 flowchart LR
-  s0["① 拿到德国雇主 offer"]
-  s1["② 学历认证"]
-  s2["③ 预约使馆或线上门户递交国家签证"]
-  s3["④ 就业局批准（降低门槛时）"]
-  s4["⑤ 入境登记住址（Anmeldung）"]
-  s5["⑥ 外管局领蓝卡"]
-  s6["⑦ 21/27 个月后申请永居"]
-  s0 --> s1 --> s2 --> s3 --> s4 --> s5 --> s6
+  s0["① 先核對具體聘僱及六個月期限"]
+  s1["② 依學歷或IT經驗選分支"]
+  s2["③ 核對所選2026薪資、BA與執照條件"]
+  s3["④ 依法申請"]
+  s0 --> s1 --> s2 --> s3
 ```
 
-1. **拿到德国雇主 offer** — 核对薪资属于哪一档
-2. **学历认证** — anabin 查询或 ZAB 认证
-3. **预约使馆或线上门户递交国家签证**
-4. **就业局批准（降低门槛时）**
-5. **入境登记住址（Anmeldung）**
-6. **外管局领蓝卡**
-7. **21/27 个月后申请永居**
+1. **先核對具體聘僱及六個月期限** — 沒有德國offer不能用其他國薪資判定
+2. **依學歷或IT經驗選分支** — 不把非本科學位或無學位一律排除
+3. **核對所選2026薪資、BA與執照條件** — 不足或未確認不得視為已符合
+4. **依法申請** — 合格研究方向不等於政府核准；永居仍需另申請
 
 ### 📋 材料清单
 
@@ -91,8 +85,7 @@ flowchart LR
 
 > [!WARNING]
 > **注意**
-> - 换工作不需事先批准，但前 12 个月外管局可暂停 30 天审查
-> - 3 年快速入籍已于 2025 年取消
+> - 2026-11-07核對特定欄位。前端依所選分支核查，未知必需條件不會當成符合。
 
 <details><summary>🔗 官方来源（4）</summary>
 

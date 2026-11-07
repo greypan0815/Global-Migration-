@@ -39,6 +39,8 @@ jobs:
           node --check web/app.js
           node --check web/match-app.js
           node --check web/match-engine.mjs
+          node --check web/country-eligibility.mjs
+          node --check web/route-status.mjs
           node --check scripts/build_site.mjs
           node --check scripts/serve_site.mjs
       - name: Unit tests
@@ -97,7 +99,7 @@ jobs:
           assert.equal(data.routes.filter(r=>r.origin==='taiwan').length,9);
           for(const file of ['dist/index.html','dist/app.js','dist/styles.css','dist/_headers','dist/favicon.svg'])
             assert.ok(fs.existsSync(file),file);
-          for(const file of ['dist/match.html','dist/match-app.js','dist/match-engine.mjs','dist/match.css'])
+          for(const file of ['dist/match.html','dist/match-app.js','dist/match-engine.mjs','dist/match.css','dist/country-eligibility.mjs','dist/route-status.mjs'])
             assert.ok(fs.existsSync(file),file);
           const matcherHtml=fs.readFileSync('dist/match.html','utf8');
           assert.ok(matcherHtml.includes('id="profileForm"'));

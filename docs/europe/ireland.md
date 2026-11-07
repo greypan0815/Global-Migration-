@@ -44,12 +44,12 @@
 
 ![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%8A%80%E6%9C%AF%E5%B7%A5%E4%BD%9C-0f766e) ![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%BC%80%E6%94%BE-2ea44f) ![家属](https://img.shields.io/badge/%E5%AE%B6%E5%B1%9E-%E5%8F%AF%E5%B8%A6-0969da) ![永居](https://img.shields.io/badge/%E6%B0%B8%E5%B1%85-%E5%8F%AF%E8%83%BD-0969da)
 
-> **英语国家里最好走的技术移民之一：列名职业年薪 4.09 万欧，2 年后转可自由工作的 Stamp 4。**
+> **愛爾蘭 Critical Skills 要至少兩年合格 offer；清單低薪分支通常需相關學位，另有近12個月取得資格、高薪及特殊例外分支。官方專頁與年度表的低門檻有細微數字差異，邊界金額標待確認；Stamp 4不是PR。**
 
 <table>
-<tr><td width="33%" valign="top"><sub>年薪</sub><br><b>列名职业 EUR 40,904；其他高薪岗位 > EUR 68,911</b></td><td width="33%" valign="top"><sub>应届</sub><br><b>EUR 36,848（特定情形）</b></td><td width="33%" valign="top"><sub>合同</sub><br><b>≥2 年</b></td></tr>
-<tr><td width="33%" valign="top"><sub>劳动力测试</sub><br><b>不需要</b></td><td width="33%" valign="top"><sub>递交</sub><br><b>入职前 ≥12 周</b></td><td width="33%" valign="top"><sub>之后</sub><br><b>可转 Stamp 4</b></td></tr>
-<tr><td width="33%" valign="top"><sub>入籍</sub><br><b>9 年内累计 5 年</b></td><td width="33%" valign="top"></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>必要聘僱期限</sub><br><b>至少兩年合格offer；不足兩年可另研究General Employment Permit，但不是自動合格</b></td><td width="33%" valign="top"><sub>清單職業及學位</sub><br><b>需核對實際Critical Skills職業與相關學位或以上，不是任何學士都符合</b></td><td width="33%" valign="top"><sub>清單分支薪資證據</sub><br><b>CSEP專頁€40,904；年度MAR頁€40,909，本網站不自行選擇差額區間的有利門檻</b></td></tr>
+<tr><td width="33%" valign="top"><sub>近12個月取得資格</sub><br><b>CSEP專頁€36,848；年度MAR頁€36,849，資格日期與相關學位仍需核對</b></td><td width="33%" valign="top"><sub>高薪一般職類</sub><br><b>專頁描述超過€68,911，排除Ineligible List及公共利益不合者；無學位仍要必要經驗</b></td><td width="33%" valign="top"><sub>雇主與薪酬</sub><br><b>真實註冊經營、EEA僱員比例或豁免，薪酬以官方允許項目計算</b></td></tr>
+<tr><td width="33%" valign="top"><sub>後續身分</sub><br><b>符合規則可另評估Stamp4與長期居留；不能把不是PR當成不適合長期研究</b></td><td width="33%" valign="top"></td><td width="33%" valign="top"></td></tr>
 </table>
 
 <table><tr>
@@ -61,19 +61,17 @@
 
 ```mermaid
 flowchart LR
-  s0["① 拿到 offer"]
-  s1["② 申请工作许可"]
-  s2["③ 签证（中国护照需要）"]
-  s3["④ 入境登记 IRP"]
-  s4["⑤ 2 年后转 Stamp 4"]
-  s0 --> s1 --> s2 --> s3 --> s4
+  s0["① 核對合格雇主及兩年offer"]
+  s1["② 選擇清單／新畢業生／高薪／特殊分支"]
+  s2["③ 確認適用薪酬及官方數字"]
+  s3["④ 按規定申請工作許可並辦居留"]
+  s0 --> s1 --> s2 --> s3
 ```
 
-1. **拿到 offer** — 职业在 Critical Skills 清单
-2. **申请工作许可** — DETE
-3. **签证（中国护照需要）**
-4. **入境登记 IRP**
-5. **2 年后转 Stamp 4**
+1. **核對合格雇主及兩年offer** — 短offer應另研究GEP，不強行套CSEP
+2. **選擇清單／新畢業生／高薪／特殊分支** — 工作代碼、學位相關性、取得資格日期分開看
+3. **確認適用薪酬及官方數字** — 落在官方頁面差額邊界需主管機關釐清
+4. **按規定申請工作許可並辦居留** — 後續Stamp4不是自動PR
 
 ### 📋 材料清单
 
@@ -83,7 +81,7 @@ flowchart LR
 
 > [!WARNING]
 > **注意**
-> - 爱尔兰不在申根，也不签发欧盟蓝卡
+> - 2026-11-07核對特定欄位。前端依所選分支核查，未知必需條件不會當成符合。
 
 <details><summary>🔗 官方来源（3）</summary>
 
@@ -215,6 +213,10 @@ flowchart LR
 
 ### 入籍
 - 一般需在申请前 9 年内累计 5 年"可计算居留"（其中最后 1 年连续），持工作许可的时间一般可计入；学生居留通常不计。具体以司法部入籍指引为准。
+
+### 2026-11-07 台灣版 CSEP 判斷
+
+至少兩年offer、實際職業清單與相關學位分開檢查。CSEP專頁與MAR年度表的低薪門檻略有差異，差額邊界不自動判通過。另有高薪與特殊分支，不能只用一般學士條件判定。完整官方來源：[本輪核查](../taiwan/eligibility-update-2026-11-07.md)。
 
 ---
 

@@ -1,38 +1,34 @@
 {
   "germany-eu-blue-card": {
-    "summary": "欧洲最主流的技术移民路线：年薪 5.07 万欧（紧缺职业 4.59 万），IT 无学历也能办，最快 21 个月永居。",
+    "summary": "德國 EU Blue Card 分一般、緊缺、近三年畢業及 IT 專業經驗途徑。2026 一般年薪 €50,700，合格低門檻分支 €45,934.20。無正式學位的IT專業人士可按最近七年至少三年大學層級經驗另審，不能一律用學士條件排除。",
     "facts": [
       [
-        "标准年薪",
-        "EUR 50,700（无需就业局批准）"
+        "一般資格",
+        "德國／認可可比對學位，或符合要求至少三年第三級Level6資格；工作需匹配"
       ],
       [
-        "降低门槛",
-        "EUR 45,934.20：紧缺职业 / 应届生 / 无学历 IT"
+        "2026 一般薪資",
+        "€50,700 稅前年薪；不是每個分支都用相同門檻"
       ],
       [
-        "无学历 IT",
-        "近 7 年内 3 年学术水平 IT 经验"
+        "緊缺／近三年畢業",
+        "合格職業或近三年取得資格，2026可用€45,934.20，另需BA同意"
       ],
       [
-        "合同",
-        "≥6 个月"
+        "IT 無正式學位途徑",
+        "最近七年至少三年IT經驗，達大學層級且為該職務所需，不能只看總工作年資"
       ],
       [
-        "有效期",
-        "合同期 + 6 个月，最长 4 年"
+        "IT 分支薪資與期限",
+        "2026至少€45,934.20；至少六個月的合格德國IT聘僱；BA規則須核對"
       ],
       [
-        "永居",
-        "B1 德语 21 个月 / A1 德语 27 个月"
+        "工作期限",
+        "所有分支都需至少六個月合格聘僱"
       ],
       [
-        "家属",
-        "配偶可工作"
-      ],
-      [
-        "入籍",
-        "一般 5 年"
+        "受規管職業",
+        "另須相應執業資格；藍卡不是自動核准或永久居留"
       ]
     ],
     "fit": [
@@ -45,32 +41,20 @@
     ],
     "steps": [
       [
-        "拿到德国雇主 offer",
-        "核对薪资属于哪一档"
+        "先核對具體聘僱及六個月期限",
+        "沒有德國offer不能用其他國薪資判定"
       ],
       [
-        "学历认证",
-        "anabin 查询或 ZAB 认证"
+        "依學歷或IT經驗選分支",
+        "不把非本科學位或無學位一律排除"
       ],
       [
-        "预约使馆或线上门户递交国家签证",
-        ""
+        "核對所選2026薪資、BA與執照條件",
+        "不足或未確認不得視為已符合"
       ],
       [
-        "就业局批准（降低门槛时）",
-        ""
-      ],
-      [
-        "入境登记住址（Anmeldung）",
-        ""
-      ],
-      [
-        "外管局领蓝卡",
-        ""
-      ],
-      [
-        "21/27 个月后申请永居",
-        ""
+        "依法申請",
+        "合格研究方向不等於政府核准；永居仍需另申請"
       ]
     ],
     "docs": [
@@ -82,8 +66,25 @@
       "受监管职业执业许可（如医生）"
     ],
     "tips": [
-      "换工作不需事先批准，但前 12 个月外管局可暂停 30 天审查",
-      "3 年快速入籍已于 2025 年取消"
+      "2026-11-07核對特定欄位。前端依所選分支核查，未知必需條件不會當成符合。"
+    ],
+    "sources": [
+      {
+        "title": "Make it in Germany：EU Blue Card",
+        "url": "https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card"
+      },
+      {
+        "title": "Make it in Germany：Settlement permit",
+        "url": "https://www.make-it-in-germany.com/en/visa-residence/living-permanently/settlement-permit"
+      },
+      {
+        "title": "德國政府：藍卡各分支及IT無學位規則",
+        "url": "https://www.make-it-in-germany.com/en/visa-recognition/visa-types/eu-blue-card"
+      },
+      {
+        "title": "德國聯邦就業局：2026藍卡及BA同意",
+        "url": "https://www.arbeitsagentur.de/vor-ort/zav/working-and-living-in-germany/iss-en/issue-03-2026/blue-card"
+      }
     ]
   },
   "germany-freelance-self-employment-visa": {
@@ -840,35 +841,35 @@
     ]
   },
   "ireland-critical-skills-employment-permit": {
-    "summary": "英语国家里最好走的技术移民之一：列名职业年薪 4.09 万欧，2 年后转可自由工作的 Stamp 4。",
+    "summary": "愛爾蘭 Critical Skills 要至少兩年合格 offer；清單低薪分支通常需相關學位，另有近12個月取得資格、高薪及特殊例外分支。官方專頁與年度表的低門檻有細微數字差異，邊界金額標待確認；Stamp 4不是PR。",
     "facts": [
       [
-        "年薪",
-        "列名职业 EUR 40,904；其他高薪岗位 > EUR 68,911"
+        "必要聘僱期限",
+        "至少兩年合格offer；不足兩年可另研究General Employment Permit，但不是自動合格"
       ],
       [
-        "应届",
-        "EUR 36,848（特定情形）"
+        "清單職業及學位",
+        "需核對實際Critical Skills職業與相關學位或以上，不是任何學士都符合"
       ],
       [
-        "合同",
-        "≥2 年"
+        "清單分支薪資證據",
+        "CSEP專頁€40,904；年度MAR頁€40,909，本網站不自行選擇差額區間的有利門檻"
       ],
       [
-        "劳动力测试",
-        "不需要"
+        "近12個月取得資格",
+        "CSEP專頁€36,848；年度MAR頁€36,849，資格日期與相關學位仍需核對"
       ],
       [
-        "递交",
-        "入职前 ≥12 周"
+        "高薪一般職類",
+        "專頁描述超過€68,911，排除Ineligible List及公共利益不合者；無學位仍要必要經驗"
       ],
       [
-        "之后",
-        "可转 Stamp 4"
+        "雇主與薪酬",
+        "真實註冊經營、EEA僱員比例或豁免，薪酬以官方允許項目計算"
       ],
       [
-        "入籍",
-        "9 年内累计 5 年"
+        "後續身分",
+        "符合規則可另評估Stamp4與長期居留；不能把不是PR當成不適合長期研究"
       ]
     ],
     "fit": [
@@ -879,24 +880,20 @@
     ],
     "steps": [
       [
-        "拿到 offer",
-        "职业在 Critical Skills 清单"
+        "核對合格雇主及兩年offer",
+        "短offer應另研究GEP，不強行套CSEP"
       ],
       [
-        "申请工作许可",
-        "DETE"
+        "選擇清單／新畢業生／高薪／特殊分支",
+        "工作代碼、學位相關性、取得資格日期分開看"
       ],
       [
-        "签证（中国护照需要）",
-        ""
+        "確認適用薪酬及官方數字",
+        "落在官方頁面差額邊界需主管機關釐清"
       ],
       [
-        "入境登记 IRP",
-        ""
-      ],
-      [
-        "2 年后转 Stamp 4",
-        ""
+        "按規定申請工作許可並辦居留",
+        "後續Stamp4不是自動PR"
       ]
     ],
     "docs": [
@@ -905,7 +902,29 @@
       "护照"
     ],
     "tips": [
-      "爱尔兰不在申根，也不签发欧盟蓝卡"
+      "2026-11-07核對特定欄位。前端依所選分支核查，未知必需條件不會當成符合。"
+    ],
+    "sources": [
+      {
+        "title": "愛爾蘭 DETE：Critical Skills Employment Permit",
+        "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/"
+      },
+      {
+        "title": "愛爾蘭移民局：Stamp 4 升級",
+        "url": "https://www.irishimmigration.ie/registering-your-immigration-permission/how-to-renew-your-current-permission/information-on-stamp-4-upgrades/"
+      },
+      {
+        "title": "愛爾蘭 Critical Skills Occupations List",
+        "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/employment-permit-eligibility/highly-skilled-eligible-occupations-list/critical%20skills%20occupations%20list.html"
+      },
+      {
+        "title": "DETE：年度報酬表（與專頁數字有差異）",
+        "url": "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/economic-migration-policy/minimum-annual-remuneration/"
+      },
+      {
+        "title": "DETE：General Employment Permit替代研究",
+        "url": "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/general-employment-permit/"
+      }
     ]
   },
   "ireland-start-up-entrepreneur-programme": {

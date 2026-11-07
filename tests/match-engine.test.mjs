@@ -53,7 +53,7 @@ test('real local job offer and matching salary improve research readiness withou
  const empty=matchRoutes(actual(),{age:27,education:'bachelor',years:3,field:'software'});
  const has=matchRoutes(actual(),{
   age:27,education:'bachelor',years:3,field:'software',
-  offerCountry:'germany',salary:56000,salaryUnit:'year'
+  offerCountry:'germany',salary:56000,salaryUnit:'year',dePath:'standard'
  });
  assert.ok(find(has,'eu:germany-eu-blue-card').score>find(empty,'eu:germany-eu-blue-card').score);
  assert.ok(find(has,'eu:germany-eu-blue-card').checks.some(x=>x.label==='薪資門檻'&&x.state==='met'));

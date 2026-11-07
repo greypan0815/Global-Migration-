@@ -18,7 +18,6 @@
 > [!IMPORTANT]
 > 🇹🇼 **臺灣護照讀者**：本頁沿用上游以**中國大陸護照與中國生活成本**為基準的敘述，不代表已完成臺灣護照個案資格審查。臺灣適用路線、官方來源及尚待核對範圍見 [臺灣專區](../taiwan/README.md)。
 
-
 ## 🏙️ 生活档案
 
 <table>
@@ -32,7 +31,7 @@
 
 | 路线 | 类型 | 一句话 | 状态 |
 |---|---|---|:-:|
-| [技术移民 SMC](#nz-smc) | 🧑‍💻 技术工作 | 认证雇主 offer + 6 分，学历、职业注册或收入给分，可用新西兰工作经验补。 | 🟢 开放 |
+| [技术移民 SMC](#nz-smc) | 🧑‍💻 技术工作 | 紐西蘭 SMC 依積分、技術工作經驗、技工／技術人員三分支研究；需具體ANZSCO、認可雇主、合格工時、年資與適用時薪。Red排除的是工作經驗子途徑而非全部SMC，Amber有較高NZ年資及薪資要求。 | 🟢 开放 |
 | [Active Investor Plus 投资移民](#nz-aip) | 💰 投资居留 | 增长类 500 万投资 3 年、在新住 21 天即可永居。 | 🟢 开放 |
 
 ---
@@ -43,12 +42,36 @@
 
 ![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%8A%80%E6%9C%AF%E5%B7%A5%E4%BD%9C-0f766e) ![状态](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%BC%80%E6%94%BE-2ea44f)
 
-> **认证雇主 offer + 6 分，学历、职业注册或收入给分，可用新西兰工作经验补。**
+> **紐西蘭 SMC 依積分、技術工作經驗、技工／技術人員三分支研究；需具體ANZSCO、認可雇主、合格工時、年資與適用時薪。Red排除的是工作經驗子途徑而非全部SMC，Amber有較高NZ年資及薪資要求。**
 
 <table>
-<tr><td width="33%" valign="top"><sub>年龄</sub><br><b>≤55 岁</b></td><td width="33%" valign="top"><sub>打分</sub><br><b>学历/注册/收入 3–6 分 + 新西兰经验 1–3 分</b></td><td width="33%" valign="top"><sub>收入 3 倍门槛</sub><br><b>直接 6 分</b></td></tr>
-<tr><td width="33%" valign="top"><sub>费用</sub><br><b>NZD 6,450</b></td><td width="33%" valign="top"></td><td width="33%" valign="top"></td></tr>
+<tr><td width="33%" valign="top"><sub>年齡及工作</sub><br><b>申請時55歲或以下；合格認可雇主、職位、工時、期限、英語與其他條件</b></td><td width="33%" valign="top"><sub>積分路徑</sub><br><b>學歷／收入／職業註冊選一基本類別，再依規則加合格NZ經驗；不能三類基本分相加</b></td><td width="33%" valign="top"><sub>一般工作經驗路徑</sub><br><b>最近10年前段至少3年相關經驗，加額外最近4年內2年NZ skilled經驗；skill1–3、一般1.1倍適用SMC時薪，年資不得重複</b></td></tr>
+<tr><td width="33%" valign="top"><sub>Amber List工作經驗</sub><br><b>前段3年相關經驗須在NZ，再加2年NZ skilled經驗；相應工作與歷史年資要達1.2倍</b></td><td width="33%" valign="top"><sub>Red List／skill4–5</sub><br><b>不能走Skilled Work Experience，不等於積分途徑也全部禁止</b></td><td width="33%" valign="top"><sub>技工／技術人員</sub><br><b>專屬職業清單、相關Level4以上資格；資格後2.5年前段經驗加1.5年NZ skilled經驗，後者在申請前三年；一般1倍適用基準</b></td></tr>
+<tr><td width="33%" valign="top"><sub>薪資須按日期查表</sub><br><b>2026-03-09起基準NZD35，1.1倍38.50、1.2倍42；特定歷史基準依工簽／年資規則，不能全部用今天門檻</b></td><td width="33%" valign="top"><sub>核准身分</sub><br><b>Resident Visa與Permanent Resident Visa仍有程序及權利差異；EOI不是工作許可</b></td><td width="33%" valign="top"></td></tr>
 </table>
+
+### 🗺️ 申请流程
+
+```mermaid
+flowchart LR
+  s0["① 確認ANZSCO職責、技能等級及清單"]
+  s1["② 選定一個SMC子途徑"]
+  s2["③ 核對offer、工時、年資與時薪期間"]
+  s3["④ 完整核對INZ操作手冊與證據"]
+  s4["⑤ 依EOI及受邀程序辦理"]
+  s0 --> s1 --> s2 --> s3 --> s4
+```
+
+1. **確認ANZSCO職責、技能等級及清單** — 不依籠統的IT職稱推定
+2. **選定一個SMC子途徑** — 紅黃清單限制不擴張到所有路徑
+3. **核對offer、工時、年資與時薪期間** — 前後段不得重複，歷史時薪不能只看現在薪水
+4. **完整核對INZ操作手冊與證據** — 本站不自行產生完整SMC官方分數
+5. **依EOI及受邀程序辦理** — 核准Resident Visa後的後續身分另查
+
+> [!WARNING]
+> **注意**
+> - 工作經驗與技工兩新路徑不計自雇；適用日期及歷史薪資要查官方。
+> - Resident Visa並非自動Permanent Resident Visa。
 
 <sub>[↑ 回到顶部](#top)</sub>
 
@@ -79,7 +102,7 @@
 
 | 路线 | 要点 |
 |---|---|
-| **技术移民 SMC（Skilled Migrant Category）** | 55 岁以下 + 认证雇主的工作 offer + 英语（如雅思 6.5）；6 分制：学历、职业注册或收入给 3–6 分，不足可用新西兰工作经验补（1 年 1 分，2 年 3 分）；收入达门槛 3 倍可直接 6 分；申请费 NZD 6,450。2026-08 推出新路径和职业清单 |
+| **技术移民 SMC（Skilled Migrant Category）** | 申請時55歲或以下，合格認可雇主及職位。2026-08-24後分積分、技術工作經驗、技工／技術人員；Red／Amber限制只套正確分支，年資與時薪按官方日期核對。詳見下方2026-11-07欄位核查。 |
 | 绿色清单（Green List） | 紧缺职业可直通或工作 2 年后申请居留 |
 | **Active Investor Plus 投资移民** | 增长类 ≥ **NZD 500 万**（持有 3 年，在新最少 21 天）；平衡类 ≥ NZD 1,000 万（5 年，105 天）；2025-04 起取消英语要求；政府费用 NZD 27,470 起 |
 | Parent Boost 父母签证 | 2025-09 开放，5 年多次入境，可再续 5 年，**不通居留** |
@@ -88,6 +111,10 @@
 ### 官方入口
 
 - [Immigration New Zealand](https://www.immigration.govt.nz/)
+
+### 2026-11-07 台灣版問卷核查
+
+網站已分開三條SMC子途徑、實際ANZSCO與技能等級、Red／Amber、非重複年資、合格歷史薪資與日期；未確認不算符合。完整來源：[本輪核查](../taiwan/eligibility-update-2026-11-07.md)。這不是完整個案法律判斷，其他本頁上游政策未全面重查。
 
 ## 🔗 官方入口
 

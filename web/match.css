@@ -266,3 +266,5 @@
 .teaser-bars .teaser-2{width:65%}
 .teaser-bars .teaser-3{width:42%}
 .teaser-bars .teaser-4{width:72%}
+
+.pathway-fields{margin-top:24px;border-top:1px solid var(--line);padding-top:20px}.pathway-fields h2{font-size:17px;line-height:1.5}.country-pathway{margin-top:12px;border:1px solid #39566a;border-radius:10px;padding:12px;min-width:0}.country-pathway summary{font-size:12px;font-weight:750;color:var(--mint);cursor:pointer}.country-pathway .match-fields{margin-top:14px}.country-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.country-links a{overflow-wrap:anywhere}.match-pathway{font-size:11px;color:#aee5d4;margin:6px 0 0}.country-pathway input[type=date]{min-width:0}

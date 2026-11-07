@@ -684,24 +684,104 @@
     "id": "nz-smc",
     "name": "技术移民 SMC",
     "type": "work",
-    "summary": "认证雇主 offer + 6 分，学历、职业注册或收入给分，可用新西兰工作经验补。",
+    "summary": "紐西蘭 SMC 依積分、技術工作經驗、技工／技術人員三分支研究；需具體ANZSCO、認可雇主、合格工時、年資與適用時薪。Red排除的是工作經驗子途徑而非全部SMC，Amber有較高NZ年資及薪資要求。",
     "facts": [
      [
-      "年龄",
-      "≤55 岁"
+      "年齡及工作",
+      "申請時55歲或以下；合格認可雇主、職位、工時、期限、英語與其他條件"
      ],
      [
-      "打分",
-      "学历/注册/收入 3–6 分 + 新西兰经验 1–3 分"
+      "積分路徑",
+      "學歷／收入／職業註冊選一基本類別，再依規則加合格NZ經驗；不能三類基本分相加"
      ],
      [
-      "收入 3 倍门槛",
-      "直接 6 分"
+      "一般工作經驗路徑",
+      "最近10年前段至少3年相關經驗，加額外最近4年內2年NZ skilled經驗；skill1–3、一般1.1倍適用SMC時薪，年資不得重複"
      ],
      [
-      "费用",
-      "NZD 6,450"
+      "Amber List工作經驗",
+      "前段3年相關經驗須在NZ，再加2年NZ skilled經驗；相應工作與歷史年資要達1.2倍"
+     ],
+     [
+      "Red List／skill4–5",
+      "不能走Skilled Work Experience，不等於積分途徑也全部禁止"
+     ],
+     [
+      "技工／技術人員",
+      "專屬職業清單、相關Level4以上資格；資格後2.5年前段經驗加1.5年NZ skilled經驗，後者在申請前三年；一般1倍適用基準"
+     ],
+     [
+      "薪資須按日期查表",
+      "2026-03-09起基準NZD35，1.1倍38.50、1.2倍42；特定歷史基準依工簽／年資規則，不能全部用今天門檻"
+     ],
+     [
+      "核准身分",
+      "Resident Visa與Permanent Resident Visa仍有程序及權利差異；EOI不是工作許可"
      ]
+    ],
+    "steps": [
+     [
+      "確認ANZSCO職責、技能等級及清單",
+      "不依籠統的IT職稱推定"
+     ],
+     [
+      "選定一個SMC子途徑",
+      "紅黃清單限制不擴張到所有路徑"
+     ],
+     [
+      "核對offer、工時、年資與時薪期間",
+      "前後段不得重複，歷史時薪不能只看現在薪水"
+     ],
+     [
+      "完整核對INZ操作手冊與證據",
+      "本站不自行產生完整SMC官方分數"
+     ],
+     [
+      "依EOI及受邀程序辦理",
+      "核准Resident Visa後的後續身分另查"
+     ]
+    ],
+    "sources": [
+     {
+      "title": "紐西蘭移民局：SMC Resident Visa",
+      "url": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/"
+     },
+     {
+      "title": "紐西蘭移民局：三種 SMC 路徑",
+      "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/"
+     },
+     {
+      "title": "INZ：SR3.35工作經驗途徑",
+      "url": "https://www.immigration.govt.nz/opsmanual/90257.htm"
+     },
+     {
+      "title": "INZ：SR3.40技工技術人員途徑",
+      "url": "https://www.immigration.govt.nz/opsmanual/90261.htm"
+     },
+     {
+      "title": "INZ：現行SR3.25積分",
+      "url": "https://www.immigration.govt.nz/opsmanual/80474.htm"
+     },
+     {
+      "title": "INZ：SMC共通及薪資表",
+      "url": "https://www.immigration.govt.nz/opsmanual/77812.htm"
+     },
+     {
+      "title": "INZ：Red與Amber限制",
+      "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/red-and-amber-list-occupations/"
+     },
+     {
+      "title": "INZ：日期與SMC時薪",
+      "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/pay-rates-for-the-skilled-migrant-category-resident-visa/"
+     },
+     {
+      "title": "INZ：正式申請表資格說明",
+      "url": "https://www.immigration.govt.nz/formshelp/smc-rv-application/"
+     }
+    ],
+    "tips": [
+     "工作經驗與技工兩新路徑不計自雇；適用日期及歷史薪資要查官方。",
+     "Resident Visa並非自動Permanent Resident Visa。"
     ]
    },
    {
