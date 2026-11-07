@@ -1,64 +1,119 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-06",
+  "checkedAt": "2026-11-07",
   "upstream": {
     "repository": "BryceYuuu/RUN",
     "head": "1a5d369bb783fb70bf8e3f25e6ab03ccd187f2ae",
     "previousReviewedHead": "1a5d369bb783fb70bf8e3f25e6ab03ccd187f2ae",
     "newCommits": 0
   },
-  "forkBaseline": "9f2186718925dd9c3c74f47c43ca167ec6a52939",
-  "scope": "Taiwan IEC/YMS eligibility, US DV registration versus issuance, Canada EE work-permit distinction; not all 152 routes reverified",
+  "forkBaseline": "8cc76374cd4c71d7210b56eedae624c293799ae3",
+  "scope": "DE Blue Card exceptions; IE CSEP offer/degree and salary source conflict; NZ SMC separate pathways and dated wage evidence; canonical application filters. Does not reverify IEC/YMS/DV or all 152 routes.",
   "correctedPriorStatement": "Removed unqualified assertion that DV issuance is currently universally paused; official page contains superseding notice and residual conflicting text.",
   "checks": [
     {
-      "topic": "IEC Taiwan",
-      "state": "eligibility_expanded",
+      "topic": "Germany Blue Card",
+      "state": "branch_requirements_expanded",
       "sources": [
-        "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility/eligibility-by-country.html",
-        "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/recognized-organizations.html",
-        "https://www.ircc.canada.ca/english/work/iec/selections.asp"
+        "https://www.make-it-in-germany.com/en/visa-recognition/visa-types/eu-blue-card",
+        "https://www.arbeitsagentur.de/vor-ort/zav/working-and-living-in-germany/iss-en/issue-03-2026/blue-card"
       ]
     },
     {
-      "topic": "YMS Taiwan",
-      "state": "eligibility_expanded",
+      "topic": "Ireland CSEP",
+      "state": "requirements_expanded_salary_discrepancy_flagged",
       "sources": [
-        "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-youth-mobility-scheme",
-        "https://www.gov.uk/youth-mobility/eligibility",
-        "https://www.gov.uk/guidance/youth-mobility-scheme-visa-ballot-system",
-        "https://www.gov.uk/youth-mobility/extend-your-visa"
+        "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
+        "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/economic-migration-policy/minimum-annual-remuneration/",
+        "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/general-employment-permit/"
       ]
     },
     {
-      "topic": "US DV registration",
-      "state": "not_open",
+      "topic": "New Zealand SMC",
+      "state": "pathway_scope_and_evidence_expanded",
       "sources": [
-        "https://dvprogram.state.gov/",
-        "https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html"
+        "https://www.immigration.govt.nz/opsmanual/90257.htm",
+        "https://www.immigration.govt.nz/opsmanual/90261.htm",
+        "https://www.immigration.govt.nz/opsmanual/80474.htm",
+        "https://www.immigration.govt.nz/opsmanual/77812.htm",
+        "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/red-and-amber-list-occupations/",
+        "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/pay-rates-for-the-skilled-migrant-category-resident-visa/"
       ]
     },
     {
-      "topic": "US DV issuance",
-      "state": "requires_reconfirmation",
-      "sources": [
-        "https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html"
+      "topic": "Application status",
+      "state": "single_derived_vocabulary_not_policy_change",
+      "files": [
+        "web/route-status.mjs",
+        "web/app.js",
+        "scripts/build_site.mjs"
       ]
-    },
+    }
+  ],
+  "history": [
     {
-      "topic": "Canada CRS and work permits",
-      "state": "scope_clarified",
-      "sources": [
-        "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html",
-        "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/public-policies/exempt-lmia-express-entry.html"
-      ]
-    },
-    {
-      "topic": "UK earned settlement",
-      "state": "current_rule_vs_announcement_retained",
-      "sources": [
-        "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa",
-        "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+      "schemaVersion": 1,
+      "checkedAt": "2026-11-06",
+      "upstream": {
+        "repository": "BryceYuuu/RUN",
+        "head": "1a5d369bb783fb70bf8e3f25e6ab03ccd187f2ae",
+        "previousReviewedHead": "1a5d369bb783fb70bf8e3f25e6ab03ccd187f2ae",
+        "newCommits": 0
+      },
+      "forkBaseline": "9f2186718925dd9c3c74f47c43ca167ec6a52939",
+      "scope": "Taiwan IEC/YMS eligibility, US DV registration versus issuance, Canada EE work-permit distinction; not all 152 routes reverified",
+      "correctedPriorStatement": "Removed unqualified assertion that DV issuance is currently universally paused; official page contains superseding notice and residual conflicting text.",
+      "checks": [
+        {
+          "topic": "IEC Taiwan",
+          "state": "eligibility_expanded",
+          "sources": [
+            "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility/eligibility-by-country.html",
+            "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/recognized-organizations.html",
+            "https://www.ircc.canada.ca/english/work/iec/selections.asp"
+          ]
+        },
+        {
+          "topic": "YMS Taiwan",
+          "state": "eligibility_expanded",
+          "sources": [
+            "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-youth-mobility-scheme",
+            "https://www.gov.uk/youth-mobility/eligibility",
+            "https://www.gov.uk/guidance/youth-mobility-scheme-visa-ballot-system",
+            "https://www.gov.uk/youth-mobility/extend-your-visa"
+          ]
+        },
+        {
+          "topic": "US DV registration",
+          "state": "not_open",
+          "sources": [
+            "https://dvprogram.state.gov/",
+            "https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html"
+          ]
+        },
+        {
+          "topic": "US DV issuance",
+          "state": "requires_reconfirmation",
+          "sources": [
+            "https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html"
+          ]
+        },
+        {
+          "topic": "Canada CRS and work permits",
+          "state": "scope_clarified",
+          "sources": [
+            "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html",
+            "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/public-policies/exempt-lmia-express-entry.html"
+          ]
+        },
+        {
+          "topic": "UK earned settlement",
+          "state": "current_rule_vs_announcement_retained",
+          "sources": [
+            "https://www.gov.uk/indefinite-leave-to-remain-tier-2-t2-skilled-worker-visa",
+            "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk"
+          ]
+        }
       ]
     }
   ]

@@ -17,7 +17,7 @@ try{
  assert.match(moduleResponse.headers.get('content-type')||'',/(java|ecma)script/);
  const catalog=await (await fetch(base+'/data/catalog.json')).json();
  assert.equal(catalog.counts.routes,152);
- assert.equal(catalog.researchChecks.checkedAt,'2026-11-06');
+ assert.equal(catalog.researchChecks.checkedAt,'2026-11-07');
  assert.match(catalog.sourceCommit,/^[0-9a-f]{40}$/);
  browser=await chromium.launch({headless:true});
  const page=await browser.newPage({viewport:{width:1440,height:1000}});
@@ -38,7 +38,19 @@ try{
  assert.match(await page.locator('#routeDialogContent').innerText(),/核發與報名分開看/);
  await page.locator('#closeDetail').click();
  assert.equal(await page.locator('#statRoutes').innerText(),'152');
- assert.match(await page.locator('#buildVersion').innerText(),/2026-11-06/);
+ assert.match(await page.locator('#buildVersion').innerText(),/2026-11-07/);
+ // Application filter and rendered cards must agree on the same canonical state.
+ await page.locator('#statusFilter').selectOption('registration_not_open');
+ assert.equal(await page.locator('.route-card').count(),1);
+ assert.match(await page.locator('.route-card').innerText(),/DV|Diversity/);
+ assert.match(await page.locator('.route-card .card-status').innerText(),/新登記尚未開放/);
+ await page.locator('#statusFilter').selectOption('invitation_based');
+ assert.equal(await page.locator('#resultCount').innerText(),'2');
+ assert.ok((await page.locator('.route-card .card-status').allTextContents()).every(x=>x.includes('邀請制')));
+ await page.locator('#statusFilter').selectOption('quota_and_check');
+ assert.equal(await page.locator('.route-card').count(),1);
+ assert.match(await page.locator('.route-card').innerText(),/High Potential|HPI/);
+ await page.locator('#resetFilters').click();
  const storageBeforeMatcher=await page.evaluate(()=>JSON.stringify(Object.entries(localStorage)));
  await page.goto(base+'/match.html');
  await page.locator('[name=age]').fill('27');
@@ -62,6 +74,37 @@ try{
  for(let i=0;i<4;i++){if(await page.locator('#showMoreMatches').count())await page.locator('#showMoreMatches').click();}
  assert.equal(await wh.count(),1);assert.notEqual(await wh.locator('.match-status').innerText(),'優先研究');
  await wh.locator('summary').click();assert.match(await wh.innerText(),/RO 額外參與需另審/);
+ // New user-facing branches; all data is synthetic and stays local.
+ const fill=async(name,value)=>{const q=page.locator('[name='+name+']');if(await q.evaluate(e=>e.tagName==='SELECT'))await q.selectOption(value);else await q.fill(value);};
+ const allCards=async()=>{await page.locator('[data-filter=all]').click();for(let i=0;i<4;i++){if(await page.locator('#showMoreMatches').count())await page.locator('#showMoreMatches').click();}};
+ const cardFor=country=>page.locator('.match-card').filter({has:page.locator('.match-country').filter({hasText:country})});
+ await page.locator('#deFields summary').click();
+ for(const [name,value] of Object.entries({education:'highschool',offerCountry:'germany',salary:'48000',salaryUnit:'year',offerMonths:'6',dePath:'it',deItYears7:'4',deItAcademic:'yes',deItJob:'yes',deBA:'yes',deLicence:'not_required'}))await fill(name,value);
+ await allCards();
+ const de=cardFor('德國').filter({has:page.locator('.match-name').filter({hasText:'藍卡'})});
+ assert.equal(await de.count(),1);assert.equal(await de.locator('.match-status').innerText(),'優先研究');
+ assert.match(await de.locator('.match-pathway').innerText(),/IT 經驗/);
+ await de.locator('summary').click();
+ assert.match(await de.innerText(),/最近七年合格 IT 經驗/);
+ assert.ok(!(await de.innerText()).includes('部分路線要求大學學位'));
+ await page.locator('#ieFields summary').click();
+ for(const [name,value] of Object.entries({offerCountry:'ireland',salary:'45000',offerMonths:'',iePath:'listed',ieCriticalList:'yes',ieRelatedDegree:'yes',ieEmployer:'yes',ieRemuneration:'yes'}))await fill(name,value);
+ await allCards();
+ const ie=cardFor('愛爾蘭').filter({has:page.locator('.match-name').filter({hasText:'Critical Skills'})});
+ assert.notEqual(await ie.locator('.match-status').innerText(),'優先研究');
+ assert.match(await ie.innerText(),/必要條件未確認/);
+ await fill('offerMonths','12');await allCards();assert.equal(await ie.locator('.match-status').innerText(),'目前已知不符');
+ await fill('offerMonths','24');await allCards();assert.equal(await ie.locator('.match-status').innerText(),'優先研究');
+ await page.locator('#nzFields summary').click();
+ for(const [name,value] of Object.entries({offerCountry:'new-zealand',nzPath:'experience',nzList:'red',nzOccupationCode:'261313',nzOccupationChecked:'yes',nzSkill:'1',nzAccredited:'yes',nzEnglish:'yes',nzHours:'40',nzContract:'permanent'}))await fill(name,value);
+ await allCards();
+ const nz=cardFor('紐西蘭').filter({has:page.locator('.match-name').filter({hasText:'SMC'})});
+ assert.equal(await nz.count(),1);assert.notEqual(await nz.locator('.match-status').innerText(),'目前已知不符');
+ await nz.locator('summary').click();assert.match(await nz.innerText(),/Red List/);
+ for(const [name,value] of Object.entries({nzPath:'points',nzPointsBasis:'qualification',nzPointsConfirmed:'yes',nzPointsWorkUsed:'no',nzHourlyPay:'35',nzWageBase:'35',nzWageDate:'2026-03-09',nzWageConfirmed:'yes'}))await fill(name,value);
+ await allCards();assert.equal(await nz.locator('.match-status').innerText(),'優先研究');
+ await nz.locator('summary').click();assert.ok(!(await nz.innerText()).includes('所選工作經驗分支不適用'));
+
  await page.setViewportSize({width:390,height:844});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'mobile horizontal overflow');
  if(process.env.SMOKE_SCREENSHOT)await page.screenshot({path:process.env.SMOKE_SCREENSHOT,fullPage:true});
@@ -70,5 +113,5 @@ try{
  assert.equal(await page.locator('[name=age]').inputValue(),'');
  assert.equal(await page.evaluate(()=>JSON.stringify(Object.entries(localStorage))),storageBeforeMatcher,'matcher changed storage with profile data');
  assert.deepEqual(errors,[]);assert.deepEqual(csp,[]);assert.deepEqual(disallowedRequests,[]);
- console.log(JSON.stringify({result:'PASS',scope:remote?'live':'local-with-production-CSP',checks:['catalog-and-revision','module-MIME','DV-correction-dialog','Taiwan-IEC-used-block','YMS-used-block','RO-not-auto-eligible','CSP-meter','mobile-layout','privacy-reset'],sourceCommit:catalog.sourceCommit}));
+ console.log(JSON.stringify({result:'PASS',scope:remote?'live':'local-with-production-CSP',checks:['catalog-and-revision','module-MIME','DV-correction-dialog','Taiwan-IEC-used-block','YMS-used-block','RO-not-auto-eligible','CSP-meter','mobile-layout','privacy-reset','canonical-status-filters','German-IT-exception','Irish-two-year-offer','NZ-Red-list-scope'],sourceCommit:catalog.sourceCommit}));
 }finally{if(browser)await browser.close();if(server)server.kill('SIGTERM');}

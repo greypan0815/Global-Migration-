@@ -44,14 +44,14 @@
 | 🇵🇱 波兰 | [波兰欧盟蓝卡](../europe/poland.md#poland-eu-blue-card) | 波兰蓝卡年薪约 16 万兹罗提（月 13,355），门槛明显高于普通许可。 | PLN 160,264.08/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇪🇪 爱沙尼亚 | [爱沙尼亚欧盟蓝卡](../europe/estonia.md#estonia-eu-blue-card) | 月薪约 3,138 欧（特定职业 2,594）以上的高资质岗位。 | EUR 3,138/月 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇫🇷 法国 | [法国 Talent Qualified Employee](../europe/france.md#france-talent-qualified-employee) | 法国人才护照员工类：年薪 39,582 欧即可，首卡最长 4 年，家属专门有人才家庭卡。 | EUR 39,582/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
-| 🇮🇪 爱尔兰 | [爱尔兰 Critical Skills Employment Permit](../europe/ireland.md#ireland-critical-skills-employment-permit) | 英语国家里最好走的技术移民之一：列名职业年薪 4.09 万欧，2 年后转可自由工作的 Stamp 4。 | EUR 40,904/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
+| 🇮🇪 爱尔兰 | [爱尔兰 Critical Skills Employment Permit](../europe/ireland.md#ireland-critical-skills-employment-permit) | 愛爾蘭 Critical Skills 要至少兩年合格 offer；清單低薪分支通常需相關學位，另有近12個月取得資格、高薪及特殊例外分支。官方專頁與年度表的低門檻有細微數字差異，邊界金額標待確認；Stamp 4不是PR。 | EUR 40,904/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇱🇹 立陶宛 | [立陶宛欧盟蓝卡](../europe/lithuania.md#lithuania-eu-blue-card) | 月薪约 3,615 欧（紧缺职业 2,894），1 个月审理，有效期 3 年。 | EUR 3,615/月 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇨🇾 塞浦路斯 | [塞浦路斯欧盟蓝卡](../europe/cyprus.md#cyprus-eu-blue-card) | 年薪 43,632 欧以上，且仅限 ICT、药企研发、海事三个行业。 | EUR 43,632/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇲🇹 马耳他 | [马耳他 Key Employee Initiative](../europe/malta.md#malta-key-employee-initiative) | 管理或高技术岗位年薪 4.5 万欧以上的快速通道，5 个工作日出结果。 | EUR 45,000/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇫🇮 芬兰 | [芬兰欧盟蓝卡](../europe/finland.md#finland-eu-blue-card) | 与专家许可同门槛（3,937 欧），多一个欧盟流动和 P-EU 累计优势。 | EUR 3,937/月 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇫🇮 芬兰 | [芬兰专家居留许可](../europe/finland.md#finland-specialist-residence-permit) | 芬兰专家许可：月薪 3,937 欧，学历要求灵活，快速通道 2 周。 | EUR 3,937/月 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇬🇧 英国 | [英国技术工作签证（Skilled Worker）](../europe/united-kingdom.md#uk-skilled-worker) | 英国最主流的工作移民路线：持牌雇主担保、学士级岗位、年薪 41,700 英镑起。 | GBP 41,700/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
-| 🇩🇪 德国 | [德国欧盟蓝卡](../europe/germany.md#germany-eu-blue-card) | 欧洲最主流的技术移民路线：年薪 5.07 万欧（紧缺职业 4.59 万），IT 无学历也能办，最快 21 个月永居。 | EUR 50,700/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
+| 🇩🇪 德国 | [德国欧盟蓝卡](../europe/germany.md#germany-eu-blue-card) | 德國 EU Blue Card 分一般、緊缺、近三年畢業及 IT 專業經驗途徑。2026 一般年薪 €50,700，合格低門檻分支 €45,934.20。無正式學位的IT專業人士可按最近七年至少三年大學層級經驗另審，不能一律用學士條件排除。 | EUR 50,700/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇦🇹 奥地利 | [奥地利欧盟蓝卡](../europe/austria.md#austria-eu-blue-card) | 奥地利蓝卡：年薪 55,678 欧、无积分，21 个月后也可转 Plus 卡。 | EUR 55,678/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇸🇪 瑞典 | [瑞典欧盟蓝卡](../europe/sweden.md#sweden-eu-blue-card) | 瑞典蓝卡月薪 SEK 53,625，有效期 9 个月至 4 年。 | SEK 53,625/月 | ✅ 可带 | ✅ 可能 | 🟢 开放 |
 | 🇫🇷 法国 | [法国 EU Blue Card](../europe/france.md#france-eu-blue-card) | 人才护照-欧盟蓝卡：年薪 59,373 欧，高资质岗位，可欧盟流动。 | EUR 59,373/年 | ✅ 可带 | ✅ 可能 | 🟢 开放 |

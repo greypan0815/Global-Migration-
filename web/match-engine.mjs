@@ -1,3 +1,5 @@
+import {COUNTRY_DEFAULTS,normalizeCountryFields,countryEligibilityChecks,selectedCountryPath} from './country-eligibility.mjs';
+import {applicationState,applicationUnavailable} from './route-status.mjs';
 /* Global Migration route matching v1 — local-browser checklist, NOT immigration points/probability. */
 export const SOURCE={
   crs:'https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html',
@@ -54,6 +56,7 @@ export const MODELS=[
  ['global:us-j1-summer-work-travel','在學交流工作／J-1 Sponsor',SOURCE.swt]
 ];
 export const DEFAULT_PROFILE={
+ ...COUNTRY_DEFAULTS,
  age:'',field:'unknown',education:'unknown',years:'',english:'unknown',german:'unknown',
  objective:'settlement',mode:'employment',offerCountry:'none',salary:'',salaryUnit:'year',
  sponsor:'unknown',taiwanHousehold:'unknown',student:'unknown',remoteWork:'unknown',
@@ -81,6 +84,7 @@ export function normalizeProfile(raw={}){
  if(p.age!==null&&p.age>110)p.age=null;
  for(const k of ['years','canadianYears','auYears'])if(p[k]!==null&&p[k]>70)p[k]=null;
  if(!['year','month'].includes(p.salaryUnit))p.salaryUnit='year';
+ Object.assign(p,normalizeCountryFields(raw));
  return p;
 }
 const item=(label,state,reason,weight=1,hard=false)=>({label,state,reason,weight,hard});
@@ -97,7 +101,8 @@ function offer(p,country){
  return p.offerCountry===country?ok('目的國雇主聘用','已填有當地工作機會；合約、工作內容仍需政府審查。',3)
    :need('目的國雇主聘用','仍需取得該國合格雇主 offer，沒有 offer 不代表將來無法申請。',3);
 }
-function sponsor(p){
+function sponsor(p,country){
+ if(country&&p.offerCountry!==country)return unknown('雇主擔保資格','尚未提供此目的國合格雇主；不能用另一國的雇主擔保狀態。',2);
  if(p.offerCountry==='none')return unknown('雇主擔保資格','找到雇主後，確認是否具主管機關認可的擔保資格。',2);
  return p.sponsor==='yes'?ok('雇主擔保資格','你表示雇主具有擔保資格；仍須查證。',2)
    :p.sponsor==='no'?need('雇主擔保資格','目前雇主不符合擔保要求。',2)
@@ -131,7 +136,7 @@ function salary(p,country,threshold,period='year'){
 function goal(p,r){
  const temp=['tw:iec_wh','tw:iec_yp','tw:iec_coop','tw:yms','tw:working_holiday',
    'tw:wh_417','tw:taiwan_wh','tw:e1','tw:e2','extra:uk-hpi'].includes(r.id)||
-   ['not_direct','status_upgrade_not_pr'].includes(r.audit?.settlement?.state);
+   ['not_direct'].includes(r.audit?.settlement?.state);
  if(p.objective==='settlement')return temp?need('長期身分目標','此計畫不直接授予永久居留，另需身分轉換與申請。',2)
    :ok('長期身分研究','可研究獨立的 PR／定居資格與後續申請程序。',2);
  if(p.objective==='temporary')return temp?ok('短期海外生活','簽證性質較符合短期交流或工作。',2)
@@ -184,13 +189,13 @@ function checksFor(r,p){
  'eu:netherlands-highly-skilled-migrant','eu:netherlands-eu-blue-card',
  'extra:uk-skilled-worker','global:au-482','global:nz-smc'];
  if(employers.includes(id))out.push(offer(p,r.countryId));
- if(['eu:netherlands-highly-skilled-migrant','extra:uk-skilled-worker','global:au-482','global:nz-smc'].includes(id))
-   out.push(sponsor(p));
+ if(['eu:netherlands-highly-skilled-migrant','extra:uk-skilled-worker','global:au-482'].includes(id))
+   out.push(sponsor(p,r.countryId));
  switch(id){
  case 'eu:germany-eu-blue-card':
-   out.push(occupation(p,['software','stem','other']),degree(p),salary(p,'germany',50700));break;
+   out.push(...countryEligibilityChecks(id,p));break;
  case 'eu:ireland-critical-skills-employment-permit':
-   out.push(occupation(p,['software','stem','health','other']),degree(p),salary(p,'ireland',40904));break;
+   out.push(...countryEligibilityChecks(id,p));break;
  case 'eu:netherlands-highly-skilled-migrant':
    out.push(salary(p,'netherlands',p.age!==null&&p.age<30?4357:5942,'month'));
    if(p.age===null)out.push(unknown('年齡分級','荷蘭薪資標準依是否滿 30 歲及特殊降低標準不同。'));break;
@@ -201,7 +206,7 @@ function checksFor(r,p){
      salary(p,'united-kingdom',41700));break;
  case 'global:au-482':out.push(experience(p),salary(p,'australia',79423));break;
  case 'global:nz-smc':
-   out.push(age(p,18,55),unknown('SMC 各路徑核算','有六分制、技術工作經驗及技工／技術人員路徑；仍須核對紐西蘭當地年資。',2));break;
+   out.push(age(p,0,55),...countryEligibilityChecks(id,p));break;
  case 'global:ca-ee':{
    out.push(p.canadianYears===null||p.canadianWorkEligible==='unknown'
      ?unknown('加拿大合格工作經驗','需確認最近十年的加拿大 TEER 0–3 合格年資；只填工作年數不能直接認定符合 CRS。',3)
@@ -346,13 +351,15 @@ export function matchRoutes(catalog,raw={}){
    const r=lookup.get(id);if(!r)return null;
    const checks=checksFor(r,profile),denom=checks.reduce((n,x)=>n+x.weight,0),
      score=Math.round(100*checks.filter(x=>x.state==='met').reduce((n,x)=>n+x.weight,0)/Math.max(1,denom)),
-     hard=checks.some(x=>x.hard),season=['season_closed','registration_not_open'].includes(r.audit?.window?.state);
+     hard=checks.some(x=>x.hard),season=applicationUnavailable(r);
    let tier=hard?'out_of_range':score>=65?'prioritize':score>=33?'prepare':'research';
    if(season&&tier==='prioritize')tier='prepare';
+   const unresolvedRequired=checks.filter(x=>x.required&&x.state!=='met');
+   if(unresolvedRequired.length&&tier==='prioritize')tier='prepare';
    if(checks.some(x=>x.label==='目的國雇主聘用'&&x.state!=='met')&&tier==='prioritize')tier='prepare';
    if(id.startsWith('tw:iec_')&&profile.iecChannel==='ro'&&tier==='prioritize')tier='prepare';
    return {id,name:r.name,country:r.country,flag:r.flag,countryId:r.countryId,method,official,
-     tier,score,checks,met:checks.filter(x=>x.state==='met').length,
+     tier,score,checks,pathway:selectedCountryPath(id,profile),unresolvedRequired:unresolvedRequired.length,applicationState:applicationState(r),met:checks.filter(x=>x.state==='met').length,
      unknown:checks.filter(x=>x.state==='unknown').length,
      gaps:checks.filter(x=>x.state==='missing'||x.state==='blocked').length,
      season,reviewed:Boolean(r.audit?.checkedAt),reviewDate:r.audit?.checkedAt||'',

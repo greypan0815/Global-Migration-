@@ -1,8 +1,8 @@
 {
   "_meta": {
     "title": "Taiwan-first official evidence overlay",
-    "lastReviewed": "2026-11-06",
-    "scope": "26 routes have selected-field evidence, not a complete audit. On 2026-11-06 only the recorded fieldChecks were revisited; original checkedAt values remain available. DV issuance requires reconfirmation.",
+    "lastReviewed": "2026-11-07",
+    "scope": "26 routes retain scoped official checks. On 2026-11-07 only DE Blue Card branches, IE CSEP requirements, NZ SMC pathways and application-state UI were revisited; prior checkedAt values remain. Irish remuneration pages conflict at narrow boundaries; no blanket full-database verification.",
     "statuses": {
       "passport": [
         "confirmed_for_taiwan",
@@ -880,24 +880,36 @@
         "state": "conditional_settlement",
         "detail": "持 EU Blue Card 符合德語、年金與其他條件者，可於 B1 德語 21 個月或 A1 德語 27 個月申請 Settlement Permit，並非自動取得。"
       },
-      "summary": "德國 EU Blue Card：2026 一般年薪至少 €50,700，緊缺等合資格情況可適用 €45,934.20；持卡者另依條件申請永居。",
-      "threshold": "2026 年薪 €50,700／合資格降低門檻 €45,934.20",
+      "summary": "德國 EU Blue Card 分一般、緊缺、近三年畢業及 IT 專業經驗途徑。2026 一般年薪 €50,700，合格低門檻分支 €45,934.20。無正式學位的IT專業人士可按最近七年至少三年大學層級經驗另審，不能一律用學士條件排除。",
+      "threshold": "2026 一般 €50,700／合格分支 €45,934.20（須核對資格與BA要求）",
       "facts": [
         [
-          "一般年薪門檻（2026）",
-          "€50,700（稅前）"
+          "一般資格",
+          "德國／認可可比對學位，或符合要求至少三年第三級Level6資格；工作需匹配"
         ],
         [
-          "特定降低門檻（2026）",
-          "€45,934.20，須符合職業等條件"
+          "2026 一般薪資",
+          "€50,700 稅前年薪；不是每個分支都用相同門檻"
         ],
         [
-          "雇主",
-          "須有至少 6 個月合格聘僱 offer"
+          "緊缺／近三年畢業",
+          "合格職業或近三年取得資格，2026可用€45,934.20，另需BA同意"
         ],
         [
-          "永久居留",
-          "B1 德語通常可 21 個月申請；A1 27 個月（另有條件）"
+          "IT 無正式學位途徑",
+          "最近七年至少三年IT經驗，達大學層級且為該職務所需，不能只看總工作年資"
+        ],
+        [
+          "IT 分支薪資與期限",
+          "2026至少€45,934.20；至少六個月的合格德國IT聘僱；BA規則須核對"
+        ],
+        [
+          "工作期限",
+          "所有分支都需至少六個月合格聘僱"
+        ],
+        [
+          "受規管職業",
+          "另須相應執業資格；藍卡不是自動核准或永久居留"
         ]
       ],
       "sources": [
@@ -908,39 +920,76 @@
         {
           "title": "Make it in Germany：Settlement permit",
           "url": "https://www.make-it-in-germany.com/en/visa-residence/living-permanently/settlement-permit"
+        },
+        {
+          "title": "德國政府：藍卡各分支及IT無學位規則",
+          "url": "https://www.make-it-in-germany.com/en/visa-recognition/visa-types/eu-blue-card"
+        },
+        {
+          "title": "德國聯邦就業局：2026藍卡及BA同意",
+          "url": "https://www.arbeitsagentur.de/vor-ort/zav/working-and-living-in-germany/iss-en/issue-03-2026/blue-card"
         }
       ],
       "reviewedFields": [
         "target_group",
         "2026_salary",
         "offer",
-        "conditional_pr"
+        "conditional_pr",
+        "blue_card_four_branches",
+        "it_three_of_seven_years",
+        "minimum_6_month_offer",
+        "2026_branch_salary_and_ba"
       ],
       "note": "薪資門檻會按年度調整；IT 無正式學位有例外路徑，但須符合特定經驗條件。",
       "checkedAt": "2026-10-30",
       "reviewType": "selective_official_audit",
       "steps": [
         [
-          "取得合格德國雇主工作 offer",
-          "確認合約至少六個月"
+          "先核對具體聘僱及六個月期限",
+          "沒有德國offer不能用其他國薪資判定"
         ],
         [
-          "核對學歷或 IT 經驗與薪資門檻",
-          "標準與降低門檻不能混用"
+          "依學歷或IT經驗選分支",
+          "不把非本科學位或無學位一律排除"
         ],
         [
-          "依官方程序申請簽證及藍卡",
-          "確認文件與主管機關"
+          "核對所選2026薪資、BA與執照條件",
+          "不足或未確認不得視為已符合"
         ],
         [
-          "合法工作並維持相關保險與年金紀錄",
-          "核對換雇主時的義務"
-        ],
-        [
-          "符合語言與年限後另申請永居",
-          "21／27 個月僅為可能申請門檻"
+          "依法申請",
+          "合格研究方向不等於政府核准；永居仍需另申請"
         ]
-      ]
+      ],
+      "eligibilityBranches": {
+        "checkedAt": "2026-11-07",
+        "paths": [
+          "standard",
+          "shortage",
+          "graduate",
+          "it"
+        ],
+        "missingEvidenceIsUnknown": true
+      },
+      "lastRecheckedAt": "2026-11-07",
+      "fieldChecks": {
+        "blue_card_four_branches": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "it_three_of_seven_years": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "minimum_6_month_offer": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "2026_branch_salary_and_ba": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        }
+      }
     },
     "eu:ireland-critical-skills-employment-permit": {
       "priority": 84,
@@ -960,24 +1009,36 @@
         "state": "status_upgrade_not_pr",
         "detail": "符合條件者在開始合格工作約 21 個月後可能申請 Stamp 4；這是可更新的居留與工作權狀態，並非永久居留或入籍。"
       },
-      "summary": "愛爾蘭 Critical Skills：特定清單職業的 2026 年薪門檻 €40,904（通常需相關學位）；達標工作約 21 個月可評估 Stamp 4，並非 PR。",
-      "threshold": "特定清單職業年薪 €40,904 起（依條件）",
+      "summary": "愛爾蘭 Critical Skills 要至少兩年合格 offer；清單低薪分支通常需相關學位，另有近12個月取得資格、高薪及特殊例外分支。官方專頁與年度表的低門檻有細微數字差異，邊界金額標待確認；Stamp 4不是PR。",
+      "threshold": "清單分支約 €40,904／€40,909（官方頁差異需確認）；高薪與畢業生另有條件",
       "facts": [
         [
-          "清單職業門檻",
-          "€40,904／年，通常需相關學位"
+          "必要聘僱期限",
+          "至少兩年合格offer；不足兩年可另研究General Employment Permit，但不是自動合格"
         ],
         [
-          "近 12 月取得資格者",
-          "特定情形可適用 €36,848"
+          "清單職業及學位",
+          "需核對實際Critical Skills職業與相關學位或以上，不是任何學士都符合"
         ],
         [
-          "其他合格職類",
-          "部分年薪超過 €68,911 可評估"
+          "清單分支薪資證據",
+          "CSEP專頁€40,904；年度MAR頁€40,909，本網站不自行選擇差額區間的有利門檻"
         ],
         [
-          "Stamp 4",
-          "符合條件、開始工作約 21 個月後可申請，非永居"
+          "近12個月取得資格",
+          "CSEP專頁€36,848；年度MAR頁€36,849，資格日期與相關學位仍需核對"
+        ],
+        [
+          "高薪一般職類",
+          "專頁描述超過€68,911，排除Ineligible List及公共利益不合者；無學位仍要必要經驗"
+        ],
+        [
+          "雇主與薪酬",
+          "真實註冊經營、EEA僱員比例或豁免，薪酬以官方允許項目計算"
+        ],
+        [
+          "後續身分",
+          "符合規則可另評估Stamp4與長期居留；不能把不是PR當成不適合長期研究"
         ]
       ],
       "sources": [
@@ -992,38 +1053,88 @@
         {
           "title": "愛爾蘭 Critical Skills Occupations List",
           "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/employment-permit-eligibility/highly-skilled-eligible-occupations-list/critical%20skills%20occupations%20list.html"
+        },
+        {
+          "title": "DETE：年度報酬表（與專頁數字有差異）",
+          "url": "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/economic-migration-policy/minimum-annual-remuneration/"
+        },
+        {
+          "title": "DETE：General Employment Permit替代研究",
+          "url": "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/general-employment-permit/"
         }
       ],
       "reviewedFields": [
         "salary",
         "occupation",
         "sponsor",
-        "stamp4_not_pr"
+        "stamp4_not_pr",
+        "minimum_two_year_offer",
+        "relevant_degree_and_occupation_list",
+        "high_salary_experience_alternative",
+        "salary_page_discrepancy"
       ],
       "checkedAt": "2026-10-30",
       "reviewType": "selective_official_audit",
       "steps": [
         [
-          "取得合格雇主與職業 offer",
-          "核對 Critical Skills Occupations List"
+          "核對合格雇主及兩年offer",
+          "短offer應另研究GEP，不強行套CSEP"
         ],
         [
-          "查當期薪資與學位／經驗條件",
-          "不同職類門檻不同"
+          "選擇清單／新畢業生／高薪／特殊分支",
+          "工作代碼、學位相關性、取得資格日期分開看"
         ],
         [
-          "按官方工作許可程序申請",
-          "核對開工前申請及其他文件"
+          "確認適用薪酬及官方數字",
+          "落在官方頁面差額邊界需主管機關釐清"
         ],
         [
-          "依許可開始合格工作",
-          "合法居留與稅務紀錄"
-        ],
-        [
-          "條件滿足後評估 Stamp 4",
-          "21 個月是可能升級資格，不等於永久居留"
+          "按規定申請工作許可並辦居留",
+          "後續Stamp4不是自動PR"
         ]
-      ]
+      ],
+      "evidenceConflicts": [
+        {
+          "field": "minimum_annual_remuneration",
+          "checkedAt": "2026-11-07",
+          "state": "official_pages_differ",
+          "detail": "CSEP專頁列€40,904／€36,848，MAR年度表列€40,909／€36,849。介於兩數字之間不標通過，正式申請應由DETE確認適用門檻。",
+          "sources": [
+            "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
+            "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/economic-migration-policy/minimum-annual-remuneration/"
+          ]
+        }
+      ],
+      "eligibilityBranches": {
+        "checkedAt": "2026-11-07",
+        "paths": [
+          "listed",
+          "graduate",
+          "high_salary",
+          "special"
+        ],
+        "minimumOfferMonths": 24,
+        "missingEvidenceIsUnknown": true
+      },
+      "lastRecheckedAt": "2026-11-07",
+      "fieldChecks": {
+        "minimum_two_year_offer": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "relevant_degree_and_occupation_list": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "high_salary_experience_alternative": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "salary_page_discrepancy": {
+          "checkedAt": "2026-11-07",
+          "state": "requires_reconfirmation"
+        }
+      }
     },
     "eu:netherlands-highly-skilled-migrant": {
       "priority": 82,
@@ -1628,27 +1739,39 @@
         "state": "resident_visa",
         "detail": "SMC 核准後為 Resident Visa（可居留工作），不是直接自動取得 Permanent Resident Visa；後續另有資格。"
       },
-      "summary": "紐西蘭 SMC 目前有三種路徑：6 分積分、技術工作經驗、技工／技術人員；均需符合就業與其他官方規則。",
+      "summary": "紐西蘭 SMC 依積分、技術工作經驗、技工／技術人員三分支研究；需具體ANZSCO、認可雇主、合格工時、年資與適用時薪。Red排除的是工作經驗子途徑而非全部SMC，Amber有較高NZ年資及薪資要求。",
       "facts": [
         [
           "共通要求",
-          "55 歲以下，合格 Accredited Employer 工作或 offer、英文等"
+          "申請時55歲或以下；合格認可雇主、職位、工時、期限、英語與其他條件"
         ],
         [
-          "路徑一",
-          "積分制：需 6 分"
+          "積分路徑",
+          "學歷／收入／職業註冊選一基本類別，再依規則加合格NZ經驗；不能三類基本分相加"
         ],
         [
-          "路徑二",
-          "技術工作經驗：通常總計至少 5 年且新西蘭合格經驗至少 2 年"
+          "一般工作經驗路徑",
+          "最近10年前段至少3年相關經驗，加額外最近4年內2年NZ skilled經驗；skill1–3、一般1.1倍適用SMC時薪，年資不得重複"
         ],
         [
-          "路徑三",
-          "符合要求的技工／技術人員路線"
+          "Amber List工作經驗",
+          "前段3年相關經驗須在NZ，再加2年NZ skilled經驗；相應工作與歷史年資要達1.2倍"
+        ],
+        [
+          "Red List／skill4–5",
+          "不能走Skilled Work Experience，不等於積分途徑也全部禁止"
+        ],
+        [
+          "技工／技術人員",
+          "專屬職業清單、相關Level4以上資格；資格後2.5年前段經驗加1.5年NZ skilled經驗，後者在申請前三年；一般1倍適用基準"
+        ],
+        [
+          "薪資須按日期查表",
+          "2026-03-09起基準NZD35，1.1倍38.50、1.2倍42；特定歷史基準依工簽／年資規則，不能全部用今天門檻"
         ],
         [
           "核准身分",
-          "Resident Visa，非直接 Permanent Resident Visa"
+          "Resident Visa與Permanent Resident Visa仍有程序及權利差異；EOI不是工作許可"
         ]
       ],
       "sources": [
@@ -1659,37 +1782,103 @@
         {
           "title": "紐西蘭移民局：三種 SMC 路徑",
           "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/"
+        },
+        {
+          "title": "INZ：SR3.35工作經驗途徑",
+          "url": "https://www.immigration.govt.nz/opsmanual/90257.htm"
+        },
+        {
+          "title": "INZ：SR3.40技工技術人員途徑",
+          "url": "https://www.immigration.govt.nz/opsmanual/90261.htm"
+        },
+        {
+          "title": "INZ：現行SR3.25積分",
+          "url": "https://www.immigration.govt.nz/opsmanual/80474.htm"
+        },
+        {
+          "title": "INZ：SMC共通及薪資表",
+          "url": "https://www.immigration.govt.nz/opsmanual/77812.htm"
+        },
+        {
+          "title": "INZ：Red與Amber限制",
+          "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/red-and-amber-list-occupations/"
+        },
+        {
+          "title": "INZ：日期與SMC時薪",
+          "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/skilled-migrant-category-pathway-to-residence/pay-rates-for-the-skilled-migrant-category-resident-visa/"
+        },
+        {
+          "title": "INZ：正式申請表資格說明",
+          "url": "https://www.immigration.govt.nz/formshelp/smc-rv-application/"
         }
       ],
       "reviewedFields": [
         "three_pathways",
         "employer",
-        "residence_not_pr"
+        "residence_not_pr",
+        "smc_three_separate_pathways",
+        "red_amber_limited_scope",
+        "non_overlapping_experience_windows",
+        "dated_hourly_wage_requirements",
+        "points_category_not_combined"
       ],
       "checkedAt": "2026-10-30",
       "reviewType": "selective_official_audit",
       "steps": [
         [
-          "取得符合規定的 accredited employer 工作或 offer",
-          "核對薪資與英文等資格"
+          "確認ANZSCO職責、技能等級及清單",
+          "不依籠統的IT職稱推定"
         ],
         [
-          "判斷適用三種 SMC 途徑的哪一種",
-          "六分、工作經驗、技工／技術人員"
+          "選定一個SMC子途徑",
+          "紅黃清單限制不擴張到所有路徑"
         ],
         [
-          "依法提交 EOI",
-          "並非提交就保證受邀"
+          "核對offer、工時、年資與時薪期間",
+          "前後段不得重複，歷史時薪不能只看現在薪水"
         ],
         [
-          "獲邀後備妥文件並申請 Resident Visa",
-          "獲准才有相應居留權"
+          "完整核對INZ操作手冊與證據",
+          "本站不自行產生完整SMC官方分數"
         ],
         [
-          "另外研究 Permanent Resident Visa 的取得條件",
-          "Resident Visa 不等同永久居民簽證"
+          "依EOI及受邀程序辦理",
+          "核准Resident Visa後的後續身分另查"
         ]
-      ]
+      ],
+      "eligibilityBranches": {
+        "checkedAt": "2026-11-07",
+        "paths": [
+          "points",
+          "experience",
+          "trades"
+        ],
+        "redAmberScope": "skilled_work_experience_only",
+        "historyNeedsEvidence": true
+      },
+      "lastRecheckedAt": "2026-11-07",
+      "fieldChecks": {
+        "smc_three_separate_pathways": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "red_amber_limited_scope": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "non_overlapping_experience_windows": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "dated_hourly_wage_requirements": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        },
+        "points_category_not_combined": {
+          "checkedAt": "2026-11-07",
+          "state": "confirmed"
+        }
+      }
     },
     "extra:uk-skilled-worker": {
       "priority": 74,

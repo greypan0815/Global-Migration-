@@ -27,6 +27,24 @@ function updateSalary(){
   ?'未有 offer，可留空。請勿將台幣收入直接當外國薪資。'
   :'只填該職缺當地幣別：'+(salaryUnits[country]||'當地貨幣')+'（稅前）';
 }
+function updateCountryFields(){
+ const f=$('profileForm'),val=n=>f.elements.namedItem(n)?.value;
+ const visible=(names,on)=>{for(const name of names){const label=f.elements.namedItem(name)?.closest('label');if(label)label.hidden=!on;}};
+ const de=val('dePath'),ie=val('iePath'),nz=val('nzPath');
+ visible(['deQualification','deJobMatches'],['standard','shortage','graduate'].includes(de));
+ visible(['deShortage'],de==='shortage');visible(['deGraduate3'],de==='graduate');
+ visible(['deItYears7','deItAcademic','deItJob'],de==='it');visible(['deBA'],['it','shortage','graduate'].includes(de));
+ visible(['ieCriticalList','ieRelatedDegree'],['listed','graduate'].includes(ie));
+ visible(['ieGraduate12'],ie==='graduate');visible(['ieNotIneligible','ieRelevantSkills'],ie==='high_salary');
+ visible(['nzList','nzSkilledYears4'],nz==='experience');
+ visible(['nzRelevantYears10'],nz==='experience'&&val('nzList')==='none');
+ visible(['nzRelevantNZYears10'],nz==='experience'&&val('nzList')==='amber');
+ visible(['nzTradesListed','nzQualification4','nzPostQualYears10','nzPostQualNZYears3'],nz==='trades');
+ visible(['nzPointsBasis','nzPointsConfirmed','nzPointsWorkUsed'],nz==='points');
+ visible(['nzIncomeMultiple'],nz==='points'&&val('nzPointsBasis')==='income');
+ visible(['nzSeparatePeriods'],['experience','trades'].includes(nz));
+ visible(['nzServiceHistory'],val('nzContract')==='services');
+}
 function dueForRecheck(day){
  if(!day)return true;
  const timestamp=Date.parse(day+'T00:00:00Z');
@@ -88,12 +106,14 @@ function matchCard(item){
   '<div class="match-card-head"><div><div class="match-country">'+escapeHtml(item.flag)+
   ' '+escapeHtml(item.country)+' · '+escapeHtml(audit)+'</div>'+
   '<h3 class="match-name">'+escapeHtml(item.name)+'</h3>'+
-  '<p class="match-method">'+escapeHtml(item.method)+'</p></div>'+
+  '<p class="match-method">'+escapeHtml(item.method)+'</p>'+
+  (item.pathway?'<p class="match-pathway">'+escapeHtml(item.pathway)+'</p>':'')+'</div>'+
   '<span class="match-status '+escapeHtml(kind.css)+'">'+escapeHtml(kind.label)+'</span></div>'+
   '<div class="meter-labels"><span>自訂條件準備度 · 非核准率／官方積分</span>'+
   '<strong>'+progress+'／100</strong></div>'+
   '<div class="meter" role="meter" aria-label="'+escapeHtml(item.name)+'自訂條件準備度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+progress+'"><span class="progress-'+progress+'"></span></div>'+
   '<div class="meter-legend"><span><b>'+escapeHtml(metText)+'</b></span></div>'+
+  (item.unresolvedRequired?'<p class="match-card-warning">仍有 '+item.unresolvedRequired+' 項所選分支的必要條件未確認或未滿足，不會因準備度高就視為符合資格。</p>':'')+
   statusWarning+
   '<details class="check-details"><summary>展開條件分析（'+item.checks.length+' 項）</summary>'+
   '<ul>'+item.checks.map(checkRow).join('')+'</ul>'+
@@ -163,14 +183,19 @@ async function boot(){
  form.addEventListener('reset',()=>{
    state.active=false;state.filter='all';state.limit=9;state.results=null;
    setTimeout(()=>{
-     updateSalary();
+     updateSalary();updateCountryFields();
      $('matchResults').innerHTML='<div class="result-empty"><div class="result-empty-art" aria-hidden="true">✳</div>'+
      '<h2>資料已清除</h2><p>這份表單的輸入不會儲存或上傳。重新輸入即可再次分析。</p></div>';
    },0);
  });
  form.addEventListener('input',()=>{if(state.active)safeRender();});
  form.addEventListener('change',event=>{
-   if(event.target.name==='offerCountry')updateSalary();
+   updateCountryFields();
+   if(event.target.name==='offerCountry'){
+     for(const name of ['salary','offerMonths'])form.elements.namedItem(name).value='';
+     for(const name of ['offerPermanent','sponsor'])form.elements.namedItem(name).value='unknown';
+     updateSalary();
+   }
    if(state.active)safeRender();
  });
  try{
@@ -185,6 +210,6 @@ async function boot(){
    errorUI('請確認 dist/data/catalog.json 存在且網站部署的是最新版本。');
    $('analyzeButton').disabled=true;
  }
- updateSalary();
+ updateSalary();updateCountryFields();
 }
 boot();

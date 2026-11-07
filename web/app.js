@@ -1,3 +1,4 @@
+import {APPLICATION_STATES,applicationState,applicationLabel,applicationFilterOptions,applicationUnavailable} from './route-status.mjs';
 /* Global Migration — interactive static catalogue; no dependencies */
 (() => {
   'use strict';
@@ -39,22 +40,7 @@
     if(v==='chargeability_matters')return {text:'出生地排期（非護照）',cls:'checked'};
     return {text:'臺灣資格待核對',cls:''};
   };
-  const windowLabels={
-    season_closed:'2026 年申請季已結束',
-    no_fixed_season:'非固定抽選 · 請核實',
-    check_official:'請查當期受理窗口',
-    invitation_based:'邀請制，需另符合條件',
-    priority_date_based:'依每月排期判定',
-    quota_and_check:'有年度名額 · 須查窗口',
-    paused:'暫停新申請',
-    registration_not_open:'DV 新登記未開放 · 核發另核實'
-  };
-  const status=r=>r.audit?.window?.state
-    ?(windowLabels[r.audit.window.state]||'依當期官方規則申請')
-    :({closed_window:'上游標示該年度已結束',
-        check_window:'需查當期申請窗口',
-        closed:'上游標示已停止',
-        upstream_open:'上游標示開放（未核實）'}[r.status]||'狀態待核實');
+  const status=applicationLabel;
   const prLabels={
     not_direct:'非直接永居',separate_application:'需另申請 PR',
     conditional_settlement:'符合條件可申請永居',status_upgrade_not_pr:'居留升級 ≠ 永居',
@@ -141,6 +127,8 @@
     });
   }
   function renderChoices(){
+    $('statusFilter').innerHTML='<option value="all">全部申請狀態</option>'+applicationFilterOptions(catalog.routes).map(o=>'<option value="'+esc(o.value)+'">'+esc(o.label)+'（'+o.count+'）</option>').join('');
+    $('statusFilter').value=state.status;
     const typeContainer=$('typeChoices');
     const types=[{id:'all',label:'全部',count:catalog.counts.routes},...catalog.types];
     typeContainer.innerHTML=types.map(t=>
@@ -161,7 +149,7 @@
       const score=r=>(state.passport==='tw'&&r.verification==='official_checked'?130:0)
         +(r.audit?.priority||0)*2+(r.audit?.checkedAt?25:0)
         +(r.type==='work'?35:0)+(r.type==='youth'?10:0)
-        +(r.status==='closed'||r.status==='closed_window'?-220:0);
+        +(applicationUnavailable(r)?-220:0);
       return score(b)-score(a)||a.country.localeCompare(b.country,'zh-Hant')||a.name.localeCompare(b.name,'zh-Hant');
     });
   }
@@ -178,7 +166,7 @@
       }
       if(state.pr!=='all'&&prCategory(r)!==state.pr)return false;
       if(state.evidence!=='all'&&r.sourceGrade!==state.evidence)return false;
-      if(state.status!=='all'&&r.status!==state.status)return false;
+      if(state.status!=='all'&&applicationState(r)!==state.status)return false;
       if(state.savedOnly&&!state.favorites.has(r.id))return false;
       if(q){
         const haystack=[r.country,r.countryEn,r.name,r.originalName,r.summary,r.audience,
@@ -208,7 +196,7 @@
     const isSaved=state.favorites.has(r.id);
     const isCompared=state.compare.includes(r.id);
     const rate=r.threshold||((r.facts||[]).find(row=>/薪|收入|資金|門檻|資本|金額/.test(row[0]))||[])[1]||'請見詳細資格';
-    const statusClass=r.status==='closed'||r.status==='closed_window'?'closed':ver.cls;
+    const statusClass=applicationUnavailable(r)?'closed':ver.cls;
     return '<article class="route-card" data-card-id="'+esc(r.id)+'">'+
       '<div class="card-top"><div class="card-country"><span class="flag">'+esc(r.flag)+'</span>'+
       '<span>'+esc(r.country)+'</span></div><span class="card-type">'+esc(r.typeLabel)+'</span></div>'+
@@ -236,7 +224,7 @@
     if(state.passport==='tw'&&state.verify==='needs_review')hints.push('臺灣待核對');
     if(state.pr!=='all')hints.push(({reviewed_possible:'有官方核查的居留方向',not_direct:'非直接永居',upstream_possible:'上游可能永居',needs_review:'永居尚待核對'})[state.pr]||state.pr);
     if(state.evidence!=='all')hints.push('證據：'+state.evidence);
-    if(state.status!=='all')hints.push('篩選狀態：'+state.status);
+    if(state.status!=='all')hints.push('篩選狀態：'+(APPLICATION_STATES[state.status]||'待核對'));
     if(state.savedOnly)hints.push('我的收藏');
     $('activeFilters').innerHTML=hints.map(s=>'<span class="active-filter-chip">'+esc(s)+'</span>').join('');
   }
@@ -350,6 +338,7 @@
             ' · 不可將政策發布日當成法規生效日。</p>'):'')+
       (r.audit?.issuance?block('核發與報名分開看：官方證據尚須確認','<div class="detail-callout">'+esc(r.audit.issuance.detail)+'</div>'):'')+
       (r.audit?.lastRecheckedAt?'<p class="audit-foot">最近分欄複核：'+esc(r.audit.lastRecheckedAt)+'；僅補查 '+esc(Object.keys(r.audit.fieldChecks||{}).join('、'))+'，不是整條路線重新驗證。</p>':'')+
+      (r.audit?.evidenceConflicts?.length?block('官方來源差異：必須另外確認',r.audit.evidenceConflicts.map(x=>'<div class="detail-callout">'+esc(x.detail)+'</div>').join('')):'')+
       block('核心條件與概要',factsHtml(facts))+
       block('申請與轉換流程（摘要）',stepHtml)+
       block('較適合的情況',(r.fit||[]).length?bulletHtml(r.fit):'')+

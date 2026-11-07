@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import {applicationState,applicationLabel} from '../web/route-status.mjs';
 /**
  * Global Migration static catalogue builder.
  * No external dependencies; compatible with Cloudflare Pages Node.js 22.
@@ -210,6 +211,8 @@ function applyReview(route,review){
     lastRecheckedAt:review.lastRecheckedAt||null,
     fieldChecks:review.fieldChecks||{},
     issuance:review.issuance||null,
+    eligibilityBranches:review.eligibilityBranches||null,
+    evidenceConflicts:review.evidenceConflicts||[],
     reviewedFields:Array.isArray(review.reviewedFields)?review.reviewedFields:[],
     passport:review.passport,
     window:review.window,
@@ -322,9 +325,12 @@ export function buildCatalog(input) {
   if(routes.length===0)throw Error('No routes generated');
   const byId=new Map(routes.map(r=>[r.id,r]));
   for(const id of Object.keys(policyReviews))if(!byId.has(id))throw Error('Policy review points to missing route: '+id);
-  for(const route of routes)applyReview(route,policyReviews[route.id]);
+  for(const route of routes){
+    applyReview(route,policyReviews[route.id]);
+    route.applicationStatus={state:applicationState(route),label:applicationLabel(route)};
+  }
   const types=Object.entries(TYPE_LABELS).map(([id,label])=>({id,label,count:routes.filter(r=>r.type===id).length})).filter(x=>x.count);
-  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-11-06',
+  return {schemaVersion:2,edition:'Taiwan-first selective official audit',verificationCutoff:'2026-11-07',
     policyAuditScope:'依各筆 audit.checkedAt／fieldChecks 日期與明列範圍核對；不是全部路線當日驗證。',
     dataNotice:'原始中國大陸導向資料與臺灣額外官方核對資料分層呈現；非法律意見。',
     counts:{countries:countries.size,routes:routes.length,taiwanChecked:routes.filter(r=>r.verification==='official_checked').length,
